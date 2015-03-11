@@ -1,0 +1,13 @@
+name = Editor de texto con formato
+description = Editor de texto con formato.
+core = 7.x
+package = Manatí
+php = 5.2.4
+dependencies[] = features
+dependencies[] = filter
+dependencies[] = pathologic
+dependencies[] = wysiwyg
+dependencies[] = wysiwyg_filter
+features[features_api][] = api:2
+features[filter][] = manati_texto_formato
+features[wysiwyg][] = manati_texto_formato
