@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ * dccr.install
+ */
+
+/**
+ * Implements hook_install().
+ */
+function dccr_install() {
+  $modules_disable_list = array(
+    'overlay',
+    'color',
+    'toolbar',
+    'comment',
+    'dashboard',
+  );
+  module_disable($modules_disable_list);
+  drupal_uninstall_modules($modules_disable_list, TRUE);
+}
