@@ -62,3 +62,11 @@ function dccr_install() {
 
   $result = module_enable($modules_enable_list, TRUE);
 }
+
+/**
+ * Enables dccr_ftr_users feature.
+ */
+function dccr_update_7000() {
+  $module_list = array('dccr_ftr_users');
+  module_enable($module_list, TRUE);
+}
