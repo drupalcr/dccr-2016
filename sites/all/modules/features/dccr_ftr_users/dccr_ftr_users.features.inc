@@ -105,3 +105,38 @@ function dccr_ftr_users_flag_default_flags() {
   return $flags;
 
 }
+
+/**
+ * Implements hook_default_message_type().
+ */
+function dccr_ftr_users_default_message_type() {
+  $items = array();
+  $items['dccr_admin_notification_payment_submit_form'] = entity_import('message_type', '{
+    "name" : "dccr_admin_notification_payment_submit_form",
+    "description" : "Admin notification payment submit form",
+    "argument_keys" : [],
+    "argument" : [],
+    "category" : "message_type",
+    "data" : {
+      "token options" : { "clear" : 0 },
+      "purge" : { "override" : 0, "enabled" : 0, "quota" : "", "days" : "" }
+    },
+    "language" : "en",
+    "arguments" : null,
+    "message_text" : { "en" : [
+        {
+          "value" : "User [message:field-submitter-user:name] has submitted payment receipt.\\r\\n",
+          "format" : "plain_text",
+          "safe_value" : "\\u003Cp\\u003EUser [message:field-submitter-user:name] has submitted payment receipt.\\u003C\\/p\\u003E\\n"
+        },
+        {
+          "value" : "You can review the [message:field-submitter-user:name]\\u0027s submission in this url: [message:field-submission:url]",
+          "format" : "plain_text",
+          "safe_value" : "\\u003Cp\\u003EYou can review the [message:field-submitter-user:name]\\u0026#039;s submission in this url: [message:field-submission:url]\\u003C\\/p\\u003E\\n"
+        }
+      ]
+    },
+    "rdf_mapping" : []
+  }');
+  return $items;
+}

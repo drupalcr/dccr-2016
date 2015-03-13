@@ -68,6 +68,106 @@ function dccr_ftr_users_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'message-dccr_admin_notification_payment_submit_form-field_submission'
+  $field_instances['message-dccr_admin_notification_payment_submit_form-field_submission'] = array(
+    'bundle' => 'dccr_admin_notification_payment_submit_form',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 1,
+      ),
+      'message_notify_email_body' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
+      'message_notify_email_subject' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
+    ),
+    'entity_type' => 'message',
+    'field_name' => 'field_submission',
+    'label' => 'Submission',
+    'required' => 1,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'message-dccr_admin_notification_payment_submit_form-field_submitter_user'
+  $field_instances['message-dccr_admin_notification_payment_submit_form-field_submitter_user'] = array(
+    'bundle' => 'dccr_admin_notification_payment_submit_form',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 0,
+      ),
+      'message_notify_email_body' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
+      'message_notify_email_subject' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
+    ),
+    'entity_type' => 'message',
+    'field_name' => 'field_submitter_user',
+    'label' => 'User',
+    'required' => 1,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 1,
+    ),
+  );
+
   // Exported field_instance: 'user-user-field_about_me'
   $field_instances['user-user-field_about_me'] = array(
     'bundle' => 'user',
@@ -337,7 +437,9 @@ function dccr_ftr_users_field_default_field_instances() {
   t('Facebook Profile');
   t('LinkedIn Profile');
   t('Payment Receipt');
+  t('Submission');
   t('Twitter Profile');
+  t('User');
 
   return $field_instances;
 }
