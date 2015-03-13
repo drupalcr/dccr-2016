@@ -42,7 +42,6 @@ function dccr_install() {
     'variable',
     'conditional_styles',
     'magic',
-    'webform',
     'features',
     'strongarm',
     'diff',
@@ -69,4 +68,15 @@ function dccr_install() {
 function dccr_update_7000() {
   $module_list = array('dccr_ftr_users');
   module_enable($module_list, TRUE);
+}
+
+/**
+ * Disables webform module and enable entityform module.
+ */
+function dccr_update_7001() {
+  $module_disable = array('webform');
+  module_disable($module_disable);
+  drupal_uninstall_modules($module_disable);
+  $module_enable = array('entityform');
+  module_enable($module_enable);
 }
