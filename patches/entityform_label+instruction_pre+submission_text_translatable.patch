@@ -1,0 +1,51 @@
+diff --git a/entityform.admin.inc b/entityform.admin.inc
+index cb55351..ecd9fc2 100644
+--- a/entityform.admin.inc
++++ b/entityform.admin.inc
+@@ -261,7 +261,7 @@ function entityform_form_wrapper($entityform, $mode = 'submit', $form_context =
+   if (!empty($entityform_type->data['instruction_pre'])) {
+     $output['intro'] = array(
+       '#type' => 'markup',
+-      '#markup' => "<div class='pre-instructions' >" . _entityform_format_text($entityform_type->data['instruction_pre'], array('entityform_type' => $entityform_type)) . "</div>",
++      '#markup' => "<div class='pre-intructions' >" . entity_i18n_string("entityform:entityform_type:{$entityform_type->type}:instruction_pre", $entityform_type->get_prop('instruction_pre')) . "</div>",
+       '#weight' => -100,
+     );
+   }
+diff --git a/entityform.module b/entityform.module
+index aa32252..f8c173a 100644
+--- a/entityform.module
++++ b/entityform.module
+@@ -748,7 +748,7 @@ function entityform_confirm_page($entityform_type) {
+     'submit_text' => array(
+       '#type' => 'markup',
+       '#prefix' => '<div class="submission-text">',
+-      '#markup' => $entityform_type->get_prop('submission_text', $entityform),
++      '#markup' => "<div class='submission-text' >" . entity_i18n_string("entityform:entityform_type:{$entityform_type->type}:", $entityform_type->get_prop('submission_text')) . "</div>",
+       '#suffix' => '</div>',
+     ),
+   );
+diff --git a/entityform_i18n/entityform_i18n.module b/entityform_i18n/entityform_i18n.module
+index a0416ac..4ff52a6 100644
+--- a/entityform_i18n/entityform_i18n.module
++++ b/entityform_i18n/entityform_i18n.module
+@@ -16,6 +16,20 @@ function entityform_i18n_entity_info_alter(&$info) {
+ }
+ 
+ /**
++ * Implements hook_entity_property_info_alter().
++ */
++function entityform_i18n_entity_property_info_alter(&$info) {
++  // Mark some properties as translatable, but also denote that translation
++  // works with i18n_string.
++  foreach ($info['entityform_type']['properties'] as $prop_name => $value) {
++    if ('label' == $prop_name || !empty($info['entityform_type']['properties'][$prop_name]['entityform_i18n'])) {
++      $info['entityform_type']['properties'][$prop_name]['translatable'] = TRUE;
++      $info['entityform_type']['properties'][$prop_name]['i18n string'] = TRUE;
++    }
++  }
++}
++
++/**
+  * Implements hook_i18n_object_info_alter().
+  */
+ function entityform_i18n_i18n_object_info_alter(&$info) {
