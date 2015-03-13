@@ -36,8 +36,13 @@ function dccr_ftr_users_default_rules_configuration() {
             "value" : [ "entityform" ]
           }
         },
-        { "entity_save" : { "data" : [ "entity-created" ] } },
-        { "message_notify_process" : { "message" : [ "entity-created" ], "mail" : "kevin@estudiomanati.com" } }
+        { "entity_save" : { "data" : [ "entity-created" ], "immediate" : "1" } },
+        { "message_notify_process" : {
+            "message" : [ "entity-created" ],
+            "save_on_success" : "0",
+            "mail" : "kevin@estudiomanati.com"
+          }
+        }
       ]
     }
   }');
