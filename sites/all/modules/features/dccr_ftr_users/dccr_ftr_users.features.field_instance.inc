@@ -10,6 +10,64 @@
 function dccr_ftr_users_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'entityform-dccr_payment_submission_form-field_payment_receipt'
+  $field_instances['entityform-dccr_payment_submission_form-field_payment_receipt'] = array(
+    'bundle' => 'dccr_payment_submission_form',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'confirmation' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 0,
+      ),
+      'table' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'entityform',
+    'field_name' => 'field_payment_receipt',
+    'label' => 'Payment Receipt',
+    'required' => 1,
+    'settings' => array(
+      'description_field' => 0,
+      'entity_translation_sync' => FALSE,
+      'file_directory' => 'payment-receipts',
+      'file_extensions' => 'jpg jpeg gif png pdf',
+      'max_filesize' => '2MB',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'file',
+      'settings' => array(
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'file_generic',
+      'weight' => 1,
+    ),
+  );
+
   // Exported field_instance: 'user-user-field_about_me'
   $field_instances['user-user-field_about_me'] = array(
     'bundle' => 'user',
@@ -30,6 +88,7 @@ function dccr_ftr_users_field_default_field_instances() {
     'label' => 'About Me',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 1,
       'user_register_form' => 1,
     ),
@@ -64,6 +123,7 @@ function dccr_ftr_users_field_default_field_instances() {
     'label' => 'Company',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => 1,
     ),
     'widget' => array(
@@ -98,6 +158,7 @@ function dccr_ftr_users_field_default_field_instances() {
     'label' => 'Drupal.Org Username',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => 1,
     ),
@@ -145,6 +206,7 @@ function dccr_ftr_users_field_default_field_instances() {
         'url_cutoff' => 80,
       ),
       'enable_tokens' => 1,
+      'entity_translation_sync' => FALSE,
       'rel_remove' => 'default',
       'title' => 'value',
       'title_label_use_field_label' => 0,
@@ -196,6 +258,7 @@ function dccr_ftr_users_field_default_field_instances() {
         'url_cutoff' => 80,
       ),
       'enable_tokens' => 1,
+      'entity_translation_sync' => FALSE,
       'rel_remove' => 'default',
       'title' => 'value',
       'title_label_use_field_label' => 0,
@@ -247,6 +310,7 @@ function dccr_ftr_users_field_default_field_instances() {
         'url_cutoff' => 80,
       ),
       'enable_tokens' => 1,
+      'entity_translation_sync' => FALSE,
       'rel_remove' => 'default',
       'title' => 'value',
       'title_label_use_field_label' => 0,
@@ -272,6 +336,7 @@ function dccr_ftr_users_field_default_field_instances() {
   t('Drupal.Org Username');
   t('Facebook Profile');
   t('LinkedIn Profile');
+  t('Payment Receipt');
   t('Twitter Profile');
 
   return $field_instances;
