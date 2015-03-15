@@ -58,7 +58,7 @@ function dccr_ftr_users_default_entityform_type() {
     "paths" : { "submit" : {
         "source" : "eform\\/submit\\/dccr-payment-submission-form",
         "alias" : "enviar-comprobante",
-        "language" : "es"
+        "language" : "und"
       }
     }
   }');
@@ -121,18 +121,31 @@ function dccr_ftr_users_default_message_type() {
       "token options" : { "clear" : 0 },
       "purge" : { "override" : 0, "enabled" : 0, "quota" : "", "days" : "" }
     },
-    "language" : "en",
+    "language" : "es",
     "arguments" : null,
-    "message_text" : { "en" : [
+    "message_text" : {
+      "en" : [
         {
-          "value" : "User [message:field-submitter-user:name] has submitted payment receipt.\\r\\n",
+          "value" : "User [message:field-submission:user:name] has sent payment receipt.\\n",
           "format" : "plain_text",
-          "safe_value" : "\\u003Cp\\u003EUser [message:field-submitter-user:name] has submitted payment receipt.\\u003C\\/p\\u003E\\n"
+          "safe_value" : "\\u003Cp\\u003EUser [message:field-submission:user:name] has sent payment receipt.\\u003C\\/p\\u003E\\n"
         },
         {
-          "value" : "You can review the [message:field-submitter-user:name]\\u0027s submission in this url: [message:field-submission:url]",
+          "value" : "You can review the [message:field-submission:user:name]\\u0027s submission in this url: [message:field-submission:url].",
           "format" : "plain_text",
-          "safe_value" : "\\u003Cp\\u003EYou can review the [message:field-submitter-user:name]\\u0026#039;s submission in this url: [message:field-submission:url]\\u003C\\/p\\u003E\\n"
+          "safe_value" : "\\u003Cp\\u003EYou can review the [message:field-submission:user:name]\\u0026#039;s submission in this url: [message:field-submission:url].\\u003C\\/p\\u003E\\n"
+        }
+      ],
+      "es" : [
+        {
+          "value" : "El usuario [message:field-submitter-user:name] ha enviado el comprobante de pago.",
+          "format" : "plain_text",
+          "safe_value" : "\\u003Cp\\u003EEl usuario [message:field-submitter-user:name] ha enviado el comprobante de pago.\\u003C\\/p\\u003E\\n"
+        },
+        {
+          "value" : "Usted puede revisar el env\\u00edo de [message:field-submission:user:name] en la url: [message:field-submission:url]",
+          "format" : "plain_text",
+          "safe_value" : "\\u003Cp\\u003EUsted puede revisar el env\\u00edo de [message:field-submission:user:name] en la url: [message:field-submission:url]\\u003C\\/p\\u003E\\n"
         }
       ]
     },
