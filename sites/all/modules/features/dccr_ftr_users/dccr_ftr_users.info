@@ -54,6 +54,7 @@ features[field_instance][] = user-user-field_twitter_profile
 features[flag][] = dccr_registration_complete
 features[message_type][] = dccr_admin_notification_payment_submit_form
 features[rules_config][] = rules_dccr_new_payment_receipt_submission
+features[rules_config][] = rules_user_registration_approved
 features[taxonomy][] = company
 features[user_role][] = drupal_administrator
 features[variable][] = field_bundle_settings_message__dccr_admin_notification_payment_submit_form
