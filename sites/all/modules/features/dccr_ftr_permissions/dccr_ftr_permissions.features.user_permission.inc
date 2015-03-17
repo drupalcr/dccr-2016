@@ -10,6 +10,17 @@
 function dccr_ftr_permissions_user_default_permissions() {
   $permissions = array();
 
+  // Exported permission: 'access user profiles'.
+  $permissions['access user profiles'] = array(
+    'name' => 'access user profiles',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'user',
+  );
+
   // Exported permission: 'administer entityform types'.
   $permissions['administer entityform types'] = array(
     'name' => 'administer entityform types',
