@@ -151,5 +151,45 @@ function dccr_ftr_users_default_message_type() {
     },
     "rdf_mapping" : []
   }');
+  $items['user_payment_approved'] = entity_import('message_type', '{
+    "name" : "user_payment_approved",
+    "description" : "User Payment Approved",
+    "argument_keys" : [],
+    "argument" : [],
+    "category" : "message_type",
+    "data" : {
+      "token options" : { "clear" : 0 },
+      "purge" : { "override" : 0, "enabled" : 0, "quota" : "", "days" : "" }
+    },
+    "language" : "en",
+    "arguments" : null,
+    "message_text" : {
+      "en" : [
+        {
+          "value" : "Your payment has been approved",
+          "format" : "plain_text",
+          "safe_value" : "\\u003Cp\\u003EYour payment has been approved\\u003C\\/p\\u003E\\n"
+        },
+        {
+          "value" : "Dear [message:field-approved-user:name],\\r\\n\\r\\nYou payment for Drupal Camp Costa Rica 2015 has been approved. You are now ready for going to this event!\\r\\n\\r\\nWe\\u0027ll see you there",
+          "format" : "plain_text",
+          "safe_value" : "\\u003Cp\\u003EDear [message:field-approved-user:name],\\u003C\\/p\\u003E\\n\\u003Cp\\u003EYou payment for Drupal Camp Costa Rica 2015 has been approved. You are now ready for going to this event!\\u003C\\/p\\u003E\\n\\u003Cp\\u003EWe\\u0026#039;ll see you there\\u003C\\/p\\u003E\\n"
+        }
+      ],
+      "es" : [
+        {
+          "value" : "Tu pago ha sido aprobado",
+          "format" : "plain_text",
+          "safe_value" : "\\u003Cp\\u003ETu pago ha sido aprobado\\u003C\\/p\\u003E\\n"
+        },
+        {
+          "value" : "Estimado [message:field-approved-user:name],\\n\\nSu pago para el Drupal Camp Costa Rica 2015 ha sido aprobado. Ya est\\u00e1s listo para asistir a este evento!\\n\\nTe veremos ah\\u00ed",
+          "format" : "plain_text",
+          "safe_value" : "\\u003Cp\\u003EEstimado [message:field-approved-user:name],\\u003C\\/p\\u003E\\n\\u003Cp\\u003ESu pago para el Drupal Camp Costa Rica 2015 ha sido aprobado. Ya est\\u00e1s listo para asistir a este evento!\\u003C\\/p\\u003E\\n\\u003Cp\\u003ETe veremos ah\\u00ed\\u003C\\/p\\u003E\\n"
+        }
+      ]
+    },
+    "rdf_mapping" : []
+  }');
   return $items;
 }
