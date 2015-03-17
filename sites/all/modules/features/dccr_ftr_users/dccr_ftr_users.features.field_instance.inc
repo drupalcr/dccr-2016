@@ -10,6 +10,81 @@
 function dccr_ftr_users_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'entityform-dccr_payment_submission_form-field_paid_users'
+  $field_instances['entityform-dccr_payment_submission_form-field_paid_users'] = array(
+    'bundle' => 'dccr_payment_submission_form',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'If you are paying your ticket; please don\'t forget to select your own username here.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 3,
+      ),
+    ),
+    'entity_type' => 'entityform',
+    'field_name' => 'field_paid_users',
+    'label' => 'Users',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'apply_chosen' => 0,
+        'match_operator' => 'STARTS_WITH',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance: 'entityform-dccr_payment_submission_form-field_paying_others'
+  $field_instances['entityform-dccr_payment_submission_form-field_paying_others'] = array(
+    'bundle' => 'dccr_payment_submission_form',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'entityform',
+    'field_name' => 'field_paying_others',
+    'label' => 'Check this box if you are paying for other users',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 1,
+    ),
+  );
+
   // Exported field_instance: 'entityform-dccr_payment_submission_form-field_payment_receipt'
   $field_instances['entityform-dccr_payment_submission_form-field_payment_receipt'] = array(
     'bundle' => 'dccr_payment_submission_form',
@@ -64,7 +139,7 @@ function dccr_ftr_users_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
-      'weight' => 1,
+      'weight' => 0,
     ),
   );
 
@@ -199,7 +274,7 @@ function dccr_ftr_users_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 6,
+      'weight' => 7,
     ),
   );
 
@@ -234,7 +309,7 @@ function dccr_ftr_users_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 5,
+      'weight' => 4,
     ),
   );
 
@@ -269,7 +344,7 @@ function dccr_ftr_users_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
@@ -322,6 +397,40 @@ function dccr_ftr_users_field_default_field_instances() {
       'settings' => array(),
       'type' => 'link_field',
       'weight' => 9,
+    ),
+  );
+
+  // Exported field_instance: 'user-user-field_full_name'
+  $field_instances['user-user-field_full_name'] = array(
+    'bundle' => 'user',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 6,
+      ),
+    ),
+    'entity_type' => 'user',
+    'field_name' => 'field_full_name',
+    'label' => 'Full Name',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => 1,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 1,
     ),
   );
 
@@ -432,14 +541,18 @@ function dccr_ftr_users_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('About Me');
+  t('Check this box if you are paying for other users');
   t('Company');
   t('Drupal.Org Username');
   t('Facebook Profile');
+  t('Full Name');
+  t('If you are paying your ticket; please don\'t forget to select your own username here.');
   t('LinkedIn Profile');
   t('Payment Receipt');
   t('Submission');
   t('Twitter Profile');
   t('User');
+  t('Users');
 
   return $field_instances;
 }

@@ -21,11 +21,11 @@ function dccr_ftr_users_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Social Networks',
-    'weight' => '8',
+    'weight' => '9',
     'children' => array(
       0 => 'field_facebook_profile',
-      1 => 'field_twitter_profile',
-      2 => 'field_linkedin_profile',
+      1 => 'field_linkedin_profile',
+      2 => 'field_twitter_profile',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
