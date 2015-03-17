@@ -1,0 +1,16 @@
+name = Drupal Camp Permissions
+description = Permissions settings for this site
+core = 7.x
+package = Drupal Camp
+version = 7.x-1.0
+project = dccr_ftr_permissions
+dependencies[] = entityform
+dependencies[] = features
+features[features_api][] = api:2
+features[user_permission][] = administer entityform types
+features[user_permission][] = delete any entityform
+features[user_permission][] = delete own entityform
+features[user_permission][] = edit any entityform
+features[user_permission][] = edit own entityform
+features[user_permission][] = view any entityform
+features[user_permission][] = view own entityform
