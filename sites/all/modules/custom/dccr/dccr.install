@@ -77,6 +77,6 @@ function dccr_update_7001() {
   $module_disable = array('webform');
   module_disable($module_disable);
   drupal_uninstall_modules($module_disable);
-  $module_enable = array('entityform', 'entityform_i18n', 'message', 'message_notify');
+  $module_enable = array('entityform', 'entityform_i18n', 'message', 'message_notify', 'dccr_ftr_permissions');
   module_enable($module_enable);
 }
