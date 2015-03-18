@@ -42,10 +42,13 @@ function dccr_ftr_sessions_field_default_field_bases() {
   // Exported field_base: 'field_speakers'
   $field_bases['field_speakers'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_speakers',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
     'indexes' => array(
       'target_id' => array(
         0 => 'target_id',
