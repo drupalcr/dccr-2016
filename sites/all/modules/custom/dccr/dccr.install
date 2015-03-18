@@ -70,3 +70,11 @@ function dccr_update_7000() {
   $module_list = array('dccr_ftr_users');
   module_enable($module_list, TRUE);
 }
+
+/**
+ * Enables dccr_ftr_sessions feature.
+ */
+function dccr_update_7001() {
+  $module_list = array('dccr_ftr_sessions');
+  module_enable($module_list, TRUE);
+}
