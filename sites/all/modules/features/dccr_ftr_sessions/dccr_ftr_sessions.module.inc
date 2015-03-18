@@ -12,5 +12,10 @@ function dccr_ftr_sessions_form_alter(&$form, &$form_state, $form_id) {
     // Set actual user as speaker by default.
     global $user;
     $form['field_speakers'][LANGUAGE_NONE][0]['target_id']['#default_value'] = "$user->name ($user->uid)";
+    $form['description'] = array(
+      '#weight' => -10,
+      '#type' => 'markup',
+      '#markup' => '<p>' . t("You can write your session's body in english and spanish in same field for covering more people.") . '</p>',
+    );
   }
 }

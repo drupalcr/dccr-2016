@@ -21,7 +21,7 @@ function dccr_ftr_sessions_node_info() {
     'dccr_session' => array(
       'name' => t('Session'),
       'base' => 'node_content',
-      'description' => t('You can write your session\'s body in english and spanish in same field for covering more people.'),
+      'description' => t('Drupal Camp Session Proposal'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',
