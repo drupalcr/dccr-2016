@@ -144,6 +144,15 @@ function dccr_ftr_permissions_user_default_permissions() {
     'module' => 'entityform',
   );
 
+  // Exported permission: 'administer filters'.
+  $permissions['administer filters'] = array(
+    'name' => 'administer filters',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'filter',
+  );
+
   // Exported permission: 'administer image styles'.
   $permissions['administer image styles'] = array(
     'name' => 'administer image styles',
@@ -549,6 +558,34 @@ function dccr_ftr_permissions_user_default_permissions() {
       'drupal_administrator' => 'drupal_administrator',
     ),
     'module' => 'i18n_string',
+  );
+
+  // Exported permission: 'use text format filtered_html'.
+  $permissions['use text format filtered_html'] = array(
+    'name' => 'use text format filtered_html',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'filter',
+  );
+
+  // Exported permission: 'use text format full_html'.
+  $permissions['use text format full_html'] = array(
+    'name' => 'use text format full_html',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'filter',
+  );
+
+  // Exported permission: 'use text format manati_texto_formato'.
+  $permissions['use text format manati_texto_formato'] = array(
+    'name' => 'use text format manati_texto_formato',
+    'roles' => array(
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'filter',
   );
 
   // Exported permission: 'view any entityform'.
