@@ -58,7 +58,6 @@ function dccr_install() {
     'i18n_user',
     'i18n_variable',
     'i18n_block',
-    
   );
 
   $result = module_enable($modules_enable_list, TRUE);
@@ -73,9 +72,9 @@ function dccr_update_7000() {
 }
 
 /**
- * Enable ds, ds_extras, date_views, date_popup, flag, admin_menu_toolbar, translation_helpers, modules and features dccr_ftr_workshop, dccr_ftr_config
+ * Enable ds, ds_extras, date_views, date_popup, flag, admin_menu_toolbar, translation_helpers, modules and features dccr_ftr_workshop, dccr_ftr_config.
  */
-function dccr_update_7001(){
+function dccr_update_7001() {
   $module_list = array(
     'date_popup',
     'date_views',
@@ -89,4 +88,3 @@ function dccr_update_7001(){
   );
   module_enable($module_list, TRUE);
 }
-
