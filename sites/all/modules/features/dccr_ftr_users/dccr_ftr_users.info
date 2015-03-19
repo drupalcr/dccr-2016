@@ -29,6 +29,7 @@ features[field_instance][] = user-user-field_facebook_profile
 features[field_instance][] = user-user-field_linkedin_profile
 features[field_instance][] = user-user-field_twitter_profile
 features[taxonomy][] = company
+features[user_role][] = drupal_administrator
 features[variable][] = user_admin_role
 features[variable][] = user_picture_dimensions
 features[variable][] = user_picture_file_size
