@@ -1,0 +1,15 @@
+name = Drupal Camp Config
+core = 7.x
+package = Drupal Camp
+dependencies[] = ctools
+dependencies[] = features
+dependencies[] = locale
+dependencies[] = strongarm
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+features[language][] = en
+features[language][] = es
+features[variable][] = language_default
+features[variable][] = language_negotiation_language
+features[variable][] = language_negotiation_language_content
+features[variable][] = language_negotiation_language_url
