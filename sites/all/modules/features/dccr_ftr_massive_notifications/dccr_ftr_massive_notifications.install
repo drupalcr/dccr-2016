@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * @file
+ * Install file for dccr_ftr_massive_notifications.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function dccr_ftr_massive_notifications_install() {
+  $recipients = array(
+    'mass_contact_taxonomy' => array(),
+    'mass_contact_role' => array(2),
+  );
+  $record = array(
+    'category' => 'Drupal Camp',
+    'recipients' => serialize($recipients),
+    'reply' => '',
+    'weight' => 0,
+    'selected' => 1,
+  );
+  drupal_write_record('mass_contact', $record);
+
+}
