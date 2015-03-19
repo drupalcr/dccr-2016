@@ -18,6 +18,7 @@ dependencies[] = taxonomy
 dependencies[] = text
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
+features[features_overrides][] = field_base.field_location.field_permissions
 features[field_base][] = field_session_approved
 features[field_base][] = field_speakers
 features[field_base][] = field_time

@@ -14,6 +14,17 @@ function dccr_ftr_sessions_ctools_plugin_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_field_default_field_bases_alter().
+ */
+function dccr_ftr_sessions_field_default_field_bases_alter(&$data) {
+  if (isset($data['field_location'])) {
+    $data['field_location']['field_permissions'] = array(
+      'type' => 2,
+    ); /* WAS: '' */
+  }
+}
+
+/**
  * Implements hook_node_info().
  */
 function dccr_ftr_sessions_node_info() {
