@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Drupal Camp Workshop feature.
+ */
+
+include_once 'dccr_ftr_workshop.features.inc';
