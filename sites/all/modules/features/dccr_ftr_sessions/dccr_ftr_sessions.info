@@ -9,6 +9,7 @@ dependencies[] = date
 dependencies[] = dccr_ftr_workshop
 dependencies[] = entityreference
 dependencies[] = features
+dependencies[] = features_override
 dependencies[] = field_permissions
 dependencies[] = list
 dependencies[] = node
