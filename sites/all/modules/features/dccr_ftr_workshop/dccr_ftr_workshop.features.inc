@@ -26,10 +26,10 @@ function dccr_ftr_workshop_flag_default_flags() {
     'types' => array(
       0 => 'workshop',
     ),
-    'flag_short' => 'Apply',
+    'flag_short' => 'Register',
     'flag_long' => '',
     'flag_message' => '',
-    'unflag_short' => 'Unflag this item',
+    'unflag_short' => 'Unregister',
     'unflag_long' => '',
     'unflag_message' => '',
     'unflag_denied_text' => '',
@@ -50,11 +50,11 @@ function dccr_ftr_workshop_flag_default_flags() {
     'access_author' => '',
     'show_contextual_link' => 0,
     'i18n' => 1,
-    'api_version' => 3,
     'module' => 'dccr_ftr_workshop',
     'locked' => array(
       0 => 'name',
     ),
+    'api_version' => 3,
   );
   return $flags;
 

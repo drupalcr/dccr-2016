@@ -262,6 +262,59 @@ function dccr_ftr_workshop_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-workshop-field_workshop_date'
+  $field_instances['node-workshop-field_workshop_date'] = array(
+    'bundle' => 'workshop',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'long',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+        ),
+        'type' => 'date_default',
+        'weight' => 7,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_workshop_date',
+    'label' => 'Workshop Date',
+    'required' => 1,
+    'settings' => array(
+      'default_value' => 'now',
+      'default_value2' => 'same',
+      'default_value_code' => '',
+      'default_value_code2' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'date',
+      'settings' => array(
+        'increment' => 15,
+        'input_format' => 'm/d/Y - H:i:s',
+        'input_format_custom' => '',
+        'label_position' => 'above',
+        'text_parts' => array(),
+        'year_range' => '-0:+0',
+      ),
+      'type' => 'date_popup',
+      'weight' => 10,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Availability');
@@ -270,6 +323,7 @@ function dccr_ftr_workshop_field_default_field_instances() {
   t('Room');
   t('Speaker');
   t('Track');
+  t('Workshop Date');
 
   return $field_instances;
 }
