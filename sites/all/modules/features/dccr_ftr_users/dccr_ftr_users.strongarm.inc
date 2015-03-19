@@ -21,22 +21,22 @@ function dccr_ftr_users_strongarm() {
       'display' => array(
         'message__message_text__0' => array(
           'message_notify_email_subject' => array(
-            'weight' => '0',
             'visible' => TRUE,
+            'weight' => 0,
           ),
           'message_notify_email_body' => array(
-            'weight' => '1',
             'visible' => FALSE,
+            'weight' => 0,
           ),
         ),
         'message__message_text__1' => array(
           'message_notify_email_subject' => array(
-            'weight' => '1',
             'visible' => FALSE,
+            'weight' => 0,
           ),
           'message_notify_email_body' => array(
-            'weight' => '0',
             'visible' => TRUE,
+            'weight' => 0,
           ),
         ),
       ),
@@ -55,7 +55,7 @@ function dccr_ftr_users_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'user_pictures';
-  $strongarm->value = 1;
+  $strongarm->value = '1';
   $export['user_pictures'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -83,7 +83,7 @@ function dccr_ftr_users_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'user_register';
-  $strongarm->value = '1';
+  $strongarm->value = 2;
   $export['user_register'] = $strongarm;
 
   return $export;
