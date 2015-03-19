@@ -72,9 +72,35 @@ function dccr_update_7000() {
 }
 
 /**
- * Enables dccr_ftr_permissions feature.
+ * Enable ds, ds_extras, date_views, date_popup, flag, admin_menu_toolbar, translation_helpers, modules and features dccr_ftr_workshop, dccr_ftr_config.
  */
 function dccr_update_7001() {
+  $module_list = array(
+    'date_popup',
+    'date_views',
+    'ds',
+    'ds_extras',
+    'flag',
+    'translation_helpers',
+    'admin_menu_toolbar',
+    'dccr_ftr_config',
+    'dccr_ftr_workshop',
+  );
+  module_enable($module_list, TRUE);
+}
+
+/**
+ * Enables dccr_ftr_sessions feature.
+ */
+function dccr_update_7002() {
+  $module_list = array('dccr_ftr_sessions');
+  module_enable($module_list, TRUE);
+}
+
+/**
+ * Enables dccr_ftr_permissions feature.
+ */
+function dccr_update_7003() {
   $module_list = array('dccr_ftr_permissions');
   module_enable($module_list, TRUE);
 }
