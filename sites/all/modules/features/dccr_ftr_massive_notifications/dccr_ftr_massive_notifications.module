@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Drupal Camp Massive Notifications feature.
+ */
+
+include_once 'dccr_ftr_massive_notifications.features.inc';
