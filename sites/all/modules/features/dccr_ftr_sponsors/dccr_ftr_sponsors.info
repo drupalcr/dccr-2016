@@ -5,6 +5,7 @@ package = Drupal Camp
 version = 7.x-1.0
 project = dccr_ftr_sponsors
 dependencies[] = ctools
+dependencies[] = dccr_ftr_workshop
 dependencies[] = features
 dependencies[] = image
 dependencies[] = link
