@@ -1,0 +1,4 @@
+name = DCCR Language Switcher
+core = 7.x
+package = Drupal Camp
+
