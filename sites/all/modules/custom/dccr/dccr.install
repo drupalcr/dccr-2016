@@ -108,9 +108,17 @@ function dccr_update_7003() {
 }
 
 /**
- * Disables webform module and enable some required modules.
+ * Enables dccr_ftr_massive_notifications feature.
  */
 function dccr_update_7004() {
+  $module_list = array('dccr_ftr_massive_notifications');
+  module_enable($module_list, TRUE);
+}
+
+/**
+ * Disables webform module and enable some required modules.
+ */
+function dccr_update_7005() {
   $module_disable = array('webform');
   module_disable($module_disable);
   drupal_uninstall_modules($module_disable);
