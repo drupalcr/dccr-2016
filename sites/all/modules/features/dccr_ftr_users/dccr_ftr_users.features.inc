@@ -138,9 +138,9 @@ function dccr_ftr_users_default_message_type() {
       ],
       "es" : [
         {
-          "value" : "El usuario [message:field-submitter-user:name] ha enviado el comprobante de pago.",
+          "value" : "El usuario [message:field-submission-user:name] ha enviado el comprobante de pago.",
           "format" : "plain_text",
-          "safe_value" : "\\u003Cp\\u003EEl usuario [message:field-submitter-user:name] ha enviado el comprobante de pago.\\u003C\\/p\\u003E\\n"
+          "safe_value" : "\\u003Cp\\u003EEl usuario [message:field-submission-user:name] ha enviado el comprobante de pago.\\u003C\\/p\\u003E\\n"
         },
         {
           "value" : "Usted puede revisar el env\\u00edo de [message:field-submission:user:name] en la url: [message:field-submission:url]",
