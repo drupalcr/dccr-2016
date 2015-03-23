@@ -116,4 +116,10 @@ function dccr_update_7004() {
   drupal_uninstall_modules($module_disable);
   $module_enable = array('entityform', 'entityform_i18n', 'message', 'message_notify', 'dccr_ftr_permissions');
   module_enable($module_enable);
+  $path = array(
+    'source' => 'payment-submit',
+    'alias' => 'enviar-comprobante',
+    'language' => 'es',
+  );
+  path_save($path);
 }
