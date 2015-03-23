@@ -16,6 +16,8 @@ function dccr_ftr_users_form_user_register_form_alter(&$form, &$form_state) {
  */
 function dccr_ftr_users_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id === 'dccr_payment_submission_form_entityform_edit_form') {
+    global $user;
+    $form['field_paid_users'][LANGUAGE_NONE][0]['target_id']['#default_value'] = "$user->name ($user->uid)";
     $form['field_paid_users']['#states'] = array(
       'invisible' => array(
         ':input[name="field_paying_others[und]"]' => array('checked' => FALSE),
