@@ -98,9 +98,20 @@ function dccr_update_7002() {
 }
 
 /**
- * Enables dccr_ftr_sponsors feature.
+ * Enables dccr_language_switcher custom module and dccr_ftr_menu feature.
  */
 function dccr_update_7003() {
+  $module_list = array(
+    'dccr_language_switcher',
+    'dccr_ftr_menus',
+  );
+  module_enable($module_list, TRUE);
+}
+
+/**
+ * Enables dccr_ftr_sponsors feature.
+ */
+function dccr_update_7004() {
   $module_list = array('dccr_ftr_sponsors');
   module_enable($module_list, TRUE);
 }
