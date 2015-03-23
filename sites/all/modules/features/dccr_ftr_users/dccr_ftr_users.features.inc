@@ -45,7 +45,7 @@ function dccr_ftr_users_default_entityform_type() {
       "submissions_view" : "default",
       "user_submissions_view" : "default",
       "form_status" : "ENTITYFORM_OPEN",
-      "roles" : { "2" : "2", "1" : 0, "3" : 0 },
+      "roles" : { "2" : "2", "1" : 0, "3" : 0, "4" : 0 },
       "resubmit_action" : "disallow",
       "redirect_path" : "user",
       "instruction_pre" : {
@@ -57,7 +57,7 @@ function dccr_ftr_users_default_entityform_type() {
     "rdf_mapping" : [],
     "paths" : { "submit" : {
         "source" : "eform\\/submit\\/dccr-payment-submission-form",
-        "alias" : "enviar-comprobante",
+        "alias" : "payment-submit",
         "language" : "und"
       }
     }
