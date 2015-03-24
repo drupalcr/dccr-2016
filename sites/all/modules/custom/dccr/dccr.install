@@ -117,17 +117,17 @@ function dccr_update_7004() {
 }
 
 /**
- * Enables dccr_ftr_sessions feature.
+ * Enables dccr_ftr_keynote feature.
  */
 function dccr_update_7005() {
-  $module_list = array('dccr_ftr_testimonial');
+  $module_list = array('dccr_ftr_keynote');
   module_enable($module_list, TRUE);
 }
 
 /**
- * Enables dccr_ftr_keynote feature.
+ * Enables dccr_ftr_sessions feature.
  */
 function dccr_update_7006() {
-  $module_list = array('dccr_ftr_keynote');
+  $module_list = array('dccr_ftr_testimonial');
   module_enable($module_list, TRUE);
 }
