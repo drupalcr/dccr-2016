@@ -1,0 +1,47 @@
+<?php
+/**
+ * @author Rodrigo Espinoza Brenes <rodrigo@estudiomanati.com>.
+ * @file dccr_language_switcher.module
+ */
+
+/**
+ * Implements hook_menu_link_alter().
+ * Alter english / español links in secondary menu so we can add the right url
+ * based on current page
+ */
+function dccr_language_switcher_menu_link_alter(&$item) {
+  if ($item['link_title'] == 'English' || $item['link_title'] == 'Español')
+    $item['options']['alter'] = true;
+}
+
+/**
+ * Implements hook_translated_menu_link_alter().
+ * alter english / español links in secondary menu so we can add the right url
+ * based on current page
+ */
+function dccr_language_switcher_translated_menu_link_alter(&$item, $map) {
+  if ($item['link_title'] == 'English' || $item['link_title'] == 'Español') {
+    global $language;
+    $languages = language_list('enabled');
+    $links = language_negotiation_get_switch_links('language', current_path());
+    if ($language->language == 'es') {
+      if (isset($links->links['en']['href'])) {
+        $item['href'] = $links->links['en']['href'];
+      }
+      else {
+        $item['href'] = current_path();
+      }
+      $item['localized_options']['language'] = $languages[1]['en'];
+    }
+    elseif ($language->language == 'en') {
+      if (isset($links->links['es']['href'])) {
+        $item['href'] = $links->links['es']['href'];
+      }
+      else {
+        $item['href'] = current_path();
+      }
+      $item['localized_options']['language'] = $languages[1]['es'];
+    }
+  }
+}
+
