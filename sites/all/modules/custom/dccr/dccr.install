@@ -164,3 +164,14 @@ function dccr_update_7008() {
   $module_list = array('dccr_ftr_testimonial');
   module_enable($module_list, TRUE);
 }
+
+/**
+ * DCCR-25: Enable required modules.
+ */
+function dccr_update_7009() {
+  $module_list = array('search_api', 'search_api_views', 'search_api_solr');
+  if (defined('PANTHEON_ENVIRONMENT')) {
+    $module_list[] = 'pantheon_apachesolr';
+  }
+  module_enable($module_list, TRUE);
+}
