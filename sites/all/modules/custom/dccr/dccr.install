@@ -139,3 +139,11 @@ function dccr_update_7006() {
   );
   path_save($path);
 }
+
+/**
+ * Enables dccr_ftr_sponsors feature.
+ */
+function dccr_update_7007() {
+  $module_list = array('dccr_ftr_sponsors');
+  module_enable($module_list, TRUE);
+}
