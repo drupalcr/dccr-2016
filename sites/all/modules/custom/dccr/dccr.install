@@ -117,9 +117,17 @@ function dccr_update_7004() {
 }
 
 /**
- * Enables dccr_ftr_permissions feature.
+ * Enables dccr_ftr_keynote feature.
  */
 function dccr_update_7005() {
+  $module_list = array('dccr_ftr_keynote');
+  module_enable($module_list, TRUE);
+}
+
+/**
+ * Enables dccr_ftr_permissions feature.
+ */
+function dccr_update_7006() {
   $module_list = array('dccr_ftr_permissions');
   module_enable($module_list, TRUE);
 }
