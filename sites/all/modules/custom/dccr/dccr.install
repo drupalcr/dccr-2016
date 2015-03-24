@@ -147,3 +147,11 @@ function dccr_update_7007() {
   $module_list = array('dccr_ftr_sponsors');
   module_enable($module_list, TRUE);
 }
+
+/**
+ * Enables dccr_ftr_testimonial feature.
+ */
+function dccr_update_7008() {
+  $module_list = array('dccr_ftr_testimonial');
+  module_enable($module_list, TRUE);
+}
