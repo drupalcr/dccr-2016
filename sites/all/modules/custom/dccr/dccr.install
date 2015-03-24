@@ -42,7 +42,6 @@ function dccr_install() {
     'variable',
     'conditional_styles',
     'magic',
-    'webform',
     'features',
     'strongarm',
     'diff',
@@ -122,4 +121,21 @@ function dccr_update_7004() {
 function dccr_update_7005() {
   $module_list = array('dccr_ftr_keynote');
   module_enable($module_list, TRUE);
+}
+
+/**
+ * Disables webform module and enable some required modules.
+ */
+function dccr_update_7006() {
+  $module_disable = array('webform');
+  module_disable($module_disable);
+  drupal_uninstall_modules($module_disable);
+  $module_enable = array('entityform', 'entityform_i18n', 'message', 'message_notify', 'dccr_ftr_permissions');
+  module_enable($module_enable);
+  $path = array(
+    'source' => 'payment-submit',
+    'alias' => 'enviar-comprobante',
+    'language' => 'es',
+  );
+  path_save($path);
 }
