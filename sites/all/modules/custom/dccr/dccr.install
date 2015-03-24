@@ -116,9 +116,17 @@ function dccr_update_7004() {
 }
 
 /**
- * Disables webform module and enable some required modules.
+ * Enables dccr_ftr_keynote feature.
  */
 function dccr_update_7005() {
+  $module_list = array('dccr_ftr_keynote');
+  module_enable($module_list, TRUE);
+}
+
+/**
+ * Disables webform module and enable some required modules.
+ */
+function dccr_update_7006() {
   $module_disable = array('webform');
   module_disable($module_disable);
   drupal_uninstall_modules($module_disable);
