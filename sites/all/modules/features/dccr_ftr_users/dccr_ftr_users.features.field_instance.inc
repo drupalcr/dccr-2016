@@ -10,6 +10,288 @@
 function dccr_ftr_users_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'entityform-dccr_payment_submission_form-field_paid_users'
+  $field_instances['entityform-dccr_payment_submission_form-field_paid_users'] = array(
+    'bundle' => 'dccr_payment_submission_form',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'If you are paying your ticket; please don\'t forget to select your own username here.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 0,
+          'view_mode' => 'default',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 3,
+      ),
+    ),
+    'entity_type' => 'entityform',
+    'field_name' => 'field_paid_users',
+    'label' => 'Users',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'apply_chosen' => 0,
+        'match_operator' => 'STARTS_WITH',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance: 'entityform-dccr_payment_submission_form-field_paying_others'
+  $field_instances['entityform-dccr_payment_submission_form-field_paying_others'] = array(
+    'bundle' => 'dccr_payment_submission_form',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'entityform',
+    'field_name' => 'field_paying_others',
+    'label' => 'Check this box if you are paying for other users',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'entityform-dccr_payment_submission_form-field_payment_receipt'
+  $field_instances['entityform-dccr_payment_submission_form-field_payment_receipt'] = array(
+    'bundle' => 'dccr_payment_submission_form',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'confirmation' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 0,
+      ),
+      'table' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'entityform',
+    'field_name' => 'field_payment_receipt',
+    'label' => 'Payment Receipt',
+    'required' => 1,
+    'settings' => array(
+      'description_field' => 0,
+      'entity_translation_sync' => FALSE,
+      'file_directory' => 'payment-receipts',
+      'file_extensions' => 'jpg jpeg gif png pdf',
+      'max_filesize' => '2MB',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'file',
+      'settings' => array(
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'file_generic',
+      'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance: 'message-dccr_admin_notification_payment_submit_form-field_submission'
+  $field_instances['message-dccr_admin_notification_payment_submit_form-field_submission'] = array(
+    'bundle' => 'dccr_admin_notification_payment_submit_form',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 1,
+      ),
+      'message_notify_email_body' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
+      'message_notify_email_subject' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
+    ),
+    'entity_type' => 'message',
+    'field_name' => 'field_submission',
+    'label' => 'Submission',
+    'required' => 1,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'message-dccr_admin_notification_payment_submit_form-field_submitter_user'
+  $field_instances['message-dccr_admin_notification_payment_submit_form-field_submitter_user'] = array(
+    'bundle' => 'dccr_admin_notification_payment_submit_form',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 0,
+      ),
+      'message_notify_email_body' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
+      'message_notify_email_subject' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
+    ),
+    'entity_type' => 'message',
+    'field_name' => 'field_submitter_user',
+    'label' => 'User',
+    'required' => 1,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'message-user_payment_approved-field_approved_user'
+  $field_instances['message-user_payment_approved-field_approved_user'] = array(
+    'bundle' => 'user_payment_approved',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 0,
+      ),
+      'message_notify_email_body' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'message_notify_email_subject' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'message',
+    'field_name' => 'field_approved_user',
+    'label' => 'User',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 1,
+    ),
+  );
+
   // Exported field_instance: 'user-user-field_about_me'
   $field_instances['user-user-field_about_me'] = array(
     'bundle' => 'user',
@@ -30,6 +312,7 @@ function dccr_ftr_users_field_default_field_instances() {
     'label' => 'About Me',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 1,
       'user_register_form' => 1,
     ),
@@ -40,7 +323,7 @@ function dccr_ftr_users_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 6,
+      'weight' => 7,
     ),
   );
 
@@ -64,6 +347,7 @@ function dccr_ftr_users_field_default_field_instances() {
     'label' => 'Company',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => 1,
     ),
     'widget' => array(
@@ -74,7 +358,7 @@ function dccr_ftr_users_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 5,
+      'weight' => 4,
     ),
   );
 
@@ -98,6 +382,7 @@ function dccr_ftr_users_field_default_field_instances() {
     'label' => 'Drupal.Org Username',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => 1,
     ),
@@ -108,7 +393,7 @@ function dccr_ftr_users_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
@@ -145,6 +430,7 @@ function dccr_ftr_users_field_default_field_instances() {
         'url_cutoff' => 80,
       ),
       'enable_tokens' => 1,
+      'entity_translation_sync' => FALSE,
       'rel_remove' => 'default',
       'title' => 'value',
       'title_label_use_field_label' => 0,
@@ -160,6 +446,40 @@ function dccr_ftr_users_field_default_field_instances() {
       'settings' => array(),
       'type' => 'link_field',
       'weight' => 9,
+    ),
+  );
+
+  // Exported field_instance: 'user-user-field_full_name'
+  $field_instances['user-user-field_full_name'] = array(
+    'bundle' => 'user',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 6,
+      ),
+    ),
+    'entity_type' => 'user',
+    'field_name' => 'field_full_name',
+    'label' => 'Full Name',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => 1,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 1,
     ),
   );
 
@@ -196,6 +516,7 @@ function dccr_ftr_users_field_default_field_instances() {
         'url_cutoff' => 80,
       ),
       'enable_tokens' => 1,
+      'entity_translation_sync' => FALSE,
       'rel_remove' => 'default',
       'title' => 'value',
       'title_label_use_field_label' => 0,
@@ -247,6 +568,7 @@ function dccr_ftr_users_field_default_field_instances() {
         'url_cutoff' => 80,
       ),
       'enable_tokens' => 1,
+      'entity_translation_sync' => FALSE,
       'rel_remove' => 'default',
       'title' => 'value',
       'title_label_use_field_label' => 0,
@@ -268,11 +590,18 @@ function dccr_ftr_users_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('About Me');
+  t('Check this box if you are paying for other users');
   t('Company');
   t('Drupal.Org Username');
   t('Facebook Profile');
+  t('Full Name');
+  t('If you are paying your ticket; please don\'t forget to select your own username here.');
   t('LinkedIn Profile');
+  t('Payment Receipt');
+  t('Submission');
   t('Twitter Profile');
+  t('User');
+  t('Users');
 
   return $field_instances;
 }

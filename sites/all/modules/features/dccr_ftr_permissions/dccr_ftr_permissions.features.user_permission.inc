@@ -34,7 +34,6 @@ function dccr_ftr_permissions_user_default_permissions() {
   $permissions['access content'] = array(
     'name' => 'access content',
     'roles' => array(
-      'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
     ),
@@ -46,6 +45,7 @@ function dccr_ftr_permissions_user_default_permissions() {
     'name' => 'access content overview',
     'roles' => array(
       'administrator' => 'administrator',
+      'drupal_administrator' => 'drupal_administrator',
     ),
     'module' => 'node',
   );
@@ -84,6 +84,7 @@ function dccr_ftr_permissions_user_default_permissions() {
     'name' => 'access site reports',
     'roles' => array(
       'administrator' => 'administrator',
+      'drupal_administrator' => 'drupal_administrator',
     ),
     'module' => 'system',
   );
@@ -92,7 +93,6 @@ function dccr_ftr_permissions_user_default_permissions() {
   $permissions['access user profiles'] = array(
     'name' => 'access user profiles',
     'roles' => array(
-      'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
     ),
@@ -113,6 +113,7 @@ function dccr_ftr_permissions_user_default_permissions() {
     'name' => 'administer content translations',
     'roles' => array(
       'administrator' => 'administrator',
+      'drupal_administrator' => 'drupal_administrator',
     ),
     'module' => 'i18n_node',
   );
@@ -131,6 +132,7 @@ function dccr_ftr_permissions_user_default_permissions() {
     'name' => 'administer entity translation',
     'roles' => array(
       'administrator' => 'administrator',
+      'drupal_administrator' => 'drupal_administrator',
     ),
     'module' => 'entity_translation',
   );
@@ -232,6 +234,7 @@ function dccr_ftr_permissions_user_default_permissions() {
     'name' => 'administer url aliases',
     'roles' => array(
       'administrator' => 'administrator',
+      'drupal_administrator' => 'drupal_administrator',
     ),
     'module' => 'path',
   );
@@ -241,6 +244,7 @@ function dccr_ftr_permissions_user_default_permissions() {
     'name' => 'administer users',
     'roles' => array(
       'administrator' => 'administrator',
+      'drupal_administrator' => 'drupal_administrator',
     ),
     'module' => 'user',
   );
@@ -260,6 +264,7 @@ function dccr_ftr_permissions_user_default_permissions() {
     'name' => 'block IP addresses',
     'roles' => array(
       'administrator' => 'administrator',
+      'drupal_administrator' => 'drupal_administrator',
     ),
     'module' => 'system',
   );
@@ -612,6 +617,7 @@ function dccr_ftr_permissions_user_default_permissions() {
     'name' => 'view own unpublished content',
     'roles' => array(
       'administrator' => 'administrator',
+      'drupal_administrator' => 'drupal_administrator',
     ),
     'module' => 'node',
   );
