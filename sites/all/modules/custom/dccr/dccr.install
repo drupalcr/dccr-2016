@@ -97,11 +97,29 @@ function dccr_update_7002() {
   module_enable($module_list, TRUE);
 }
 
+/**
+ * Enables dccr_language_switcher custom module and dccr_ftr_menu feature.
+ */
+function dccr_update_7003() {
+  $module_list = array(
+    'dccr_language_switcher',
+    'dccr_ftr_menus',
+  );
+  module_enable($module_list, TRUE);
+}
+
+/**
+ * Enables dccr_ftr_massive_notifications feature.
+ */
+function dccr_update_7004() {
+  $module_list = array('dccr_ftr_massive_notifications');
+  module_enable($module_list, TRUE);
+}
 
 /**
  * Enables dccr_ftr_sessions feature.
  */
-function dccr_update_7003() {
+function dccr_update_7005() {
   $module_list = array('dccr_ftr_testimonial');
   module_enable($module_list, TRUE);
 }
