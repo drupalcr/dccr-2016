@@ -115,3 +115,11 @@ function dccr_update_7004() {
   $module_list = array('dccr_ftr_massive_notifications');
   module_enable($module_list, TRUE);
 }
+
+/**
+ * Enables dccr_ftr_keynote feature.
+ */
+function dccr_update_7005() {
+  $module_list = array('dccr_ftr_keynote');
+  module_enable($module_list, TRUE);
+}
