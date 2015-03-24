@@ -17,6 +17,13 @@ function dccr_ftr_users_ctools_plugin_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_views_api().
+ */
+function dccr_ftr_users_views_api($module = NULL, $api = NULL) {
+  return array("api" => "3.0");
+}
+
+/**
  * Implements hook_default_entityform_type().
  */
 function dccr_ftr_users_default_entityform_type() {
@@ -189,6 +196,140 @@ function dccr_ftr_users_default_message_type() {
         }
       ]
     },
+    "rdf_mapping" : []
+  }');
+  return $items;
+}
+
+/**
+ * Implements hook_default_search_api_index().
+ */
+function dccr_ftr_users_default_search_api_index() {
+  $items = array();
+  $items['dccr_users_index'] = entity_import('search_api_index', '{
+    "name" : "Users Index",
+    "machine_name" : "dccr_users_index",
+    "description" : null,
+    "server" : "solr",
+    "item_type" : "user",
+    "options" : {
+      "index_directly" : 1,
+      "cron_limit" : "50",
+      "fields" : {
+        "created" : { "type" : "date" },
+        "field_company" : { "type" : "integer", "entity_type" : "taxonomy_term" },
+        "field_drupal_org" : { "type" : "text" },
+        "field_facebook_profile:url" : { "type" : "uri" },
+        "field_full_name" : { "type" : "text" },
+        "field_linkedin_profile:url" : { "type" : "uri" },
+        "field_twitter_profile:url" : { "type" : "uri" },
+        "flag_dccr_registration_complete" : { "type" : "boolean" },
+        "mail" : { "type" : "text" },
+        "name" : { "type" : "string" },
+        "roles" : { "type" : "list\\u003Cinteger\\u003E" },
+        "search_api_language" : { "type" : "string" },
+        "status" : { "type" : "integer" },
+        "uid" : { "type" : "integer" },
+        "url" : { "type" : "uri" }
+      },
+      "data_alter_callbacks" : {
+        "search_api_alter_role_filter" : {
+          "status" : 1,
+          "weight" : "-10",
+          "settings" : { "default" : "1", "roles" : { "1" : "1", "3" : "3", "4" : "4" } }
+        },
+        "search_api_alter_language_control" : {
+          "status" : 0,
+          "weight" : "0",
+          "settings" : { "lang_field" : "", "languages" : [] }
+        },
+        "search_api_alter_add_hierarchy" : { "status" : 0, "weight" : "0", "settings" : { "fields" : [] } },
+        "search_api_alter_add_aggregation" : { "status" : 0, "weight" : "0", "settings" : [] },
+        "search_api_alter_add_url" : { "status" : 0, "weight" : "0", "settings" : [] },
+        "search_api_alter_add_viewed_entity" : { "status" : 0, "weight" : "0", "settings" : { "mode" : "full" } }
+      },
+      "processors" : {
+        "search_api_case_ignore" : {
+          "status" : 0,
+          "weight" : "0",
+          "settings" : { "fields" : {
+              "name" : true,
+              "mail" : true,
+              "field_drupal_org" : true,
+              "field_full_name" : true
+            }
+          }
+        },
+        "search_api_html_filter" : {
+          "status" : 0,
+          "weight" : "10",
+          "settings" : {
+            "fields" : {
+              "name" : true,
+              "mail" : true,
+              "field_drupal_org" : true,
+              "field_full_name" : true
+            },
+            "title" : 0,
+            "alt" : 1,
+            "tags" : "h1 = 5\\r\\nh2 = 3\\r\\nh3 = 2\\r\\nstrong = 2\\r\\nb = 2\\r\\nem = 1.5\\r\\nu = 1.5"
+          }
+        },
+        "search_api_transliteration" : {
+          "status" : 1,
+          "weight" : "15",
+          "settings" : { "fields" : {
+              "name" : true,
+              "mail" : true,
+              "field_drupal_org" : true,
+              "field_full_name" : true
+            }
+          }
+        },
+        "search_api_tokenizer" : {
+          "status" : 0,
+          "weight" : "20",
+          "settings" : {
+            "fields" : {
+              "name" : true,
+              "mail" : true,
+              "field_drupal_org" : true,
+              "field_full_name" : true
+            },
+            "spaces" : "[^[:alnum:]]",
+            "ignorable" : "[\\u0027]"
+          }
+        },
+        "search_api_stopwords" : {
+          "status" : 0,
+          "weight" : "30",
+          "settings" : {
+            "fields" : {
+              "name" : true,
+              "mail" : true,
+              "field_drupal_org" : true,
+              "field_full_name" : true
+            },
+            "file" : "",
+            "stopwords" : "but\\r\\ndid\\r\\nthe this that those\\r\\netc"
+          }
+        },
+        "search_api_highlighting" : {
+          "status" : 1,
+          "weight" : "35",
+          "settings" : {
+            "prefix" : "\\u003Cstrong\\u003E",
+            "suffix" : "\\u003C\\/strong\\u003E",
+            "excerpt" : 1,
+            "excerpt_length" : "256",
+            "exclude_fields" : [],
+            "highlight" : "always"
+          }
+        }
+      }
+    },
+    "enabled" : "1",
+    "read_only" : "0",
     "rdf_mapping" : []
   }');
   return $items;
