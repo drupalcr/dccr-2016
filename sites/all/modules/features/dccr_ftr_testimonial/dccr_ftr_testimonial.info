@@ -10,6 +10,7 @@ dependencies[] = dccr_ftr_workshop
 dependencies[] = features
 dependencies[] = i18n_taxonomy
 dependencies[] = image
+dependencies[] = link
 dependencies[] = node
 dependencies[] = strongarm
 dependencies[] = taxonomy
