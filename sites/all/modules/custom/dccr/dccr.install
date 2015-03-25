@@ -71,7 +71,10 @@ function dccr_update_7000() {
 }
 
 /**
- * Enable ds, ds_extras, date_views, date_popup, flag, admin_menu_toolbar, translation_helpers, modules and features dccr_ftr_workshop, dccr_ftr_config.
+ * Enable some required modules.
+ *
+ * Enable ds, ds_extras, date_views, date_popup, flag, admin_menu_toolbar,
+ * translation_helpers, modules and features dccr_ftr_workshop, dccr_ftr_config.
  */
 function dccr_update_7001() {
   $module_list = array(
@@ -130,7 +133,13 @@ function dccr_update_7006() {
   $module_disable = array('webform');
   module_disable($module_disable);
   drupal_uninstall_modules($module_disable);
-  $module_enable = array('entityform', 'entityform_i18n', 'message', 'message_notify', 'dccr_ftr_permissions');
+  $module_enable = array(
+    'entityform',
+    'entityform_i18n',
+    'message',
+    'message_notify',
+    'dccr_ftr_permissions',
+  );
   module_enable($module_enable);
   $path = array(
     'source' => 'payment-submit',
@@ -157,9 +166,20 @@ function dccr_update_7008() {
 }
 
 /**
- * Enables dccr_ftr_permissions feature.
+ * DCCR-25: Enable required modules.
  */
 function dccr_update_7009() {
+  $module_list = array('search_api', 'search_api_views', 'search_api_solr');
+  if (defined('PANTHEON_ENVIRONMENT')) {
+    $module_list[] = 'pantheon_apachesolr';
+  }
+  module_enable($module_list, TRUE);
+}
+
+/**
+ * Enables dccr_ftr_permissions feature.
+ */
+function dccr_update_7010() {
   $module_list = array('dccr_ftr_permissions');
   module_enable($module_list, TRUE);
 }
