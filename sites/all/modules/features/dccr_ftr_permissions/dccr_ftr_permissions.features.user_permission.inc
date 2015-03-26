@@ -132,7 +132,6 @@ function dccr_ftr_permissions_user_default_permissions() {
     'name' => 'administer entity translation',
     'roles' => array(
       'administrator' => 'administrator',
-      'drupal_administrator' => 'drupal_administrator',
     ),
     'module' => 'entity_translation',
   );
@@ -254,7 +253,6 @@ function dccr_ftr_permissions_user_default_permissions() {
     'name' => 'administer views',
     'roles' => array(
       'administrator' => 'administrator',
-      'drupal_administrator' => 'drupal_administrator',
     ),
     'module' => 'views',
   );
@@ -474,7 +472,6 @@ function dccr_ftr_permissions_user_default_permissions() {
     'name' => 'flush caches',
     'roles' => array(
       'administrator' => 'administrator',
-      'drupal_administrator' => 'drupal_administrator',
     ),
     'module' => 'admin_menu',
   );
