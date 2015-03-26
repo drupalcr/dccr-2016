@@ -175,3 +175,11 @@ function dccr_update_7009() {
   }
   module_enable($module_list, TRUE);
 }
+
+/**
+ * Enables dccr_ftr_permissions feature.
+ */
+function dccr_update_7010() {
+  $module_list = array('dccr_ftr_permissions');
+  module_enable($module_list, TRUE);
+}
