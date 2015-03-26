@@ -40,7 +40,7 @@ function dccr_ftr_workshop_flag_default_flags() {
     'unflag_long' => '',
     'unflag_message' => '',
     'unflag_denied_text' => '',
-    'link_type' => 'toggle',
+    'link_type' => 'normal',
     'weight' => 0,
     'show_in_links' => array(
       'full' => 0,
@@ -52,7 +52,7 @@ function dccr_ftr_workshop_flag_default_flags() {
       'token' => 0,
       'revision' => 0,
     ),
-    'show_as_field' => 1,
+    'show_as_field' => 0,
     'show_on_form' => 0,
     'access_author' => '',
     'show_contextual_link' => 0,
