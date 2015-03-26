@@ -92,9 +92,9 @@ function dccr_ftr_workshop_default_message_type() {
           "safe_value" : "\\u003Cp\\u003EThe workshop [message:field-workshop-node:title] is full\\u003C\\/p\\u003E\\n"
         },
         {
-          "value" : "The workshop [message:field-workshop-node:title] is full.\\n\\nThanks.",
+          "value" : "The workshop [message:field-workshop-node:title] is full.\\nThere are [message:field-workshop-node:flag-workshop-registration-count] people registered.\\nYou can verify this information following this link  [message:field-workshop-node:url:absolute].\\nThanks.",
           "format" : "plain_text",
-          "safe_value" : "\\u003Cp\\u003EThe workshop [message:field-workshop-node:title] is full.\\u003C\\/p\\u003E\\n\\u003Cp\\u003EThanks.\\u003C\\/p\\u003E\\n"
+          "safe_value" : "\\u003Cp\\u003EThe workshop [message:field-workshop-node:title] is full.\\u003Cbr \\/\\u003E\\nThere are [message:field-workshop-node:flag-workshop-registration-count] people registered.\\u003Cbr \\/\\u003E\\nYou can verify this information following this link  [message:field-workshop-node:url:absolute].\\u003Cbr \\/\\u003E\\nThanks.\\u003C\\/p\\u003E\\n"
         }
       ],
       "es" : [
@@ -104,9 +104,9 @@ function dccr_ftr_workshop_default_message_type() {
           "safe_value" : "\\u003Cp\\u003EEl taller [message:field-workshop-node:title] est\\u00e1 lleno\\u003C\\/p\\u003E\\n"
         },
         {
-          "value" : "El taller [message:field-workshop-node:title] ha completado su cupo.\\r\\n\\r\\nGracias.",
+          "value" : "El taller [message:field-workshop-node:title] ha completado su cupo.\\r\\nSe han registrado un total de [message:field-workshop-node:flag-workshop-registration-count]  personas.\\r\\nPuede verificar esta informaci\\u00f3n siguiendo el siguiente enlace  [message:field-workshop-node:url:absolute].\\r\\n\\r\\nGracias.",
           "format" : "plain_text",
-          "safe_value" : "\\u003Cp\\u003EEl taller [message:field-workshop-node:title] ha completado su cupo.\\u003C\\/p\\u003E\\n\\u003Cp\\u003EGracias.\\u003C\\/p\\u003E\\n"
+          "safe_value" : "\\u003Cp\\u003EEl taller [message:field-workshop-node:title] ha completado su cupo.\\u003Cbr \\/\\u003E\\nSe han registrado un total de [message:field-workshop-node:flag-workshop-registration-count]  personas.\\u003Cbr \\/\\u003E\\nPuede verificar esta informaci\\u00f3n siguiendo el siguiente enlace  [message:field-workshop-node:url:absolute].\\u003C\\/p\\u003E\\n\\u003Cp\\u003EGracias.\\u003C\\/p\\u003E\\n"
         }
       ]
     },
@@ -122,7 +122,7 @@ function dccr_ftr_workshop_default_message_type() {
       "token options" : { "clear" : 0 },
       "purge" : { "override" : 0, "enabled" : 0, "quota" : "", "days" : "" }
     },
-    "language" : "en",
+    "language" : "es",
     "arguments" : null,
     "message_text" : {
       "en" : [
@@ -132,21 +132,21 @@ function dccr_ftr_workshop_default_message_type() {
           "safe_value" : "\\u003Cp\\u003EYou are registered in the workshop  [message:field-workshop-node:title]\\u003C\\/p\\u003E\\n"
         },
         {
-          "value" : "Dear [current-user:name] \\r\\nYou are registered in the workshop [message:field-workshop-node:title], gonna be the [message:field-workshop-node:field-workshop-date:value:custom:d\\/m\\/Y - g:i a]\\r\\n\\r\\nThanks.",
+          "value" : "Dear [current-user:name] \\nYou are registered in the workshop [message:field-workshop-node:title]; it\\u0027s going to be on [message:field-workshop-node:field-workshop-date:value:custom:m\\/d\\/Y - g:i a]\\n\\nThanks.",
           "format" : "plain_text",
-          "safe_value" : "\\u003Cp\\u003EDear [current-user:name]\\u003Cbr \\/\\u003E\\nYou are registered in the workshop [message:field-workshop-node:title], gonna be the [message:field-workshop-node:field-workshop-date:value:custom:d\\/m\\/Y - g:i a]\\u003C\\/p\\u003E\\n\\u003Cp\\u003EThanks.\\u003C\\/p\\u003E\\n"
+          "safe_value" : "\\u003Cp\\u003EDear [current-user:name]\\u003Cbr \\/\\u003E\\nYou are registered in the workshop [message:field-workshop-node:title]; it\\u0026#039;s going to be on [message:field-workshop-node:field-workshop-date:value:custom:m\\/d\\/Y - g:i a]\\u003C\\/p\\u003E\\n\\u003Cp\\u003EThanks.\\u003C\\/p\\u003E\\n"
         }
       ],
       "es" : [
         {
-          "value" : "Usted se ha registrado en el taller de [message:field-workshop-node:title]\\n",
+          "value" : "Usted se ha registrado en el taller de [message:field-workshop-node:title]\\r\\n",
           "format" : "plain_text",
           "safe_value" : "\\u003Cp\\u003EUsted se ha registrado en el taller de [message:field-workshop-node:title]\\u003C\\/p\\u003E\\n"
         },
         {
-          "value" : "Querido [current-user:name]\\nUsted se ha registrado correctamente en el taller  [message:field-workshop-node:title] , sera el [message:field-workshop-node:field-workshop-date:value:custom:d\\/m\\/Y - g:i a]\\nGracias.\\n",
+          "value" : "Querido [current-user:name]\\r\\nUsted se ha registrado correctamente en el taller [message:field-workshop-node:title]; el mismo ser\\u00e1 el d\\u00eda [message:field-workshop-node:field-workshop-date:value:custom:d\\/m\\/Y - g:i a].\\r\\n\\r\\nGracias.\\r\\n",
           "format" : "plain_text",
-          "safe_value" : "\\u003Cp\\u003EQuerido [current-user:name]\\u003Cbr \\/\\u003E\\nUsted se ha registrado correctamente en el taller  [message:field-workshop-node:title] , sera el [message:field-workshop-node:field-workshop-date:value:custom:d\\/m\\/Y - g:i a]\\u003Cbr \\/\\u003E\\nGracias.\\u003C\\/p\\u003E\\n"
+          "safe_value" : "\\u003Cp\\u003EQuerido [current-user:name]\\u003Cbr \\/\\u003E\\nUsted se ha registrado correctamente en el taller [message:field-workshop-node:title]; el mismo ser\\u00e1 el d\\u00eda [message:field-workshop-node:field-workshop-date:value:custom:d\\/m\\/Y - g:i a].\\u003C\\/p\\u003E\\n\\u003Cp\\u003EGracias.\\u003C\\/p\\u003E\\n"
         }
       ]
     },
