@@ -50,7 +50,7 @@ function dccr_ftr_workshop_register_link($node) {
 /**
  * Implements hook_flag_flag().
  */
-function dccr_ftr_workshop_flag_flag($flag, $content_id, $account, $flagging){
+function dccr_ftr_workshop_flag_flag($flag, $content_id, $account, $flagging) {
   if ($flag->name == 'workshop_registration') {
     dccr_ftr_workshop_countdown('flag',$content_id);
   }
@@ -59,13 +59,13 @@ function dccr_ftr_workshop_flag_flag($flag, $content_id, $account, $flagging){
 /**
  * Implements hook_flag_unflag().
  */
-function dccr_ftr_workshop_flag_unflag($flag, $content_id, $account, $flagging){
+function dccr_ftr_workshop_flag_unflag($flag, $content_id, $account, $flagging) {
   if ($flag->name == 'workshop_registration') {
     dccr_ftr_workshop_countdown('unflag',$content_id);
   }
 }
 
-function dccr_ftr_workshop_countdown($action, $content_id){
+function dccr_ftr_workshop_countdown($action, $content_id) {
   $wrapper = entity_metadata_wrapper('node', $content_id);
   if ($wrapper->source->value()) {
     $translations = translation_node_get_translations($wrapper->source->value()->tnid);
