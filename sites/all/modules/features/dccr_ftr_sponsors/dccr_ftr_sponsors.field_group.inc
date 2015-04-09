@@ -24,7 +24,7 @@ function dccr_ftr_sponsors_field_group_info() {
     'weight' => '0',
     'children' => array(
       0 => 'field_image',
-      1 => 'field_sponsorship_level',
+      1 => 'field_sponsorship_level_ref',
     ),
     'format_type' => 'div',
     'format_settings' => array(
