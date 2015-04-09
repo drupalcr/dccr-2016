@@ -48,26 +48,64 @@ function dccr_ftr_propossed_sessions_views_default_views() {
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'title' => 'title',
+    'field_speakers_name' => 'field_speakers_name',
+    'field_track' => 'field_track',
+    'field_level' => 'field_level',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'title' => array(
+      'align' => 'views-align-left',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_speakers_name' => array(
+      'align' => 'views-align-center',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_track' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => 'views-align-center',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_level' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => 'views-align-center',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['header'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Indexed Node: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'search_api_index_proposed_sessions';
   $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['label'] = 'Session';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
   /* Field: Speakers: Name (indexed) */
   $handler->display->display_options['fields']['field_speakers_name']['id'] = 'field_speakers_name';
   $handler->display->display_options['fields']['field_speakers_name']['table'] = 'search_api_index_proposed_sessions';
   $handler->display->display_options['fields']['field_speakers_name']['field'] = 'field_speakers_name';
-  $handler->display->display_options['fields']['field_speakers_name']['label'] = '';
+  $handler->display->display_options['fields']['field_speakers_name']['label'] = 'Speaker (s)';
   $handler->display->display_options['fields']['field_speakers_name']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_speakers_name']['link_to_entity'] = 1;
   /* Field: Indexed Node: Track */
   $handler->display->display_options['fields']['field_track']['id'] = 'field_track';
   $handler->display->display_options['fields']['field_track']['table'] = 'search_api_index_proposed_sessions';
   $handler->display->display_options['fields']['field_track']['field'] = 'field_track';
-  $handler->display->display_options['fields']['field_track']['label'] = '';
   $handler->display->display_options['fields']['field_track']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_track']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_track']['view_mode'] = 'full';
@@ -76,8 +114,13 @@ function dccr_ftr_propossed_sessions_views_default_views() {
   $handler->display->display_options['fields']['field_level']['id'] = 'field_level';
   $handler->display->display_options['fields']['field_level']['table'] = 'search_api_index_proposed_sessions';
   $handler->display->display_options['fields']['field_level']['field'] = 'field_level';
-  $handler->display->display_options['fields']['field_level']['label'] = '';
   $handler->display->display_options['fields']['field_level']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Indexed Node: Date created */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'search_api_index_proposed_sessions';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Indexed Node: Content type */
@@ -127,7 +170,10 @@ function dccr_ftr_propossed_sessions_views_default_views() {
     t('.'),
     t(','),
     t('Block'),
+    t('Session'),
+    t('Speaker (s)'),
     t('Track'),
+    t('Level'),
   );
   $export['proposed_sessions_list'] = $view;
 
