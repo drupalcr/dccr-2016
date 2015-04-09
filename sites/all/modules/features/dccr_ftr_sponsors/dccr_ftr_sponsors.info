@@ -43,6 +43,7 @@ features[variable][] = menu_parent_dccr_sponsor
 features[variable][] = node_options_dccr_sponsor
 features[variable][] = node_preview_dccr_sponsor
 features[variable][] = node_submitted_dccr_sponsor
+features[variable][] = pathauto_node_dccr_sponsor_pattern
 features[views_view][] = sponsors
 features_exclude[field_base][body] = body
 features_exclude[field_base][field_image] = field_image
