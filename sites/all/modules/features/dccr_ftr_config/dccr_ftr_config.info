@@ -13,3 +13,4 @@ features[variable][] = language_default
 features[variable][] = language_negotiation_language
 features[variable][] = language_negotiation_language_content
 features[variable][] = language_negotiation_language_url
+features[variable][] = pathauto_transliterate
