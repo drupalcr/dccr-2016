@@ -33,6 +33,7 @@ function dccr_ftr_users_field_default_field_instances() {
     'label' => 'Users',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -72,6 +73,7 @@ function dccr_ftr_users_field_default_field_instances() {
     'label' => 'Check this box if you are paying for other users',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -277,6 +279,7 @@ function dccr_ftr_users_field_default_field_instances() {
     'label' => 'User',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -469,6 +472,7 @@ function dccr_ftr_users_field_default_field_instances() {
     'label' => 'Full Name',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => 1,
     ),

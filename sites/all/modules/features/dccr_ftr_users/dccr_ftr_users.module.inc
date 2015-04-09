@@ -27,6 +27,29 @@ function dccr_ftr_users_form_alter(&$form, &$form_state, $form_id) {
 }
 
 /**
+ * Implements hook_flag_flag().
+ */
+function dccr_ftr_users_flag_flag($flag, $entity_id, $account, $flagging) {
+  dccr_ftr_users_track_user($flag, $entity_id);
+}
+
+/**
+ * Implements hook_flag_unflag().
+ */
+function dccr_ftr_users_flag_unflag($flag, $entity_id, $account, $flagging) {
+  dccr_ftr_users_track_user($flag, $entity_id);
+}
+
+/**
+ * Invoke search_api_track_item_change for recently flagged user.
+ */
+function dccr_ftr_users_track_user($flag, $entity_id) {
+  if ($flag->name === 'dccr_registration_complete') {
+    search_api_track_item_change('user', array($entity_id));
+  }
+}
+
+/**
  * Extra validate for user_register_form.
  */
 function dccr_ftr_users_form_user_register_form_validate($form, &$form_state) {

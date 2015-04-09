@@ -183,3 +183,11 @@ function dccr_update_7010() {
   $module_list = array('dccr_ftr_permissions');
   module_enable($module_list, TRUE);
 }
+
+/**
+ * Enables honeypot and logintoboggan modules.
+ */
+function dccr_update_7011() {
+  $module_list = array('honeypot', 'logintoboggan');
+  module_enable($module_list, TRUE);
+}
