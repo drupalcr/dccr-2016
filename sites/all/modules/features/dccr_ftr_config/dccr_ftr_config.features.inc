@@ -29,6 +29,7 @@ function dccr_ftr_config_default_search_api_index() {
       "cron_limit" : "50",
       "fields" : {
         "author" : { "type" : "integer", "entity_type" : "user" },
+        "created" : { "type" : "date" },
         "field_availability" : { "type" : "integer" },
         "field_level" : { "type" : "integer" },
         "field_location" : { "type" : "integer", "entity_type" : "taxonomy_term" },
