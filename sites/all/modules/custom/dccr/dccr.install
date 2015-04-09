@@ -188,7 +188,7 @@ function dccr_update_7010() {
  * Enables required modules for views.
  */
 function dccr_update_7011() {
-  $module_list = array('views_ui');
+  $module_list = array('views_ui, better_exposed_filters');
   module_enable($module_list, TRUE);
 }
 
