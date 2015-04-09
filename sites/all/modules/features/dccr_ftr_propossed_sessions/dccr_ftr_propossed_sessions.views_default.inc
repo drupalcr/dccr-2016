@@ -42,9 +42,81 @@ function dccr_ftr_propossed_sessions_views_default_views() {
   $handler->display->display_options['defaults']['use_ajax'] = FALSE;
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['defaults']['exposed_form'] = FALSE;
-  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['type'] = 'better_exposed_filters';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'All';
   $handler->display->display_options['exposed_form']['options']['expose_sort_order'] = FALSE;
   $handler->display->display_options['exposed_form']['options']['autosubmit'] = TRUE;
+  $handler->display->display_options['exposed_form']['options']['bef'] = array(
+    'general' => array(
+      'allow_secondary' => 0,
+      'secondary_label' => 'Advanced options',
+      'collapsible_label' => NULL,
+      'combine_rewrite' => NULL,
+      'reset_label' => NULL,
+      'bef_filter_description' => NULL,
+      'any_label' => NULL,
+      'filter_rewrite_values' => NULL,
+    ),
+    'field_track' => array(
+      'bef_format' => 'bef_links',
+      'more_options' => array(
+        'bef_select_all_none' => FALSE,
+        'bef_collapsible' => 0,
+        'is_secondary' => 0,
+        'any_label' => 'All',
+        'bef_filter_description' => '',
+        'tokens' => array(
+          'available' => array(
+            0 => 'global_types',
+            'secondary_label' => NULL,
+            'collapsible_label' => NULL,
+            'combine_rewrite' => NULL,
+            'reset_label' => NULL,
+            'bef_filter_description' => NULL,
+            'any_label' => NULL,
+            'filter_rewrite_values' => NULL,
+          ),
+          'secondary_label' => NULL,
+          'collapsible_label' => NULL,
+          'combine_rewrite' => NULL,
+          'reset_label' => NULL,
+          'bef_filter_description' => NULL,
+          'any_label' => NULL,
+          'filter_rewrite_values' => NULL,
+        ),
+        'rewrite' => array(
+          'filter_rewrite_values' => '',
+          'secondary_label' => NULL,
+          'collapsible_label' => NULL,
+          'combine_rewrite' => NULL,
+          'reset_label' => NULL,
+          'bef_filter_description' => NULL,
+          'any_label' => NULL,
+        ),
+        'secondary_label' => NULL,
+        'collapsible_label' => NULL,
+        'combine_rewrite' => NULL,
+        'reset_label' => NULL,
+        'filter_rewrite_values' => NULL,
+      ),
+      'secondary_label' => NULL,
+      'collapsible_label' => NULL,
+      'combine_rewrite' => NULL,
+      'reset_label' => NULL,
+      'bef_filter_description' => NULL,
+      'any_label' => NULL,
+      'filter_rewrite_values' => NULL,
+    ),
+    'secondary_label' => NULL,
+    'collapsible_label' => NULL,
+    'combine_rewrite' => NULL,
+    'reset_label' => NULL,
+    'bef_filter_description' => NULL,
+    'any_label' => NULL,
+    'filter_rewrite_values' => NULL,
+  );
+  $handler->display->display_options['exposed_form']['options']['input_required'] = 0;
+  $handler->display->display_options['exposed_form']['options']['text_input_required_format'] = 'manati_texto_formato';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
@@ -147,7 +219,6 @@ function dccr_ftr_propossed_sessions_views_default_views() {
   $handler->display->display_options['filters']['field_track']['group'] = 1;
   $handler->display->display_options['filters']['field_track']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_track']['expose']['operator_id'] = 'field_track_op';
-  $handler->display->display_options['filters']['field_track']['expose']['label'] = 'Track';
   $handler->display->display_options['filters']['field_track']['expose']['operator'] = 'field_track_op';
   $handler->display->display_options['filters']['field_track']['expose']['identifier'] = 'field_track';
   $handler->display->display_options['filters']['field_track']['expose']['remember_roles'] = array(
@@ -170,6 +241,9 @@ function dccr_ftr_propossed_sessions_views_default_views() {
     t('.'),
     t(','),
     t('Block'),
+    t('All'),
+    t('Advanced options'),
+    t('Select any filter and click on Apply to see results'),
     t('Session'),
     t('Speaker (s)'),
     t('Track'),

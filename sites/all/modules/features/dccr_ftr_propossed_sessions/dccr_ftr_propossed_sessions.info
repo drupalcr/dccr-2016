@@ -4,6 +4,7 @@ core = 7.x
 package = Drupal Camp
 version = 7.x-1.0
 project = dccr_ftr_propossed_sessions
+dependencies[] = better_exposed_filters
 dependencies[] = dccr_ftr_config
 dependencies[] = views
 features[ctools][] = views:views_default:3.0
