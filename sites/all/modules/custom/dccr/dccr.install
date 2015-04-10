@@ -185,9 +185,17 @@ function dccr_update_7010() {
 }
 
 /**
- * Enables required modules for views.
+ * Enables honeypot and logintoboggan modules.
  */
 function dccr_update_7011() {
+  $module_list = array('honeypot', 'logintoboggan');
+  module_enable($module_list, TRUE);
+}
+
+/**
+ * Enables required modules for views.
+ */
+function dccr_update_7012() {
   $module_list = array('views_ui, better_exposed_filters');
   module_enable($module_list, TRUE);
 }
@@ -195,7 +203,7 @@ function dccr_update_7011() {
 /**
  * Enables dccr_ftr_propossed_sessions feature.
  */
-function dccr_update_7012() {
+function dccr_update_7013() {
   $module_list = array('dccr_ftr_propossed_sessions');
   module_enable($module_list, TRUE);
 }

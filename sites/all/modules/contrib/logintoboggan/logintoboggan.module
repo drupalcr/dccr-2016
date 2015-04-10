@@ -1153,6 +1153,25 @@ function logintoboggan_mail_alter(&$message) {
 }
 
 /**
+ * Implement hook_element_info_alter().
+ */
+function logintoboggan_element_info_alter(&$type) {
+  // Allow logintoboggan to alter the password_confirm minimum password length
+  $type['password_confirm']['#process'] = array_merge($type['password_confirm']['#process'], array('logintoboggan_form_process_password_confirm'));
+}
+
+
+function logintoboggan_form_process_password_confirm($element) {
+  foreach ($element['#attached']['js'] as $key => &$js) {
+    if (!empty($js['data']['password'])) {
+      $js['data']['password']['tooShort'] = t('Make it at least !length characters', array('!length' => variable_get('logintoboggan_minimum_password_length', 0)));
+    }
+  }
+
+  return $element;
+}
+
+/**
  *
  * THEME FUNCTIONS!
  *
