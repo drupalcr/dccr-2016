@@ -191,3 +191,11 @@ function dccr_update_7011() {
   $module_list = array('honeypot', 'logintoboggan');
   module_enable($module_list, TRUE);
 }
+
+/**
+ * Enables dccr_blocks module.
+ */
+function dccr_update_7012() {
+  $module_list = array('dccr_blocks');
+  module_enable($module_list, TRUE);
+}
