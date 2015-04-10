@@ -11,13 +11,28 @@
 function dccr_blocks_block_info() {
   $blocks = array();
   $blocks['proposed_sessions_header'] = array(
-    'info' => t('Proposed sessions list header.'),
+    'info' => t('Proposed sessions list header'),
+    'cache' => DRUPAL_CACHE_GLOBAL,
   );
   $blocks['propose_sessions_link'] = array(
-    'info' => t('Link to propose a session.'),
+    'info' => t('Link to propose a session'),
+    'cache' => DRUPAL_CACHE_GLOBAL,
   );
 
   return $blocks;
+}
+
+/**
+ * Implements hook_i18n_string_info().
+ */
+function dccr_blocks_i18n_string_info() {
+  $groups['users_input_translation'] = array(
+    'title' => 'User\'s input translations',
+    'description' => 'Translatable blocks fields for users',
+    'format' => FALSE,
+    'list' => FALSE,
+  );
+  return $groups;
 }
 
 /**
@@ -25,14 +40,18 @@ function dccr_blocks_block_info() {
  */
 function dccr_blocks_block_configure($delta = '') {
   $form = array();
+  $default = 'In the Drupal Camp everyone can propose a session, you can talk about Drupal, CSS, HTML, Javascript, RWD, UX, Design, Social Media, etc. The proposed sessions will be evaluated and by [DATE] we will choose and let you know the approved sessions.';
 
   switch ($delta) {
     case 'proposed_sessions_header':
-      $form['text_body'] = array(
-        '#type' => 'text_format',
-        '#title' => t('Enter the text here'),
-        '#default_value' => variable_get('text_variable', ''),
+      $form['dccr_blocks_text_body'] = array(
+        '#type' => 'textarea',
+        '#title' => t('Enter the text about proposed sessions here'),
+        '#default_value' => variable_get('dccr_blocks_text_body_field', $default),
       );
+      if (module_exists('i18n_string')) {
+        i18n_string('users_input_translation:dccr_blocks_text_body', $default, array('update' => TRUE));
+      }
       break;
   }
   return $form;
@@ -44,7 +63,10 @@ function dccr_blocks_block_configure($delta = '') {
 function dccr_blocks_block_save($delta = '', $edit = array()) {
   switch ($delta) {
     case 'proposed_sessions_header':
-      variable_set('text_variable', $edit['text_body']['value']);
+      variable_set('dccr_blocks_text_body_field', $edit['dccr_blocks_text_body']);
+      if (module_exists('i18n_string')) {
+        i18n_string('users_input_translation:dccr_blocks_text_body', $edit['dccr_blocks_text_body'], array('update' => TRUE));
+      }
       break;
   }
 }
@@ -54,17 +76,16 @@ function dccr_blocks_block_save($delta = '', $edit = array()) {
  */
 function dccr_blocks_block_view($delta = '') {
   $block = array();
+  $default = 'In the Drupal Camp everyone can propose a session, you can talk about Drupal, CSS, HTML, Javascript, RWD, UX, Design, Social Media, etc. The proposed sessions will be evaluated and by [DATE] we will choose and let you know the approved sessions.';
 
   switch ($delta) {
     case 'proposed_sessions_header':
+      $custom_block_text = (module_exists('i18n_string')) ? i18n_string_translate("users_input_translation:dccr_blocks_text_body", variable_get('dccr_blocks_text_body_field', $default)) : variable_get('dccr_blocks_text_body_field', $default);
+      $block['subject'] = t('Proposed Sessions');
       $block['content'] = array(
-        'title' => array(
-          '#type' => 'markup',
-          '#markup' => variable_get('title', ''),
-        ),
         'message' => array(
           '#type' => 'markup',
-          '#markup' => variable_get('text_variable', ''),
+          '#markup' => $custom_block_text,
         ),
       );
       break;
@@ -72,7 +93,7 @@ function dccr_blocks_block_view($delta = '') {
     case 'propose_sessions_link':
       $block['content'] = array(
         'link' => array(
-          'type' => 'markup',
+          '#type' => 'markup',
           '#markup' => l(t('Propose a session!'), 'node/add/dccr-session'),
         ),
       );
