@@ -51,7 +51,7 @@ function dccr_ftr_sponsors_views_default_views() {
   $handler->display->display_options['fields']['field_sponsorship_level_ref']['field'] = 'field_sponsorship_level_ref';
   $handler->display->display_options['fields']['field_sponsorship_level_ref']['label'] = '';
   $handler->display->display_options['fields']['field_sponsorship_level_ref']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_sponsorship_level_ref']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_sponsorship_level_ref']['type'] = 'i18n_taxonomy_term_reference_plain';
   /* Sort criterion: Taxonomy term: Weight */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'taxonomy_term_data';

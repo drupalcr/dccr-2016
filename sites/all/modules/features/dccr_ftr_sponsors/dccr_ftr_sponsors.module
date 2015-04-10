@@ -5,3 +5,4 @@
  */
 
 include_once 'dccr_ftr_sponsors.features.inc';
+include_once 'dccr_ftr_sponsors.module.inc';
