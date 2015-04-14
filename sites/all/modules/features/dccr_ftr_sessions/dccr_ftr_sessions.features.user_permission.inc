@@ -157,6 +157,24 @@ function dccr_ftr_sessions_user_default_permissions() {
     'module' => 'field_permissions',
   );
 
+  // Exported permission: 'flag add_to_favorites'.
+  $permissions['flag add_to_favorites'] = array(
+    'name' => 'flag add_to_favorites',
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'flag',
+  );
+
+  // Exported permission: 'unflag add_to_favorites'.
+  $permissions['unflag add_to_favorites'] = array(
+    'name' => 'unflag add_to_favorites',
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'flag',
+  );
+
   // Exported permission: 'view field_location'.
   $permissions['view field_location'] = array(
     'name' => 'view field_location',
