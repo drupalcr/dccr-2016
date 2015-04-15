@@ -22,7 +22,7 @@ function dccr_ftr_config_default_search_api_index() {
     "name" : "Nodes Index",
     "machine_name" : "proposed_sessions",
     "description" : null,
-    "server" : "dccr2015",
+    "server" : "solr",
     "item_type" : "node",
     "options" : {
       "index_directly" : 1,
