@@ -14,7 +14,7 @@ function dccr_ftr_propossed_sessions_views_default_views() {
   $view->name = 'proposed_sessions_list';
   $view->description = '';
   $view->tag = 'default';
-  $view->base_table = 'search_api_index_proposed_sessions';
+  $view->base_table = 'search_api_index_nodes_index';
   $view->human_name = 'Proposed sessions list';
   $view->core = 7;
   $view->api_version = '3.0';
@@ -34,7 +34,7 @@ function dccr_ftr_propossed_sessions_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Field: Indexed Node: Node ID */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
-  $handler->display->display_options['fields']['nid']['table'] = 'search_api_index_proposed_sessions';
+  $handler->display->display_options['fields']['nid']['table'] = 'search_api_index_nodes_index';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
 
   /* Display: Block */
@@ -162,21 +162,21 @@ function dccr_ftr_propossed_sessions_views_default_views() {
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Indexed Node: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'search_api_index_proposed_sessions';
+  $handler->display->display_options['fields']['title']['table'] = 'search_api_index_nodes_index';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = 'Session';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
   /* Field: Speakers: Name (indexed) */
   $handler->display->display_options['fields']['field_speakers_name']['id'] = 'field_speakers_name';
-  $handler->display->display_options['fields']['field_speakers_name']['table'] = 'search_api_index_proposed_sessions';
+  $handler->display->display_options['fields']['field_speakers_name']['table'] = 'search_api_index_nodes_index';
   $handler->display->display_options['fields']['field_speakers_name']['field'] = 'field_speakers_name';
   $handler->display->display_options['fields']['field_speakers_name']['label'] = 'Speaker (s)';
   $handler->display->display_options['fields']['field_speakers_name']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_speakers_name']['link_to_entity'] = 1;
   /* Field: Indexed Node: Track */
   $handler->display->display_options['fields']['field_track']['id'] = 'field_track';
-  $handler->display->display_options['fields']['field_track']['table'] = 'search_api_index_proposed_sessions';
+  $handler->display->display_options['fields']['field_track']['table'] = 'search_api_index_nodes_index';
   $handler->display->display_options['fields']['field_track']['field'] = 'field_track';
   $handler->display->display_options['fields']['field_track']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_track']['link_to_entity'] = 0;
@@ -184,20 +184,20 @@ function dccr_ftr_propossed_sessions_views_default_views() {
   $handler->display->display_options['fields']['field_track']['bypass_access'] = 0;
   /* Field: Indexed Node: Level */
   $handler->display->display_options['fields']['field_level']['id'] = 'field_level';
-  $handler->display->display_options['fields']['field_level']['table'] = 'search_api_index_proposed_sessions';
+  $handler->display->display_options['fields']['field_level']['table'] = 'search_api_index_nodes_index';
   $handler->display->display_options['fields']['field_level']['field'] = 'field_level';
   $handler->display->display_options['fields']['field_level']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Indexed Node: Date created */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'search_api_index_proposed_sessions';
+  $handler->display->display_options['sorts']['created']['table'] = 'search_api_index_nodes_index';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Indexed Node: Content type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
-  $handler->display->display_options['filters']['type']['table'] = 'search_api_index_proposed_sessions';
+  $handler->display->display_options['filters']['type']['table'] = 'search_api_index_nodes_index';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'dccr_session' => 'dccr_session',
@@ -205,7 +205,7 @@ function dccr_ftr_propossed_sessions_views_default_views() {
   $handler->display->display_options['filters']['type']['group'] = 1;
   /* Filter criterion: Indexed Node: Status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'search_api_index_proposed_sessions';
+  $handler->display->display_options['filters']['status']['table'] = 'search_api_index_nodes_index';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = array(
     1 => '1',
@@ -213,7 +213,7 @@ function dccr_ftr_propossed_sessions_views_default_views() {
   $handler->display->display_options['filters']['status']['group'] = 1;
   /* Filter criterion: Indexed Node: Track */
   $handler->display->display_options['filters']['field_track']['id'] = 'field_track';
-  $handler->display->display_options['filters']['field_track']['table'] = 'search_api_index_proposed_sessions';
+  $handler->display->display_options['filters']['field_track']['table'] = 'search_api_index_nodes_index';
   $handler->display->display_options['filters']['field_track']['field'] = 'field_track';
   $handler->display->display_options['filters']['field_track']['value'] = array();
   $handler->display->display_options['filters']['field_track']['group'] = 1;
