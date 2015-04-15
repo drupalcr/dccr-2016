@@ -18,9 +18,9 @@ function dccr_ftr_config_ctools_plugin_api($module = NULL, $api = NULL) {
  */
 function dccr_ftr_config_default_search_api_index() {
   $items = array();
-  $items['proposed_sessions'] = entity_import('search_api_index', '{
+  $items['nodes_index'] = entity_import('search_api_index', '{
     "name" : "Nodes Index",
-    "machine_name" : "proposed_sessions",
+    "machine_name" : "nodes_index",
     "description" : null,
     "server" : "solr",
     "item_type" : "node",
