@@ -14,14 +14,50 @@ function dccr_ftr_sessions_ctools_plugin_api($module = NULL, $api = NULL) {
 }
 
 /**
- * Implements hook_field_default_field_bases_alter().
+ * Implements hook_flag_default_flags().
  */
-function dccr_ftr_sessions_field_default_field_bases_alter(&$data) {
-  if (isset($data['field_location'])) {
-    $data['field_location']['field_permissions'] = array(
-      'type' => 2,
-    ); /* WAS: '' */
-  }
+function dccr_ftr_sessions_flag_default_flags() {
+  $flags = array();
+  // Exported flag: "Add to favorites".
+  $flags['add_to_favorites'] = array(
+    'entity_type' => 'node',
+    'title' => 'Add to favorites',
+    'global' => 0,
+    'types' => array(
+      0 => 'dccr_session',
+    ),
+    'flag_short' => 'Add to favorites',
+    'flag_long' => '',
+    'flag_message' => '',
+    'unflag_short' => 'Remove from favorites',
+    'unflag_long' => '',
+    'unflag_message' => '',
+    'unflag_denied_text' => '',
+    'link_type' => 'toggle',
+    'weight' => 0,
+    'show_in_links' => array(
+      'full' => 'full',
+      'teaser' => 'teaser',
+      'rss' => 0,
+      'search_index' => 0,
+      'search_result' => 0,
+      'diff_standard' => 0,
+      'token' => 0,
+      'revision' => 0,
+    ),
+    'show_as_field' => 1,
+    'show_on_form' => 0,
+    'access_author' => '',
+    'show_contextual_link' => 0,
+    'i18n' => 1,
+    'api_version' => 3,
+    'module' => 'dccr_ftr_sessions',
+    'locked' => array(
+      0 => 'name',
+    ),
+  );
+  return $flags;
+
 }
 
 /**
