@@ -217,9 +217,10 @@ function dccr_update_7014() {
 }
 
 /**
- * Creates an empty page callback to provide a path for schedule.
+ * Provide a path for schedule.
  */
 function dccr_update_7015() {
+  // Create an empty page callback for schedule.
   $callback = new stdClass();
 
   $callback->path = 'schedule';
@@ -227,4 +228,12 @@ function dccr_update_7015() {
 
   empty_page_save_callback($callback);
   empty_page_clear_menu_cache();
+
+  // Ading path alias for 'schedule'.
+  $path = array(
+    'source' => 'schedule',
+    'alias' => 'agenda',
+    'language' => 'es',
+  );
+  path_save($path);
 }
