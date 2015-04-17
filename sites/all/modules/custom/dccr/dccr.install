@@ -191,3 +191,15 @@ function dccr_update_7011() {
   $module_list = array('honeypot', 'logintoboggan');
   module_enable($module_list, TRUE);
 }
+
+/**
+ * DCCR-36: Adds sponsors spanish alias.
+ */
+function dccr_update_7012() {
+  $path = array(
+    'source' => 'sponsors',
+    'alias' => 'patrocinadores',
+    'language' => 'es',
+  );
+  path_save($path);
+}
