@@ -232,6 +232,7 @@ function dccr_update_7015() {
  * Provide a path for schedule.
  */
 function dccr_update_7016() {
+  module_load_include('inc', 'i18n_string');
   // Create an empty page callback for schedule.
   $callback = new stdClass();
 
@@ -239,7 +240,6 @@ function dccr_update_7016() {
   $callback->page_title = '';
 
   empty_page_save_callback($callback);
-  empty_page_clear_menu_cache();
 
   // Ading path alias for 'schedule'.
   $path = array(
