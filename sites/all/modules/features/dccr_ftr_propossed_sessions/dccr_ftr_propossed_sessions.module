@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Drupal Camp Propossed Sessions feature.
+ */
+
+include_once 'dccr_ftr_propossed_sessions.features.inc';

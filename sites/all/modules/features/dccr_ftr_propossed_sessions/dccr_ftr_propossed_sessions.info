@@ -1,0 +1,17 @@
+name = Drupal Camp Propossed Sessions
+description = A list of proposed sessions for the Drupal Camp.
+core = 7.x
+package = Drupal Camp
+version = 7.x-1.0
+project = dccr_ftr_propossed_sessions
+dependencies[] = better_exposed_filters
+dependencies[] = context
+dependencies[] = dccr_blocks
+dependencies[] = dccr_ftr_config
+dependencies[] = views
+features[context][] = proposed_sessions
+features[ctools][] = context:context:3
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[views_view][] = proposed_sessions_list
+features_exclude[dependencies][ctools] = ctools
