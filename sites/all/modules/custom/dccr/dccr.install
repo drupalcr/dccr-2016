@@ -211,3 +211,41 @@ function dccr_update_7013() {
   $module_list = array('dccr_blocks');
   module_enable($module_list, TRUE);
 }
+
+/**
+ * Enables required modules for views.
+ */
+function dccr_update_7014() {
+  $module_list = array('better_exposed_filters', 'empty_page');
+  module_enable($module_list, TRUE);
+}
+
+/**
+ * Enables dccr_ftr_propossed_sessions feature.
+ */
+function dccr_update_7015() {
+  $module_list = array('dccr_ftr_propossed_sessions', 'dccr_expire_context');
+  module_enable($module_list, TRUE);
+}
+
+/**
+ * Provide a path for schedule.
+ */
+function dccr_update_7016() {
+  module_load_include('inc', 'i18n_string');
+  // Create an empty page callback for schedule.
+  $callback = new stdClass();
+
+  $callback->path = 'schedule';
+  $callback->page_title = '';
+
+  empty_page_save_callback($callback);
+
+  // Ading path alias for 'schedule'.
+  $path = array(
+    'source' => 'schedule',
+    'alias' => 'agenda',
+    'language' => 'es',
+  );
+  path_save($path);
+}
