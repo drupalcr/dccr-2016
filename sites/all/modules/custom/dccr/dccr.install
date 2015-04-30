@@ -203,3 +203,11 @@ function dccr_update_7012() {
   );
   path_save($path);
 }
+
+/**
+ * Enables dccr_blocks module.
+ */
+function dccr_update_7013() {
+  $module_list = array('dccr_blocks');
+  module_enable($module_list, TRUE);
+}
