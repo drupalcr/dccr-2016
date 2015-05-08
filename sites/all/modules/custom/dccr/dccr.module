@@ -4,3 +4,13 @@
  * @file
  * dccr.module
  */
+
+// @TODO Change early bird limit.
+define('DCCR_EARLY_BIRD_LIMIT', 1435622400);
+
+/**
+ * Returns whether it is or not early bird.
+ */
+function dccr_is_early_bird($time) {
+  return $time < DCCR_EARLY_BIRD_LIMIT;
+}
