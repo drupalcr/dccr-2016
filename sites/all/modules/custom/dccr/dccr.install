@@ -249,3 +249,24 @@ function dccr_update_7016() {
   );
   path_save($path);
 }
+
+/**
+ * Enable dccr_ftr_landing_pages.
+ */
+function dccr_update_7017() {
+  $module_list = array('dccr_ftr_landing_pages');
+  module_enable($module_list, TRUE);
+}
+
+/**
+ * Add path alias for register.
+ */
+function dccr_update_7018() {
+  // Ading path alias for 'register'.
+  $path = array(
+    'source' => 'register',
+    'alias' => 'registro',
+    'language' => 'es',
+  );
+  path_save($path);
+}
