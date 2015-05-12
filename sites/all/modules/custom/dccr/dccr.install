@@ -296,3 +296,16 @@ function dccr_update_7020() {
   );
   path_save($path);
 }
+
+/**
+ * Add path alias for how-to-sponsor.
+ */
+function dccr_update_7022() {
+  // Ading path alias for 'how-to-sponsor'.
+  $path = array(
+    'source' => 'how-to-sponsor',
+    'alias' => 'como-patrocinar',
+    'language' => 'es',
+  );
+  path_save($path);
+}
