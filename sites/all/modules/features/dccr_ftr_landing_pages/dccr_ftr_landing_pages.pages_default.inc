@@ -313,7 +313,7 @@ function dccr_ftr_landing_pages_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = 'Register';
+  $display->title = 'Conference';
   $display->uuid = '891a719b-c48f-48ba-824f-3cbdb6e49243';
   $display->content = array();
   $display->panels = array();
