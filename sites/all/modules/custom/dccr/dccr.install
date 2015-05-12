@@ -283,3 +283,16 @@ function dccr_update_7019() {
   );
   path_save($path);
 }
+
+/**
+ * Add path alias for contact-us.
+ */
+function dccr_update_7020() {
+  // Ading path alias for 'contact-us'.
+  $path = array(
+    'source' => 'contact-us',
+    'alias' => 'contactenos',
+    'language' => 'es',
+  );
+  path_save($path);
+}
