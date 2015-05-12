@@ -825,6 +825,348 @@ function dccr_ftr_landing_pages_default_page_manager_pages() {
   $page = new stdClass();
   $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
   $page->api_version = 1;
+  $page->name = 'how_to_sponsor';
+  $page->task = 'page';
+  $page->admin_title = 'How to sponsor';
+  $page->admin_description = '';
+  $page->path = 'how-to-sponsor';
+  $page->access = array();
+  $page->menu = array();
+  $page->arguments = array();
+  $page->conf = array(
+    'admin_paths' => FALSE,
+  );
+  $page->default_handlers = array();
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_how_to_sponsor__panel_context_77804f55-3613-4f17-9adc-b0aba099d0cb';
+  $handler->task = 'page';
+  $handler->subtask = 'how_to_sponsor';
+  $handler->handler = 'panel_context';
+  $handler->weight = 0;
+  $handler->conf = array(
+    'title' => 'Spanish',
+    'no_blocks' => 1,
+    'pipeline' => 'ipe',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'site_language',
+          'settings' => array(
+            'language' => array(
+              'es' => 'es',
+              'default' => 0,
+              'en' => 0,
+            ),
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+  );
+  $display = new panels_display();
+  $display->layout = 'twocol_bricks';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'top' => NULL,
+      'left_above' => NULL,
+      'right_above' => NULL,
+      'middle' => NULL,
+      'left_below' => NULL,
+      'right_below' => NULL,
+      'bottom' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = 'Cómo Patrocinar?';
+  $display->uuid = '891a719b-c48f-48ba-824f-3cbdb6e49243';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-62bd2741-0a8a-400b-a878-fa9afa81d64c';
+    $pane->panel = 'right_above';
+    $pane->type = 'block';
+    $pane->subtype = 'dccr_blocks-dccr_register_image_link_block';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '62bd2741-0a8a-400b-a878-fa9afa81d64c';
+    $display->content['new-62bd2741-0a8a-400b-a878-fa9afa81d64c'] = $pane;
+    $display->panels['right_above'][0] = 'new-62bd2741-0a8a-400b-a878-fa9afa81d64c';
+    $pane = new stdClass();
+    $pane->pid = 'new-69ef329f-f7c9-4eef-8bf0-fd995f226899';
+    $pane->panel = 'right_above';
+    $pane->type = 'block';
+    $pane->subtype = 'dccr_blocks-dccr_social_block_sidebar';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '69ef329f-f7c9-4eef-8bf0-fd995f226899';
+    $display->content['new-69ef329f-f7c9-4eef-8bf0-fd995f226899'] = $pane;
+    $display->panels['right_above'][1] = 'new-69ef329f-f7c9-4eef-8bf0-fd995f226899';
+    $pane = new stdClass();
+    $pane->pid = 'new-43a4796d-bdc6-4866-bdc7-aab9204547c7';
+    $pane->panel = 'right_above';
+    $pane->type = 'block';
+    $pane->subtype = 'views-tracks-block';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $pane->uuid = '43a4796d-bdc6-4866-bdc7-aab9204547c7';
+    $display->content['new-43a4796d-bdc6-4866-bdc7-aab9204547c7'] = $pane;
+    $display->panels['right_above'][2] = 'new-43a4796d-bdc6-4866-bdc7-aab9204547c7';
+    $pane = new stdClass();
+    $pane->pid = 'new-0a64d6f4-9725-44ae-89fc-b0535e35b1b9';
+    $pane->panel = 'right_above';
+    $pane->type = 'block';
+    $pane->subtype = 'dccr_blocks-dccr_faq_block';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 3;
+    $pane->locks = array();
+    $pane->uuid = '0a64d6f4-9725-44ae-89fc-b0535e35b1b9';
+    $display->content['new-0a64d6f4-9725-44ae-89fc-b0535e35b1b9'] = $pane;
+    $display->panels['right_above'][3] = 'new-0a64d6f4-9725-44ae-89fc-b0535e35b1b9';
+    $pane = new stdClass();
+    $pane->pid = 'new-96b23f53-7470-46bd-af2d-ce296f99f212';
+    $pane->panel = 'right_above';
+    $pane->type = 'block';
+    $pane->subtype = 'dccr_blocks-dccr_register_image_link_block';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 4;
+    $pane->locks = array();
+    $pane->uuid = '96b23f53-7470-46bd-af2d-ce296f99f212';
+    $display->content['new-96b23f53-7470-46bd-af2d-ce296f99f212'] = $pane;
+    $display->panels['right_above'][4] = 'new-96b23f53-7470-46bd-af2d-ce296f99f212';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_how_to_sponsor__panel_context_cb036e50-d422-4536-b147-708abdadd86b';
+  $handler->task = 'page';
+  $handler->subtask = 'how_to_sponsor';
+  $handler->handler = 'panel_context';
+  $handler->weight = 1;
+  $handler->conf = array(
+    'title' => 'English',
+    'no_blocks' => 1,
+    'pipeline' => 'ipe',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'site_language',
+          'settings' => array(
+            'language' => array(
+              'en' => 'en',
+              'default' => 0,
+              'es' => 0,
+            ),
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+  );
+  $display = new panels_display();
+  $display->layout = 'twocol_bricks';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'top' => NULL,
+      'left_above' => NULL,
+      'right_above' => NULL,
+      'middle' => NULL,
+      'left_below' => NULL,
+      'right_below' => NULL,
+      'bottom' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = 'How to Sponsor?';
+  $display->uuid = '891a719b-c48f-48ba-824f-3cbdb6e49243';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-d3671fbd-ef1d-4282-b7f2-1c34fa6c7048';
+    $pane->panel = 'right_above';
+    $pane->type = 'block';
+    $pane->subtype = 'dccr_blocks-dccr_register_image_link_block';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'd3671fbd-ef1d-4282-b7f2-1c34fa6c7048';
+    $display->content['new-d3671fbd-ef1d-4282-b7f2-1c34fa6c7048'] = $pane;
+    $display->panels['right_above'][0] = 'new-d3671fbd-ef1d-4282-b7f2-1c34fa6c7048';
+    $pane = new stdClass();
+    $pane->pid = 'new-69ef329f-f7c9-4eef-8bf0-fd995f226899';
+    $pane->panel = 'right_above';
+    $pane->type = 'block';
+    $pane->subtype = 'dccr_blocks-dccr_social_block_sidebar';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '69ef329f-f7c9-4eef-8bf0-fd995f226899';
+    $display->content['new-69ef329f-f7c9-4eef-8bf0-fd995f226899'] = $pane;
+    $display->panels['right_above'][1] = 'new-69ef329f-f7c9-4eef-8bf0-fd995f226899';
+    $pane = new stdClass();
+    $pane->pid = 'new-43a4796d-bdc6-4866-bdc7-aab9204547c7';
+    $pane->panel = 'right_above';
+    $pane->type = 'block';
+    $pane->subtype = 'views-tracks-block';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $pane->uuid = '43a4796d-bdc6-4866-bdc7-aab9204547c7';
+    $display->content['new-43a4796d-bdc6-4866-bdc7-aab9204547c7'] = $pane;
+    $display->panels['right_above'][2] = 'new-43a4796d-bdc6-4866-bdc7-aab9204547c7';
+    $pane = new stdClass();
+    $pane->pid = 'new-0a64d6f4-9725-44ae-89fc-b0535e35b1b9';
+    $pane->panel = 'right_above';
+    $pane->type = 'block';
+    $pane->subtype = 'dccr_blocks-dccr_faq_block';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 3;
+    $pane->locks = array();
+    $pane->uuid = '0a64d6f4-9725-44ae-89fc-b0535e35b1b9';
+    $display->content['new-0a64d6f4-9725-44ae-89fc-b0535e35b1b9'] = $pane;
+    $display->panels['right_above'][3] = 'new-0a64d6f4-9725-44ae-89fc-b0535e35b1b9';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $pages['how_to_sponsor'] = $page;
+
+  $page = new stdClass();
+  $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
+  $page->api_version = 1;
   $page->name = 'register';
   $page->task = 'page';
   $page->admin_title = 'Register';
