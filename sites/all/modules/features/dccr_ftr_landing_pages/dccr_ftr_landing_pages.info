@@ -29,6 +29,7 @@ features[field_instance][] = fieldable_panels_pane-dccr_images_fpp-field_fpp_ima
 features[field_instance][] = fieldable_panels_pane-dccr_images_fpp-field_fpp_link
 features[field_instance][] = fieldable_panels_pane-dccr_simple_fpp-field_body
 features[page_manager_pages][] = conference
+features[page_manager_pages][] = contact_us
 features[page_manager_pages][] = register
 features[uuid_fpp][] = 1419d112-bb6c-4a32-a9e1-cae0a6404b7f
 features[uuid_fpp][] = 14dfc4a0-8ca9-4f41-8152-6d5a9be4b7a5

@@ -141,7 +141,7 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
       ),
     ),
     'rdf_mapping' => array(),
-    'user_uuid' => '8dde6c4e-0b63-4ac3-9cb7-66f9f40da016',
+    'user_uuid' => '5ff24b76-cc90-4ec1-899e-f2f640ef998c',
   );
   $fpps[] = array(
     'timestamp' => 1431459755,
@@ -218,7 +218,7 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
       ),
     ),
     'rdf_mapping' => array(),
-    'user_uuid' => '8dde6c4e-0b63-4ac3-9cb7-66f9f40da016',
+    'user_uuid' => '5ff24b76-cc90-4ec1-899e-f2f640ef998c',
   );
   $fpps[] = array(
     'timestamp' => 1431450899,
@@ -463,7 +463,7 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
       ),
     ),
     'rdf_mapping' => array(),
-    'user_uuid' => '8dde6c4e-0b63-4ac3-9cb7-66f9f40da016',
+    'user_uuid' => '5ff24b76-cc90-4ec1-899e-f2f640ef998c',
   );
   $fpps[] = array(
     'timestamp' => 1431459670,
@@ -555,7 +555,7 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
       ),
     ),
     'rdf_mapping' => array(),
-    'user_uuid' => '8dde6c4e-0b63-4ac3-9cb7-66f9f40da016',
+    'user_uuid' => '5ff24b76-cc90-4ec1-899e-f2f640ef998c',
   );
   $fpps[] = array(
     'timestamp' => 1431459805,
@@ -678,7 +678,7 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
       ),
     ),
     'rdf_mapping' => array(),
-    'user_uuid' => '8dde6c4e-0b63-4ac3-9cb7-66f9f40da016',
+    'user_uuid' => '5ff24b76-cc90-4ec1-899e-f2f640ef998c',
   );
   $fpps[] = array(
     'timestamp' => 1431459883,
