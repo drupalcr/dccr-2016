@@ -209,6 +209,35 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
     'user_uuid' => 'b1ca6a98-3153-462d-9f4e-77750818c0f4',
   );
   $fpps[] = array(
+    'timestamp' => 1431486956,
+    'title' => 'Sede',
+    'log' => '',
+    'bundle' => 'dccr_simple_fpp',
+    'link' => 0,
+    'path' => '',
+    'reusable' => 0,
+    'admin_title' => '',
+    'admin_description' => '',
+    'category' => '',
+    'view_access' => NULL,
+    'edit_access' => NULL,
+    'created' => 1431486956,
+    'uuid' => '298557a6-4fa8-473b-a977-5b7ff86b0b74',
+    'language' => 'und',
+    'field_body' => array(
+      'und' => array(
+        0 => array(
+          'value' => '<p>Ciudad de la Investigación,<br>
+	Universidad de Costa Rica</p>
+',
+          'format' => 'manati_texto_formato',
+        ),
+      ),
+    ),
+    'rdf_mapping' => array(),
+    'user_uuid' => '60b0f64e-592c-4d69-a1b0-07d70b9e7fcd',
+  );
+  $fpps[] = array(
     'timestamp' => 1431459755,
     'title' => '',
     'log' => '',
@@ -266,6 +295,35 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
     ),
     'rdf_mapping' => array(),
     'user_uuid' => 'b1ca6a98-3153-462d-9f4e-77750818c0f4',
+  );
+  $fpps[] = array(
+    'timestamp' => 1431487250,
+    'title' => 'Venue',
+    'log' => '',
+    'bundle' => 'dccr_simple_fpp',
+    'link' => 0,
+    'path' => '',
+    'reusable' => 0,
+    'admin_title' => '',
+    'admin_description' => '',
+    'category' => '',
+    'view_access' => NULL,
+    'edit_access' => NULL,
+    'created' => 1431487250,
+    'uuid' => '2c95dbad-1cba-4b9b-a5f7-5dc91a04f948',
+    'language' => 'und',
+    'field_body' => array(
+      'und' => array(
+        0 => array(
+          'value' => '<p>Ciudad de la Investigacion,<br>
+	Universidad de Costa Rica</p>
+',
+          'format' => 'manati_texto_formato',
+        ),
+      ),
+    ),
+    'rdf_mapping' => array(),
+    'user_uuid' => '60b0f64e-592c-4d69-a1b0-07d70b9e7fcd',
   );
   $fpps[] = array(
     'timestamp' => 1431450899,
@@ -641,6 +699,28 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
     ),
     'rdf_mapping' => array(),
     'user_uuid' => 'b1ca6a98-3153-462d-9f4e-77750818c0f4',
+  );
+  $fpps[] = array(
+    'timestamp' => 1431487773,
+    'title' => '',
+    'log' => '',
+    'bundle' => 'dccr_images_fpp',
+    'link' => 0,
+    'path' => '',
+    'reusable' => 1,
+    'admin_title' => 'Venue Image (Homepage)',
+    'admin_description' => '',
+    'category' => 'DCCR',
+    'view_access' => NULL,
+    'edit_access' => NULL,
+    'created' => 1431487105,
+    'uuid' => 'c6e1cd73-c630-4cf2-93a8-6fd78db0d9f8',
+    'language' => 'und',
+    'field_fpp_image' => array(),
+    'field_fpp_image_caption' => array(),
+    'field_fpp_link' => array(),
+    'rdf_mapping' => array(),
+    'user_uuid' => '60b0f64e-592c-4d69-a1b0-07d70b9e7fcd',
   );
   $fpps[] = array(
     'timestamp' => 1431464196,
