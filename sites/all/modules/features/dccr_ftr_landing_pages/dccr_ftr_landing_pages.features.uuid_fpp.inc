@@ -11,6 +11,67 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
   $fpps = array();
 
   $fpps[] = array(
+    'timestamp' => 1431481585,
+    'title' => '',
+    'log' => '',
+    'bundle' => 'dccr_simple_fpp',
+    'link' => 0,
+    'path' => '',
+    'reusable' => 0,
+    'admin_title' => '',
+    'admin_description' => '',
+    'category' => '',
+    'view_access' => NULL,
+    'edit_access' => NULL,
+    'created' => 1431481585,
+    'uuid' => '01ba1b0c-78df-43dd-bc34-6c15fe25eca8',
+    'language' => 'und',
+    'field_body' => array(
+      'und' => array(
+        0 => array(
+          'value' => '<p><span class="b" id="cache133" style="font-family:\'ArialMT\', \'Arial\';font-weight:400;line-height:28px;">El evento se realizará en las instalaciones de la Ciudad de la Investigación de la Universidad de Costa Rica, ubicada en San Pedro de Montes de Oca, San José.</span></p>
+',
+          'format' => 'manati_texto_formato',
+        ),
+      ),
+    ),
+    'rdf_mapping' => array(),
+    'user_uuid' => '60b0f64e-592c-4d69-a1b0-07d70b9e7fcd',
+  );
+  $fpps[] = array(
+    'timestamp' => 1431481655,
+    'title' => 'En dicha instalación tendremos:',
+    'log' => '',
+    'bundle' => 'dccr_simple_fpp',
+    'link' => 0,
+    'path' => '',
+    'reusable' => 0,
+    'admin_title' => '',
+    'admin_description' => '',
+    'category' => '',
+    'view_access' => NULL,
+    'edit_access' => NULL,
+    'created' => 1431481655,
+    'uuid' => '0e422d9b-ba2c-473d-898f-ce1fa581920b',
+    'language' => 'und',
+    'field_body' => array(
+      'und' => array(
+        0 => array(
+          'value' => '<ul>
+	<li>Asientos cómodos</li>
+	<li>Acceso a WiFi</li>
+	<li>Enchufes para cargar</li>
+	<li>Café</li>
+</ul>
+',
+          'format' => 'manati_texto_formato',
+        ),
+      ),
+    ),
+    'rdf_mapping' => array(),
+    'user_uuid' => '60b0f64e-592c-4d69-a1b0-07d70b9e7fcd',
+  );
+  $fpps[] = array(
     'timestamp' => 1431449597,
     'title' => '',
     'log' => '',
@@ -36,7 +97,7 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
       ),
     ),
     'rdf_mapping' => array(),
-    'user_uuid' => '5ff24b76-cc90-4ec1-899e-f2f640ef998c',
+    'user_uuid' => 'b1ca6a98-3153-462d-9f4e-77750818c0f4',
   );
   $fpps[] = array(
     'timestamp' => 1431450885,
@@ -54,26 +115,7 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
     'created' => 1431450307,
     'uuid' => '14dfc4a0-8ca9-4f41-8152-6d5a9be4b7a5',
     'language' => 'und',
-    'field_fpp_image' => array(
-      'und' => array(
-        0 => array(
-          'uid' => 1,
-          'filename' => 'lipsum.png',
-          'uri' => 'public://lipsum.png',
-          'filemime' => 'image/png',
-          'filesize' => 409053,
-          'status' => 1,
-          'uuid' => '4542c2a1-7ee3-4b25-a57a-35cfd9b2bf44',
-          'rdf_mapping' => array(),
-          'alt' => '',
-          'title' => '',
-          'width' => 900,
-          'height' => 563,
-          'uuid_features_file_url' => 'http://dccr-2015.local.dev/sites/default/files/lipsum.png',
-        ),
-      ),
-    ),
-    'field_fpp_link' => array(),
+    'field_fpp_image' => array(),
     'field_fpp_image_caption' => array(
       'und' => array(
         0 => array(
@@ -82,8 +124,9 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
         ),
       ),
     ),
+    'field_fpp_link' => array(),
     'rdf_mapping' => array(),
-    'user_uuid' => '5ff24b76-cc90-4ec1-899e-f2f640ef998c',
+    'user_uuid' => 'b1ca6a98-3153-462d-9f4e-77750818c0f4',
   );
   $fpps[] = array(
     'timestamp' => 1431459617,
@@ -111,7 +154,29 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
       ),
     ),
     'rdf_mapping' => array(),
-    'user_uuid' => '5ff24b76-cc90-4ec1-899e-f2f640ef998c',
+    'user_uuid' => 'b1ca6a98-3153-462d-9f4e-77750818c0f4',
+  );
+  $fpps[] = array(
+    'timestamp' => 1431482082,
+    'title' => '',
+    'log' => '',
+    'bundle' => 'dccr_images_fpp',
+    'link' => 0,
+    'path' => '',
+    'reusable' => 0,
+    'admin_title' => '',
+    'admin_description' => '',
+    'category' => '',
+    'view_access' => NULL,
+    'edit_access' => NULL,
+    'created' => 1431482082,
+    'uuid' => '2272932d-fd61-4fc2-b546-90f8edaa23b6',
+    'language' => 'und',
+    'field_fpp_image' => array(),
+    'field_fpp_image_caption' => array(),
+    'field_fpp_link' => array(),
+    'rdf_mapping' => array(),
+    'user_uuid' => '60b0f64e-592c-4d69-a1b0-07d70b9e7fcd',
   );
   $fpps[] = array(
     'timestamp' => 1431464244,
@@ -141,7 +206,7 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
       ),
     ),
     'rdf_mapping' => array(),
-    'user_uuid' => '5ff24b76-cc90-4ec1-899e-f2f640ef998c',
+    'user_uuid' => 'b1ca6a98-3153-462d-9f4e-77750818c0f4',
   );
   $fpps[] = array(
     'timestamp' => 1431459755,
@@ -159,25 +224,8 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
     'created' => 1431459755,
     'uuid' => '2b150773-b92e-49a7-a7c2-9df59d9fc0b8',
     'language' => 'und',
-    'field_fpp_image' => array(
-      'und' => array(
-        0 => array(
-          'uid' => 1,
-          'filename' => 'lipsum.png',
-          'uri' => 'public://lipsum_3.png',
-          'filemime' => 'image/png',
-          'filesize' => 409053,
-          'status' => 1,
-          'uuid' => '5a9081e9-f4bb-45ab-8356-b70b2d648d60',
-          'rdf_mapping' => array(),
-          'alt' => '',
-          'title' => '',
-          'width' => 900,
-          'height' => 563,
-          'uuid_features_file_url' => 'http://dccr-2015.local.dev/sites/default/files/lipsum_3.png',
-        ),
-      ),
-    ),
+    'field_fpp_image' => array(),
+    'field_fpp_image_caption' => array(),
     'field_fpp_link' => array(
       'und' => array(
         0 => array(
@@ -187,9 +235,8 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
         ),
       ),
     ),
-    'field_fpp_image_caption' => array(),
     'rdf_mapping' => array(),
-    'user_uuid' => '5ff24b76-cc90-4ec1-899e-f2f640ef998c',
+    'user_uuid' => 'b1ca6a98-3153-462d-9f4e-77750818c0f4',
   );
   $fpps[] = array(
     'timestamp' => 1431462484,
@@ -218,7 +265,7 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
       ),
     ),
     'rdf_mapping' => array(),
-    'user_uuid' => '5ff24b76-cc90-4ec1-899e-f2f640ef998c',
+    'user_uuid' => 'b1ca6a98-3153-462d-9f4e-77750818c0f4',
   );
   $fpps[] = array(
     'timestamp' => 1431450899,
@@ -236,26 +283,7 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
     'created' => 1431450416,
     'uuid' => '2d45bb6f-a640-4f56-b357-251f2f0c98e7',
     'language' => 'und',
-    'field_fpp_image' => array(
-      'und' => array(
-        0 => array(
-          'uid' => 1,
-          'filename' => 'lipsum.png',
-          'uri' => 'public://lipsum_1.png',
-          'filemime' => 'image/png',
-          'filesize' => 409053,
-          'status' => 1,
-          'uuid' => '8b6f6005-e652-4cbf-a84f-42a5ecb6f9e1',
-          'rdf_mapping' => array(),
-          'alt' => '',
-          'title' => '',
-          'width' => 900,
-          'height' => 563,
-          'uuid_features_file_url' => 'http://dccr-2015.local.dev/sites/default/files/lipsum_1.png',
-        ),
-      ),
-    ),
-    'field_fpp_link' => array(),
+    'field_fpp_image' => array(),
     'field_fpp_image_caption' => array(
       'und' => array(
         0 => array(
@@ -264,8 +292,9 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
         ),
       ),
     ),
+    'field_fpp_link' => array(),
     'rdf_mapping' => array(),
-    'user_uuid' => '5ff24b76-cc90-4ec1-899e-f2f640ef998c',
+    'user_uuid' => 'b1ca6a98-3153-462d-9f4e-77750818c0f4',
   );
   $fpps[] = array(
     'timestamp' => 1431460038,
@@ -283,26 +312,7 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
     'created' => 1431460038,
     'uuid' => '2e144534-5c30-480c-b780-2498b2a11779',
     'language' => 'und',
-    'field_fpp_image' => array(
-      'und' => array(
-        0 => array(
-          'uid' => 1,
-          'filename' => 'lipsum.png',
-          'uri' => 'public://lipsum_5.png',
-          'filemime' => 'image/png',
-          'filesize' => 409053,
-          'status' => 1,
-          'uuid' => '2b64eac3-8665-4b67-8a14-dd6d7953be07',
-          'rdf_mapping' => array(),
-          'alt' => '',
-          'title' => '',
-          'width' => 900,
-          'height' => 563,
-          'uuid_features_file_url' => 'http://dccr-2015.local.dev/sites/default/files/lipsum_5.png',
-        ),
-      ),
-    ),
-    'field_fpp_link' => array(),
+    'field_fpp_image' => array(),
     'field_fpp_image_caption' => array(
       'und' => array(
         0 => array(
@@ -311,8 +321,9 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
         ),
       ),
     ),
+    'field_fpp_link' => array(),
     'rdf_mapping' => array(),
-    'user_uuid' => '5ff24b76-cc90-4ec1-899e-f2f640ef998c',
+    'user_uuid' => 'b1ca6a98-3153-462d-9f4e-77750818c0f4',
   );
   $fpps[] = array(
     'timestamp' => 1431450624,
@@ -343,7 +354,7 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
       ),
     ),
     'rdf_mapping' => array(),
-    'user_uuid' => '5ff24b76-cc90-4ec1-899e-f2f640ef998c',
+    'user_uuid' => 'b1ca6a98-3153-462d-9f4e-77750818c0f4',
   );
   $fpps[] = array(
     'timestamp' => 1431459920,
@@ -376,7 +387,7 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
       ),
     ),
     'rdf_mapping' => array(),
-    'user_uuid' => '5ff24b76-cc90-4ec1-899e-f2f640ef998c',
+    'user_uuid' => 'b1ca6a98-3153-462d-9f4e-77750818c0f4',
   );
   $fpps[] = array(
     'timestamp' => 1431459955,
@@ -406,7 +417,7 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
       ),
     ),
     'rdf_mapping' => array(),
-    'user_uuid' => '5ff24b76-cc90-4ec1-899e-f2f640ef998c',
+    'user_uuid' => 'b1ca6a98-3153-462d-9f4e-77750818c0f4',
   );
   $fpps[] = array(
     'timestamp' => 1431450642,
@@ -435,7 +446,7 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
       ),
     ),
     'rdf_mapping' => array(),
-    'user_uuid' => '5ff24b76-cc90-4ec1-899e-f2f640ef998c',
+    'user_uuid' => 'b1ca6a98-3153-462d-9f4e-77750818c0f4',
   );
   $fpps[] = array(
     'timestamp' => 1431462386,
@@ -463,7 +474,7 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
       ),
     ),
     'rdf_mapping' => array(),
-    'user_uuid' => '5ff24b76-cc90-4ec1-899e-f2f640ef998c',
+    'user_uuid' => 'b1ca6a98-3153-462d-9f4e-77750818c0f4',
   );
   $fpps[] = array(
     'timestamp' => 1431459670,
@@ -481,26 +492,7 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
     'created' => 1431459670,
     'uuid' => '69a53e9e-4bc1-4860-bc46-dc2b07e62dcf',
     'language' => 'und',
-    'field_fpp_image' => array(
-      'und' => array(
-        0 => array(
-          'uid' => 1,
-          'filename' => 'lipsum.png',
-          'uri' => 'public://lipsum_2.png',
-          'filemime' => 'image/png',
-          'filesize' => 409053,
-          'status' => 1,
-          'uuid' => 'b0047533-dfe4-4d01-9508-d163dbcf38e7',
-          'rdf_mapping' => array(),
-          'alt' => '',
-          'title' => '',
-          'width' => 900,
-          'height' => 563,
-          'uuid_features_file_url' => 'http://dccr-2015.local.dev/sites/default/files/lipsum_2.png',
-        ),
-      ),
-    ),
-    'field_fpp_link' => array(),
+    'field_fpp_image' => array(),
     'field_fpp_image_caption' => array(
       'und' => array(
         0 => array(
@@ -509,8 +501,9 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
         ),
       ),
     ),
+    'field_fpp_link' => array(),
     'rdf_mapping' => array(),
-    'user_uuid' => '5ff24b76-cc90-4ec1-899e-f2f640ef998c',
+    'user_uuid' => 'b1ca6a98-3153-462d-9f4e-77750818c0f4',
   );
   $fpps[] = array(
     'timestamp' => 1431462521,
@@ -555,7 +548,7 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
       ),
     ),
     'rdf_mapping' => array(),
-    'user_uuid' => '5ff24b76-cc90-4ec1-899e-f2f640ef998c',
+    'user_uuid' => 'b1ca6a98-3153-462d-9f4e-77750818c0f4',
   );
   $fpps[] = array(
     'timestamp' => 1431459805,
@@ -573,26 +566,7 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
     'created' => 1431459805,
     'uuid' => '782609b4-53c3-45d9-b50e-528814719f08',
     'language' => 'und',
-    'field_fpp_image' => array(
-      'und' => array(
-        0 => array(
-          'uid' => 1,
-          'filename' => 'lipsum.png',
-          'uri' => 'public://lipsum_4.png',
-          'filemime' => 'image/png',
-          'filesize' => 409053,
-          'status' => 1,
-          'uuid' => 'b15dc967-b5b8-4423-9605-a3800726bb08',
-          'rdf_mapping' => array(),
-          'alt' => '',
-          'title' => '',
-          'width' => 900,
-          'height' => 563,
-          'uuid_features_file_url' => 'http://dccr-2015.local.dev/sites/default/files/lipsum_4.png',
-        ),
-      ),
-    ),
-    'field_fpp_link' => array(),
+    'field_fpp_image' => array(),
     'field_fpp_image_caption' => array(
       'und' => array(
         0 => array(
@@ -601,8 +575,42 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
         ),
       ),
     ),
+    'field_fpp_link' => array(),
     'rdf_mapping' => array(),
-    'user_uuid' => '5ff24b76-cc90-4ec1-899e-f2f640ef998c',
+    'user_uuid' => 'b1ca6a98-3153-462d-9f4e-77750818c0f4',
+  );
+  $fpps[] = array(
+    'timestamp' => 1431482210,
+    'title' => 'In the conference center we\'ll have:',
+    'log' => '',
+    'bundle' => 'dccr_simple_fpp',
+    'link' => 0,
+    'path' => '',
+    'reusable' => 0,
+    'admin_title' => '',
+    'admin_description' => '',
+    'category' => '',
+    'view_access' => NULL,
+    'edit_access' => NULL,
+    'created' => 1431482210,
+    'uuid' => '81eed993-9b36-41a8-8377-dacaf8a2ace9',
+    'language' => 'und',
+    'field_body' => array(
+      'und' => array(
+        0 => array(
+          'value' => '<ul>
+	<li>Comfortable Seats</li>
+	<li>WiFi Access</li>
+	<li>Power outlets</li>
+	<li>Coffee</li>
+</ul>
+',
+          'format' => 'manati_texto_formato',
+        ),
+      ),
+    ),
+    'rdf_mapping' => array(),
+    'user_uuid' => '60b0f64e-592c-4d69-a1b0-07d70b9e7fcd',
   );
   $fpps[] = array(
     'timestamp' => 1431450354,
@@ -620,25 +628,8 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
     'created' => 1431450354,
     'uuid' => '91150805-d758-4dd8-a539-7e6f08e5168a',
     'language' => 'und',
-    'field_fpp_image' => array(
-      'und' => array(
-        0 => array(
-          'uid' => 1,
-          'filename' => 'lipsum.png',
-          'uri' => 'public://lipsum_0.png',
-          'filemime' => 'image/png',
-          'filesize' => 409053,
-          'status' => 1,
-          'uuid' => '779ac0ba-0cf0-4a35-8306-343813002967',
-          'rdf_mapping' => array(),
-          'alt' => '',
-          'title' => '',
-          'width' => 900,
-          'height' => 563,
-          'uuid_features_file_url' => 'http://dccr-2015.local.dev/sites/default/files/lipsum_0.png',
-        ),
-      ),
-    ),
+    'field_fpp_image' => array(),
+    'field_fpp_image_caption' => array(),
     'field_fpp_link' => array(
       'und' => array(
         0 => array(
@@ -648,9 +639,8 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
         ),
       ),
     ),
-    'field_fpp_image_caption' => array(),
     'rdf_mapping' => array(),
-    'user_uuid' => '5ff24b76-cc90-4ec1-899e-f2f640ef998c',
+    'user_uuid' => 'b1ca6a98-3153-462d-9f4e-77750818c0f4',
   );
   $fpps[] = array(
     'timestamp' => 1431464196,
@@ -678,7 +668,63 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
       ),
     ),
     'rdf_mapping' => array(),
-    'user_uuid' => '5ff24b76-cc90-4ec1-899e-f2f640ef998c',
+    'user_uuid' => 'b1ca6a98-3153-462d-9f4e-77750818c0f4',
+  );
+  $fpps[] = array(
+    'timestamp' => 1431482157,
+    'title' => '',
+    'log' => '',
+    'bundle' => 'dccr_simple_fpp',
+    'link' => 0,
+    'path' => '',
+    'reusable' => 0,
+    'admin_title' => '',
+    'admin_description' => '',
+    'category' => '',
+    'view_access' => NULL,
+    'edit_access' => NULL,
+    'created' => 1431482157,
+    'uuid' => 'd5636df1-fbbb-4a6e-811a-0c2548a337ae',
+    'language' => 'und',
+    'field_body' => array(
+      'und' => array(
+        0 => array(
+          'value' => '<p>The event will be on Ciudad de la Investigacion, Universidad de Costa Rica; in San Pedro, Montes de Oca, San Jose.</p>
+',
+          'format' => 'manati_texto_formato',
+        ),
+      ),
+    ),
+    'rdf_mapping' => array(),
+    'user_uuid' => '60b0f64e-592c-4d69-a1b0-07d70b9e7fcd',
+  );
+  $fpps[] = array(
+    'timestamp' => 1431482006,
+    'title' => '',
+    'log' => '',
+    'bundle' => 'dccr_embed_fpp',
+    'link' => 0,
+    'path' => '',
+    'reusable' => 1,
+    'admin_title' => 'Embed UCR Map',
+    'admin_description' => '',
+    'category' => 'DCCR',
+    'view_access' => NULL,
+    'edit_access' => NULL,
+    'created' => 1431482006,
+    'uuid' => 'e6685593-84fd-42dc-bf99-3648a4ae35ea',
+    'language' => 'und',
+    'field_embed_code' => array(
+      'und' => array(
+        0 => array(
+          'value' => '<iframe width="600" height="450" frameborder="0" style="border:0"
+src="https://www.google.com/maps/embed/v1/place?q=Ciudad%20de%20la%20Investigacion%2C%20Sabanilla%2C%20San%20Jose%2C%20Costa%20Rica&key=AIzaSyC1WtX40GST0Nc7JxiweLxNCv62aeUOrsE"></iframe> ',
+          'format' => 'full_html',
+        ),
+      ),
+    ),
+    'rdf_mapping' => array(),
+    'user_uuid' => '60b0f64e-592c-4d69-a1b0-07d70b9e7fcd',
   );
   $fpps[] = array(
     'timestamp' => 1431459883,
@@ -713,7 +759,29 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
       ),
     ),
     'rdf_mapping' => array(),
-    'user_uuid' => '5ff24b76-cc90-4ec1-899e-f2f640ef998c',
+    'user_uuid' => 'b1ca6a98-3153-462d-9f4e-77750818c0f4',
+  );
+  $fpps[] = array(
+    'timestamp' => 1431481732,
+    'title' => '',
+    'log' => '',
+    'bundle' => 'dccr_images_fpp',
+    'link' => 0,
+    'path' => '',
+    'reusable' => 0,
+    'admin_title' => '',
+    'admin_description' => '',
+    'category' => '',
+    'view_access' => NULL,
+    'edit_access' => NULL,
+    'created' => 1431481732,
+    'uuid' => 'fc34488b-f7f0-43c4-b9fa-c7490275c047',
+    'language' => 'und',
+    'field_fpp_image' => array(),
+    'field_fpp_image_caption' => array(),
+    'field_fpp_link' => array(),
+    'rdf_mapping' => array(),
+    'user_uuid' => '60b0f64e-592c-4d69-a1b0-07d70b9e7fcd',
   );
   return $fpps;
 }
