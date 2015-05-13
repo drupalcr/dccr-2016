@@ -71,3 +71,4 @@ features[uuid_fpp][] = e6685593-84fd-42dc-bf99-3648a4ae35ea
 features[uuid_fpp][] = edf42ecf-f4b5-4c11-8a5d-db6059e91b9f
 features[uuid_fpp][] = fc34488b-f7f0-43c4-b9fa-c7490275c047
 features[views_view][] = speakers
+features[views_view][] = tracks
