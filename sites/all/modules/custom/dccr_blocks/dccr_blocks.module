@@ -1,0 +1,268 @@
+<?php
+
+/**
+ * @file
+ * dccr_blocks.module
+ */
+
+/**
+ * Implements hook_block_info().
+ */
+function dccr_blocks_block_info() {
+  $blocks = array();
+  $blocks['proposed_sessions_header'] = array(
+    'info' => t('Proposed sessions list header'),
+    'cache' => DRUPAL_CACHE_GLOBAL,
+  );
+  $blocks['propose_sessions_link'] = array(
+    'info' => t('Link to propose a session'),
+    'cache' => DRUPAL_CACHE_GLOBAL,
+  );
+
+  $blocks['dccr_social_block_sidebar'] = array(
+    'info' => t('Social Block Sidebar.'),
+    'cache' => DRUPAL_CACHE_GLOBAL,
+  );
+
+  $blocks['dccr_social_block_footer'] = array(
+    'info' => t('Social Block Footer.'),
+    'cache' => DRUPAL_CACHE_GLOBAL,
+  );
+
+  $blocks['dccr_faq_block'] = array(
+    'info' => t('FAQ Block.'),
+    'cache' => DRUPAL_CACHE_GLOBAL,
+  );
+
+  $blocks['dccr_register_image_link_block'] = array(
+    'info' => t('Register Image Link Block.'),
+    'cache' => DRUPAL_CACHE_PER_ROLE,
+  );
+
+  $blocks['dccr_create_account_block'] = array(
+    'info' => t('Create Account Block.'),
+    'cache' => DRUPAL_CACHE_PER_ROLE,
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_i18n_string_info().
+ */
+function dccr_blocks_i18n_string_info() {
+  $groups['users_input_translation'] = array(
+    'title' => 'User\'s input translations',
+    'description' => 'Translatable blocks fields for users',
+    'format' => FALSE,
+    'list' => FALSE,
+  );
+  return $groups;
+}
+
+/**
+ * Implements hook_block_configure().
+ */
+function dccr_blocks_block_configure($delta = '') {
+  $form = array();
+  $default = 'In the Drupal Camp everyone can propose a session, you can talk about Drupal, CSS, HTML, Javascript, RWD, UX, Design, Social Media, etc. The proposed sessions will be evaluated and by [DATE] we will choose and let you know the approved sessions.';
+
+  switch ($delta) {
+    case 'proposed_sessions_header':
+      $form['dccr_blocks_text_body'] = array(
+        '#type' => 'textarea',
+        '#title' => t('Enter the text about proposed sessions here'),
+        '#default_value' => variable_get('dccr_blocks_text_body_field', $default),
+      );
+      if (module_exists('i18n_string')) {
+        i18n_string('users_input_translation:dccr_blocks_text_body', $default, array('update' => TRUE));
+      }
+      break;
+  }
+  return $form;
+}
+
+/**
+ * Implements hook_block_save().
+ */
+function dccr_blocks_block_save($delta = '', $edit = array()) {
+  switch ($delta) {
+    case 'proposed_sessions_header':
+      variable_set('dccr_blocks_text_body_field', $edit['dccr_blocks_text_body']);
+      if (module_exists('i18n_string')) {
+        i18n_string('users_input_translation:dccr_blocks_text_body', $edit['dccr_blocks_text_body'], array('update' => TRUE));
+      }
+      break;
+  }
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function dccr_blocks_block_view($delta = '') {
+  $block = array();
+  $default = 'In the Drupal Camp everyone can propose a session, you can talk about Drupal, CSS, HTML, Javascript, RWD, UX, Design, Social Media, etc. The proposed sessions will be evaluated and by [DATE] we will choose and let you know the approved sessions.';
+
+  switch ($delta) {
+    case 'proposed_sessions_header':
+      $custom_block_text = (module_exists('i18n_string')) ? i18n_string_translate("users_input_translation:dccr_blocks_text_body", variable_get('dccr_blocks_text_body_field', $default)) : variable_get('dccr_blocks_text_body_field', $default);
+      $block['subject'] = t('Proposed Sessions');
+      $block['content'] = array(
+        'message' => array(
+          '#type' => 'markup',
+          '#markup' => $custom_block_text,
+        ),
+      );
+      break;
+
+    case 'propose_sessions_link':
+      $block['content'] = array(
+        'link' => array(
+          '#type' => 'markup',
+          '#markup' => l(t('Propose a session!'), 'node/add/dccr-session'),
+        ),
+      );
+      break;
+
+    case 'dccr_social_block_sidebar':
+      $block = dccr_blocks_get_social_block('sidebar');
+      break;
+
+    case 'dccr_social_block_footer':
+      $block = dccr_blocks_get_social_block('footer');
+      break;
+
+    case 'dccr_faq_block':
+      $block = dccr_blocks_get_faq_block();
+      break;
+
+    case 'dccr_register_image_link_block':
+      $block = dccr_blocks_register_image_link_block();
+      break;
+
+    case 'dccr_create_account_block':
+      $block = dccr_blocks_create_account_block();
+      break;
+  }
+
+  return $block;
+}
+
+/**
+ * Get Social Block.
+ */
+function dccr_blocks_get_social_block($position) {
+  $block = array();
+  $subject = $position == 'sidebar' ? t('Follow Us') : '';
+  $block['subject'] = $subject;
+  $links = array(
+    l(t('Facebook'), 'https://www.facebook.com/groups/drupalcr/', array(
+      'attributes' => array(
+        'target' => '_blank',
+        'rel' => 'nofollow',
+        'class' => array('social-link', 'facebook'),
+      ),
+    )),
+    l(t('Twitter'), 'https://twitter.com/drupalcr', array(
+      'attributes' => array(
+        'target' => '_blank',
+        'rel' => 'nofollow',
+        'class' => array('social-link', 'twitter'),
+      ),
+    )),
+    l(t('Drupal'), 'https://groups.drupal.org/costa-rica', array(
+      'attributes' => array(
+        'target' => '_blank',
+        'rel' => 'nofollow',
+        'class' => array('social-link', 'drupal'),
+      ),
+    )),
+  );
+  $markup = theme_item_list(array(
+    'items' => $links,
+    'title' => '',
+    'type' => 'ul',
+    'attributes' => array(),
+  ));
+
+  $extra_class = $position == 'footer' ? 'footer' : 'sidebar';
+  $block['content'] = array(
+    '#type' => 'markup',
+    '#markup' => $markup,
+    '#prefix' => '<div class="social-links ' . $extra_class . '">',
+    '#suffix' => '</div>',
+  );
+
+  return $block;
+}
+
+/**
+ * Get F.A.Q block.
+ */
+function dccr_blocks_get_faq_block() {
+  $block = array();
+  $block['subject'] = t('Frequently Asked Questions');
+  $faqs = array(
+    l(t('How to arrive?'), '<front>'),
+    l(t('Do you offer scholarships?'), '<front>'),
+    l(t('Where to eat?'), '<front>'),
+    l(t('Where to sleep?'), '<front>'),
+  );
+  $markup = theme_item_list(array(
+    'items' => $faqs,
+    'title' => '',
+    'type' => 'ul',
+    'attributes' => array(),
+  ));
+  $block['content'] = $markup;
+
+  return $block;
+}
+
+/**
+ * Get register image link block.
+ */
+function dccr_blocks_register_image_link_block() {
+  $block = array();
+  // @TODO change image_stlye.
+  $image_style_name = 'thumbnail';
+  $image_path = variable_get('dccr_register_image_link_path', '');
+  $markup = '';
+  if ($image_path) {
+    $image_markup = theme_image_style(array(
+      'style_name' => $image_style_name,
+      'path' => $image_path,
+    ));
+    $markup .= $image_markup;
+  }
+  if (user_is_anonymous()) {
+    $button_main_text = t('Register');
+    $button_secondary_text = t('$25 Early Bird');
+    if (!dccr_is_early_bird(REQUEST_TIME)) {
+      $button_secondary_text = t('$35 Regular Bird');
+    }
+    $link_markup = '<span class="link-main">' . $button_main_text . '</span><span>' . $button_secondary_text . '</span>';
+    $link = l($link_markup, '<front>', array('html' => TRUE));
+    $markup .= $link;
+  }
+
+  $block['subject'] = '';
+  $block['content'] = $markup;
+
+  return $block;
+}
+
+/**
+ * Get Create Account block.
+ */
+function dccr_blocks_create_account_block() {
+  $block = array();
+  $block['subject'] = '';
+  $markup = '';
+  if (user_is_anonymous()) {
+    $markup = l(t('Create Account'), 'user/register');
+  }
+  $block['content'] = $markup;
+
+  return $block;
+}

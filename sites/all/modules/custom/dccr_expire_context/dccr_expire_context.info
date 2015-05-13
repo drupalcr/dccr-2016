@@ -1,0 +1,8 @@
+name = DCCR Publish/Expire Context
+description = Context plugin for publishing and expiring context at certain date
+core = 7.x
+package = Drupal Camp
+
+files[] = dccr_expire_context.module
+files[] = plugins/context_condition_publish.inc
+files[] = plugins/context_condition_expire.inc
