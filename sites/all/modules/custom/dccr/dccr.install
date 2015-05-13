@@ -300,7 +300,7 @@ function dccr_update_7020() {
 /**
  * Add path alias for how-to-sponsor.
  */
-function dccr_update_7022() {
+function dccr_update_7021() {
   // Ading path alias for 'how-to-sponsor'.
   $path = array(
     'source' => 'how-to-sponsor',
