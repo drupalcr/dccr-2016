@@ -21,6 +21,11 @@ function dccr_ftr_keynote_ds_field_settings_info() {
       'weight' => '1',
       'label' => 'hidden',
       'format' => 'default',
+      'formatter_settings' => array(
+        'link' => '0',
+        'wrapper' => 'h4',
+        'class' => '',
+      ),
     ),
   );
   $export['node|keynote|default'] = $ds_fieldsetting;
