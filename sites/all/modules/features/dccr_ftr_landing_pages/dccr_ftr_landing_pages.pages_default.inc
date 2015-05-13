@@ -485,9 +485,9 @@ function dccr_ftr_landing_pages_default_page_manager_pages() {
   $page->api_version = 1;
   $page->name = 'conference_center';
   $page->task = 'page';
-  $page->admin_title = 'Conference Center';
+  $page->admin_title = 'Venue';
   $page->admin_description = '';
-  $page->path = 'conference-center';
+  $page->path = 'venue';
   $page->access = array();
   $page->menu = array();
   $page->arguments = array();
@@ -804,7 +804,7 @@ function dccr_ftr_landing_pages_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = 'Conference Center';
+  $display->title = 'Venue';
   $display->uuid = '891a719b-c48f-48ba-824f-3cbdb6e49243';
   $display->content = array();
   $display->panels = array();

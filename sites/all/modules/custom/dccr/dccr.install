@@ -311,12 +311,12 @@ function dccr_update_7021() {
 }
 
 /**
- * Add path alias for conference-center.
+ * Add path alias for venue.
  */
 function dccr_update_7022() {
-  // Ading path alias for 'conference-center'.
+  // Ading path alias for 'venue'.
   $path = array(
-    'source' => 'conference-center',
+    'source' => 'venue',
     'alias' => 'sede',
     'language' => 'es',
   );
