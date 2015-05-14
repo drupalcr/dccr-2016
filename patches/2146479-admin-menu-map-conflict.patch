@@ -1,0 +1,78 @@
+diff --git a/fieldable_panels_panes.module b/fieldable_panels_panes.module
+index 6204b63..e666152 100644
+--- a/fieldable_panels_panes.module
++++ b/fieldable_panels_panes.module
+@@ -395,17 +395,48 @@ function fieldable_panels_panes_admin_menu_map() {
+   $info = entity_get_info('fieldable_panels_pane');
+   foreach ($info['bundles'] as $bundle_name => $bundle_info) {
+     $bundles[] = strtr($bundle_name, '_', '-');
++  }
++
++  $map['admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type'] = array(
++    'parent' => 'admin/structure/fieldable-panels-panes',
++    'arguments' => array(
++      array('%fieldable_panels_panes_type' => $bundles),
++    ),
++  );
++
++  return $map;
++}
++
++/**
++ * Implements hook_admin_menu_map_alter().
++ *
++ * Add mapping for the individual fields if the Field UI module is enabled,
++ * and the mappings are not already added by field_ui_admin_menu_map().
++ */
++function fieldable_panels_panes_admin_menu_map_alter(array &$map) {
++  if (!module_exists('field_ui')) {
++    return;
++  }
+ 
+-    // Add mapping for the individual fields if the Field UI module is enabled.
+-    if (module_exists('field_ui')) {
+-      if (isset($bundle_info['admin'])) {
+-        $admin_path = $bundle_info['admin']['path'];
+-        $fields = array();
++  $bundles = array();
++  $info = entity_get_info('fieldable_panels_pane');
++  foreach ($info['bundles'] as $bundle_name => $bundle_info) {
++    if (isset($bundle_info['admin'])) {
++      $admin_path = $bundle_info['admin']['path'];
++
++      // Fields mapping may already be supported by field_ui_admin_menu_map()
++      // so only add it if it doesn't exist.
++      if (isset($map["$admin_path/fields/%field_ui_menu"])) {
++        continue;
++      }
+ 
+-        foreach (field_info_instances('fieldable_panels_pane', $bundle_name) as $field) {
+-          $fields[] = $field['field_name'];
+-        }
++      $fields = array();
+ 
++      foreach (field_info_instances('fieldable_panels_pane', $bundle_name) as $field) {
++        $fields[] = $field['field_name'];
++      }
++
++      if (!empty($fields)) {
+         $map["$admin_path/fields/%field_ui_menu"]['parent'] = "$admin_path/fields";
+         $map["$admin_path/fields/%field_ui_menu"]['arguments'][] = array(
+           '%fieldable_panels_panes_type' => array($bundle_name),
+@@ -414,16 +445,6 @@ function fieldable_panels_panes_admin_menu_map() {
+       }
+     }
+   }
+-
+-  $map['admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type'] = array(
+-    'parent' => 'admin/structure/fieldable-panels-panes',
+-    'arguments' => array(
+-      array('%fieldable_panels_panes_type' => $bundles),
+-    ),
+-  );
+-
+-
+-  return $map;
+ }
+ 
+ /**
