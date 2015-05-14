@@ -152,6 +152,33 @@ function dccr_ftr_workshop_default_message_type() {
     },
     "rdf_mapping" : []
   }');
+  $items['workshop_reminder'] = entity_import('message_type', '{
+    "name" : "workshop_reminder",
+    "description" : "Workshop Reminder",
+    "argument_keys" : [],
+    "argument" : [],
+    "category" : "message_type",
+    "data" : {
+      "token options" : { "clear" : 0 },
+      "purge" : { "override" : 0, "enabled" : 0, "quota" : "", "days" : "" }
+    },
+    "language" : "en",
+    "arguments" : null,
+    "message_text" : { "en" : [
+        {
+          "value" : "\\u003Cp\\u003EHola\\u003C\\/p\\u003E\\r\\n",
+          "format" : "manati_texto_formato",
+          "safe_value" : "\\u003Cp\\u003EHola\\u003C\\/p\\u003E\\n"
+        },
+        {
+          "value" : "\\u003Cp\\u003EHola Esto es un test\\u0026nbsp; \\u003Ca title=\\u0022Insert this token into your form\\u0022\\u003E[message:field-workshop-node:title] \\u003C\\/a\\u003E\\u003C\\/p\\u003E\\r\\n\\u003Cp\\u003EEste el usuario \\u003Ca title=\\u0022Insert this token into your form\\u0022\\u003E[message:field-user-flagger:name]\\u003C\\/a\\u003E\\u003C\\/p\\u003E\\r\\n",
+          "format" : "manati_texto_formato",
+          "safe_value" : "\\u003Cp\\u003EHola Esto es un test\\u00a0 \\u003Ca title=\\u0022Insert this token into your form\\u0022\\u003E[message:field-workshop-node:title] \\u003C\\/a\\u003E\\u003C\\/p\\u003E\\n\\u003Cp\\u003EEste el usuario \\u003Ca title=\\u0022Insert this token into your form\\u0022\\u003E[message:field-user-flagger:name]\\u003C\\/a\\u003E\\u003C\\/p\\u003E\\n"
+        }
+      ]
+    },
+    "rdf_mapping" : []
+  }');
   return $items;
 }
 

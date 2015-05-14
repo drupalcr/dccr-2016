@@ -44,6 +44,7 @@ function dccr_ftr_workshop_field_default_field_instances() {
     'label' => 'Workshop node',
     'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -93,6 +94,7 @@ function dccr_ftr_workshop_field_default_field_instances() {
     'label' => 'Workshop node',
     'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -105,6 +107,102 @@ function dccr_ftr_workshop_field_default_field_instances() {
       ),
       'type' => 'entityreference_autocomplete',
       'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'message-workshop_reminder-field_user_flagger'
+  $field_instances['message-workshop_reminder-field_user_flagger'] = array(
+    'bundle' => 'workshop_reminder',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 0,
+      ),
+      'message_notify_email_body' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'message_notify_email_subject' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'message',
+    'field_name' => 'field_user_flagger',
+    'label' => 'user flagger',
+    'required' => 1,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'message-workshop_reminder-field_workshop_node'
+  $field_instances['message-workshop_reminder-field_workshop_node'] = array(
+    'bundle' => 'workshop_reminder',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 1,
+      ),
+      'message_notify_email_body' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'message_notify_email_subject' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'message',
+    'field_name' => 'field_workshop_node',
+    'label' => 'Workshop node',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 3,
     ),
   );
 
@@ -138,6 +236,7 @@ function dccr_ftr_workshop_field_default_field_instances() {
     'required' => 1,
     'settings' => array(
       'display_summary' => 1,
+      'entity_translation_sync' => FALSE,
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -188,6 +287,7 @@ function dccr_ftr_workshop_field_default_field_instances() {
     'label' => 'Availability',
     'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max' => 15,
       'min' => '',
       'prefix' => '',
@@ -229,6 +329,7 @@ function dccr_ftr_workshop_field_default_field_instances() {
     'label' => 'Level',
     'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -266,6 +367,7 @@ function dccr_ftr_workshop_field_default_field_instances() {
     'label' => 'Room',
     'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -305,6 +407,7 @@ function dccr_ftr_workshop_field_default_field_instances() {
     'label' => 'Speaker',
     'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -346,6 +449,7 @@ function dccr_ftr_workshop_field_default_field_instances() {
     'label' => 'Track',
     'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -395,6 +499,7 @@ function dccr_ftr_workshop_field_default_field_instances() {
       'default_value2' => 'same',
       'default_value_code' => '',
       'default_value_code2' => '',
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -423,6 +528,7 @@ function dccr_ftr_workshop_field_default_field_instances() {
   t('Track');
   t('Workshop Date');
   t('Workshop node');
+  t('user flagger');
 
   return $field_instances;
 }
