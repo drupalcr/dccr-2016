@@ -44,6 +44,11 @@ function dccr_blocks_block_info() {
     'cache' => DRUPAL_CACHE_PER_ROLE,
   );
 
+  $blocks['dccr_important_dates'] = array(
+    'info' => t('Important Dates'),
+    'cache' => DRUPAL_CACHE_GLOBAL,
+  );
+
   return $blocks;
 }
 
@@ -143,7 +148,61 @@ function dccr_blocks_block_view($delta = '') {
     case 'dccr_create_account_block':
       $block = dccr_blocks_create_account_block();
       break;
+
+    case 'dccr_important_dates':
+      $block = dccr_blocks_important_dates_block();
+      break;
   }
+
+  return $block;
+}
+
+/**
+ * Get Important Dates Block.
+ */
+function dccr_blocks_important_dates_block() {
+  $dates = array(
+    array(
+      // 06-09-15.
+      'date' => 1433808000,
+      'text' => t('Sessions Proposals Starts.') . '<br/>' . t('Early Bird Inscription Starts'),
+    ),
+    array(
+      // 06-30-15.
+      'date' => 1435622400,
+      'text' => t('Early Bird Inscription Finishes'),
+    ),
+    array(
+      // 07-16-15.
+      'date' => 1437004800,
+      'text' => t('Sessions Proposals Finishes'),
+    ),
+    array(
+      // 07-25-15.
+      'date' => 1437782400,
+      'text' => t('Regular Bird Inscription Finishes'),
+    ),
+    array(
+      // 07-30-15.
+      'date' => 1438214400,
+      'text' => t('Drupal Camp Inauguration'),
+    ),
+  );
+
+  $items = array();
+  foreach ($dates as $date) {
+    $item = '<div class="important-date"><div class="date">' . format_date($date['date'], 'custom', 'F d')
+      . '</div><div class="event"><p>' . $date['text'] . '</p></div>';
+    $items[] = $item;
+  }
+
+  $block['subject'] = t('Important Dates:');
+  $block['content'] = theme_item_list(array(
+    'items' => $items,
+    'title' => '',
+    'type' => 'ul',
+    'attributes' => array(),
+  ));
 
   return $block;
 }

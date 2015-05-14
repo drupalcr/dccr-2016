@@ -251,9 +251,82 @@ function dccr_update_7016() {
 }
 
 /**
- * Enable dccr_ftr_faq module and create path alias..
+ * Enable dccr_ftr_landing_pages.
  */
 function dccr_update_7017() {
+  $module_list = array('dccr_ftr_landing_pages');
+  module_enable($module_list, TRUE);
+}
+
+/**
+ * Add path alias for register.
+ */
+function dccr_update_7018() {
+  // Ading path alias for 'register'.
+  $path = array(
+    'source' => 'register',
+    'alias' => 'registro',
+    'language' => 'es',
+  );
+  path_save($path);
+}
+
+/**
+ * Add path alias for conference.
+ */
+function dccr_update_7019() {
+  // Ading path alias for 'conference'.
+  $path = array(
+    'source' => 'conference',
+    'alias' => 'conferencia',
+    'language' => 'es',
+  );
+  path_save($path);
+}
+
+/**
+ * Add path alias for contact-us.
+ */
+function dccr_update_7020() {
+  // Ading path alias for 'contact-us'.
+  $path = array(
+    'source' => 'contact-us',
+    'alias' => 'contactenos',
+    'language' => 'es',
+  );
+  path_save($path);
+}
+
+/**
+ * Add path alias for how-to-sponsor.
+ */
+function dccr_update_7021() {
+  // Ading path alias for 'how-to-sponsor'.
+  $path = array(
+    'source' => 'how-to-sponsor',
+    'alias' => 'como-patrocinar',
+    'language' => 'es',
+  );
+  path_save($path);
+}
+
+/**
+ * Add path alias for venue.
+ */
+function dccr_update_7022() {
+  // Ading path alias for 'venue'.
+  $path = array(
+    'source' => 'venue',
+    'alias' => 'sede',
+    'language' => 'es',
+  );
+  path_save($path);
+}
+
+/**
+ * Enable dccr_ftr_faq module and create path alias..
+ */
+function dccr_update_7023() {
   $module_list = array('dccr_ftr_faq');
   module_enable($module_list);
 
@@ -265,3 +338,4 @@ function dccr_update_7017() {
   );
   path_save($path);
 }
+
