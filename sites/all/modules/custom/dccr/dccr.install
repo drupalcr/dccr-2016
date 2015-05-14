@@ -322,3 +322,20 @@ function dccr_update_7022() {
   );
   path_save($path);
 }
+
+/**
+ * Enable dccr_ftr_faq module and create path alias..
+ */
+function dccr_update_7023() {
+  $module_list = array('dccr_ftr_faq');
+  module_enable($module_list);
+
+  // Ading path alias for 'faq'.
+  $path = array(
+    'source' => 'faq',
+    'alias' => 'preguntas-frecuentes',
+    'language' => 'es',
+  );
+  path_save($path);
+}
+
