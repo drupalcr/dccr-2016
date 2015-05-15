@@ -262,10 +262,10 @@ function dccr_blocks_get_faq_block() {
   $block = array();
   $block['subject'] = t('Frequently Asked Questions');
   $faqs = array(
-    l(t('How to arrive?'), '<front>'),
-    l(t('Do you offer scholarships?'), '<front>'),
-    l(t('Where to eat?'), '<front>'),
-    l(t('Where to sleep?'), '<front>'),
+    l(t('How to arrive?'), 'faq'),
+    l(t('Do you offer scholarships?'), 'faq'),
+    l(t('Where to eat?'), 'faq'),
+    l(t('Where to sleep?'), 'faq'),
   );
   $markup = theme_item_list(array(
     'items' => $faqs,
