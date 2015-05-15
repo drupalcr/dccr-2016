@@ -162,18 +162,31 @@ function dccr_ftr_workshop_default_message_type() {
       "token options" : { "clear" : 0 },
       "purge" : { "override" : 0, "enabled" : 0, "quota" : "", "days" : "" }
     },
-    "language" : "en",
+    "language" : "es",
     "arguments" : null,
-    "message_text" : { "en" : [
+    "message_text" : {
+      "en" : [
         {
-          "value" : "\\u003Cp\\u003EHola\\u003C\\/p\\u003E\\r\\n",
-          "format" : "manati_texto_formato",
-          "safe_value" : "\\u003Cp\\u003EHola\\u003C\\/p\\u003E\\n"
+          "value" : "[message:field-days-remaining] days left to the workshop  [message:field-workshop-node:title]\\n",
+          "format" : "plain_text",
+          "safe_value" : "\\u003Cp\\u003E[message:field-days-remaining] days left to the workshop  [message:field-workshop-node:title]\\u003C\\/p\\u003E\\n"
         },
         {
-          "value" : "\\u003Cp\\u003EHola Esto es un test\\u0026nbsp; \\u003Ca title=\\u0022Insert this token into your form\\u0022\\u003E[message:field-workshop-node:title] \\u003C\\/a\\u003E\\u003C\\/p\\u003E\\r\\n\\u003Cp\\u003EEste el usuario \\u003Ca title=\\u0022Insert this token into your form\\u0022\\u003E[message:field-user-flagger:name]\\u003C\\/a\\u003E\\u003C\\/p\\u003E\\r\\n",
-          "format" : "manati_texto_formato",
-          "safe_value" : "\\u003Cp\\u003EHola Esto es un test\\u00a0 \\u003Ca title=\\u0022Insert this token into your form\\u0022\\u003E[message:field-workshop-node:title] \\u003C\\/a\\u003E\\u003C\\/p\\u003E\\n\\u003Cp\\u003EEste el usuario \\u003Ca title=\\u0022Insert this token into your form\\u0022\\u003E[message:field-user-flagger:name]\\u003C\\/a\\u003E\\u003C\\/p\\u003E\\n"
+          "value" : "Dear [message:field-user-flagger:name]\\nThe workshop  [message:field-workshop-node:title]  will be the [message:field-workshop-node:field-workshop-date:value:workshop_reminder] in the [message:field-workshop-node:field-location:name] room.\\nThank you.",
+          "format" : "plain_text",
+          "safe_value" : "\\u003Cp\\u003EDear [message:field-user-flagger:name]\\u003Cbr \\/\\u003E\\nThe workshop  [message:field-workshop-node:title]  will be the [message:field-workshop-node:field-workshop-date:value:workshop_reminder] in the [message:field-workshop-node:field-location:name] room.\\u003Cbr \\/\\u003E\\nThank you.\\u003C\\/p\\u003E\\n"
+        }
+      ],
+      "es" : [
+        {
+          "value" : "Faltan  [message:field_days_remaining] para el taller [message:field-workshop-node:title]\\r\\n",
+          "format" : "plain_text",
+          "safe_value" : "\\u003Cp\\u003EFaltan  [message:field_days_remaining] para el taller [message:field-workshop-node:title]\\u003C\\/p\\u003E\\n"
+        },
+        {
+          "value" : "Estimado [message:field-user-flagger:name]\\r\\nLe recordamos que el taller [message:field-workshop-node:title] se estar\\u00e1 llevando a cabo el d\\u00eda [message:field-workshop-node:field-workshop-date:value:workshop_reminder] en el salon [message:field-workshop-node:field-location:name]",
+          "format" : "plain_text",
+          "safe_value" : "\\u003Cp\\u003EEstimado [message:field-user-flagger:name]\\u003Cbr \\/\\u003E\\nLe recordamos que el taller [message:field-workshop-node:title] se estar\\u00e1 llevando a cabo el d\\u00eda [message:field-workshop-node:field-workshop-date:value:workshop_reminder] en el salon [message:field-workshop-node:field-location:name]\\u003C\\/p\\u003E\\n"
         }
       ]
     },

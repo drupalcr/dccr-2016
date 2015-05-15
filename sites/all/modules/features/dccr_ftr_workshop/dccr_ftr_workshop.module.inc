@@ -102,22 +102,33 @@ function dccr_ftr_workshop_countdown($action, $content_id) {
 function dccr_ftr_workshop_cron() {
   $week_before = strtotime('-7 day',DCCR_CAMP_START_DATE);
   $three_days_before = strtotime('-3 day',DCCR_CAMP_START_DATE);
-   if ($week_before <= time()) {
+ if (DCCR_CAMP_START_DATE >= REQUEST_TIME && $week_before <= REQUEST_TIME && !variable_get('REMINDER_WEEK_BEFORE', FALSE)) {
+    variable_get('REMINDER_WEEK_BEFORE', TRUE);
+    dccr_ftr_workshop_invoke_reminde('7');
+  }
+  elseif (DCCR_CAMP_START_DATE >= REQUEST_TIME && $three_days_before <= REQUEST_TIME && !variable_get('REMINDER_THREE_DAYS_BEFORE', FALSE)) {
+    variable_set('REMINDER_THREE_DAYS_BEFORE', TRUE);
+    dccr_ftr_workshop_invoke_reminder('3');
+ }
+}
 
-    $result = db_select('node', 'n')
-      ->fields('n',array('nid'))
-      ->condition('type','workshop', '=')
-      ->condition('status',1, '=')
-      ->execute();
-    $workshops_nids = $result->fetchCol();
-    $workshops = node_load_multiple($workshops_nids);
+/**
+ * Invoke the rule event dccr_ftr_workshop_nofications.
+ */
+function dccr_ftr_workshop_invoke_reminder($days) {
+  $result = db_select('node', 'n')
+    ->fields('n',array('nid'))
+    ->condition('type','workshop', '=')
+    ->condition('status',1, '=')
+    ->execute();
+  $workshops_nids = $result->fetchCol();
+  $workshops = node_load_multiple($workshops_nids);
 
-    foreach ($workshops_nids as $nid) {
-      $users_uids = dccr_ftr_workshop_get_workshop_flaggers($nid);
-      $users = user_load_multiple($users_uids);
-      foreach ($users_uids as $uid) {
-        rules_invoke_event('dccr_ftr_workshop_nofications', $workshops[$nid],$users[$uid]);
-      }
+  foreach ($workshops_nids as $nid) {
+    $users_uids = dccr_ftr_workshop_get_workshop_flaggers($nid);
+    $users = user_load_multiple($users_uids);
+    foreach ($users_uids as $uid) {
+      rules_invoke_event('dccr_ftr_workshop_nofications', $workshops[$nid],$users[$uid], $days);
     }
   }
 }
@@ -151,7 +162,11 @@ function dccr_ftr_workshop_rules_event_info() {
           'type' => 'user',
           'label' => t('User to remind'),
         ),
+        'days' => array(
+          'type' => 'text',
+          'label' => t('Days to the camp'),
+        ),
       ),
     ),
   );
-} 
+}

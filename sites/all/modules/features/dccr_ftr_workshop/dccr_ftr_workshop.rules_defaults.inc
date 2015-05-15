@@ -84,6 +84,11 @@ function dccr_ftr_workshop_default_rules_configuration() {
             "value" : [ "user" ]
           }
         },
+        { "data_set" : {
+            "data" : [ "workshop-reminder-created:field-days-remaining" ],
+            "value" : "[days:value]"
+          }
+        },
         { "message_notify_process" : { "message" : [ "workshop-reminder-created" ], "mail" : "[user:mail]" } }
       ]
     }
