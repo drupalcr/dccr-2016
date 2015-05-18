@@ -240,7 +240,7 @@ function _uuid_fpp_features_dependencies($uuids) {
         if (isset($backup[$bundle]) && !isset($entity_info['fieldable_panels_pane']['bundles'][$bundle])) {
           $implements[$module] = $module;
         }
-        elseif ($backup[$bundle] != $entity_info['fieldable_panels_pane']['bundles'][$bundle]) {
+        elseif (isset($backup[$bundle]) && isset($entity_info['fieldable_panels_pane']['bundles'][$bundle]) && $backup[$bundle] != $entity_info['fieldable_panels_pane']['bundles'][$bundle]) {
           $implements[$module] = $module;
         }
       }

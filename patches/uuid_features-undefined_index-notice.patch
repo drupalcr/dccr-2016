@@ -1,0 +1,13 @@
+diff --git a/includes/uuid_fpp.features.inc b/includes/uuid_fpp.features.inc
+index 0360656..873bc28 100644
+--- a/includes/uuid_fpp.features.inc
++++ b/includes/uuid_fpp.features.inc
+@@ -240,7 +240,7 @@ function _uuid_fpp_features_dependencies($uuids) {
+         if (isset($backup[$bundle]) && !isset($entity_info['fieldable_panels_pane']['bundles'][$bundle])) {
+           $implements[$module] = $module;
+         }
+-        elseif ($backup[$bundle] != $entity_info['fieldable_panels_pane']['bundles'][$bundle]) {
++        elseif (isset($backup[$bundle]) && isset($entity_info['fieldable_panels_pane']['bundles'][$bundle]) && $backup[$bundle] != $entity_info['fieldable_panels_pane']['bundles'][$bundle]) {
+           $implements[$module] = $module;
+         }
+       }
