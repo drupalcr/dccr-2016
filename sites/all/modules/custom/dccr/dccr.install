@@ -339,3 +339,15 @@ function dccr_update_7023() {
   path_save($path);
 }
 
+/**
+ * Set title to <none> for left and right menu blocks.
+ */
+function dccr_update_7024() {
+  db_update('block')
+    ->fields(array(
+      'title' => '<none>',
+    ))
+    ->condition('delta', array('menu-left-menu', 'menu-right-menu'), 'IN')
+    ->execute();
+
+}
