@@ -170,3 +170,31 @@ function dccr_ftr_workshop_rules_event_info() {
     ),
   );
 }
+
+/**
+ * Implements hook_date_formats().
+ */
+
+function dccr_ftr_workshop_date_formats() {
+  return array(
+    array(
+      'type' => 'workshop_reminder',
+      'format' => 'l, F dS, Y \a\t G:i',
+      'locales' => array ('en', 'en-us'),
+    ),
+    array(
+      'type' => 'workshop_reminder',
+      'format' => 'd \d\e F \d\e\l Y \a \l\a\s g:s a',
+      'locales' => array ('es'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_date_format_types().
+ */
+function dccr_ftr_workshop_date_formats_types() {
+  return array(
+    'workshop_reminder' => t('Workshop Notification'),
+  );
+}
