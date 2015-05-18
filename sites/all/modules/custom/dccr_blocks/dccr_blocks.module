@@ -181,7 +181,9 @@ function dccr_blocks_block_view($delta = '') {
 function dccr_blocks_login_link_block() {
   $block = array();
   $block['subject'] = '';
-  $block['content'] = user_is_anonymous() ? l(t('Login'), 'user') : '';
+  $link = user_is_anonymous() ? l(t('Login'), 'user') : '';
+  $markup = '<div class="login-link-block">' . $link . '</div>';
+  $block['content'] = $markup;
   return $block;
 }
 
