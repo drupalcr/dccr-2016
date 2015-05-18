@@ -3,6 +3,7 @@ core = 7.x
 package = Drupal Camp
 dependencies[] = context
 dependencies[] = ctools
+dependencies[] = dccr_blocks
 dependencies[] = dccr_ftr_workshop
 dependencies[] = entity
 dependencies[] = features
