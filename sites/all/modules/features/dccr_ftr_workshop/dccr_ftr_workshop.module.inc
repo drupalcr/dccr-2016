@@ -100,14 +100,14 @@ function dccr_ftr_workshop_countdown($action, $content_id) {
  * Implements hook_cron().
  */
 function dccr_ftr_workshop_cron() {
-  $week_before = strtotime('-7 day',DCCR_CAMP_START_DATE);
-  $three_days_before = strtotime('-3 day',DCCR_CAMP_START_DATE);
- if (DCCR_CAMP_START_DATE >= REQUEST_TIME && $week_before <= REQUEST_TIME && !variable_get('REMINDER_WEEK_BEFORE', FALSE)) {
-    variable_get('REMINDER_WEEK_BEFORE', TRUE);
-    dccr_ftr_workshop_invoke_reminde('7');
+  $week_before = strtotime('-7 day', DCCR_CAMP_START_DATE);
+  $three_days_before = strtotime('-3 day', DCCR_CAMP_START_DATE);
+ if ($week_before <= REQUEST_TIME && !variable_get('reminder_week_before', FALSE)) {
+    variable_set('reminder_week_before', TRUE);
+    dccr_ftr_workshop_invoke_reminder('7');
   }
-  elseif (DCCR_CAMP_START_DATE >= REQUEST_TIME && $three_days_before <= REQUEST_TIME && !variable_get('REMINDER_THREE_DAYS_BEFORE', FALSE)) {
-    variable_set('REMINDER_THREE_DAYS_BEFORE', TRUE);
+  elseif ($three_days_before <= REQUEST_TIME && !variable_get('reminder_three_days_before', FALSE)) {
+    variable_set('reminder_three_days_before', TRUE);
     dccr_ftr_workshop_invoke_reminder('3');
  }
 }
