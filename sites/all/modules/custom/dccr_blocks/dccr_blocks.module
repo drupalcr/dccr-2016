@@ -49,6 +49,11 @@ function dccr_blocks_block_info() {
     'cache' => DRUPAL_CACHE_GLOBAL,
   );
 
+  $blocks['dccr_main_logo'] = array(
+    'info' => t('Main Logo'),
+    'cache' => DRUPAL_CACHE_GLOBAL,
+  );
+
   return $blocks;
 }
 
@@ -152,8 +157,26 @@ function dccr_blocks_block_view($delta = '') {
     case 'dccr_important_dates':
       $block = dccr_blocks_important_dates_block();
       break;
+
+    case 'dccr_main_logo':
+      $block = dccr_blocks_main_logo_block();
+      break;
   }
 
+  return $block;
+}
+
+/**
+ * Get Main Logo Block.
+ */
+function dccr_blocks_main_logo_block() {
+  $block = array();
+  $block['subject'] = '';
+  $block['content'] = theme_image(array(
+    'path' => theme_get_setting('logo'),
+    'alt' => t('Theme logo'),
+    'attributes' => array(),
+  ));
   return $block;
 }
 
