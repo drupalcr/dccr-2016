@@ -128,7 +128,7 @@ function dccr_ftr_workshop_invoke_reminder($days) {
     $users_uids = dccr_ftr_workshop_get_workshop_flaggers($nid);
     $users = user_load_multiple($users_uids);
     foreach ($users_uids as $uid) {
-      rules_invoke_event('dccr_ftr_workshop_nofications', $workshops[$nid],$users[$uid], $days);
+      rules_invoke_event('dccr_ftr_workshop_nofications', $workshops[$nid], $users[$uid], $days);
     }
   }
 }
