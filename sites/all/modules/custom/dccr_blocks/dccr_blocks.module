@@ -351,11 +351,23 @@ function dccr_get_final_schedule($only_flagged, $empty_slot_text, $block_title) 
   $block = array();
   $markup = '';
   $terms = dccr_get_rooms();
-  dpm($terms, 'terms');
   $terms_count = 0;
   $counter = 0;
-  $date1 = 1435672800;
-  $date2 = 1435759200;
+  $params = drupal_get_query_parameters();
+  $markup = '<div class=\'filter\'><div class=\'day\'>' . l(t('July 30th'), 'schedule', array('query' => array('date' => 'thursday'))) . '</div><div class=\'day\'>' . l(t('July 31th'), 'schedule', array('query' => array('date' => 'friday'))) . '</div></div>';
+
+  // Thursday, July 30th.
+  $date1 = 1438264800;
+  // Friday, July 31st.
+  $date2 = 1438351200;
+  if (isset($params['date']) && check_plain($params['date'])) {
+    if ($params['date'] == 'friday') {
+      // Friday, July 31st.
+      $date1 = 1438351200;
+      // Saturday, August 1st.
+      $date2 = 1438437600;
+    }
+  }
   $activities = dccr_get_global_activities(array($date1, $date2));
 
   // Create markup for rooms.
@@ -365,14 +377,12 @@ function dccr_get_final_schedule($only_flagged, $empty_slot_text, $block_title) 
     $markup .= '<div class=\'room-name\'><h2>' . $term->name . '</h2></div>';
   }
   $markup .= '</div>';
-  dpm($terms_count, 'cantidad de rooms');
 
   if ($activities) {
     foreach ($activities as $activity) {
       $date2 = dccr_get_activity_finish_time($activity);
       $sessions = dccr_get_approved_sessions(array($date1, $date2), $only_flagged);
 
-      dpm($sessions, 'todas');
       if ($sessions) {
         $markup .= dccr_print_sessions($sessions, $terms, $terms_count, $empty_slot_text);
       }
@@ -382,6 +392,17 @@ function dccr_get_final_schedule($only_flagged, $empty_slot_text, $block_title) 
       $act = node_view($activity_node, 'time_slot');
       $markup .= '<div class=\'time-slot\'><div class=\'hour\'><p>' . date('H:i', $activity_node->field_time['und'][0]['value']) . '</p><p>' . date('H:i', $activity_node->field_time['und'][0]['value2']) . '</p></div>';
       $markup .= '<div class=\'wide-slot\'>' . render($act) . '</div></div>';
+    }
+    if (isset($params['date']) && check_plain($params['date']) && $params['date'] == 'friday') {
+      $date2 = 1438437600;
+    }
+    else {
+      $date2 = 1438351200;
+    }
+
+    $sessions = dccr_get_approved_sessions(array($date1, $date2), $only_flagged);
+    if ($sessions) {
+      $markup .= dccr_print_sessions($sessions, $terms, $terms_count, $empty_slot_text);
     }
   }
 
@@ -397,15 +418,28 @@ function dccr_get_final_schedule($only_flagged, $empty_slot_text, $block_title) 
 function dccr_print_sessions($sessions, $terms, $terms_count, $empty_slot_text) {
   $markup = '';
   $counter = 0;
+  $var1 = 0;
+  $var2 = 0;
   $first_term_index = key($terms);
-  dpm($first_term_index);
 
-  // Lala.
   foreach ($sessions as $session) {
     if ($counter == 0) {
-      $markup .= '<div class=\'time-slot\'><div class=\'hour\'><p>' . date('H:i', $session->field_time['und'][0]['value']) . '</p><p>' . date('H:i', $session->field_time['und'][0]['value2']) . '</p></div>';
+      $var1 = date('H:i', $session->field_time['und'][0]['value']);
+      $var2 = date('H:i', $session->field_time['und'][0]['value2']);
+      $markup .= '<div class=\'time-slot\'><div class=\'hour\'><p>' . $var1 . '</p><p>' . $var2 . '</p></div>';
     }
     if ($session->field_location['und'][0]['tid'] == $terms[$first_term_index + $counter]->tid) {
+      if (date('H:i', $session->field_time['und'][0]['value']) != $var1) {
+        for ($i = $counter; $i < $terms_count; $i++) {
+          $markup .= '<div class=\'session\'><p>' . t("@text", array('@text' => $empty_slot_text)) . '</p></div>';
+        }
+        $var1 = date('H:i', $session->field_time['und'][0]['value']);
+        $var2 = date('H:i', $session->field_time['und'][0]['value2']);
+        $markup .= '</div><div class=\'time-slot\'><div class=\'hour\'><p>' . $var1 . '</p><p>' . $var2 . '</p></div>';
+        for ($i = 0; $i < $counter; $i++) {
+          $markup .= '<div class=\'session\'><p>' . t("@text", array('@text' => $empty_slot_text)) . '</p></div>';
+        }
+      }
       $item = node_view($session, 'time_slot');
       $markup .= '<div class=\'session\'>' . render($item) . '</div>';
       $counter++;
@@ -437,7 +471,7 @@ function dccr_print_sessions($sessions, $terms, $terms_count, $empty_slot_text) 
       $markup .= '</div>';
       $counter = 0;
     }
-  }//Fin foreach.
+  }
   if ($counter != $terms_count) {
     for ($i = $counter; $i < $terms_count; $i++) {
       $markup .= '<div class=\'session\'><p>' . t("@text", array('@text' => $empty_slot_text)) . '</p></div>';
