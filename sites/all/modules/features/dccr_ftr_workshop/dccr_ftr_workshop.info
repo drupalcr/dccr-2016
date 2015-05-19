@@ -51,6 +51,7 @@ features[taxonomy][] = rooms
 features[taxonomy][] = tracks
 features[user_permission][] = flag workshop_registration
 features[user_permission][] = unflag workshop_registration
+features[variable][] = date_format_hour_minute
 features[variable][] = field_bundle_settings_message__full_workshop
 features[variable][] = field_bundle_settings_message__user_application_workshop
 features[variable][] = field_bundle_settings_node__workshop
