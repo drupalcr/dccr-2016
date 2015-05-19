@@ -72,6 +72,7 @@ function dccr_ftr_workshop_preprocess_node(&$variables) {
   if ($variables['type'] == 'workshop' && $variables['view_mode'] == 'teaser') {
     $variables['content']['field_speaker'][0]['#suffix'] = ' /&nbsp';
     $variables['content']['field_availability'][0]['#suffix'] = ' ' . t('spaces left.');
+    $variables['content']['title'][0]['#markup'] = '<h2>' . l(check_plain($variables['title']), 'node/' . $variables['nid']) . '</h2>';
   }
 }
 
