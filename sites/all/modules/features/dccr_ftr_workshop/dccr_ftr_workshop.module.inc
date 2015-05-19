@@ -65,6 +65,16 @@ function dccr_ftr_workshop_flag_unflag($flag, $content_id, $account, $flagging) 
   }
 }
 
+/**
+ * Implements hook_preprocess_node().
+ */
+function dccr_ftr_workshop_preprocess_node(&$variables) {
+  if ($variables['type'] == 'workshop' && $variables['view_mode'] == 'teaser') {
+    $variables['content']['field_speaker'][0]['#suffix'] = ' /&nbsp';
+    $variables['content']['field_availability'][0]['#suffix'] = ' ' . t('spaces left.');
+  }
+}
+
 function dccr_ftr_workshop_countdown($action, $content_id) {
   $wrapper = entity_metadata_wrapper('node', $content_id);
   if ($wrapper->source->value()) {
