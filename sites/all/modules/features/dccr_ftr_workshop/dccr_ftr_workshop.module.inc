@@ -176,7 +176,7 @@ function dccr_ftr_workshop_rules_event_info() {
  */
 
 function dccr_ftr_workshop_date_formats() {
-  return array(
+  $formats = array(
     array(
       'type' => 'workshop_reminder',
       'format' => 'l, F dS, Y \a\t G:i',
@@ -188,11 +188,16 @@ function dccr_ftr_workshop_date_formats() {
       'locales' => array ('es'),
     ),
   );
+  foreach ($formats as $format) {
+    variable_set('date_format_'. $format['type'], $format['format']);
+  }
+  return $formats;
 }
 
 /**
  * Implements hook_date_format_types().
  */
+
 function dccr_ftr_workshop_date_formats_types() {
   return array(
     'workshop_reminder' => t('Workshop Notification'),
