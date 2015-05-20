@@ -3,6 +3,7 @@
  * @file
  * Extra-functionality to workshop feature.
  */
+
 /**
  * Implements hook_field_extra_fields().
  */
@@ -28,6 +29,9 @@ function dccr_ftr_workshop_node_view($node, $view_mode, $langcode) {
   }
 }
 
+/**
+ * Returns workshop register flag link only if it should be printed.
+ */
 function dccr_ftr_workshop_register_link($node) {
   global $user;
   $wrapper = entity_metadata_wrapper('node', $node);
@@ -52,7 +56,7 @@ function dccr_ftr_workshop_register_link($node) {
  */
 function dccr_ftr_workshop_flag_flag($flag, $content_id, $account, $flagging) {
   if ($flag->name == 'workshop_registration') {
-    dccr_ftr_workshop_countdown('flag',$content_id);
+    dccr_ftr_workshop_countdown('flag', $content_id);
   }
 }
 
@@ -61,7 +65,7 @@ function dccr_ftr_workshop_flag_flag($flag, $content_id, $account, $flagging) {
  */
 function dccr_ftr_workshop_flag_unflag($flag, $content_id, $account, $flagging) {
   if ($flag->name == 'workshop_registration') {
-    dccr_ftr_workshop_countdown('unflag',$content_id);
+    dccr_ftr_workshop_countdown('unflag', $content_id);
   }
 }
 
@@ -76,13 +80,16 @@ function dccr_ftr_workshop_preprocess_node(&$variables) {
   }
 }
 
+/**
+ * Update availability field for a workshop when flagged/unflagged.
+ */
 function dccr_ftr_workshop_countdown($action, $content_id) {
   $wrapper = entity_metadata_wrapper('node', $content_id);
   if ($wrapper->source->value()) {
     $translations = translation_node_get_translations($wrapper->source->value()->tnid);
     foreach ($translations as $node) {
       if ($wrapper->source->value()->tnid != $node->nid) {
-        $t_wrapper = entity_metadata_wrapper('node',$node->nid);
+        $t_wrapper = entity_metadata_wrapper('node', $node->nid);
         $t_availability = $t_wrapper->field_availability->value();
         if ($action == 'flag') {
           $t_availability--;
@@ -120,7 +127,7 @@ function dccr_ftr_workshop_cron() {
   elseif ($three_days_before <= REQUEST_TIME && !variable_get('reminder_three_days_before', FALSE)) {
     variable_set('reminder_three_days_before', TRUE);
     dccr_ftr_workshop_invoke_reminder('3');
- }
+  }
 }
 
 /**
@@ -128,9 +135,9 @@ function dccr_ftr_workshop_cron() {
  */
 function dccr_ftr_workshop_invoke_reminder($days) {
   $result = db_select('node', 'n')
-    ->fields('n',array('nid'))
-    ->condition('type','workshop', '=')
-    ->condition('status',1, '=')
+    ->fields('n', array('nid'))
+    ->condition('type', 'workshop', '=')
+    ->condition('status', 1, '=')
     ->execute();
   $workshops_nids = $result->fetchCol();
   $workshops = node_load_multiple($workshops_nids);
@@ -148,9 +155,9 @@ function dccr_ftr_workshop_invoke_reminder($days) {
  * Get the user who flagged a node.
  */
 function dccr_ftr_workshop_get_workshop_flaggers($nid) {
-  $result = db_select('flagging','f')
-    ->fields('f',array('uid'))
-    ->condition('entity_type','node', '=')
+  $result = db_select('flagging', 'f')
+    ->fields('f', array('uid'))
+    ->condition('entity_type', 'node', '=')
     ->condition('entity_id', $nid, '=')
     ->execute();
   return $result->fetchCol();
@@ -185,18 +192,17 @@ function dccr_ftr_workshop_rules_event_info() {
 /**
  * Implements hook_date_formats().
  */
-
 function dccr_ftr_workshop_date_formats() {
   return array(
     array(
       'type' => 'workshop_reminder',
       'format' => 'l, F dS, Y \a\t G:i',
-      'locales' => array ('en', 'en-us'),
+      'locales' => array('en', 'en-us'),
     ),
     array(
       'type' => 'workshop_reminder',
       'format' => 'd \d\e F \d\e\l Y \a \l\a\s g:s a',
-      'locales' => array ('es'),
+      'locales' => array('es'),
     ),
   );
 }
@@ -204,7 +210,6 @@ function dccr_ftr_workshop_date_formats() {
 /**
  * Implements hook_date_format_types().
  */
-
 function dccr_ftr_workshop_date_format_types() {
   return array(
     'workshop_reminder' => t('Workshop Notification'),

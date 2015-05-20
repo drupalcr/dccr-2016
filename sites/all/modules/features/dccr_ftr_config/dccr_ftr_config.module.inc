@@ -1,6 +1,7 @@
 <?php
 
 /**
+ * @file
  * Main code file for dccr_ftr_config.
  */
 
