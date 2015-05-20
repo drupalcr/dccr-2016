@@ -13,6 +13,13 @@ function dccr_ftr_workshop_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_hour_minute';
+  $strongarm->value = 'h:i a';
+  $export['date_format_hour_minute'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_message__full_workshop';
   $strongarm->value = array(
     'view_modes' => array(),
