@@ -102,7 +102,7 @@ function dccr_ftr_workshop_countdown($action, $content_id) {
 function dccr_ftr_workshop_cron() {
   $week_before = strtotime('-7 day', DCCR_CAMP_START_DATE);
   $three_days_before = strtotime('-3 day', DCCR_CAMP_START_DATE);
- if ($week_before <= REQUEST_TIME && !variable_get('reminder_week_before', FALSE)) {
+  if ($week_before <= REQUEST_TIME && !variable_get('reminder_week_before', FALSE)) {
     variable_set('reminder_week_before', TRUE);
     dccr_ftr_workshop_invoke_reminder('7');
   }
