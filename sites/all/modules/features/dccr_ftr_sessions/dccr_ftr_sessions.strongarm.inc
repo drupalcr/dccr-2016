@@ -40,6 +40,9 @@ function dccr_ftr_sessions_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
+      'time_slot' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -50,7 +53,18 @@ function dccr_ftr_sessions_strongarm() {
           'weight' => '8',
         ),
       ),
-      'display' => array(),
+      'display' => array(
+        'flag_add_to_favorites' => array(
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'time_slot' => array(
+            'weight' => '3',
+            'visible' => TRUE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_node__dccr_session'] = $strongarm;
