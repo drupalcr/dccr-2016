@@ -356,6 +356,7 @@ function dccr_update_7024() {
  * Set title to <none> for left and right menu blocks.
  */
 function dccr_update_7025() {
+  _block_rehash();
   db_update('block')
     ->fields(array(
       'title' => '<none>',
