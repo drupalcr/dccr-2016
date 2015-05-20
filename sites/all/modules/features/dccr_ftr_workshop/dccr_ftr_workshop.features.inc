@@ -8,6 +8,15 @@
  * Implements hook_ctools_plugin_api().
  */
 function dccr_ftr_workshop_ctools_plugin_api($module = NULL, $api = NULL) {
+  if ($module == "context" && $api == "context") {
+    return array("version" => "3");
+  }
+  if ($module == "ds" && $api == "ds") {
+    return array("version" => "1");
+  }
+  if ($module == "field_group" && $api == "field_group") {
+    return array("version" => "1");
+  }
   if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => "1");
   }
@@ -147,6 +156,46 @@ function dccr_ftr_workshop_default_message_type() {
           "value" : "Querido [current-user:name]\\r\\nUsted se ha registrado correctamente en el taller [message:field-workshop-node:title]; el mismo ser\\u00e1 el d\\u00eda [message:field-workshop-node:field-workshop-date:value:custom:d\\/m\\/Y - g:i a].\\r\\n\\r\\nGracias.\\r\\n",
           "format" : "plain_text",
           "safe_value" : "\\u003Cp\\u003EQuerido [current-user:name]\\u003Cbr \\/\\u003E\\nUsted se ha registrado correctamente en el taller [message:field-workshop-node:title]; el mismo ser\\u00e1 el d\\u00eda [message:field-workshop-node:field-workshop-date:value:custom:d\\/m\\/Y - g:i a].\\u003C\\/p\\u003E\\n\\u003Cp\\u003EGracias.\\u003C\\/p\\u003E\\n"
+        }
+      ]
+    },
+    "rdf_mapping" : []
+  }');
+  $items['workshop_reminder'] = entity_import('message_type', '{
+    "name" : "workshop_reminder",
+    "description" : "Workshop Reminder",
+    "argument_keys" : [],
+    "argument" : [],
+    "category" : "message_type",
+    "data" : {
+      "token options" : { "clear" : 0 },
+      "purge" : { "override" : 0, "enabled" : 0, "quota" : "", "days" : "" }
+    },
+    "language" : "es",
+    "arguments" : null,
+    "message_text" : {
+      "en" : [
+        {
+          "value" : "[message:field-days-remaining] days left to the workshop  [message:field-workshop-node:title]\\n",
+          "format" : "plain_text",
+          "safe_value" : "\\u003Cp\\u003E[message:field-days-remaining] days left to the workshop  [message:field-workshop-node:title]\\u003C\\/p\\u003E\\n"
+        },
+        {
+          "value" : "Dear [message:field-user-flagger:name]\\nThe workshop  [message:field-workshop-node:title]  will be the [message:field-workshop-node:field-workshop-date:value:workshop_reminder] in the [message:field-workshop-node:field-location:name] room.\\nThank you.",
+          "format" : "plain_text",
+          "safe_value" : "\\u003Cp\\u003EDear [message:field-user-flagger:name]\\u003Cbr \\/\\u003E\\nThe workshop  [message:field-workshop-node:title]  will be the [message:field-workshop-node:field-workshop-date:value:workshop_reminder] in the [message:field-workshop-node:field-location:name] room.\\u003Cbr \\/\\u003E\\nThank you.\\u003C\\/p\\u003E\\n"
+        }
+      ],
+      "es" : [
+        {
+          "value" : "Faltan  [message:field_days_remaining] para el taller [message:field-workshop-node:title]\\r\\n",
+          "format" : "plain_text",
+          "safe_value" : "\\u003Cp\\u003EFaltan  [message:field_days_remaining] para el taller [message:field-workshop-node:title]\\u003C\\/p\\u003E\\n"
+        },
+        {
+          "value" : "Estimado [message:field-user-flagger:name]\\r\\nLe recordamos que el taller [message:field-workshop-node:title] se estar\\u00e1 llevando a cabo el d\\u00eda [message:field-workshop-node:field-workshop-date:value:workshop_reminder] en el salon [message:field-workshop-node:field-location:name]",
+          "format" : "plain_text",
+          "safe_value" : "\\u003Cp\\u003EEstimado [message:field-user-flagger:name]\\u003Cbr \\/\\u003E\\nLe recordamos que el taller [message:field-workshop-node:title] se estar\\u00e1 llevando a cabo el d\\u00eda [message:field-workshop-node:field-workshop-date:value:workshop_reminder] en el salon [message:field-workshop-node:field-location:name]\\u003C\\/p\\u003E\\n"
         }
       ]
     },

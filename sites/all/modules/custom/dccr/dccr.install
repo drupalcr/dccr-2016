@@ -340,14 +340,26 @@ function dccr_update_7023() {
 }
 
 /**
- * Set title to <none> for left and right menu blocks.
+ * Add path alias for workshops.
  */
 function dccr_update_7024() {
+  // Ading path alias for 'workshops'.
+  $path = array(
+    'source' => 'workshops',
+    'alias' => 'talleres',
+    'language' => 'es',
+  );
+  path_save($path);
+}
+
+/**
+ * Set title to <none> for left and right menu blocks.
+ */
+function dccr_update_7025() {
   db_update('block')
     ->fields(array(
       'title' => '<none>',
     ))
     ->condition('delta', array('menu-left-menu', 'menu-right-menu'), 'IN')
     ->execute();
-
 }

@@ -17,6 +17,9 @@ class context_condition_publish extends context_condition {
     return array();
   }
 
+  /**
+   * {@inheritdoc}
+   */
   function condition_form($context) {
     $form = parent::condition_form($context);
 
@@ -40,6 +43,9 @@ class context_condition_publish extends context_condition {
     return $form;
   }
 
+  /**
+   * {@inheritdoc}
+   */
   function condition_form_submit($values) {
     return array(
       mktime(
@@ -53,6 +59,9 @@ class context_condition_publish extends context_condition {
     );
   }
 
+  /**
+   * {@inheritdoc}
+   */
   function execute($value = NULL) {
     if (empty($value)) {
       $value = time();
