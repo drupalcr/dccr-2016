@@ -42,6 +42,7 @@ features[page_manager_pages][] = conference_center
 features[page_manager_pages][] = contact_us
 features[page_manager_pages][] = home
 features[page_manager_pages][] = how_to_sponsor
+features[page_manager_pages][] = my_schedule
 features[page_manager_pages][] = register
 features[uuid_fpp][] = 01ba1b0c-78df-43dd-bc34-6c15fe25eca8
 features[uuid_fpp][] = 0e422d9b-ba2c-473d-898f-ce1fa581920b
