@@ -179,5 +179,57 @@ function dccr_ftr_workshop_views_default_views() {
   );
   $export['site_administrators_list'] = $view;
 
+  $view = new view();
+  $view->name = 'workshops';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'search_api_index_nodes_index';
+  $view->human_name = 'Workshops';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Workshops';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'entity';
+  $handler->display->display_options['row_options']['view_mode'] = 'teaser';
+  /* Field: Indexed Node: Node ID */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'search_api_index_nodes_index';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  /* Filter criterion: Indexed Node: Content type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'search_api_index_nodes_index';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'workshop' => 'workshop',
+  );
+
+  /* Display: Workshops */
+  $handler = $view->new_display('page', 'Workshops', 'page');
+  $handler->display->display_options['path'] = 'workshops';
+  $translatables['workshops'] = array(
+    t('Master'),
+    t('Workshops'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Node ID'),
+    t('.'),
+    t(','),
+  );
+  $export['workshops'] = $view;
+
   return $export;
 }

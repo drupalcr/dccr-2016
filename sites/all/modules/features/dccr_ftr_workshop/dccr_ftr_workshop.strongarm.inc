@@ -16,6 +16,9 @@ function dccr_ftr_workshop_strongarm() {
   $strongarm->name = 'date_format_workshop_reminder';
   $strongarm->value = 'd \\d\\e F \\d\\e\\l Y \\a \\l\\a\\s g:s a';
   $export['date_format_workshop_reminder'] = $strongarm;
+  $strongarm->name = 'date_format_hour_minute';
+  $strongarm->value = 'h:i a';
+  $export['date_format_hour_minute'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
