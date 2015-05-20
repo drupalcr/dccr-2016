@@ -57,6 +57,42 @@ function dccr_ftr_workshop_default_rules_configuration() {
       ]
     }
   }');
+  $items['rules_send_workshop_reminder'] = entity_import('rules_config', '{ "rules_send_workshop_reminder" : {
+      "LABEL" : "Send Workshop Reminder",
+      "PLUGIN" : "reaction rule",
+      "OWNER" : "rules",
+      "TAGS" : [ "Notification" ],
+      "REQUIRES" : [ "rules", "message_notify", "dccr_ftr_workshop" ],
+      "ON" : { "dccr_ftr_workshop_nofications" : [] },
+      "DO" : [
+        { "entity_create" : {
+            "USING" : {
+              "type" : "message",
+              "param_type" : "workshop_reminder",
+              "param_user" : [ "site:current-user" ]
+            },
+            "PROVIDE" : { "entity_created" : { "workshop_reminder_created" : "Created entity" } }
+          }
+        },
+        { "data_set" : {
+            "data" : [ "workshop-reminder-created:field-workshop-node" ],
+            "value" : [ "workshop-node" ]
+          }
+        },
+        { "data_set" : {
+            "data" : [ "workshop-reminder-created:field-user-flagger" ],
+            "value" : [ "user" ]
+          }
+        },
+        { "data_set" : {
+            "data" : [ "workshop-reminder-created:field-days-remaining" ],
+            "value" : "[days:value]"
+          }
+        },
+        { "message_notify_process" : { "message" : [ "workshop-reminder-created" ], "mail" : "[user:mail]" } }
+      ]
+    }
+  }');
   $items['rules_user_workshop_application'] = entity_import('rules_config', '{ "rules_user_workshop_application" : {
       "LABEL" : "User workshop application",
       "PLUGIN" : "reaction rule",

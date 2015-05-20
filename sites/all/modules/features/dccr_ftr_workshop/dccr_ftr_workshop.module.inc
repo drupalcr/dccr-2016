@@ -107,3 +107,106 @@ function dccr_ftr_workshop_countdown($action, $content_id) {
   $wrapper->save();
 }
 
+/**
+ * Implements hook_cron().
+ */
+function dccr_ftr_workshop_cron() {
+  $week_before = strtotime('-7 day', DCCR_CAMP_START_DATE);
+  $three_days_before = strtotime('-3 day', DCCR_CAMP_START_DATE);
+  if ($week_before <= REQUEST_TIME && !variable_get('reminder_week_before', FALSE)) {
+    variable_set('reminder_week_before', TRUE);
+    dccr_ftr_workshop_invoke_reminder('7');
+  }
+  elseif ($three_days_before <= REQUEST_TIME && !variable_get('reminder_three_days_before', FALSE)) {
+    variable_set('reminder_three_days_before', TRUE);
+    dccr_ftr_workshop_invoke_reminder('3');
+ }
+}
+
+/**
+ * Invoke the rule event dccr_ftr_workshop_nofications.
+ */
+function dccr_ftr_workshop_invoke_reminder($days) {
+  $result = db_select('node', 'n')
+    ->fields('n',array('nid'))
+    ->condition('type','workshop', '=')
+    ->condition('status',1, '=')
+    ->execute();
+  $workshops_nids = $result->fetchCol();
+  $workshops = node_load_multiple($workshops_nids);
+
+  foreach ($workshops_nids as $nid) {
+    $users_uids = dccr_ftr_workshop_get_workshop_flaggers($nid);
+    $users = user_load_multiple($users_uids);
+    foreach ($users_uids as $uid) {
+      rules_invoke_event('dccr_ftr_workshop_nofications', $workshops[$nid], $users[$uid], $days);
+    }
+  }
+}
+
+/**
+ * Get the user who flagged a node.
+ */
+function dccr_ftr_workshop_get_workshop_flaggers($nid) {
+  $result = db_select('flagging','f')
+    ->fields('f',array('uid'))
+    ->condition('entity_type','node', '=')
+    ->condition('entity_id', $nid, '=')
+    ->execute();
+  return $result->fetchCol();
+}
+
+/**
+ * Implements hook_rules_event_info().
+ */
+function dccr_ftr_workshop_rules_event_info() {
+  return array(
+    'dccr_ftr_workshop_nofications' => array(
+      'label' => t('Time to execute Workshop email reminder'),
+      'module' => 'dccr_ftr_workshop',
+      'variables' => array(
+        'workshop_node' => array(
+          'type' => 'node',
+          'label' => t('The Workshop node'),
+        ),
+        'user' => array(
+          'type' => 'user',
+          'label' => t('User to remind'),
+        ),
+        'days' => array(
+          'type' => 'text',
+          'label' => t('Days to the camp'),
+        ),
+      ),
+    ),
+  );
+}
+
+/**
+ * Implements hook_date_formats().
+ */
+
+function dccr_ftr_workshop_date_formats() {
+  return array(
+    array(
+      'type' => 'workshop_reminder',
+      'format' => 'l, F dS, Y \a\t G:i',
+      'locales' => array ('en', 'en-us'),
+    ),
+    array(
+      'type' => 'workshop_reminder',
+      'format' => 'd \d\e F \d\e\l Y \a \l\a\s g:s a',
+      'locales' => array ('es'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_date_format_types().
+ */
+
+function dccr_ftr_workshop_date_format_types() {
+  return array(
+    'workshop_reminder' => t('Workshop Notification'),
+  );
+}
