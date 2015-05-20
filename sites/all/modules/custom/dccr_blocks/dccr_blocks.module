@@ -56,7 +56,7 @@ function dccr_blocks_block_info() {
 
   $blocks['dccr_my_schedule'] = array(
     'info' => t('My schedule'),
-    'cache' => DRUPAL_CACHE_PER_ROLE,
+    'cache' => DRUPAL_CACHE_PER_USER,
   );
 
   $blocks['dccr_main_logo'] = array(
