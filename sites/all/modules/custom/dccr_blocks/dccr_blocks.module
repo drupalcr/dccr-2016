@@ -351,10 +351,15 @@ function dccr_get_final_schedule($only_flagged, $empty_slot_text, $block_title) 
   $block = array();
   $markup = '';
   $terms = dccr_get_rooms();
+  $tracks = taxonomy_get_tree(4);
   $terms_count = 0;
   $counter = 0;
   $params = drupal_get_query_parameters();
-  $markup = '<div class=\'filter\'><div class=\'day\'>' . l(t('July 30th'), 'schedule', array('query' => array('date' => 'thursday'))) . '</div><div class=\'day\'>' . l(t('July 31th'), 'schedule', array('query' => array('date' => 'friday'))) . '</div></div>';
+  $markup .= '<div class=\'tracks\'>';
+  for ($i = 0; $i < count($tracks); $i++) {
+    $markup .= '<div class=\'color-' . strtolower($tracks[$i]->name) . '\'><p> ' . $tracks[$i]->name . '</p></div>';
+  }
+  $markup .= '</div><div class=\'filter\'><div class=\'day\'>' . l(t('July 30th'), 'schedule', array('query' => array('date' => 'thursday'))) . '</div><div class=\'day\'>' . l(t('July 31th'), 'schedule', array('query' => array('date' => 'friday'))) . '</div></div>';
 
   if ($only_flagged) {
     drupal_add_js(drupal_get_path('module', 'dccr_blocks') . '/js/alter_flag_behavior.js');
@@ -445,7 +450,7 @@ function dccr_print_sessions($sessions, $terms, $terms_count, $empty_slot_text) 
         }
       }
       $item = node_view($session, 'time_slot');
-      $markup .= '<div class=\'session\'>' . render($item) . '</div>';
+      $markup .= '<div class=\'session ' . dccr_get_track_class_name($session) . '\'>' . render($item) . '</div>';
       $counter++;
     }
     else {
@@ -456,7 +461,7 @@ function dccr_print_sessions($sessions, $terms, $terms_count, $empty_slot_text) 
           $counter++;
         }
         $item = node_view($session, 'time_slot');
-        $markup .= '<div class=\'session\'>' . render($item) . '</div>';
+        $markup .= '<div class=\'session ' . dccr_get_track_class_name($session) . '\'>' . render($item) . '</div>';
       }
       else {
         for ($i = $counter; $i < $terms_count - 1; $i++) {
@@ -467,7 +472,7 @@ function dccr_print_sessions($sessions, $terms, $terms_count, $empty_slot_text) 
           $markup .= '<div class=\'session\'><p>' . t("@text", array('@text' => $empty_slot_text)) . '</p></div>';
         }
         $item = node_view($session, 'time_slot');
-        $markup .= '<div class=\'session\'>' . render($item) . '</div>';
+        $markup .= '<div class=\'session ' . dccr_get_track_class_name($session) . '\'>' . render($item) . '</div>';
         $counter = $index + 1;
       }
     }
@@ -484,6 +489,19 @@ function dccr_print_sessions($sessions, $terms, $terms_count, $empty_slot_text) 
     $counter = 0;
   }
   return $markup;
+}
+
+/**
+ * Return the class name for a track.
+ */
+function dccr_get_track_class_name($session) {
+  $tracks = taxonomy_get_tree(4);
+  for ($i = 0; $i < count($tracks); $i++) {
+    if ($session->field_track['und'][0]['tid'] == $tracks[$i]->tid) {
+      return 'color-' . strtolower($tracks[$i]->name);
+    }
+  }
+  return '';
 }
 
 /**
