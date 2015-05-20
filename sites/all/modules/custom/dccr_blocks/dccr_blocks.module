@@ -356,6 +356,10 @@ function dccr_get_final_schedule($only_flagged, $empty_slot_text, $block_title) 
   $params = drupal_get_query_parameters();
   $markup = '<div class=\'filter\'><div class=\'day\'>' . l(t('July 30th'), 'schedule', array('query' => array('date' => 'thursday'))) . '</div><div class=\'day\'>' . l(t('July 31th'), 'schedule', array('query' => array('date' => 'friday'))) . '</div></div>';
 
+  if ($only_flagged) {
+    drupal_add_js(drupal_get_path('module', 'dccr_blocks') . '/js/alter_flag_behavior.js');
+  }
+
   // Thursday, July 30th.
   $date1 = 1438264800;
   // Friday, July 31st.
