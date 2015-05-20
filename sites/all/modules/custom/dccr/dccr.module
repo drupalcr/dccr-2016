@@ -7,7 +7,8 @@
 
 // @TODO Change early bird limit.
 define('DCCR_EARLY_BIRD_LIMIT', 1435622400);
-
+//date 07/29/2015
+define('DCCR_CAMP_START_DATE', 1438149600);
 /**
  * Returns whether it is or not early bird.
  */

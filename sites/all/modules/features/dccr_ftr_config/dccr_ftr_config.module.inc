@@ -1,6 +1,7 @@
 <?php
 
 /**
+ * @file
  * Main code file for dccr_ftr_config.
  */
 
@@ -45,5 +46,28 @@ function dccr_ftr_config_entity_info_alter(&$entity_info) {
       'real path' => 'admin/structure/fieldable-panels-panes/manage/dccr-simple-fpp',
       'access arguments' => array('administer fieldable panels panes'),
     ),
+  );
+}
+
+/**
+ * Implements hook_date_formats().
+ */
+function dccr_ftr_config_date_formats() {
+  return array(
+    // Creates a new format for a Hour-Minute.
+    array(
+      'type' => 'hour_minute',
+      'format' => 'h:i a',
+      'locales' => array(),
+    ),
+  );
+}
+
+/**
+ * Implements hook_date_format_types().
+ */
+function dccr_ftr_config_date_format_types() {
+  return array(
+    'hour_minute' => t('Hour Minute'),
   );
 }

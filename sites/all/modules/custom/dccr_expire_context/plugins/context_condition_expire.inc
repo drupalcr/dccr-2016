@@ -9,6 +9,10 @@
  * Class for creating and handling an expire condition in contexts.
  */
 class context_condition_expire extends context_condition_publish {
+
+  /**
+   * {@inheritdoc}
+   */
   function execute($value = NULL) {
     if (empty($value)) {
       $value = time();
