@@ -51,12 +51,12 @@ function dccr_blocks_block_info() {
 
   $blocks['dccr_final_schedule'] = array(
     'info' => t('Final Schedule'),
-    'cache' => DRUPAL_CACHE_GLOBAL,
+    'cache' => DRUPAL_NO_CACHE,
   );
 
   $blocks['dccr_my_schedule'] = array(
     'info' => t('My schedule'),
-    'cache' => DRUPAL_CACHE_PER_USER,
+    'cache' => DRUPAL_NO_CACHE,
   );
 
   $blocks['dccr_main_logo'] = array(
