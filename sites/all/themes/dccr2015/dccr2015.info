@@ -1,0 +1,42 @@
+name = DCCR-2015
+description = Tema para el sitio web del DrupalCamp Costa Rica 2015
+screenshot = screenshot.png
+version = 0.1
+engine = phptemplate
+core = 7.x
+
+;-------------- F E A T U R E S -------------
+features[] = logo
+features[] = favicon
+features[] = name
+features[] = slogan
+features[] = node_user_picture
+features[] = comment_user_picture
+features[] = comment_user_verification
+features[] = main_menu
+features[] = secondary_menu
+
+;-------------- R E G I O N S -------------
+
+regions[page_top]           = Page Top
+regions[page_bottom]        = Page Bottom
+
+regions[utility_bar]        = Utility Bar
+regions[header]             = Header
+
+regions[help]               = Help
+regions[highlighted]        = Highlighted
+
+regions[above_content]      = Above Content
+regions[content]            = Content
+regions[sidebar]      = Sidebar
+regions[below_content]      = Below Content
+
+regions[footer]             = Footer
+regions[closure]            = Closure
+
+;-------------- C S S -------------
+stylesheets[all][] = css/style.css
+
+;-------------- J S -------------
+;scripts[] = js/accese.min.js
