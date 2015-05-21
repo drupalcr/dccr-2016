@@ -554,7 +554,7 @@ function dccr_get_track_class_name($session) {
   $tracks = taxonomy_get_tree(4);
   for ($i = 0; $i < count($tracks); $i++) {
     if ($session->field_track['und'][0]['tid'] == $tracks[$i]->tid) {
-      return 'color-' . strtolower($tracks[$i]->name);
+      return 'color-' . strtolower(str_replace(' ', '-', $tracks[$i]->name));
     }
   }
   return '';
