@@ -366,13 +366,13 @@ function dccr_update_7025() {
 }
 
 /**
- * Add path alias for my_schedule.
+ * Add path alias for my-schedule.
  */
 function dccr_update_7026() {
-  // Adding path alias for 'my_schedule'.
+  // Adding path alias for 'my-schedule'.
   $path = array(
-    'source' => 'my_schedule',
-    'alias' => 'mi_agenda',
+    'source' => 'my-schedule',
+    'alias' => 'mi-agenda',
     'language' => 'es',
   );
   path_save($path);
