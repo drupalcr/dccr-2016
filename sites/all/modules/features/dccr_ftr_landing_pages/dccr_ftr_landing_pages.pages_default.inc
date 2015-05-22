@@ -2124,7 +2124,7 @@ function dccr_ftr_landing_pages_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'My Schedule';
   $page->admin_description = '';
-  $page->path = 'my_schedule';
+  $page->path = 'my-schedule';
   $page->access = array();
   $page->menu = array();
   $page->arguments = array();
