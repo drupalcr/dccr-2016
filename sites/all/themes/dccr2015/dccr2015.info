@@ -36,7 +36,7 @@ regions[footer]             = Footer
 regions[closure]            = Closure
 
 ;-------------- C S S -------------
-stylesheets[all][] = css/style.css
+stylesheets[all][] = css/styles.css
 
 ;-------------- J S -------------
-;scripts[] = js/accese.min.js
+;scripts[] = js/scripts.min.js
