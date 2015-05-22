@@ -412,7 +412,7 @@ function dccr_get_final_schedule($only_flagged, $empty_slot_text, $block_title) 
     $markup .= '<div class=\'color-' . strtolower($tracks[$i]->name) . '\'><p> ' . $tracks[$i]->name . '</p></div>';
   }
   if ($only_flagged) {
-    $markup .= '</div><div class=\'filter\'><div class=\'day\'>' . l(t('July 30th'), 'my_schedule', array('query' => array('date' => 'thursday'))) . '</div><div class=\'day\'>' . l(t('July 31st'), 'my_schedule', array('query' => array('date' => 'friday'))) . '</div></div>';
+    $markup .= '</div><div class=\'filter\'><div class=\'day\'>' . l(t('July 30th'), 'my-schedule', array('query' => array('date' => 'thursday'))) . '</div><div class=\'day\'>' . l(t('July 31st'), 'my-schedule', array('query' => array('date' => 'friday'))) . '</div></div>';
   }
   else {
     $markup .= '</div><div class=\'filter\'><div class=\'day\'>' . l(t('July 30th'), 'schedule', array('query' => array('date' => 'thursday'))) . '</div><div class=\'day\'>' . l(t('July 31st'), 'schedule', array('query' => array('date' => 'friday'))) . '</div></div>';
