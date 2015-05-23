@@ -403,7 +403,7 @@ function dccr_get_final_schedule($only_flagged, $empty_slot_text, $block_title) 
   $block = array();
   $markup = '';
   $terms = dccr_get_rooms();
-  $tracks = taxonomy_get_tree(4);
+  $tracks = taxonomy_get_tree(taxonomy_vocabulary_machine_name_load('tracks')->vid);
   $terms_count = 0;
   $counter = 0;
   $params = drupal_get_query_parameters();
@@ -560,7 +560,7 @@ function dccr_print_sessions($sessions, $terms, $terms_count, $empty_slot_text) 
  * Return the class name for a track.
  */
 function dccr_get_track_class_name($session) {
-  $tracks = taxonomy_get_tree(4);
+  $tracks = taxonomy_get_tree(taxonomy_vocabulary_machine_name_load('tracks')->vid);
   for ($i = 0; $i < count($tracks); $i++) {
     if ($session->field_track['und'][0]['tid'] == $tracks[$i]->tid) {
       return 'color-' . strtolower(str_replace(' ', '-', $tracks[$i]->name));
@@ -575,7 +575,7 @@ function dccr_get_track_class_name($session) {
 function dccr_get_rooms() {
   $query = new EntityFieldQuery();
   $result = $query->entityCondition('entity_type', 'taxonomy_term')
-    ->propertyCondition('vid', '3')
+    ->propertyCondition('vid', taxonomy_vocabulary_machine_name_load('rooms')->vid)
     ->propertyOrderBy('tid');
   $result = $query->execute();
 
