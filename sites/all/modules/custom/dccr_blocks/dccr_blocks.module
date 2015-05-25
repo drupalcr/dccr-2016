@@ -12,6 +12,12 @@ const DCCR_BLOCKS_FIRST_DAY = 1438264800;
 const DCCR_BLOCKS_SECOND_DAY = 1438351200;
 // Saturday, August 1st.
 const DCCR_BLOCKS_POST_CAMP = 1438437600;
+/**
+ * Text for no-session in a time slot (schedule).
+ * Uncomment line 20 and comment 19 if you need text.
+ */
+const DCCR_BLOCKS_GENERAL_NO_SESSION = '';
+// define('DCCR_BLOCKS_GENERAL_NO_SESSION', t('BOF'));
 
 /**
  * Implements hook_block_info().
@@ -182,7 +188,7 @@ function dccr_blocks_block_view($delta = '') {
       break;
 
     case 'dccr_final_schedule':
-      $block = dccr_get_final_schedule(FALSE, t('BOF'), t('Schedule'));
+      $block = dccr_get_final_schedule(FALSE, DCCR_BLOCKS_GENERAL_NO_SESSION, t('Schedule'));
       break;
 
     case 'dccr_my_schedule':
@@ -409,7 +415,7 @@ function dccr_get_final_schedule($only_flagged, $empty_slot_text, $block_title) 
   $params = drupal_get_query_parameters();
   $markup .= '<div class=\'tracks\'>';
   for ($i = 0; $i < count($tracks); $i++) {
-    $markup .= '<div class=\'color-' . strtolower($tracks[$i]->name) . '\'><p> ' . $tracks[$i]->name . '</p></div>';
+    $markup .= '<span class=\'color-' . strtolower($tracks[$i]->name) . '\'>' . $tracks[$i]->name . '</span>';
   }
   if ($only_flagged) {
     $markup .= '</div><div class=\'filter\'><div class=\'day\'>' . l(t('July 30th'), 'my-schedule', array('query' => array('date' => 'thursday'))) . '</div><div class=\'day\'>' . l(t('July 31st'), 'my-schedule', array('query' => array('date' => 'friday'))) . '</div></div>';
@@ -438,12 +444,10 @@ function dccr_get_final_schedule($only_flagged, $empty_slot_text, $block_title) 
     $activities = dccr_get_global_activities(array($date1, $date2));
 
     // Create markup for rooms.
-    $markup .= '<div class=\'rooms\'>';
     foreach ($terms as $term) {
       $terms_count++;
-      $markup .= '<div class=\'room-name\'><h2>' . $term->name . '</h2></div>';
+      $markup .= '<h3 class=\'room-name\'>' . $term->name . '</h3>';
     }
-    $markup .= '</div>';
 
     if ($activities) {
       foreach ($activities as $activity) {
@@ -504,13 +508,21 @@ function dccr_print_sessions($sessions, $terms, $terms_count, $empty_slot_text) 
     if ($session->field_location['und'][0]['tid'] == $terms[$counter]->tid) {
       if (date('H:i', $session->field_time['und'][0]['value']) != $var1) {
         for ($i = $counter; $i < $terms_count; $i++) {
-          $markup .= '<div class=\'session\'><p>' . $empty_slot_text . '</p></div>';
+          $markup .= '<div class=\'session\'>';
+          if (!empty($empty_slot_text)) {
+            $markup .= '<p>' . $empty_slot_text . '</p>';
+          }
+          $markup .= '</div>';
         }
         $var1 = date('H:i', $session->field_time['und'][0]['value']);
         $var2 = date('H:i', $session->field_time['und'][0]['value2']);
         $markup .= '</div><div class=\'time-slot\'><div class=\'hour\'><p>' . $var1 . '</p><p>' . $var2 . '</p></div>';
         for ($i = 0; $i < $counter; $i++) {
-          $markup .= '<div class=\'session\'><p>' . $empty_slot_text . '</p></div>';
+          $markup .= '<div class=\'session\'>';
+          if (!empty($empty_slot_text)) {
+            $markup .= '<p>' . $empty_slot_text . '</p>';
+          }
+          $markup .= '</div>';
         }
       }
       $item = node_view($session, 'time_slot');
@@ -521,7 +533,11 @@ function dccr_print_sessions($sessions, $terms, $terms_count, $empty_slot_text) 
       $index = dccr_get_term_position($terms, $session->field_location['und'][0]['tid']);
       if ($session->field_location['und'][0]['tid'] > $terms[$counter]->tid) {
         while ($counter < $index) {
-          $markup .= '<div class=\'session\'><p>' . $empty_slot_text . '</p></div>';
+          $markup .= '<div class=\'session\'>';
+          if (!empty($empty_slot_text)) {
+            $markup .= '<p>' . $empty_slot_text . '</p>';
+          }
+          $markup .= '</div>';
           $counter++;
         }
         $item = node_view($session, 'time_slot');
@@ -530,11 +546,19 @@ function dccr_print_sessions($sessions, $terms, $terms_count, $empty_slot_text) 
       }
       else {
         for ($i = $counter; $i < $terms_count; $i++) {
-          $markup .= '<div class=\'session\'><p>' . $empty_slot_text . '</p></div>';
+          $markup .= '<div class=\'session\'>';
+          if (!empty($empty_slot_text)) {
+            $markup .= '<p>' . $empty_slot_text . '</p>';
+          }
+          $markup .= '</div>';
         }
         $markup .= '</div><div class=\'time-slot\'><div class=\'hour\'><p>' . date('H:i', $session->field_time['und'][0]['value']) . '</p><p>' . date('H:i', $session->field_time['und'][0]['value2']) . '</p></div>';
         for ($i = 0; $i < $index; $i++) {
-          $markup .= '<div class=\'session\'><p>' . $empty_slot_text . '</p></div>';
+          $markup .= '<div class=\'session\'>';
+          if (!empty($empty_slot_text)) {
+            $markup .= '<p>' . $empty_slot_text . '</p>';
+          }
+          $markup .= '</div>';
         }
         $item = node_view($session, 'time_slot');
         $markup .= '<div class=\'session ' . dccr_get_track_class_name($session) . '\'>' . render($item) . '</div>';
@@ -548,7 +572,11 @@ function dccr_print_sessions($sessions, $terms, $terms_count, $empty_slot_text) 
   }
   if ($counter != $terms_count && $counter != 0) {
     for ($i = $counter; $i < $terms_count; $i++) {
-      $markup .= '<div class=\'session\'><p>' . $empty_slot_text . '</p></div>';
+      $markup .= '<div class=\'session\'>';
+      if (!empty($empty_slot_text)) {
+        $markup .= '<p>' . $empty_slot_text . '</p>';
+      }
+      $markup .= '</div>';
     }
     $markup .= '</div>';
     $counter = 0;
