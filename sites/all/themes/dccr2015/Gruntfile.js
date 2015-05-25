@@ -8,7 +8,8 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        // Watch for changes and trigger compass, jshint & uglify
+
+        // Watch for changes and trigger sass, jshint & uglify
         watch: {
           compass: {
             files: ['sass/{,**/}*.scss'],
@@ -24,6 +25,18 @@ module.exports = function (grunt) {
             options: {
             spawn: false,
             }
+          }
+        },
+
+        postcss: {
+          options: {
+            map: true,
+            processors: [
+              require('autoprefixer-core')({browsers: 'last 2 versions'}).postcss
+            ]
+          },
+          dist: {
+            src: 'css/*.css'
           }
         },
 
@@ -90,7 +103,6 @@ module.exports = function (grunt) {
             },
             files: {
               'js/scripts.min.js': ['js/scripts.js']
-              // Output: input
             }
           },
           prod: {
@@ -117,7 +129,7 @@ module.exports = function (grunt) {
     // or, to run production's tasks
     // $ grunt build
     
-    grunt.registerTask('build', [
+    grunt.registerTask('prod', [
         'jshint',
         'uglify:prod',
         'sass:prod'
