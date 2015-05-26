@@ -84,10 +84,10 @@
 
     </div>
 
-  <?php if ($page['sidebar']): ?>
-    <div id="sidebar" class="sidebar">
-      <?php print render($page['sidebar']); ?>
-    </div> <!-- /.section, /#sidebar -->
+  <?php if ($page['sidebar_second']): ?>
+    <div id="sidebar-second" class="sidebar">
+      <?php print render($page['sidebar_second']); ?>
+    </div> <!-- /.section, /#sidebar-second -->
   <?php endif; ?>
 
 </div>

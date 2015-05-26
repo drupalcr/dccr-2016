@@ -29,7 +29,7 @@ regions[highlighted]        = Highlighted
 
 regions[above_content]      = Above Content
 regions[content]            = Content
-regions[sidebar]      = Sidebar
+regions[sidebar_second]      = Sidebar Second
 regions[below_content]      = Below Content
 
 regions[footer]             = Footer
