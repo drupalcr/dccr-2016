@@ -441,7 +441,9 @@ function dccr_get_final_schedule($only_flagged, $empty_slot_text, $block_title) 
   }
 
   if ($terms) {
-    $activities = dccr_get_global_activities(array($date1, $date2));
+    global $language;
+    $lang = $language->language;
+    $activities = dccr_get_global_activities(array($date1, $date2), $lang);
 
     // Create markup for rooms.
     foreach ($terms as $term) {
@@ -672,12 +674,13 @@ function dccr_get_approved_sessions($dates, $only_flagged = FALSE) {
 /**
  * It returns the global activities.
  */
-function dccr_get_global_activities($dates) {
+function dccr_get_global_activities($dates, $lang) {
   $query = new EntityFieldQuery();
 
   $query->entityCondition('entity_type', 'node')
     ->entityCondition('bundle', 'global_activity')
     ->propertyCondition('status', NODE_PUBLISHED)
+    ->propertyCondition('language', $lang, '=')
     ->fieldCondition('field_time', 'value', $dates, 'BETWEEN')
     ->fieldOrderBy('field_time', 'value');
   $activities = $query->execute();
