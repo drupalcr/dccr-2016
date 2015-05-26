@@ -45,13 +45,13 @@ function dccr_ftr_global_activities_ds_layout_settings_info() {
     'regions' => array(
       'ds_content' => array(
         0 => 'title',
-        1 => 'field_speaker_name',
+        1 => 'field_subtitle',
         2 => 'field_place',
       ),
     ),
     'fields' => array(
       'title' => 'ds_content',
-      'field_speaker_name' => 'ds_content',
+      'field_subtitle' => 'ds_content',
       'field_place' => 'ds_content',
     ),
     'classes' => array(),

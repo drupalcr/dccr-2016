@@ -32,13 +32,13 @@ function dccr_ftr_global_activities_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_speaker_name'
-  $field_bases['field_speaker_name'] = array(
+  // Exported field_base: 'field_subtitle'
+  $field_bases['field_subtitle'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_speaker_name',
+    'field_name' => 'field_subtitle',
     'field_permissions' => array(
       'type' => 0,
     ),
