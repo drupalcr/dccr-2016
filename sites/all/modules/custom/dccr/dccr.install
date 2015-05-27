@@ -364,3 +364,19 @@ function dccr_update_7025() {
     ->condition('delta', array('menu-left-menu', 'menu-right-menu'), 'IN')
     ->execute();
 }
+
+/**
+ * Enable dccr_ftr_global_activities and add path alias for my-schedule.
+ */
+function dccr_update_7026() {
+  $module_list = array('dccr_ftr_global_activities');
+  module_enable($module_list, TRUE);
+
+  // Adding path alias for 'my-schedule'.
+  $path = array(
+    'source' => 'my-schedule',
+    'alias' => 'mi-agenda',
+    'language' => 'es',
+  );
+  path_save($path);
+}
