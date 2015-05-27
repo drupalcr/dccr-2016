@@ -8,6 +8,9 @@
  * Implements hook_ctools_plugin_api().
  */
 function dccr_ftr_sessions_ctools_plugin_api($module = NULL, $api = NULL) {
+  if ($module == "ds" && $api == "ds") {
+    return array("version" => "1");
+  }
   if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => "1");
   }
@@ -50,11 +53,11 @@ function dccr_ftr_sessions_flag_default_flags() {
     'access_author' => '',
     'show_contextual_link' => 0,
     'i18n' => 1,
-    'api_version' => 3,
     'module' => 'dccr_ftr_sessions',
     'locked' => array(
       0 => 'name',
     ),
+    'api_version' => 3,
   );
   return $flags;
 

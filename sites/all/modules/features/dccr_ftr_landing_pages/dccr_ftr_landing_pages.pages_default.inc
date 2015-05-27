@@ -2120,6 +2120,87 @@ function dccr_ftr_landing_pages_default_page_manager_pages() {
   $page = new stdClass();
   $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
   $page->api_version = 1;
+  $page->name = 'my_schedule';
+  $page->task = 'page';
+  $page->admin_title = 'My Schedule';
+  $page->admin_description = '';
+  $page->path = 'my-schedule';
+  $page->access = array();
+  $page->menu = array();
+  $page->arguments = array();
+  $page->conf = array(
+    'admin_paths' => FALSE,
+  );
+  $page->default_handlers = array();
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_my_schedule__panel_context_827124ea-f3ec-4ea7-a91b-b25512714f83';
+  $handler->task = 'page';
+  $handler->subtask = 'my_schedule';
+  $handler->handler = 'panel_context';
+  $handler->weight = 0;
+  $handler->conf = array(
+    'title' => 'Panel',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+  );
+  $display = new panels_display();
+  $display->layout = 'onecol';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'top' => NULL,
+      'left' => NULL,
+      'middle' => NULL,
+      'right' => NULL,
+      'bottom' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = 'dd629a5d-732a-471e-b553-8e7c3f3236bd';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-c7c96ad6-f603-48f8-b4c2-610dac023174';
+    $pane->panel = 'middle';
+    $pane->type = 'block';
+    $pane->subtype = 'dccr_blocks-dccr_my_schedule';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'c7c96ad6-f603-48f8-b4c2-610dac023174';
+    $display->content['new-c7c96ad6-f603-48f8-b4c2-610dac023174'] = $pane;
+    $display->panels['middle'][0] = 'new-c7c96ad6-f603-48f8-b4c2-610dac023174';
+  $display->hide_title = PANELS_TITLE_NONE;
+  $display->title_pane = 'new-c7c96ad6-f603-48f8-b4c2-610dac023174';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $pages['my_schedule'] = $page;
+
+  $page = new stdClass();
+  $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
+  $page->api_version = 1;
   $page->name = 'register';
   $page->task = 'page';
   $page->admin_title = 'Register';

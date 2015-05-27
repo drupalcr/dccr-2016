@@ -5,6 +5,20 @@
  * dccr_blocks.module
  */
 
+// Defining constants.
+// Thursday, July 30th.
+const DCCR_BLOCKS_FIRST_DAY = 1438264800;
+// Friday, July 31st.
+const DCCR_BLOCKS_SECOND_DAY = 1438351200;
+// Saturday, August 1st.
+const DCCR_BLOCKS_POST_CAMP = 1438437600;
+/**
+ * Text for no-session in a time slot (schedule).
+ * Uncomment line 20 and comment 19 if you need text.
+ */
+const DCCR_BLOCKS_GENERAL_NO_SESSION = '';
+// define('DCCR_BLOCKS_GENERAL_NO_SESSION', t('BOF'));
+
 /**
  * Implements hook_block_info().
  */
@@ -47,6 +61,16 @@ function dccr_blocks_block_info() {
   $blocks['dccr_important_dates'] = array(
     'info' => t('Important Dates'),
     'cache' => DRUPAL_CACHE_GLOBAL,
+  );
+
+  $blocks['dccr_final_schedule'] = array(
+    'info' => t('Final Schedule'),
+    'cache' => DRUPAL_NO_CACHE,
+  );
+
+  $blocks['dccr_my_schedule'] = array(
+    'info' => t('My schedule'),
+    'cache' => DRUPAL_NO_CACHE,
   );
 
   $blocks['dccr_main_logo'] = array(
@@ -161,6 +185,14 @@ function dccr_blocks_block_view($delta = '') {
 
     case 'dccr_important_dates':
       $block = dccr_blocks_important_dates_block();
+      break;
+
+    case 'dccr_final_schedule':
+      $block = dccr_get_final_schedule(FALSE, DCCR_BLOCKS_GENERAL_NO_SESSION, t('Schedule'));
+      break;
+
+    case 'dccr_my_schedule':
+      $block = dccr_get_final_schedule(TRUE, t('Free'), t('My Schedule'));
       break;
 
     case 'dccr_main_logo':
@@ -368,4 +400,322 @@ function dccr_blocks_create_account_block() {
   $block['content'] = $markup;
 
   return $block;
+}
+
+/**
+ * Get Final Schedule block.
+ */
+function dccr_get_final_schedule($only_flagged, $empty_slot_text, $block_title) {
+  $block = array();
+  $markup = '';
+  $terms = dccr_get_rooms();
+  $tracks = taxonomy_get_tree(taxonomy_vocabulary_machine_name_load('tracks')->vid);
+  $terms_count = 0;
+  $counter = 0;
+  $params = drupal_get_query_parameters();
+  $markup .= '<div class=\'tracks\'>';
+  for ($i = 0; $i < count($tracks); $i++) {
+    $markup .= '<span class=\'color-' . strtolower($tracks[$i]->name) . '\'>' . $tracks[$i]->name . '</span>';
+  }
+  if ($only_flagged) {
+    $markup .= '</div><div class=\'filter\'><div class=\'day\'>' . l(t('July 30th'), 'my-schedule', array('query' => array('date' => 'thursday'))) . '</div><div class=\'day\'>' . l(t('July 31st'), 'my-schedule', array('query' => array('date' => 'friday'))) . '</div></div>';
+  }
+  else {
+    $markup .= '</div><div class=\'filter\'><div class=\'day\'>' . l(t('July 30th'), 'schedule', array('query' => array('date' => 'thursday'))) . '</div><div class=\'day\'>' . l(t('July 31st'), 'schedule', array('query' => array('date' => 'friday'))) . '</div></div>';
+  }
+  if ($only_flagged) {
+    drupal_add_js(drupal_get_path('module', 'dccr_blocks') . '/js/alter_flag_behavior.js');
+  }
+
+  // Thursday, July 30th.
+  $date1 = DCCR_BLOCKS_FIRST_DAY;
+  // Friday, July 31st.
+  $date2 = DCCR_BLOCKS_SECOND_DAY;
+  if (isset($params['date']) && check_plain($params['date'])) {
+    if ($params['date'] == 'friday') {
+      // Friday, July 31st.
+      $date1 = DCCR_BLOCKS_SECOND_DAY;
+      // Saturday, August 1st.
+      $date2 = DCCR_BLOCKS_POST_CAMP;
+    }
+  }
+
+  if ($terms) {
+    global $language;
+    $lang = $language->language;
+    $activities = dccr_get_global_activities(array($date1, $date2), $lang);
+
+    // Create markup for rooms.
+    foreach ($terms as $term) {
+      $terms_count++;
+      $markup .= '<h3 class=\'room-name\'>' . $term->name . '</h3>';
+    }
+
+    if ($activities) {
+      foreach ($activities as $activity) {
+        $date2 = dccr_get_activity_finish_time($activity);
+        $sessions = dccr_get_approved_sessions(array($date1, $date2), $only_flagged);
+
+        if ($sessions) {
+          $markup .= dccr_print_sessions($sessions, $terms, $terms_count, $empty_slot_text);
+        }
+
+        $date1 = $date2;
+        $activity_node = node_load($activity->nid);
+        $act = node_view($activity_node, 'time_slot');
+        $markup .= '<div class=\'time-slot\'><div class=\'hour\'><p>' . date('H:i', $activity_node->field_time['und'][0]['value']) . '</p><p>' . date('H:i', $activity_node->field_time['und'][0]['value2']) . '</p></div>';
+        $markup .= '<div class=\'wide-slot\'>' . render($act) . '</div></div>';
+      }
+      if (isset($params['date']) && check_plain($params['date']) && $params['date'] == 'friday') {
+        $date2 = DCCR_BLOCKS_POST_CAMP;
+      }
+      else {
+        $date2 = DCCR_BLOCKS_SECOND_DAY;
+      }
+
+      $sessions = dccr_get_approved_sessions(array($date1, $date2), $only_flagged);
+      if ($sessions) {
+        $markup .= dccr_print_sessions($sessions, $terms, $terms_count, $empty_slot_text);
+      }
+    }
+    else {
+      $sessions = dccr_get_approved_sessions(array($date1, $date2), $only_flagged);
+      if ($sessions) {
+        $markup .= dccr_print_sessions($sessions, $terms, $terms_count, $empty_slot_text);
+      }
+    }
+  }
+
+  // Assign content to the block.
+  $block['subject'] = $block_title;
+  $block['content'] = $markup;
+  return $block;
+}
+
+/**
+ * Prints sessions.
+ */
+function dccr_print_sessions($sessions, $terms, $terms_count, $empty_slot_text) {
+  $markup = '';
+  $counter = 0;
+  $var1 = 0;
+  $var2 = 0;
+
+  foreach ($sessions as $session) {
+    if ($counter == 0) {
+      $var1 = date('H:i', $session->field_time['und'][0]['value']);
+      $var2 = date('H:i', $session->field_time['und'][0]['value2']);
+      $markup .= '<div class=\'time-slot\'><div class=\'hour\'><p>' . $var1 . '</p><p>' . $var2 . '</p></div>';
+    }
+    if ($session->field_location['und'][0]['tid'] == $terms[$counter]->tid) {
+      if (date('H:i', $session->field_time['und'][0]['value']) != $var1) {
+        for ($i = $counter; $i < $terms_count; $i++) {
+          $markup .= '<div class=\'session\'>';
+          if (!empty($empty_slot_text)) {
+            $markup .= '<p>' . $empty_slot_text . '</p>';
+          }
+          $markup .= '</div>';
+        }
+        $var1 = date('H:i', $session->field_time['und'][0]['value']);
+        $var2 = date('H:i', $session->field_time['und'][0]['value2']);
+        $markup .= '</div><div class=\'time-slot\'><div class=\'hour\'><p>' . $var1 . '</p><p>' . $var2 . '</p></div>';
+        for ($i = 0; $i < $counter; $i++) {
+          $markup .= '<div class=\'session\'>';
+          if (!empty($empty_slot_text)) {
+            $markup .= '<p>' . $empty_slot_text . '</p>';
+          }
+          $markup .= '</div>';
+        }
+      }
+      $item = node_view($session, 'time_slot');
+      $markup .= '<div class=\'session ' . dccr_get_track_class_name($session) . '\'>' . render($item) . '</div>';
+      $counter++;
+    }
+    else {
+      $index = dccr_get_term_position($terms, $session->field_location['und'][0]['tid']);
+      if ($session->field_location['und'][0]['tid'] > $terms[$counter]->tid) {
+        while ($counter < $index) {
+          $markup .= '<div class=\'session\'>';
+          if (!empty($empty_slot_text)) {
+            $markup .= '<p>' . $empty_slot_text . '</p>';
+          }
+          $markup .= '</div>';
+          $counter++;
+        }
+        $item = node_view($session, 'time_slot');
+        $markup .= '<div class=\'session ' . dccr_get_track_class_name($session) . '\'>' . render($item) . '</div>';
+        $counter++;
+      }
+      else {
+        for ($i = $counter; $i < $terms_count; $i++) {
+          $markup .= '<div class=\'session\'>';
+          if (!empty($empty_slot_text)) {
+            $markup .= '<p>' . $empty_slot_text . '</p>';
+          }
+          $markup .= '</div>';
+        }
+        $markup .= '</div><div class=\'time-slot\'><div class=\'hour\'><p>' . date('H:i', $session->field_time['und'][0]['value']) . '</p><p>' . date('H:i', $session->field_time['und'][0]['value2']) . '</p></div>';
+        for ($i = 0; $i < $index; $i++) {
+          $markup .= '<div class=\'session\'>';
+          if (!empty($empty_slot_text)) {
+            $markup .= '<p>' . $empty_slot_text . '</p>';
+          }
+          $markup .= '</div>';
+        }
+        $item = node_view($session, 'time_slot');
+        $markup .= '<div class=\'session ' . dccr_get_track_class_name($session) . '\'>' . render($item) . '</div>';
+        $counter = $index + 1;
+      }
+    }
+    if ($counter == $terms_count || $session->field_location['und'][0]['tid'] == $terms[$terms_count - 1]->tid) {
+      $markup .= '</div>';
+      $counter = 0;
+    }
+  }
+  if ($counter != $terms_count && $counter != 0) {
+    for ($i = $counter; $i < $terms_count; $i++) {
+      $markup .= '<div class=\'session\'>';
+      if (!empty($empty_slot_text)) {
+        $markup .= '<p>' . $empty_slot_text . '</p>';
+      }
+      $markup .= '</div>';
+    }
+    $markup .= '</div>';
+    $counter = 0;
+  }
+  return $markup;
+}
+
+/**
+ * Return the class name for a track.
+ */
+function dccr_get_track_class_name($session) {
+  $tracks = taxonomy_get_tree(taxonomy_vocabulary_machine_name_load('tracks')->vid);
+  for ($i = 0; $i < count($tracks); $i++) {
+    if ($session->field_track['und'][0]['tid'] == $tracks[$i]->tid) {
+      return 'color-' . strtolower(str_replace(' ', '-', $tracks[$i]->name));
+    }
+  }
+  return '';
+}
+
+/**
+ * Returns the rooms.
+ */
+function dccr_get_rooms() {
+  $query = new EntityFieldQuery();
+  $result = $query->entityCondition('entity_type', 'taxonomy_term')
+    ->propertyCondition('vid', taxonomy_vocabulary_machine_name_load('rooms')->vid)
+    ->propertyOrderBy('tid');
+  $result = $query->execute();
+
+  $tids = array();
+  if (isset($result['taxonomy_term'])) {
+    foreach ($result['taxonomy_term'] as $key => $value) {
+      $tids[] = $key;
+    }
+    $rooms = taxonomy_term_load_multiple($tids);
+    $final = array();
+    foreach ($rooms as $room) {
+      $final[] = $room;
+    }
+    return $final;
+  }
+  return NULL;
+}
+
+/**
+ * It returns the approved sessions.
+ */
+function dccr_get_approved_sessions($dates, $only_flagged = FALSE) {
+  $query = db_select('node', 'n');
+  $query->fields('n', array('nid'))
+    ->fields('fl', array('field_location_tid'))
+    ->fields('ft', array('field_time_value'));
+  $query->join('field_data_field_session_approved', 'sa', 'n.nid = sa.entity_id');
+  $query->join('field_data_field_location', 'fl', 'n.nid = fl.entity_id');
+  $query->join('field_data_field_time', 'ft', 'n.nid = ft.entity_id');
+
+  $query->condition('n.type', 'dccr_session', '=');
+  $query->condition('sa.field_session_approved_value', 1, '=');
+  $query->condition('ft.field_time_value', $dates[0], '>=');
+  $query->condition('ft.field_time_value2', $dates[1], '<=');
+
+  $query->orderBy('ft.field_time_value')
+    ->orderBy('fl.field_location_tid');
+
+  $query->groupBy('ft.field_time_value')
+    ->groupBy('fl.field_location_tid');
+
+
+  $sessions = $query->execute();
+
+  if (isset($sessions)) {
+    $items = array();
+    if ($only_flagged) {
+      $flag = flag_get_flag('add_to_favorites');
+
+      foreach ($sessions as $session) {
+        if ($flag->is_flagged($session->nid)) {
+          $items[] = $session->nid;
+        }
+      }
+    }
+    else {
+      foreach ($sessions as $session) {
+        $items[] = $session->nid;
+      }
+    }
+    return node_load_multiple($items);
+  }
+  return NULL;
+}
+
+/**
+ * It returns the global activities.
+ */
+function dccr_get_global_activities($dates, $lang) {
+  $query = new EntityFieldQuery();
+
+  $query->entityCondition('entity_type', 'node')
+    ->entityCondition('bundle', 'global_activity')
+    ->propertyCondition('status', NODE_PUBLISHED)
+    ->propertyCondition('language', $lang, '=')
+    ->fieldCondition('field_time', 'value', $dates, 'BETWEEN')
+    ->fieldOrderBy('field_time', 'value');
+  $activities = $query->execute();
+
+  if (isset($activities['node'])) {
+    return $activities['node'];
+  }
+  return NULL;
+}
+
+/**
+ * Return the time in which a global activity will start.
+ */
+function dccr_get_activity_start_time($activity) {
+  $node = node_load($activity->nid);
+  return $node->field_time['und'][0]['value'];
+}
+
+/**
+ * Return the time in which a global activity will finish.
+ */
+function dccr_get_activity_finish_time($activity) {
+  $node = node_load($activity->nid);
+  return $node->field_time['und'][0]['value2'];
+}
+
+/**
+ * Get the position of the term.
+ */
+function dccr_get_term_position($terms, $tid) {
+  $index = 0;
+  foreach ($terms as $term) {
+    if ($term->tid == $tid) {
+      return $index;
+    }
+    $index++;
+  }
 }
