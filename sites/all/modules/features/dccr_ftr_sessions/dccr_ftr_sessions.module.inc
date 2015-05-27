@@ -11,7 +11,7 @@ function dccr_ftr_sessions_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id === 'dccr_session_node_form') {
     // Set actual user as speaker by default.
     global $user;
-    if (empty($form['node']['#value'])) {
+    if (empty($form['nid']['#value'])) {
       $form['field_speakers'][LANGUAGE_NONE][0]['target_id']['#default_value'] = "$user->name ($user->uid)";
     }
     $form['description'] = array(
