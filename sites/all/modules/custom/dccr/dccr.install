@@ -60,6 +60,106 @@ function dccr_install() {
   );
 
   $result = module_enable($modules_enable_list, TRUE);
+
+  //Empty pages.
+  module_load_include('inc', 'i18n_string');
+  // Create an empty page callback for schedule.
+  $callback = new stdClass();
+
+  $callback->path = 'schedule';
+  $callback->page_title = '';
+
+  empty_page_save_callback($callback);
+
+  // Some path alias.
+  $path = array(
+    'source' => 'payment-submit',
+    'alias' => 'enviar-comprobante',
+    'language' => 'es',
+  );
+  path_save($path);
+
+  $path = array(
+    'source' => 'my-schedule',
+    'alias' => 'mi-agenda',
+    'language' => 'es',
+  );
+  path_save($path);
+
+  $path = array(
+    'source' => 'workshops',
+    'alias' => 'talleres',
+    'language' => 'es',
+  );
+  path_save($path);
+
+  $path = array(
+    'source' => 'faq',
+    'alias' => 'preguntas-frecuentes',
+    'language' => 'es',
+  );
+  path_save($path);
+
+  $path = array(
+    'source' => 'venue',
+    'alias' => 'sede',
+    'language' => 'es',
+  );
+  path_save($path);
+
+  $path = array(
+    'source' => 'how-to-sponsor',
+    'alias' => 'como-patrocinar',
+    'language' => 'es',
+  );
+  path_save($path);
+
+  $path = array(
+    'source' => 'contact-us',
+    'alias' => 'contactenos',
+    'language' => 'es',
+  );
+  path_save($path);
+
+  $path = array(
+    'source' => 'conference',
+    'alias' => 'conferencia',
+    'language' => 'es',
+  );
+  path_save($path);
+
+  $path = array(
+    'source' => 'register',
+    'alias' => 'registro',
+    'language' => 'es',
+  );
+  path_save($path);
+
+  $path = array(
+    'source' => 'schedule',
+    'alias' => 'agenda',
+    'language' => 'es',
+  );
+  path_save($path);
+
+  $path = array(
+    'source' => 'sponsors',
+    'alias' => 'patrocinadores',
+    'language' => 'es',
+  );
+  path_save($path);
+
+  // Blocks update.
+  _block_rehash();
+  db_update('block')
+    ->fields(array(
+      'title' => '<none>',
+    ))
+    ->condition('delta', array('menu-left-menu', 'menu-right-menu'), 'IN')
+    ->execute();
+
+  // Set default theme.
+  variable_set('theme_default', 'dccr2015');
 }
 
 /**
