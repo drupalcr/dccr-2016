@@ -8,11 +8,11 @@
  * Implements hook_ctools_plugin_api().
  */
 function dccr_ftr_config_ctools_plugin_api($module = NULL, $api = NULL) {
-  if ($module == "ds" && $api == "ds") {
-    return array("version" => "1");
-  }
   if ($module == "context" && $api == "context") {
     return array("version" => "3");
+  }
+  if ($module == "ds" && $api == "ds") {
+    return array("version" => "1");
   }
   if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => "1");
@@ -56,6 +56,38 @@ function dccr_ftr_config_default_search_api_index() {
     },
     "enabled" : "1",
     "read_only" : "0",
+    "rdf_mapping" : []
+  }');
+  return $items;
+}
+
+/**
+ * Implements hook_default_search_api_server().
+ */
+function dccr_ftr_config_default_search_api_server() {
+  $items = array();
+  $items['solr'] = entity_import('search_api_server', '{
+    "name" : "Solr",
+    "machine_name" : "solr",
+    "description" : "",
+    "class" : "search_api_solr_service",
+    "options" : {
+      "clean_ids" : true,
+      "site_hash" : true,
+      "scheme" : "http",
+      "host" : "localhost",
+      "port" : "8888",
+      "path" : "\\/solr\\/dccr",
+      "http_user" : "",
+      "http_pass" : "",
+      "excerpt" : 0,
+      "retrieve_data" : 0,
+      "highlight_data" : 0,
+      "skip_schema_check" : 0,
+      "solr_version" : "",
+      "http_method" : "AUTO"
+    },
+    "enabled" : "1",
     "rdf_mapping" : []
   }');
   return $items;
