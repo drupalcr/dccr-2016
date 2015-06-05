@@ -380,3 +380,10 @@ function dccr_update_7026() {
   );
   path_save($path);
 }
+
+/**
+ * Set dccr2015 as default theme.
+ */
+function dccr_update_7027() {
+  variable_set('theme_default', 'dccr2015');
+}
