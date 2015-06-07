@@ -37,6 +37,7 @@ features[field_instance][] = node-dccr_sponsor-body
 features[field_instance][] = node-dccr_sponsor-field_image
 features[field_instance][] = node-dccr_sponsor-field_sponsor_link
 features[field_instance][] = node-dccr_sponsor-field_sponsorship_level_ref
+features[image][] = sponsor_logo
 features[node][] = dccr_sponsor
 features[taxonomy][] = sponsorship_level
 features[user_permission][] = create dccr_sponsor content

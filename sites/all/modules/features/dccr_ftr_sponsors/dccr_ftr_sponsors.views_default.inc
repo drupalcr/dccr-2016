@@ -74,7 +74,7 @@ function dccr_ftr_sponsors_views_default_views() {
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['path'] = 'sponsors';
+  $handler->display->display_options['path'] = 'sponsors-view';
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block_1');
@@ -93,7 +93,7 @@ function dccr_ftr_sponsors_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '11';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_plugin'] = 'list';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'node';
