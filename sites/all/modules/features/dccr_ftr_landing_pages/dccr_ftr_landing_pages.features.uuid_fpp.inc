@@ -36,7 +36,7 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
       ),
     ),
     'rdf_mapping' => array(),
-    'user_uuid' => '60b0f64e-592c-4d69-a1b0-07d70b9e7fcd',
+    'user_uuid' => 'd7e36c51-1606-4bc1-b41e-917cbf3dd667',
   );
   $fpps[] = array(
     'timestamp' => 1431481655,
@@ -69,7 +69,7 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
       ),
     ),
     'rdf_mapping' => array(),
-    'user_uuid' => '60b0f64e-592c-4d69-a1b0-07d70b9e7fcd',
+    'user_uuid' => 'd7e36c51-1606-4bc1-b41e-917cbf3dd667',
   );
   $fpps[] = array(
     'timestamp' => 1431449597,
@@ -97,7 +97,7 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
       ),
     ),
     'rdf_mapping' => array(),
-    'user_uuid' => 'b1ca6a98-3153-462d-9f4e-77750818c0f4',
+    'user_uuid' => 'd7e36c51-1606-4bc1-b41e-917cbf3dd667',
   );
   $fpps[] = array(
     'timestamp' => 1431450885,
@@ -126,7 +126,7 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
     ),
     'field_fpp_link' => array(),
     'rdf_mapping' => array(),
-    'user_uuid' => 'b1ca6a98-3153-462d-9f4e-77750818c0f4',
+    'user_uuid' => 'd7e36c51-1606-4bc1-b41e-917cbf3dd667',
   );
   $fpps[] = array(
     'timestamp' => 1431459617,
@@ -154,7 +154,7 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
       ),
     ),
     'rdf_mapping' => array(),
-    'user_uuid' => 'b1ca6a98-3153-462d-9f4e-77750818c0f4',
+    'user_uuid' => 'd7e36c51-1606-4bc1-b41e-917cbf3dd667',
   );
   $fpps[] = array(
     'timestamp' => 1431482082,
@@ -176,7 +176,7 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
     'field_fpp_image_caption' => array(),
     'field_fpp_link' => array(),
     'rdf_mapping' => array(),
-    'user_uuid' => '60b0f64e-592c-4d69-a1b0-07d70b9e7fcd',
+    'user_uuid' => 'd7e36c51-1606-4bc1-b41e-917cbf3dd667',
   );
   $fpps[] = array(
     'timestamp' => 1431464244,
@@ -206,7 +206,7 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
       ),
     ),
     'rdf_mapping' => array(),
-    'user_uuid' => 'b1ca6a98-3153-462d-9f4e-77750818c0f4',
+    'user_uuid' => 'd7e36c51-1606-4bc1-b41e-917cbf3dd667',
   );
   $fpps[] = array(
     'timestamp' => 1431486956,
@@ -235,7 +235,7 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
       ),
     ),
     'rdf_mapping' => array(),
-    'user_uuid' => '60b0f64e-592c-4d69-a1b0-07d70b9e7fcd',
+    'user_uuid' => 'd7e36c51-1606-4bc1-b41e-917cbf3dd667',
   );
   $fpps[] = array(
     'timestamp' => 1431459755,
@@ -265,7 +265,7 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
       ),
     ),
     'rdf_mapping' => array(),
-    'user_uuid' => 'b1ca6a98-3153-462d-9f4e-77750818c0f4',
+    'user_uuid' => 'd7e36c51-1606-4bc1-b41e-917cbf3dd667',
   );
   $fpps[] = array(
     'timestamp' => 1431462484,
@@ -294,7 +294,7 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
       ),
     ),
     'rdf_mapping' => array(),
-    'user_uuid' => 'b1ca6a98-3153-462d-9f4e-77750818c0f4',
+    'user_uuid' => 'd7e36c51-1606-4bc1-b41e-917cbf3dd667',
   );
   $fpps[] = array(
     'timestamp' => 1431487250,
@@ -323,7 +323,7 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
       ),
     ),
     'rdf_mapping' => array(),
-    'user_uuid' => '60b0f64e-592c-4d69-a1b0-07d70b9e7fcd',
+    'user_uuid' => 'd7e36c51-1606-4bc1-b41e-917cbf3dd667',
   );
   $fpps[] = array(
     'timestamp' => 1431450899,
@@ -352,7 +352,7 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
     ),
     'field_fpp_link' => array(),
     'rdf_mapping' => array(),
-    'user_uuid' => 'b1ca6a98-3153-462d-9f4e-77750818c0f4',
+    'user_uuid' => 'd7e36c51-1606-4bc1-b41e-917cbf3dd667',
   );
   $fpps[] = array(
     'timestamp' => 1431460038,
@@ -381,7 +381,7 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
     ),
     'field_fpp_link' => array(),
     'rdf_mapping' => array(),
-    'user_uuid' => 'b1ca6a98-3153-462d-9f4e-77750818c0f4',
+    'user_uuid' => 'd7e36c51-1606-4bc1-b41e-917cbf3dd667',
   );
   $fpps[] = array(
     'timestamp' => 1431450624,
@@ -412,7 +412,7 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
       ),
     ),
     'rdf_mapping' => array(),
-    'user_uuid' => 'b1ca6a98-3153-462d-9f4e-77750818c0f4',
+    'user_uuid' => 'd7e36c51-1606-4bc1-b41e-917cbf3dd667',
   );
   $fpps[] = array(
     'timestamp' => 1431459920,
@@ -445,7 +445,7 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
       ),
     ),
     'rdf_mapping' => array(),
-    'user_uuid' => 'b1ca6a98-3153-462d-9f4e-77750818c0f4',
+    'user_uuid' => 'd7e36c51-1606-4bc1-b41e-917cbf3dd667',
   );
   $fpps[] = array(
     'timestamp' => 1431459955,
@@ -475,7 +475,7 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
       ),
     ),
     'rdf_mapping' => array(),
-    'user_uuid' => 'b1ca6a98-3153-462d-9f4e-77750818c0f4',
+    'user_uuid' => 'd7e36c51-1606-4bc1-b41e-917cbf3dd667',
   );
   $fpps[] = array(
     'timestamp' => 1431450642,
@@ -504,7 +504,7 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
       ),
     ),
     'rdf_mapping' => array(),
-    'user_uuid' => 'b1ca6a98-3153-462d-9f4e-77750818c0f4',
+    'user_uuid' => 'd7e36c51-1606-4bc1-b41e-917cbf3dd667',
   );
   $fpps[] = array(
     'timestamp' => 1431462386,
@@ -532,7 +532,7 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
       ),
     ),
     'rdf_mapping' => array(),
-    'user_uuid' => 'b1ca6a98-3153-462d-9f4e-77750818c0f4',
+    'user_uuid' => 'd7e36c51-1606-4bc1-b41e-917cbf3dd667',
   );
   $fpps[] = array(
     'timestamp' => 1431459670,
@@ -561,7 +561,7 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
     ),
     'field_fpp_link' => array(),
     'rdf_mapping' => array(),
-    'user_uuid' => 'b1ca6a98-3153-462d-9f4e-77750818c0f4',
+    'user_uuid' => 'd7e36c51-1606-4bc1-b41e-917cbf3dd667',
   );
   $fpps[] = array(
     'timestamp' => 1431462521,
@@ -606,7 +606,7 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
       ),
     ),
     'rdf_mapping' => array(),
-    'user_uuid' => 'b1ca6a98-3153-462d-9f4e-77750818c0f4',
+    'user_uuid' => 'd7e36c51-1606-4bc1-b41e-917cbf3dd667',
   );
   $fpps[] = array(
     'timestamp' => 1431459805,
@@ -635,7 +635,7 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
     ),
     'field_fpp_link' => array(),
     'rdf_mapping' => array(),
-    'user_uuid' => 'b1ca6a98-3153-462d-9f4e-77750818c0f4',
+    'user_uuid' => 'd7e36c51-1606-4bc1-b41e-917cbf3dd667',
   );
   $fpps[] = array(
     'timestamp' => 1431482210,
@@ -668,7 +668,7 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
       ),
     ),
     'rdf_mapping' => array(),
-    'user_uuid' => '60b0f64e-592c-4d69-a1b0-07d70b9e7fcd',
+    'user_uuid' => 'd7e36c51-1606-4bc1-b41e-917cbf3dd667',
   );
   $fpps[] = array(
     'timestamp' => 1431450354,
@@ -698,7 +698,7 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
       ),
     ),
     'rdf_mapping' => array(),
-    'user_uuid' => 'b1ca6a98-3153-462d-9f4e-77750818c0f4',
+    'user_uuid' => 'd7e36c51-1606-4bc1-b41e-917cbf3dd667',
   );
   $fpps[] = array(
     'timestamp' => 1431487773,
@@ -720,7 +720,7 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
     'field_fpp_image_caption' => array(),
     'field_fpp_link' => array(),
     'rdf_mapping' => array(),
-    'user_uuid' => '60b0f64e-592c-4d69-a1b0-07d70b9e7fcd',
+    'user_uuid' => 'd7e36c51-1606-4bc1-b41e-917cbf3dd667',
   );
   $fpps[] = array(
     'timestamp' => 1431464196,
@@ -748,7 +748,7 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
       ),
     ),
     'rdf_mapping' => array(),
-    'user_uuid' => 'b1ca6a98-3153-462d-9f4e-77750818c0f4',
+    'user_uuid' => 'd7e36c51-1606-4bc1-b41e-917cbf3dd667',
   );
   $fpps[] = array(
     'timestamp' => 1431482157,
@@ -776,10 +776,10 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
       ),
     ),
     'rdf_mapping' => array(),
-    'user_uuid' => '60b0f64e-592c-4d69-a1b0-07d70b9e7fcd',
+    'user_uuid' => 'd7e36c51-1606-4bc1-b41e-917cbf3dd667',
   );
   $fpps[] = array(
-    'timestamp' => 1431482006,
+    'timestamp' => 1433643725,
     'title' => '',
     'log' => '',
     'bundle' => 'dccr_embed_fpp',
@@ -797,14 +797,14 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
     'field_embed_code' => array(
       'und' => array(
         0 => array(
-          'value' => '<iframe width="600" height="450" frameborder="0" style="border:0"
+          'value' => '<iframe class="location-map" width="100%" height="450" frameborder="0" style="border:0"
 src="https://www.google.com/maps/embed/v1/place?q=Ciudad%20de%20la%20Investigacion%2C%20Sabanilla%2C%20San%20Jose%2C%20Costa%20Rica&key=AIzaSyC1WtX40GST0Nc7JxiweLxNCv62aeUOrsE"></iframe> ',
           'format' => 'full_html',
         ),
       ),
     ),
     'rdf_mapping' => array(),
-    'user_uuid' => '60b0f64e-592c-4d69-a1b0-07d70b9e7fcd',
+    'user_uuid' => 'd7e36c51-1606-4bc1-b41e-917cbf3dd667',
   );
   $fpps[] = array(
     'timestamp' => 1431459883,
@@ -839,7 +839,7 @@ src="https://www.google.com/maps/embed/v1/place?q=Ciudad%20de%20la%20Investigaci
       ),
     ),
     'rdf_mapping' => array(),
-    'user_uuid' => 'b1ca6a98-3153-462d-9f4e-77750818c0f4',
+    'user_uuid' => 'd7e36c51-1606-4bc1-b41e-917cbf3dd667',
   );
   $fpps[] = array(
     'timestamp' => 1431481732,
@@ -861,7 +861,7 @@ src="https://www.google.com/maps/embed/v1/place?q=Ciudad%20de%20la%20Investigaci
     'field_fpp_image_caption' => array(),
     'field_fpp_link' => array(),
     'rdf_mapping' => array(),
-    'user_uuid' => '60b0f64e-592c-4d69-a1b0-07d70b9e7fcd',
+    'user_uuid' => 'd7e36c51-1606-4bc1-b41e-917cbf3dd667',
   );
   return $fpps;
 }
