@@ -24,6 +24,7 @@ features[field_base][] = field_speaker_title
 features[field_instance][] = node-keynote-body
 features[field_instance][] = node-keynote-field_photo
 features[field_instance][] = node-keynote-field_speaker_title
+features[image][] = keynote_frontpage
 features[node][] = keynote
 features[user_permission][] = create keynote content
 features[user_permission][] = delete any keynote content
