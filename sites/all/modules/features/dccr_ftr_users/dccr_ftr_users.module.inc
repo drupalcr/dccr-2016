@@ -59,3 +59,23 @@ function dccr_ftr_users_form_user_register_form_validate($form, &$form_state) {
     form_set_error('name][', t('Username can contain only lowercase letters, numbers, "-" and "_"'));
   }
 }
+
+/**
+ * Implements hook_module_implements_alter().
+ */
+function dccr_ftr_users_module_implements_alter(&$implementations, $hook) {
+  if ($hook == 'user_view' && isset($implementations['dccr_ftr_users'])) {
+    $dccr_ftr_users = $implementations['dccr_ftr_users'];
+    unset($implementations['dccr_ftr_users']);
+    $implementations['dccr_ftr_users'] = $dccr_ftr_users;
+  }
+}
+
+/**
+ * Implements hook_user_view().
+ */
+function dccr_ftr_users_user_view($account, $view_mode, $language) {
+  if ($view_mode == 'teaser' && isset($account->content['summary'])) {
+    unset($account->content['summary']);
+  }
+}
