@@ -1,0 +1,65 @@
+#block-dccr-blocks-proposed-sessions-header {
+  margin-bottom: 15px;
+  @include media($tablet) {
+    @include span-columns(8);
+    margin-bottom: 0;
+  }
+  h2 {
+    @extend .page-title;
+    border-bottom: 0;
+    margin-bottom: 0
+  }
+}
+
+#block-dccr-blocks-propose-sessions-link {
+  @include media($tablet) {
+    @include span-columns(4);
+    @include omega;
+  }
+  .content a {
+    @include button-round($anaranjado,  #fff,  $arrow:yes);
+    @include font-size(18);
+    padding: 20px;
+    text-transform: uppercase;
+    @include media($tablet) {
+      margin-top: 50px;
+    }
+  }
+}
+
+#block-views-proposed-sessions-list-block {
+  clear: both;
+}
+
+.proposed-sessions-list {
+  @extend %rwd-table;
+  padding-top: 15px;
+  @include media($tablet) {
+    padding-top: 30px;
+  }
+  .views-exposed-widget {
+    float: none;
+    padding: 0;
+  }
+  .view-filters {
+    margin-bottom: 20px;
+    padding-top: 20px;
+    border-top: solid 2px $verde-turquesa;
+  }
+  .form-type-bef-link {
+    @include media($tablet) {
+      display: inline-block;
+    }
+    a {
+      @include button-round($verde-turquesa, #fff,  $arrow:no);
+      padding: 10px 30px;
+      margin-bottom: 10px;
+      @include media($tablet) {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .views-table {
+    width: 100%;
+  }
+}

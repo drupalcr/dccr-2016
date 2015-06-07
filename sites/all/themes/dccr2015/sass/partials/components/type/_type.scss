@@ -1,0 +1,7 @@
+// font sizes
+body {
+  @include font-size(14);
+  @include media($tablet) {
+    @include font-size(16);
+  }
+}

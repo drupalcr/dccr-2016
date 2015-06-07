@@ -1,0 +1,10 @@
+.pane-block {
+  border-bottom: solid 1px #ddd;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  &:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+}

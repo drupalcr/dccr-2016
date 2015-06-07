@@ -1,0 +1,14 @@
+.pane-dccr-ftr-sponsors-sponsors-info {
+  .pane-title {
+    @extend %sidebar-title-uppercase;
+  }
+  .pane-content {
+    a {
+      @include button-round(#3C3C44,  #EAEA63,  $arrow:yes);
+    }
+    .link-main {
+      display: block;
+      @include font-size(24);
+    }
+  }
+}

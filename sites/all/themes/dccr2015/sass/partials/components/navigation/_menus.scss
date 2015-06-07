@@ -1,0 +1,73 @@
+header.header {
+  border-bottom: 4px solid $verde-turquesa;
+  padding-bottom: 40px;
+  overflow: hidden;
+  .header-content {
+    @include outer-container(1200px);
+    #block-menu-menu-left-menu {
+      width: 36%;
+      float: left;
+    }
+    #block-menu-menu-right-menu {
+      width: 36%;
+      float: left;
+      ul {
+        float: right;
+      }
+    }
+    #block-menu-menu-left-menu,
+    #block-menu-menu-right-menu {
+      ul {
+        li {
+          float: left;
+          list-style: none;
+          font-size: 13px;
+          margin: 0;
+          padding: 0;
+          a{
+            color: black;
+            padding: 5px 10px;
+          }
+        }
+      }
+    }
+    .logo-leyenda {
+        margin-top: 12px;
+      p {
+        text-align: center;
+        font-family: "latobold";
+        font-size: 21px;
+        color: $verde-turquesa;
+        margin: 0;
+      }
+      .content{
+        border-bottom: 1px solid #cecece;
+        padding-bottom: 40px;
+        &:after,
+        &:before {
+          content: "";
+          border-radius: 50%;
+          width: 5px;
+          height: 5px;
+          display: block;
+          background-color: #cecece;
+          position: absolute;
+          float: left;
+          bottom: -1.5px;
+        }
+        &:after {
+          left: 0;
+        }
+        &:before {
+          right: 0;
+        }
+      }
+    }
+  }
+  .menu {
+    li:hover a{
+      background: $gris-claro;
+      border-radius: 4px;
+    }
+  }
+}

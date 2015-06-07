@@ -1,0 +1,12 @@
+.utility-bar {
+  background: #3C3C44;
+  padding: 10px;
+  overflow: hidden;
+}
+.login-link-block a {
+  @include button-round($verde-turquesa,  #fff,  $arrow:yes);
+  @include font-size(13);
+  display: inline-block;
+  padding: 3px 8px;
+  float: right;
+}

@@ -1,0 +1,34 @@
+.pane-dccr-blocks-dccr-important-dates {
+  background: $anaranjado;
+  padding: 15px;
+  border-radius: 3px;
+  color: #fff;
+  .pane-title {
+    @extend %sidebar-title-uppercase;
+    border-bottom: solid 1px #fff;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
+  ul {
+    @include media($tablet) {
+      -webkit-columns: 2;
+         -moz-columns: 2;
+              columns: 2;
+      -moz-column-fill: auto;
+          column-fill: auto;
+    } 
+  }
+  li {
+    @extend %reset-list;
+  }
+  .date {
+    font-weight: bold;
+    &:before {
+      content: '\00BB  '
+    }
+  }
+  .event {
+    @include font-size(14);
+    padding-left: 10px;
+  }
+}
