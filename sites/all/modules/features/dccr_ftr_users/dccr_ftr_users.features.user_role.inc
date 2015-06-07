@@ -10,6 +10,12 @@
 function dccr_ftr_users_user_default_roles() {
   $roles = array();
 
+  // Exported role: active_member.
+  $roles['active_member'] = array(
+    'name' => 'active_member',
+    'weight' => 4,
+  );
+
   // Exported role: drupal_administrator.
   $roles['drupal_administrator'] = array(
     'name' => 'drupal_administrator',

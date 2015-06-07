@@ -70,6 +70,7 @@ features[search_api_index][] = dccr_users_index
 features[taxonomy][] = company
 features[user_permission][] = flag dccr_registration_complete
 features[user_permission][] = unflag dccr_registration_complete
+features[user_role][] = active_member
 features[user_role][] = drupal_administrator
 features[variable][] = field_bundle_settings_message__dccr_admin_notification_payment_submit_form
 features[variable][] = field_bundle_settings_message__user_payment_approved
