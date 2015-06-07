@@ -1,4 +1,151 @@
 //
 // General layout rules
 //
+.main-content {
+  background: #F7F7F7;
+  overflow: hidden;
+  .front & {
+    background: transparent;
+  }
+}
+.main-content-limiter {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 20px;
+  @include media($tablet) {
+    padding: 40px 20px;
+  }
+  .front & {
+    padding: 0;
+    max-width: none;
+  }
+}
 
+// Panel 2 col bricks
+.panel-2col {
+  .panel-panel {
+    @include media($tablet) {
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+  .panel-col-first {
+    margin-bottom: 30px;
+    @include media($tablet) {
+      width: 62%;       // 605 / 966
+      margin-right: 9%; // 88 / 966
+      margin-bottom: 0;
+    }
+  }
+  .panel-col-last {
+    @include media($tablet) {
+      width: 28%;       // 280 / 966
+    }
+  }
+  .inside {}
+  .panel-pane {}
+}
+
+
+
+//encabezado de pagina de inicio
+
+.encabezado-inicio {
+  .content {
+    @include outer-container(1200px);
+    margin: 0 auto;
+    .content-wrapper {
+      .content-inner {
+        @include outer-container(800px);
+        .left {
+          @include span-columns(6 of 12);
+          @include omega;
+          .centra-boton {
+            width: 162px;
+            margin: 0 auto;
+          }
+        }
+        .right {
+          @include span-columns(6 of 12);
+          @include omega;
+          .centra-boton {
+            width: 154px;
+            margin: 0 auto;
+          }
+        }
+      }
+      .boton-wrapper{
+        clear: both;
+        margin: 40px auto;
+        width: 266px;
+      }
+    }
+  }
+}
+
+// MAPA UCR
+.ucr-mapa {
+  iframe {
+    margin: 50px auto;
+    display: block;
+    @include outer-container(1200px);
+  }
+}
+
+// bloque comunidad
+.comunidad-block {
+  .view-content {
+    @include outer-container(1200px);
+    min-height: 500px;
+    overflow: hidden;
+    padding: 40px 10px;
+    .comunidad-superior {
+      clear: both;
+      display: block;
+      overflow: hidden;
+      margin: 10px auto;
+      text-align: center;
+    }
+    .comunidad-inferior {
+      clear: both;
+      display: block;
+      overflow: hidden;
+      margin: 10px auto;
+      text-align: center;
+    }
+    .views-row {
+      display: inline;
+      padding: 6px 12px;
+    }
+  }
+}
+
+// bloque patrocinadores
+.patrocinadores-block {
+  .view-content {
+    @include outer-container(1200px);
+    .views-row {
+      float: left;
+      width: 20%;
+      margin: 2% 3.3%;
+      text-align: center;
+      &:nth-child(odd):nth-child(4n+1) {
+        margin-left: 0;
+      }
+      &:nth-child(even):nth-child(4n+2) {
+
+      }
+      &:nth-child(odd):nth-child(4n+3) {
+
+      }
+      &:nth-child(even):nth-child(4n) {
+        margin-right: 0;
+      }
+    }
+  }
+  .more-link {
+    a {
+
+    }
+  }
+}
