@@ -13,16 +13,16 @@ function dccr_ftr_workshop_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'date_format_workshop_reminder';
-  $strongarm->value = 'd \\d\\e F \\d\\e\\l Y \\a \\l\\a\\s g:s a';
-  $export['date_format_workshop_reminder'] = $strongarm;
+  $strongarm->name = 'date_format_hour_minute';
+  $strongarm->value = 'h:i a';
+  $export['date_format_hour_minute'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'date_format_hour_minute';
-  $strongarm->value = 'h:i a';
-  $export['date_format_hour_minute'] = $strongarm;
+  $strongarm->name = 'date_format_workshop_reminder';
+  $strongarm->value = 'd \\d\\e F \\d\\e\\l Y \\a \\l\\a\\s g:s a';
+  $export['date_format_workshop_reminder'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -205,11 +205,19 @@ function dccr_ftr_workshop_strongarm() {
             'weight' => '2',
             'visible' => TRUE,
           ),
+          'teaser' => array(
+            'weight' => '11',
+            'visible' => FALSE,
+          ),
         ),
         'extra_field_workshop_register' => array(
           'default' => array(
             'weight' => '0',
             'visible' => TRUE,
+          ),
+          'teaser' => array(
+            'weight' => '12',
+            'visible' => FALSE,
           ),
         ),
       ),
