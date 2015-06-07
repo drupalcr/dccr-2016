@@ -27,13 +27,18 @@ function dccr_ftr_users_field_group_info() {
       1 => 'field_linkedin_profile',
       2 => 'field_twitter_profile',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'div',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'formatter' => 'open',
       'instance_settings' => array(
         'description' => '',
-        'classes' => 'group-social-networks field-group-fieldset',
+        'show_label' => 1,
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+        'classes' => '',
         'required_fields' => 1,
+        'id' => '',
       ),
     ),
   );
