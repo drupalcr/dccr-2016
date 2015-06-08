@@ -162,7 +162,7 @@ function dccr_blocks_block_view($delta = '') {
       $block['content'] = array(
         'link' => array(
           '#type' => 'markup',
-          '#markup' => l(t('Propose a session!'), 'node/add/dccr-session'),
+          '#markup' => l(t('Propose a session!'), 'node/add/dccr-session', array('attributes' => array('class' => 'propose-session-link'))),
         ),
       );
       break;
