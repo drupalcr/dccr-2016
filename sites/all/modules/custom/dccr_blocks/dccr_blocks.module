@@ -82,6 +82,9 @@ function dccr_blocks_block_info() {
     'info' => t('Login Link'),
     'cache' => DRUPAL_CACHE_PER_ROLE,
   );
+  $blocks['dccr_footer'] = array(
+    'info' => t('Dccr Footer'),
+  );
 
   return $blocks;
 }
@@ -202,11 +205,26 @@ function dccr_blocks_block_view($delta = '') {
     case 'dccr_login_link':
       $block = dccr_blocks_login_link_block();
       break;
+    case 'dccr_footer':
+      $block = dccr_blocks_build_footer_block();
   }
 
   return $block;
 }
-
+/**
+ * Build the footer block.
+ */
+function dccr_blocks_build_footer_block() {
+  $block = array();
+  $block['subject'] = '';
+  $markup = '<div class="event-footer">';
+  $markup .= '<h2 class="event-footer-title">' . t('Contact') . '</h2>';
+  $markup .= '<p class="event-footer-description">' . t('Please contact the organizers if you have any questions') . '</p>';
+  $markup .= '<a class="event-footer-contact-email" href="camp@drupalcr.org">camp@drupalcr.org</a>';
+  $markup .= '</div>';
+  $block['content'] = $markup;
+  return $block;
+}
 /**
  * Get Login Link Block.
  */
