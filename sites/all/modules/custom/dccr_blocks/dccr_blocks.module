@@ -84,6 +84,7 @@ function dccr_blocks_block_info() {
   );
   $blocks['dccr_footer'] = array(
     'info' => t('Dccr Footer'),
+    'cache' => DRUPAL_CACHE_GLOBAL,
   );
 
   return $blocks;
