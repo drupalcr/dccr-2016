@@ -116,15 +116,16 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
     'uuid' => '14dfc4a0-8ca9-4f41-8152-6d5a9be4b7a5',
     'language' => 'und',
     'field_fpp_image' => array(),
-    'field_fpp_image_caption' => array(
+    'field_fpp_image_caption' => array(),
+    'field_fpp_link' => array(
       'und' => array(
         0 => array(
-          'value' => 'Crear cuenta en el sitio',
-          'format' => NULL,
+          'url' => 'user/register',
+          'title' => 'Crear cuenta en el sitio',
+          'attributes' => array(),
         ),
       ),
     ),
-    'field_fpp_link' => array(),
     'rdf_mapping' => array(),
     'user_uuid' => 'd7e36c51-1606-4bc1-b41e-917cbf3dd667',
   );
@@ -371,15 +372,16 @@ function dccr_ftr_landing_pages_uuid_features_default_fpps() {
     'uuid' => '2e144534-5c30-480c-b780-2498b2a11779',
     'language' => 'und',
     'field_fpp_image' => array(),
-    'field_fpp_image_caption' => array(
+    'field_fpp_image_caption' => array(),
+    'field_fpp_link' => array(
       'und' => array(
         0 => array(
-          'value' => 'Create an account in the site',
-          'format' => NULL,
+          'url' => 'user/register',
+          'title' => 'Create an account in the site',
+          'attributes' => array(),
         ),
       ),
     ),
-    'field_fpp_link' => array(),
     'rdf_mapping' => array(),
     'user_uuid' => 'd7e36c51-1606-4bc1-b41e-917cbf3dd667',
   );
