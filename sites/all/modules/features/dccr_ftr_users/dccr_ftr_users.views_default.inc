@@ -133,6 +133,13 @@ function dccr_ftr_users_views_default_views() {
   $handler->display->display_options['filters']['flag_dccr_registration_complete']['field'] = 'flag_dccr_registration_complete';
   $handler->display->display_options['filters']['flag_dccr_registration_complete']['value'] = '1';
   $handler->display->display_options['filters']['flag_dccr_registration_complete']['group'] = 1;
+  /* Filter criterion: Indexed User: User roles */
+  $handler->display->display_options['filters']['roles']['id'] = 'roles';
+  $handler->display->display_options['filters']['roles']['table'] = 'search_api_index_dccr_users_index';
+  $handler->display->display_options['filters']['roles']['field'] = 'roles';
+  $handler->display->display_options['filters']['roles']['value'] = array(
+    5 => '5',
+  );
   $translatables['dccr_attendees'] = array(
     t('Master'),
     t('Attendees'),
