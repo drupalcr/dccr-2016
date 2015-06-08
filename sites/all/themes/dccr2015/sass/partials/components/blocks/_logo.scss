@@ -1,0 +1,64 @@
+.logo-container {
+  text-align: center;
+  color: $verde-turquesa;
+  margin-bottom: 30px;
+  border-bottom: solid 1px #ddd;
+  padding-bottom: 20px;
+  position: relative;
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 6px;
+    background: #ddd;
+    border-radius: 100%;
+    position: absolute;
+    bottom: -3px;
+  }
+  &:before {
+    left: 0;
+  }
+  &:after {
+    right: 0;
+  }
+  @include media($tablet) {
+    position: absolute;
+    left: 50%;
+    top: 70px;
+    margin-left: -150px;
+    margin-bottom: 0;
+  }
+}
+.logo-site-name {
+  width: 149px;
+  height: 134px;
+  display: inline-block;
+  @include media($tablet) {
+    height: 179px;
+  }
+}
+.logo-site-name-link {
+  width: 149px;
+  height: 134px;
+  display: inline-block;
+  background: url(../logo.png) no-repeat top center;
+  background-size: 112px 134px;
+  text-indent: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  @include media($tablet) {
+    height: 179px;
+    background-size: 149px 179px;
+  }
+}
+.event-logo-date,
+.event-logo-location {
+  @include font-size(18);
+  margin-bottom: 0;
+  font-family: $headings-font;
+  font-weight: bold;
+  @include media($tablet) {
+    @include font-size(26);
+  }
+}
