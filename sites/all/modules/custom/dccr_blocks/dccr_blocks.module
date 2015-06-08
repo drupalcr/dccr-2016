@@ -221,7 +221,7 @@ function dccr_blocks_build_footer_block() {
   $markup = '<div class="event-footer">';
   $markup .= '<h2 class="event-footer-title">' . t('Contact') . '</h2>';
   $markup .= '<p class="event-footer-description">' . t('Please contact the organizers if you have any questions') . '</p>';
-  $markup .= '<a class="event-footer-contact-email" href="camp@drupalcr.org">camp@drupalcr.org</a>';
+  $markup .= '<a class="event-footer-contact-email" href="mailto:camp@drupalcr.org">camp@drupalcr.org</a>';
   $markup .= '</div>';
   $block['content'] = $markup;
   return $block;
