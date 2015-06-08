@@ -104,7 +104,7 @@ function dccr_ftr_config_strongarm() {
     'language' => 'en',
     'name' => 'English',
     'native' => 'English',
-    'direction' => 0,
+    'direction' => '0',
     'enabled' => 1,
     'plurals' => 0,
     'formula' => '',
