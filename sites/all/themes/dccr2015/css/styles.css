@@ -591,6 +591,14 @@ header.header {
   .register-create-block a:hover {
     background: #242429; }
 
+.location-map-container {
+  margin: 0 auto;
+  position: relative;
+  padding: 20px 0; }
+  @media screen and (min-width: 601px)  {
+    .location-map-container {
+      width: 90%; } }
+
 .front-keynote-speakers {
   background: url(../images/hojas-fondo.jpg);
   text-align: center;
