@@ -87,7 +87,7 @@ function dccr_ftr_sponsors_views_default_views() {
   $handler->display->display_options['use_more_text'] = 'Become a Sponsor';
   $handler->display->display_options['defaults']['link_display'] = FALSE;
   $handler->display->display_options['link_display'] = 'custom_url';
-  $handler->display->display_options['link_url'] = 'how-to-sponsor';
+  $handler->display->display_options['link_url'] = 'sponsors';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '11';
