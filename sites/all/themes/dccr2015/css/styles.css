@@ -52,6 +52,10 @@ h1, h2, h3, h4, h5, h6 {
 p {
   margin: 0 0 15px; }
 
+img {
+  max-width: 100%;
+  height: auto; }
+
 .main-content {
   background: #F7F7F7;
   overflow: hidden; }
@@ -599,8 +603,78 @@ header.header {
     text-align: center;
     border-bottom: solid 3px #22936A;
     padding-bottom: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 90px;
     display: inline-block; }
+  .front-keynote-speakers .views-row {
+    background: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    display: inline-block;
+    vertical-align: top;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 50px;
+    width: 90%; }
+    @media screen and (min-width: 601px)  {
+      .front-keynote-speakers .views-row {
+        width: 40%;
+        height: 260px; } }
+    @media screen and (min-width: 960px)  {
+      .front-keynote-speakers .views-row {
+        width: 350px;
+        height: 220px; } }
+  .front-keynote-speakers .views-row-first {
+    margin-bottom: 80px; }
+    @media screen and (min-width: 601px)  {
+      .front-keynote-speakers .views-row-first {
+        margin-right: 50px;
+        margin-bottom: 50px; } }
+  .front-keynote-speakers .field-name-title h4 {
+    font-size: 22px;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 10px; }
+  .front-keynote-speakers .field-name-field-speaker-title {
+    font-size: 14px;
+    font-size: 1.4rem;
+    margin-bottom: 20px; }
+  .front-keynote-speakers .field-name-field-photo {
+    border-radius: 100%;
+    border: solid 4px #fff;
+    background: #fff;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin-top: -150px;
+    overflow: hidden; }
+  .front-keynote-speakers .more-link {
+    text-align: center; }
+    .front-keynote-speakers .more-link a {
+      background: #E35534;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      cursor: pointer;
+      display: block;
+      font-size: 15px;
+      font-size: 1.5rem;
+      border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+      text-align: center;
+      display: inline-block;
+      margin-bottom: 50px; }
+      .front-keynote-speakers .more-link a:after {
+        width: 0;
+        height: 0;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-left: 7px solid #fff;
+        content: "";
+        font-size: 1px;
+        text-align: right;
+        margin: 5px 0 0 10px;
+        display: inline-block;
+        vertical-align: top; }
+      .front-keynote-speakers .more-link a:hover {
+        background: #c83c1c; }
 
 .pane-dccr-blocks-dccr-register-image-link-block {
   padding-top: 253px;
