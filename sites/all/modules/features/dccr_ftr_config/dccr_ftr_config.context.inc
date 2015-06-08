@@ -32,12 +32,6 @@ function dccr_ftr_config_context_default_contexts() {
           'region' => 'utility_bar',
           'weight' => '-10',
         ),
-        'dccr_blocks-dccr_main_logo' => array(
-          'module' => 'dccr_blocks',
-          'delta' => 'dccr_main_logo',
-          'region' => 'header',
-          'weight' => '-10',
-        ),
         'menu-menu-left-menu' => array(
           'module' => 'menu',
           'delta' => 'menu-left-menu',

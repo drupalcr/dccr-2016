@@ -215,7 +215,10 @@ function dccr_ftr_workshop_views_default_views() {
 
   /* Display: Workshops */
   $handler = $view->new_display('page', 'Workshops', 'page');
-  $handler->display->display_options['path'] = 'workshops';
+  $handler->display->display_options['path'] = 'workshops-view';
+
+  /* Display: Block */
+  $handler = $view->new_display('block', 'Block', 'block_1');
   $translatables['workshops'] = array(
     t('Master'),
     t('Workshops'),
@@ -228,6 +231,7 @@ function dccr_ftr_workshop_views_default_views() {
     t('Node ID'),
     t('.'),
     t(','),
+    t('Block'),
   );
   $export['workshops'] = $view;
 
