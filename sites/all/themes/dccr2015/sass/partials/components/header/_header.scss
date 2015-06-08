@@ -1,0 +1,17 @@
+.main-header {
+  border-bottom: 8px solid $verde-turquesa;
+  padding-bottom: 20px;
+  overflow: hidden;
+  @include media($tablet) {
+    background: url(../images/nubes.jpg) no-repeat top center;
+    padding-bottom: 70px;
+  }
+}
+.header-content  {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 20px;
+  @include media($tablet) {
+    padding: 170px 20px 80px;
+  }
+}
