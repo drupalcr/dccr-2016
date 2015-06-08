@@ -1,0 +1,23 @@
+.event-footer {
+  background: #3C3C44;
+  padding: 55px 15px;
+  color: $verde-turquesa;
+  text-align: center;
+}
+.event-footer-title {
+  color: #fff;
+  text-transform: uppercase;
+  @include font-size(16);
+}
+.event-footer-description {
+  &:after {
+    content: '';
+    display: block;
+    border-bottom: solid 1px #8A8A8F;
+    width: 20px;
+    margin: 20px auto 0;
+  }
+}
+.event-footer-contact-email {
+  color: $verde-turquesa;
+}
