@@ -194,52 +194,6 @@ function dccr_ftr_config_menu_default_menu_links() {
     'language' => 'en',
     'menu_links_customized' => 1,
   );
-  // Exported menu link: menu-left-menu_talleres:<front>
-  $menu_links['menu-left-menu_talleres:<front>'] = array(
-    'menu_name' => 'menu-left-menu',
-    'link_path' => '<front>',
-    'router_path' => '',
-    'link_title' => 'Talleres',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'alter' => TRUE,
-      'identifier' => 'menu-left-menu_talleres:<front>',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 1,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -41,
-    'customized' => 1,
-    'language' => 'es',
-    'menu_links_customized' => 1,
-  );
-  // Exported menu link: menu-left-menu_workshops:<front>
-  $menu_links['menu-left-menu_workshops:<front>'] = array(
-    'menu_name' => 'menu-left-menu',
-    'link_path' => '<front>',
-    'router_path' => '',
-    'link_title' => 'Workshops',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'alter' => TRUE,
-      'identifier' => 'menu-left-menu_workshops:<front>',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 1,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -46,
-    'customized' => 1,
-    'language' => 'en',
-    'menu_links_customized' => 1,
-  );
   // Exported menu link: menu-right-menu_contact:contact-us
   $menu_links['menu-right-menu_contact:contact-us'] = array(
     'menu_name' => 'menu-right-menu',
@@ -441,9 +395,7 @@ function dccr_ftr_config_menu_default_menu_links() {
   t('Schedule');
   t('Sede');
   t('Sponsors');
-  t('Talleres');
   t('Venue');
-  t('Workshops');
 
 
   return $menu_links;
