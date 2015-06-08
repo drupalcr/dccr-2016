@@ -50,6 +50,12 @@ function dccr_ftr_config_context_default_contexts() {
           'region' => 'header',
           'weight' => '-8',
         ),
+        'dccr_blocks-dccr_footer' => array(
+          'module' => 'dccr_blocks',
+          'delta' => 'dccr_footer',
+          'region' => 'footer',
+          'weight' => '-10',
+        ),
       ),
     ),
   );
