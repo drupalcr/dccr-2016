@@ -1,0 +1,54 @@
+.front-sponsors {
+  width: 95%;
+  margin: 0 auto;
+  @include media($tablet) {
+    width: 90%;
+  }
+  .item-list {
+    overflow: hidden;
+    margin-bottom: 40px;
+    li {
+      @extend %reset-list;
+      @include span-columns(2 of 4);
+      @include omega(2n);
+      @include media($tablet) {
+        @include span-columns(2 of 8);
+        @include omega(4n);
+      }
+    }
+  }
+  .pane-title {
+    text-align: center;
+    @include font-size(22);
+    text-transform: uppercase;
+    border-top: solid 1px #ddd;
+    position: relative;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    &:before,
+    &:after {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: #ddd;
+      border-radius: 100%;
+      display: block;
+      top: -4px;
+      position: absolute;
+    }
+    &:before {
+      left: 0;
+    }
+    &:after {
+      right: 0;
+    }
+  }
+  .more-link{
+    text-align: center;
+    a {
+      @include button-arrow(#52E2AE, #3C3C44);
+      display: inline-block;
+      margin-bottom: 50px;
+    }
+  }
+}
