@@ -369,6 +369,10 @@ select {
   font-size: 1.2rem;
   width: 100%; }
 
+@media screen and (min-width: 601px)  {
+  .form-type-select {
+    max-width: 300px; } }
+
 input[type="text"], input[type="email"], input[type="password"], textarea {
   font-size: 12px;
   font-size: 1.2rem;
@@ -404,6 +408,7 @@ input[type="checkbox"], input[type="radio"] {
   outline: 0;
   padding: 8px 25px;
   width: 100%;
+  margin-bottom: 10px;
   -moz-transition: all 0.2s ease-in-out;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out; }
@@ -423,7 +428,10 @@ input[type="checkbox"], input[type="radio"] {
     background: #c83c1c; }
   @media screen and (min-width: 601px)  {
     .main-content input[type="submit"] {
-      width: auto; } }
+      width: auto;
+      display: inline-block;
+      margin-right: 10px;
+      margin-bottom: 0; } }
   .main-content input[type="submit"]:after {
     content: "▸";
     margin-left: 0.5em; }

@@ -18,6 +18,11 @@ select {
   @include font-size(12);
   width: 100%;
 }
+.form-type-select {
+  @include media($tablet) {
+    max-width: 300px;
+  }
+}
 input[type="text"],
 input[type="email"],
 input[type="password"],
@@ -48,8 +53,12 @@ input[type="radio"] {
   outline: 0;
   padding: 8px 25px;
   width: 100%;
+  margin-bottom: 10px;
   @include media($tablet) {
     width: auto;
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 0;
   }
   &:after {
     content: "▸";
