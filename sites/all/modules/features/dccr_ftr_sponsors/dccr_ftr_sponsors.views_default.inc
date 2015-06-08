@@ -78,6 +78,8 @@ function dccr_ftr_sponsors_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block_1');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'front-sponsors';
   $handler->display->display_options['defaults']['use_more'] = FALSE;
   $handler->display->display_options['use_more'] = TRUE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
@@ -115,7 +117,7 @@ function dccr_ftr_sponsors_views_default_views() {
     t('term from field_sponsorship_level_ref'),
     t('Page'),
     t('Block'),
-    t('Be a Sponsor'),
+    t('Become a Sponsor'),
     t('Sponsors (/sponsors)'),
   );
   $export['sponsors'] = $view;
