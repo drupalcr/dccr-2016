@@ -47,7 +47,8 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 10px;
-  font-weight: normal; }
+  font-weight: normal;
+  font-family: "Lato", sans-serif; }
 
 p {
   margin: 0 0 15px; }
@@ -188,6 +189,23 @@ img {
     .patrocinadores-block .view-content .views-row:nth-child(even):nth-child(4n) {
       margin-right: 0; }
 
+.main-header {
+  border-bottom: 8px solid #33B78B;
+  padding-bottom: 20px;
+  overflow: hidden; }
+  @media screen and (min-width: 601px)  {
+    .main-header {
+      background: url(../images/nubes.jpg) no-repeat top center;
+      padding-bottom: 70px; } }
+
+.header-content {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 20px; }
+  @media screen and (min-width: 601px)  {
+    .header-content {
+      padding: 170px 20px 80px; } }
+
 .boton-basico {
   background: #E35534;
   color: white;
@@ -221,6 +239,67 @@ body {
     body {
       font-size: 16px;
       font-size: 1.6rem; } }
+
+.logo-container {
+  text-align: center;
+  color: #33B78B;
+  margin-bottom: 30px;
+  border-bottom: solid 1px #ddd;
+  padding-bottom: 20px;
+  position: relative; }
+  .logo-container:before, .logo-container:after {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 6px;
+    background: #ddd;
+    border-radius: 100%;
+    position: absolute;
+    bottom: -3px; }
+  .logo-container:before {
+    left: 0; }
+  .logo-container:after {
+    right: 0; }
+  @media screen and (min-width: 601px)  {
+    .logo-container {
+      position: absolute;
+      left: 50%;
+      top: 70px;
+      margin-left: -150px;
+      margin-bottom: 0; } }
+
+.logo-site-name {
+  width: 149px;
+  height: 134px;
+  display: inline-block; }
+  @media screen and (min-width: 601px)  {
+    .logo-site-name {
+      height: 179px; } }
+
+.logo-site-name-link {
+  width: 149px;
+  height: 134px;
+  display: inline-block;
+  background: url(../logo.png) no-repeat top center;
+  background-size: 112px 134px;
+  text-indent: 100%;
+  overflow: hidden;
+  white-space: nowrap; }
+  @media screen and (min-width: 601px)  {
+    .logo-site-name-link {
+      height: 179px;
+      background-size: 149px 179px; } }
+
+.event-logo-date, .event-logo-location {
+  font-size: 18px;
+  font-size: 1.8rem;
+  margin-bottom: 0;
+  font-family: "Lato", sans-serif;
+  font-weight: bold; }
+  @media screen and (min-width: 601px)  {
+    .event-logo-date, .event-logo-location {
+      font-size: 26px;
+      font-size: 2.6rem; } }
 
 .pane-block {
   border-bottom: solid 1px #ddd;
@@ -393,61 +472,72 @@ input[type="checkbox"], input[type="radio"] {
       background: #33B78B;
       color: #fff; }
 
-header.header {
-  border-bottom: 4px solid #33B78B;
-  padding-bottom: 40px;
-  overflow: hidden; }
-  header.header .header-content {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto; }
-    header.header .header-content::after {
-      clear: both;
+.header-content .logo-leyenda {
+  margin-top: 12px; }
+  .header-content .logo-leyenda p {
+    text-align: center;
+    font-family: "latobold";
+    font-size: 21px;
+    color: #33B78B;
+    margin: 0; }
+  .header-content .logo-leyenda .content {
+    border-bottom: 1px solid #cecece;
+    padding-bottom: 40px; }
+    .header-content .logo-leyenda .content:after, .header-content .logo-leyenda .content:before {
       content: "";
-      display: table; }
-    header.header .header-content #block-menu-menu-left-menu {
-      width: 36%;
-      float: left; }
-    header.header .header-content #block-menu-menu-right-menu {
-      width: 36%;
-      float: left; }
-      header.header .header-content #block-menu-menu-right-menu ul {
-        float: right; }
-    header.header .header-content #block-menu-menu-left-menu ul li, header.header .header-content #block-menu-menu-right-menu ul li {
+      border-radius: 50%;
+      width: 5px;
+      height: 5px;
+      display: block;
+      background-color: #cecece;
+      position: absolute;
       float: left;
-      list-style: none;
-      font-size: 13px;
-      margin: 0;
-      padding: 0; }
-      header.header .header-content #block-menu-menu-left-menu ul li a, header.header .header-content #block-menu-menu-right-menu ul li a {
-        color: black;
-        padding: 5px 10px; }
-    header.header .header-content .logo-leyenda {
-      margin-top: 12px; }
-      header.header .header-content .logo-leyenda p {
-        text-align: center;
-        font-family: "latobold";
-        font-size: 21px;
-        color: #33B78B;
-        margin: 0; }
-      header.header .header-content .logo-leyenda .content {
-        border-bottom: 1px solid #cecece;
-        padding-bottom: 40px; }
-        header.header .header-content .logo-leyenda .content:after, header.header .header-content .logo-leyenda .content:before {
-          content: "";
-          border-radius: 50%;
-          width: 5px;
-          height: 5px;
-          display: block;
-          background-color: #cecece;
-          position: absolute;
-          float: left;
-          bottom: -1.5px; }
-        header.header .header-content .logo-leyenda .content:after {
-          left: 0; }
-        header.header .header-content .logo-leyenda .content:before {
-          right: 0; }
-  header.header .menu li:hover a {
+      bottom: -1.5px; }
+    .header-content .logo-leyenda .content:after {
+      left: 0; }
+    .header-content .logo-leyenda .content:before {
+      right: 0; }
+
+#block-menu-menu-left-menu {
+  width: 40%;
+  float: left; }
+  @media (min-width: 500px) {
+    #block-menu-menu-left-menu {
+      width: 30%; } }
+  @media (min-width: 800px) {
+    #block-menu-menu-left-menu {
+      width: 45%; } }
+
+#block-menu-menu-right-menu {
+  width: 40%;
+  float: right; }
+  @media (min-width: 500px) {
+    #block-menu-menu-right-menu {
+      width: 30%; } }
+  @media (min-width: 800px) {
+    #block-menu-menu-right-menu {
+      width: 45%; } }
+  #block-menu-menu-right-menu ul {
+    float: right; }
+
+.main-header .menu {
+  overflow: hidden;
+  margin: 0;
+  padding-left: 0; }
+  .main-header .menu li {
+    font-size: 15px;
+    font-size: 1.5rem;
+    list-style: none;
+    margin: 0 2px 0;
+    padding: 0; }
+    @media screen and (min-width: 601px)  {
+      .main-header .menu li {
+        float: left; } }
+    .main-header .menu li a {
+      color: black;
+      display: inline-block;
+      padding: 5px 10px; }
+  .main-header .menu li:hover a, .main-header .menu li a.active {
     background: #E2E5E4;
     border-radius: 4px; }
 

@@ -1,4 +1,4 @@
-<header class="header" role="banner">
+<header class="main-header" role="banner">
 
   <?php if ($page['utility_bar']): ?>
     <div class="utility-bar">
@@ -12,15 +12,23 @@
     <?php if ($site_name || $site_slogan): ?>
 
         <?php if ($site_name): ?>
-          <?php if ($title): ?>
 
-            <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
+            <div class="logo-container">
+              <?php if ($title): ?>
+              <h2 class="logo-site-name">
+                <a class="logo-site-name-link" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
+              </h2>
+              
+              <?php else: /* Use h1 when the content title is empty */ ?>
+                <h1 class="logo-site-name">
+                  <a class="logo-site-name-link" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
+                </h1>
+              <?php endif; ?>
+              
+              <h3 class="event-logo-date">29 al 31 de julio</h3>
+              <span class="event-logo-location">Universidad de Costa Rica</span>
+            </div>
 
-          <?php else: /* Use h1 when the content title is empty */ ?>
-            <h1 id="site-name">
-              <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
-            </h1>
-          <?php endif; ?>
         <?php endif; ?>
 
         <?php if ($site_slogan): ?>
