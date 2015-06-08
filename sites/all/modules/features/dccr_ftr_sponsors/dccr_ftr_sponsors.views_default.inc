@@ -100,6 +100,9 @@ function dccr_ftr_sponsors_views_default_views() {
   $handler->display->display_options['row_options']['links'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['footer'] = FALSE;
+
+  /* Display: Sponsors (/sponsors) */
+  $handler = $view->new_display('block', 'Sponsors (/sponsors)', 'sponsors_block');
   $translatables['sponsors'] = array(
     t('Master'),
     t('Sponsors'),
@@ -113,6 +116,7 @@ function dccr_ftr_sponsors_views_default_views() {
     t('Page'),
     t('Block'),
     t('Be a Sponsor'),
+    t('Sponsors (/sponsors)'),
   );
   $export['sponsors'] = $view;
 
