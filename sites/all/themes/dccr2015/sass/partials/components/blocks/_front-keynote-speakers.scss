@@ -1,0 +1,68 @@
+.front-keynote-speakers {
+  background: url(../images/hojas-fondo.jpg);
+  text-align: center;
+  padding-top: 30px;
+  .pane-title {
+    color: #fff;
+    @include font-size(24);
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: solid 3px #22936A;
+    padding-bottom: 10px;
+    margin-bottom: 90px;
+    display: inline-block;
+  }
+  .views-row {
+    background: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    display: inline-block;
+    vertical-align: top;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+    margin-bottom: 50px;
+    width: 90%;
+    @include media($tablet) {
+      width: 40%;
+      height: 260px;
+    }
+    @include media($desktop) {
+      width: 350px;
+      height: 220px;
+    }
+  }
+  .views-row-first {
+    margin-bottom: 80px;
+    @include media($tablet) {
+      margin-right: 50px;
+      margin-bottom: 50px;
+    }
+  }
+  .field-name-title h4 {
+    @include font-size(22);
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .field-name-field-speaker-title {
+    @include font-size(14);
+    margin-bottom: 20px;
+  }
+  .field-name-field-photo {
+    border-radius: 100%;
+    border: solid 4px #fff;
+    background: #fff;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin-top: -150px;
+    overflow: hidden;
+  }
+  .more-link{
+    text-align: center;
+    a {
+      @include button-arrow($anaranjado, #fff);
+      display: inline-block;
+      margin-bottom: 50px;
+    }
+  }
+
+}
