@@ -7,4 +7,12 @@ $base-font: "Source Sans Pro", sans-serif;
 
 // Colores
 
+$negro-claro: #3c3c44;
+$verde-turquesa: #33B78B;
+$anaranjado: #E35534;
+$gris-fuente: #666C6C;
+$gris-claro: #E2E5E4;
+
 // Neat Variables
+$tablet: new-breakpoint(min-width 601px);
+$desktop: new-breakpoint(min-width 960px);

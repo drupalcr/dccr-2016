@@ -1,0 +1,26 @@
+.tabs {
+  padding-left: 0;
+  li {
+    display: block;
+    margin-bottom: 10px;
+    @include media($tablet) {
+      @extend %reset-list;
+      display: inline-block;
+      margin-right: 5px;
+      margin-bottom: 0;
+    }
+  }
+  a {
+    @include font-size(14);
+    @include button-round(#e1e1e1,  #333,  $arrow:no);
+    padding: 5px 10px;
+    text-align: left;
+    &:hover {
+      color: #000;
+    }
+    &.active {
+      background: $verde-turquesa;
+      color: #fff;
+    }
+  }
+}

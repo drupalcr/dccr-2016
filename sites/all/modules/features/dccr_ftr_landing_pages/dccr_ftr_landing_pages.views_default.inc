@@ -22,7 +22,7 @@ function dccr_ftr_landing_pages_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Speakers';
+  $handler->display->display_options['title'] = 'Keynote Speakers';
   $handler->display->display_options['use_more'] = TRUE;
   $handler->display->display_options['use_more_always'] = TRUE;
   $handler->display->display_options['use_more_text'] = 'View full schedule';
@@ -63,12 +63,12 @@ function dccr_ftr_landing_pages_views_default_views() {
     'keynote' => 'keynote',
   );
 
-  /* Display: Speakers */
-  $handler = $view->new_display('block', 'Speakers', 'speakers_block');
+  /* Display: Keynote Speakers */
+  $handler = $view->new_display('block', 'Keynote Speakers', 'speakers_block');
   $handler->display->display_options['link_url'] = 'schedule';
   $translatables['speakers'] = array(
     t('Master'),
-    t('Speakers'),
+    t('Keynote Speakers'),
     t('View full schedule'),
     t('Apply'),
     t('Reset'),
@@ -105,7 +105,9 @@ function dccr_ftr_landing_pages_views_default_views() {
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'none';
-  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['style_options']['row_class'] = 'track-name';
+  $handler->display->display_options['style_options']['class'] = 'track-name-list';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Field: Taxonomy term: Term ID */
   $handler->display->display_options['fields']['tid']['id'] = 'tid';

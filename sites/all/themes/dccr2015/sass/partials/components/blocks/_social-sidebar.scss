@@ -1,0 +1,42 @@
+.pane-dccr-blocks-dccr-social-block-sidebar {
+  .pane-title,
+  .pane-content {
+    @extend %inline-block;
+  }
+  ul {
+    margin-bottom: 0;
+    li {
+      @extend %reset-list;
+      @extend %inline-list;
+      @extend %horizontal-list;
+    }
+  }
+  
+  .pane-title {
+    @include font-size(14);
+    font-weight: normal;
+    margin-right: 20px;
+    margin-bottom: 0;
+    padding-top: 3px;
+  }
+  .social-link {
+    width: 24px;
+    height: 24px;
+    background-image: url(../images/sprite.png); // fallback
+    background-image: url(../images/sprite.svg), none;
+    text-indent: 100%;
+    white-space: nowrap;
+    display: block;
+    overflow: hidden;
+    margin-right: 5px;
+    &.facebook {
+      background-position: -1px -28px;
+    }
+    &.twitter {
+      background-position: -1px -1px;
+    }
+    &.drupal {
+      background-position: -1px -55px;
+    }
+  }
+}

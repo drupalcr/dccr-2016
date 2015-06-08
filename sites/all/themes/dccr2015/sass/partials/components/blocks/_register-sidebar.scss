@@ -1,0 +1,13 @@
+.pane-dccr-blocks-dccr-register-image-link-block {
+  padding-top: 253px;
+  background: url(../images/register-people.png) no-repeat center top;
+  background-size: 257px 233px;
+  a {
+    @include button-round(#3C3C44, #fff, $arrow:yes);
+    padding: 20px 35px;
+  }
+  .link-main {
+    margin-right: 10px;
+    text-transform: uppercase;
+  }
+}

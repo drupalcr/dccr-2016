@@ -1,0 +1,65 @@
+//button with arrow
+@mixin button-arrow($background, $color) {
+  background: $background;
+  color: $color;
+  padding: 10px 20px;
+  text-decoration: none;
+  cursor: pointer;
+  display: block;
+  @include font-size(15);
+  border-bottom: 2px solid rgba(0,0,0,0.2);
+  text-align: center;
+  &:after {
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 7px solid $color;
+    content: "";
+    font-size: 1px;
+    text-align: right;
+    margin: 5px 0 0 10px;
+    display: inline-block;
+    vertical-align: top;
+  }
+  &:hover {
+    background: darken($background, 10%);
+  }
+}
+
+// rounded buttons, with arrow by default
+@mixin button-round($background, $color, $arrow:yes) {
+  @include font-size(15);
+  background: $background;
+  border-radius: 3px;
+  cursor: pointer;
+  color: $color;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  text-align: center;
+  
+  @if $arrow == "yes" {
+    &:after {
+        width: 0;
+        height: 0;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-left: 7px solid $color;
+        content: "";
+        font-size: 1px;
+        text-align: right;
+        margin: 5px 0 0 10px;
+        display: inline-block;
+        vertical-align: top;
+      }
+  }
+  &:hover {
+    background: darken($background, 10%);
+  }
+}
+
+//orange button
+.boton-basico {
+  @include button-arrow($anaranjado, white);
+}

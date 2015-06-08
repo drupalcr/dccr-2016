@@ -1,0 +1,42 @@
+//
+// Extends
+//
+
+%marco-redondo {
+  border-radius: 100%;
+  display: block;
+  overflow: hidden;
+  width: 147px;
+  height: 147px;
+  margin: 0 auto;
+  border: solid 4px white;
+  background: white;
+  img {
+    height: 100%;
+  }
+}
+
+%inline-block {
+  display: inline-block;
+  vertical-align: top;
+}
+
+// reset lists
+%reset-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+%inline-list {
+  @extend %inline-block;
+}
+%horizontal-list {
+  margin: 0 0 0 -4px;
+}
+
+// sidebars
+%sidebar-title-uppercase {
+  @include font-size(16);
+  font-weight: normal;
+  text-transform: uppercase;
+}

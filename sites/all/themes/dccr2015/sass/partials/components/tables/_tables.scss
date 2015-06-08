@@ -1,0 +1,53 @@
+// Global tables override
+
+table {
+  border-collapse: collapse;
+}
+th {
+  border-bottom: 1px solid #ddd;
+  padding-right: 1em; /* LTR */
+  text-align: left; /* LTR */
+  padding: 10px 5px;
+  background: #e1e1e1; 
+}
+tbody {
+  border-top: 0;
+}
+tr.even,
+tr.odd {
+  background-color: transparent;
+  border-bottom: 1px solid #ccc;
+  padding: 0.1em 0.6em;
+}
+td {
+  padding: 10px 5px;
+}
+
+%rwd-table {
+  @media (max-width: 601px) {
+    table,
+    tr,
+    td,
+    th,
+    thead,
+    tbody {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+    th {
+      display: none;
+    }
+    tr {
+      padding: 0;
+    }
+    td {
+      padding: 3px;
+      @include font-size(12);
+    }
+    .views-field-title {
+      @include font-size(16);
+      font-weight: bold;
+    }
+  }
+}

@@ -75,7 +75,7 @@ function dccr_ftr_keynote_field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'image_style' => 'thumbnail',
+          'image_style' => 'keynote_frontpage',
         ),
         'type' => 'image',
         'weight' => 0,

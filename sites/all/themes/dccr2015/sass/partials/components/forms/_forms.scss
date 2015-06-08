@@ -1,0 +1,74 @@
+/* #global forms */
+label,
+.webform-container-inline label {
+  font-weight: bold;
+  color: #333;
+  display: block;
+  margin-bottom: 8px;
+}
+
+label.option {
+  display: inline;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  margin-left: 0.5em;
+}
+
+select {
+  @include font-size(12);
+  width: 100%;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  @include font-size(12);
+  border-radius: 3px;
+  border: solid #e1e1e1 1px;
+  background: #fff;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  @include media($tablet) {
+    max-width: 300px;
+  }
+}
+input[type="checkbox"],
+input[type="radio"] {
+  @include font-size(16);
+  vertical-align: baseline;
+}
+.main-content input[type="submit"] {
+  @include button-round($anaranjado,  #fff,  $arrow:yes);
+  border: 0;
+  outline: 0;
+  padding: 8px 25px;
+  width: 100%;
+  @include media($tablet) {
+    width: auto;
+  }
+  &:after {
+    content: "▸";
+    margin-left: 0.5em;
+  }
+     -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+}
+.form-type-radio {
+  margin-bottom: 5px;
+}
+
+// formatting options
+.field-widget-text-textarea .form-type-textarea {
+  margin-bottom: 10px;
+}
+.filter-wrapper {
+  border: 0;
+  background: #fff;
+  border-radius: 5px;
+}

@@ -29,7 +29,7 @@ regions[highlighted]        = Highlighted
 
 regions[above_content]      = Above Content
 regions[content]            = Content
-regions[sidebar_second]      = Sidebar Second
+regions[sidebar_second]     = Sidebar Second
 regions[below_content]      = Below Content
 
 regions[footer]             = Footer
@@ -39,4 +39,4 @@ regions[closure]            = Closure
 stylesheets[all][] = css/styles.css
 
 ;-------------- J S -------------
-;scripts[] = js/scripts.min.js
+scripts[] = js/scripts.min.js

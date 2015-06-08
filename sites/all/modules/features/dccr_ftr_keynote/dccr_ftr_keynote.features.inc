@@ -17,6 +17,30 @@ function dccr_ftr_keynote_ctools_plugin_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_image_default_styles().
+ */
+function dccr_ftr_keynote_image_default_styles() {
+  $styles = array();
+
+  // Exported image style: keynote_frontpage.
+  $styles['keynote_frontpage'] = array(
+    'label' => 'keynote frontpage',
+    'effects' => array(
+      1 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 200,
+          'height' => 200,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  return $styles;
+}
+
+/**
  * Implements hook_node_info().
  */
 function dccr_ftr_keynote_node_info() {

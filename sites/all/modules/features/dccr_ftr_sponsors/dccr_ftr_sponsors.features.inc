@@ -30,6 +30,31 @@ function dccr_ftr_sponsors_views_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_image_default_styles().
+ */
+function dccr_ftr_sponsors_image_default_styles() {
+  $styles = array();
+
+  // Exported image style: sponsor_logo.
+  $styles['sponsor_logo'] = array(
+    'label' => 'sponsor logo',
+    'effects' => array(
+      2 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => '',
+          'height' => 100,
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  return $styles;
+}
+
+/**
  * Implements hook_node_info().
  */
 function dccr_ftr_sponsors_node_info() {

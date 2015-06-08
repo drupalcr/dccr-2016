@@ -23,6 +23,7 @@ function dccr_ftr_propossed_sessions_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Proposed sessions list';
+  $handler->display->display_options['css_class'] = 'proposed-sessions-list';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'none';
   $handler->display->display_options['cache']['type'] = 'none';

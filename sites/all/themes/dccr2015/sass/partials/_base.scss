@@ -4,9 +4,25 @@
 
 html {
   font-size: 62.5%;
+  color: $negro-claro;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 body {
   font-family: $base-font;
+  margin: 0;
 }
-
+a {
+  text-decoration: none;
+  color: darken($verde-turquesa, 10%);
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 10px;
+  font-weight: normal;
+}
+p {
+  margin: 0 0 15px;
+}

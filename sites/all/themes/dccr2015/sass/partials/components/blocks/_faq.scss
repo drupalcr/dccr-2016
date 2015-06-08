@@ -1,0 +1,17 @@
+.pane-dccr-blocks-dccr-faq-block {
+  .pane-title {
+    @extend %sidebar-title-uppercase;
+  }
+  ul {
+    margin-bottom: 0;
+    li {
+      @extend %reset-list;
+    }
+  }
+  a {
+    color: #000;
+    &:hover {
+      color: $verde-turquesa;
+    }
+  }
+}
