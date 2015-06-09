@@ -17,11 +17,6 @@ function dccr_ftr_propossed_sessions_context_default_contexts() {
   $context->description = 'Proposed sessions';
   $context->tag = '';
   $context->conditions = array(
-    'expire' => array(
-      'values' => array(
-        0 => 1437285600,
-      ),
-    ),
     'path' => array(
       'values' => array(
         'schedule' => 'schedule',
@@ -60,7 +55,7 @@ function dccr_ftr_propossed_sessions_context_default_contexts() {
   $export['proposed_sessions'] = $context;
 
   $context = new stdClass();
-  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->disabled = TRUE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
   $context->name = 'schedule';
   $context->description = 'Schedule';
@@ -69,11 +64,6 @@ function dccr_ftr_propossed_sessions_context_default_contexts() {
     'path' => array(
       'values' => array(
         'schedule' => 'schedule',
-      ),
-    ),
-    'publish' => array(
-      'values' => array(
-        0 => 1437285600,
       ),
     ),
   );
