@@ -55,7 +55,7 @@ function dccr_ftr_propossed_sessions_context_default_contexts() {
   $export['proposed_sessions'] = $context;
 
   $context = new stdClass();
-  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->disabled = TRUE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
   $context->name = 'schedule';
   $context->description = 'Schedule';
