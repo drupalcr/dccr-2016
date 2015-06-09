@@ -487,3 +487,17 @@ function dccr_update_7026() {
 function dccr_update_7027() {
   variable_set('theme_default', 'dccr2015');
 }
+
+/**
+ * Remove old links to workshops.
+ */
+function dccr_update_7028() {
+  $titles = array('Workshops', 'Talleres');
+  $links = menu_load_links('menu-left-menu');
+  foreach ($links as $link) {
+    if (in_array($link['link_title'], $titles) && $link['link_path'] == '<front>') {
+      $mlid = $link['mlid'];
+      menu_link_delete($mlid);
+    }
+  }
+}
