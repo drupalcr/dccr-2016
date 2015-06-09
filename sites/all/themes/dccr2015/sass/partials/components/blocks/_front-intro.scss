@@ -1,0 +1,78 @@
+.pane-hero-banner {
+  background-color: #F7F7F7;
+  @include media($tablet) {
+    background: #F7F7F7 url(../images/encabezado-fondo.jpg) top center no-repeat;
+  }
+}
+.event-introduction {
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 20px 20px;
+  @include media($tablet) {
+    padding: 60px 20px
+  }
+}
+.event-introduction-title {
+  @include media($tablet) {
+    @include font-size(30);
+  }
+  @include font-size(26);
+  line-height: 1.2;
+  margin-bottom: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-align: center;
+}
+.event-introduction-description {
+  @include media($tablet) {
+    @include font-size(22);
+  }
+  @include font-size(18);
+  border-bottom: solid 1px #e1e1e1;
+  text-align: center;
+  max-width: 450px;
+  padding: 0 0 30px;
+  margin: 0 auto 30px;
+}
+.event-introduction-ctas {
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+.event-cta {
+  text-align: center;
+  margin-bottom: 20px;
+  @include media($tablet) {
+    margin-bottom: 0
+  }
+}
+.event-cta-workshops {
+  @include media($tablet) {
+    @include span-columns(4 of 8);
+  }
+}
+.event-cta-conferences {
+  @include media($tablet) {
+    @include span-columns(4 of 8);
+  }
+}
+.event-cta-description {
+  @include font-size(18);
+  @include media($tablet) {
+    height: 40px;
+  }
+}
+.event-cta-link {
+  @include button-arrow($anaranjado, #fff);
+  @include media($tablet) {
+    display: inline-block;
+  }
+}
+.event-introduction-register {
+  text-align: center;
+}
+.event-register-link {
+  @include button-arrow(#3C3C44, #fff);
+  @include media($tablet) {
+    display: inline-block;
+  }
+}
