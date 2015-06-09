@@ -2,6 +2,17 @@
   background: #3C3C44;
   padding: 10px;
   overflow: hidden;
+  text-align: right;
+}
+.utility-bar-content {
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+#block-dccr-blocks-dccr-login-link {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: top;
 }
 .login-link-block a {
   @include button-round($verde-turquesa,  #fff,  $arrow:yes);
@@ -9,4 +20,31 @@
   display: inline-block;
   padding: 3px 8px;
   float: right;
+}
+
+.language-switcher-block,
+.user-options {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 10px;
+  h2 {
+    display: none;
+  }
+  .menu {
+    padding-left: 0;
+    margin: 0;
+  }
+  li {
+    @extend %reset-list;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  a {
+    color: lighten($verde-turquesa, 8%);
+    @include font-size(14);
+  }
 }
