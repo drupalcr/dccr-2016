@@ -26,11 +26,23 @@ function dccr_ftr_config_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'system-main-menu' => array(
+          'module' => 'system',
+          'delta' => 'main-menu',
+          'region' => 'utility_bar',
+          'weight' => '-10',
+        ),
         'dccr_blocks-dccr_login_link' => array(
           'module' => 'dccr_blocks',
           'delta' => 'dccr_login_link',
           'region' => 'utility_bar',
-          'weight' => '-10',
+          'weight' => '-9',
+        ),
+        'system-user-menu' => array(
+          'module' => 'system',
+          'delta' => 'user-menu',
+          'region' => 'utility_bar',
+          'weight' => '-8',
         ),
         'menu-menu-left-menu' => array(
           'module' => 'menu',
@@ -55,40 +67,6 @@ function dccr_ftr_config_context_default_contexts() {
   );
   $context->condition_mode = 0;
   $export['sitewide'] = $context;
-
-  $context = new stdClass();
-  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
-  $context->api_version = 3;
-  $context->name = 'utility_bar_menus';
-  $context->description = '';
-  $context->tag = '';
-  $context->conditions = array(
-    'sitewide' => array(
-      'values' => array(
-        1 => 1,
-      ),
-    ),
-  );
-  $context->reactions = array(
-    'block' => array(
-      'blocks' => array(
-        'system-main-menu' => array(
-          'module' => 'system',
-          'delta' => 'main-menu',
-          'region' => 'utility_bar',
-          'weight' => '-10',
-        ),
-        'system-user-menu' => array(
-          'module' => 'system',
-          'delta' => 'user-menu',
-          'region' => 'utility_bar',
-          'weight' => '-9',
-        ),
-      ),
-    ),
-  );
-  $context->condition_mode = 0;
-  $export['utility_bar_menus'] = $context;
 
   return $export;
 }
