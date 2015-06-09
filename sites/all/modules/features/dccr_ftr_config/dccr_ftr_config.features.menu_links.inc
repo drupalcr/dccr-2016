@@ -197,7 +197,7 @@ function dccr_ftr_config_menu_default_menu_links() {
   // Exported menu link: menu-left-menu_talleres:<front>
   $menu_links['menu-left-menu_talleres:<front>'] = array(
     'menu_name' => 'menu-left-menu',
-    'link_path' => '<front>',
+    'link_path' => 'workshops',
     'router_path' => '',
     'link_title' => 'Talleres',
     'options' => array(
@@ -220,7 +220,7 @@ function dccr_ftr_config_menu_default_menu_links() {
   // Exported menu link: menu-left-menu_workshops:<front>
   $menu_links['menu-left-menu_workshops:<front>'] = array(
     'menu_name' => 'menu-left-menu',
-    'link_path' => '<front>',
+    'link_path' => 'workshops',
     'router_path' => '',
     'link_title' => 'Workshops',
     'options' => array(
