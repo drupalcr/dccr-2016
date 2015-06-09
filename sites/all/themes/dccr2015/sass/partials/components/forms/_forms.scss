@@ -18,11 +18,14 @@ select {
   @include font-size(12);
   width: 100%;
 }
-.form-type-select {
-  @include media($tablet) {
-    max-width: 300px;
+.page-node-add-dccr-session {
+  .form-type-select {
+    @include media($tablet) {
+      max-width: 300px;
+    }
   }
 }
+
 input[type="text"],
 input[type="email"],
 input[type="password"],
