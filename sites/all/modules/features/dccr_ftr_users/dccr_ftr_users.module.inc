@@ -75,7 +75,28 @@ function dccr_ftr_users_module_implements_alter(&$implementations, $hook) {
  * Implements hook_user_view().
  */
 function dccr_ftr_users_user_view($account, $view_mode, $language) {
+  global $user;
   if ($view_mode == 'teaser' && isset($account->content['summary'])) {
     unset($account->content['summary']);
+  }
+  if ($user->uid == $account->uid && $view_mode == 'full' && !dccr_ftr_users_form_user_has_completed_registration($account)) {
+    $markup = '<div class="payment-upload">';
+    $markup .= l(t('Upload payment receipt'), 'payment-submit');
+    $markup .= '</div> ';
+    $account->content['registration_reminder'] = array(
+      '#type' => 'markup',
+      '#markup' => $markup,
+      '#weight' => 50,
+    );
+  }
+}
+
+/**
+ * Determines whether a user hass completed registration or not.
+ */
+function dccr_ftr_users_form_user_has_completed_registration($account) {
+  $flag = flag_get_flag('dccr_registration_complete');
+  if ($flag) {
+    return $flag->is_flagged($account->uid);
   }
 }
