@@ -1,0 +1,52 @@
+.front-community {
+  background: #3C3C44 url(../images/comunidad-fondo.jpg) no-repeat top center;
+  text-align: center;
+  margin-bottom: 40px;
+  .pane-title {
+    @extend %sidebar-title-uppercase;
+    color: #fff;
+    color: #fff;
+    padding: 40px 0 0 0;
+    font-size: 23px;
+    padding-bottom: 10px;
+    border-bottom: solid 3px #000;
+    display: inline-block;
+  }
+  .more-link {
+    margin-bottom: 40px;
+    text-align: center;
+    a {
+      @include button-arrow($anaranjado,  #fff);
+      display: inline-block;
+    }
+  }
+  .view-content {
+    max-width: 870px;
+    margin: 0 auto 20px;
+    @include media($tablet) {
+      margin: 0 auto;
+      padding: 50px 20px;
+    }
+  }
+  .views-row {
+    width: 25%;
+    margin: 10px;
+    display: inline-block;
+    vertical-align: top;
+    @include media($tablet) {
+      width: 16%;
+      margin: 0 25px 25px 0;
+      &:nth-child(5n) {
+        margin-right: 0;
+      }
+    }
+  }
+  .field-name-ds-user-picture {
+    border-radius: 100%;
+    overflow: hidden;
+    border: 6px #5D5D63 solid;
+    img {
+      display: block;
+    }
+  }
+}

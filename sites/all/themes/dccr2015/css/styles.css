@@ -23,7 +23,7 @@ html {
 .pane-dccr-blocks-dccr-social-block-sidebar ul li, .pane-views-tracks-block .track-name {
   margin: 0 0 0 -4px; }
 
-.pane-views-tracks-block .pane-title, .pane-dccr-blocks-dccr-faq-block .pane-title, .pane-dccr-blocks-dccr-important-dates .pane-title, .pane-dccr-ftr-sponsors-sponsors-info .pane-title {
+.front-community .pane-title, .pane-views-tracks-block .pane-title, .pane-dccr-blocks-dccr-faq-block .pane-title, .pane-dccr-blocks-dccr-important-dates .pane-title, .pane-dccr-ftr-sponsors-sponsors-info .pane-title {
   font-size: 16px;
   font-size: 1.6rem;
   font-weight: normal;
@@ -781,6 +781,72 @@ input[type="checkbox"], input[type="radio"] {
   @media screen and (min-width: 601px)  {
     .location-map-container {
       width: 90%; } }
+
+.front-community {
+  background: #3C3C44 url(../images/comunidad-fondo.jpg) no-repeat top center;
+  text-align: center;
+  margin-bottom: 40px; }
+  .front-community .pane-title {
+    color: #fff;
+    color: #fff;
+    padding: 40px 0 0 0;
+    font-size: 23px;
+    padding-bottom: 10px;
+    border-bottom: solid 3px #000;
+    display: inline-block; }
+  .front-community .more-link {
+    margin-bottom: 40px;
+    text-align: center; }
+    .front-community .more-link a {
+      background: #E35534;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      cursor: pointer;
+      display: block;
+      font-size: 15px;
+      font-size: 1.5rem;
+      border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+      text-align: center;
+      display: inline-block; }
+      .front-community .more-link a:after {
+        width: 0;
+        height: 0;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-left: 7px solid #fff;
+        content: "";
+        font-size: 1px;
+        text-align: right;
+        margin: 5px 0 0 10px;
+        display: inline-block;
+        vertical-align: top; }
+      .front-community .more-link a:hover {
+        background: #c83c1c; }
+  .front-community .view-content {
+    max-width: 870px;
+    margin: 0 auto 20px; }
+    @media screen and (min-width: 601px)  {
+      .front-community .view-content {
+        margin: 0 auto;
+        padding: 50px 20px; } }
+  .front-community .views-row {
+    width: 25%;
+    margin: 10px;
+    display: inline-block;
+    vertical-align: top; }
+    @media screen and (min-width: 601px)  {
+      .front-community .views-row {
+        width: 16%;
+        margin: 0 25px 25px 0; }
+        .front-community .views-row:nth-child(5n) {
+          margin-right: 0; } }
+  .front-community .field-name-ds-user-picture {
+    border-radius: 100%;
+    overflow: hidden;
+    border: 6px #5D5D63 solid; }
+    .front-community .field-name-ds-user-picture img {
+      display: block; }
 
 .front-keynote-speakers {
   background: url(../images/hojas-fondo.jpg);

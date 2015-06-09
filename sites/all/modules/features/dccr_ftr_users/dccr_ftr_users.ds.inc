@@ -20,7 +20,7 @@ function dccr_ftr_users_ds_field_settings_info() {
     'ds_user_picture' => array(
       'weight' => '0',
       'label' => 'hidden',
-      'format' => 'ds_picture_medium',
+      'format' => 'ds_picture_keynote_frontpage',
     ),
   );
   $export['user|user|teaser'] = $ds_fieldsetting;
