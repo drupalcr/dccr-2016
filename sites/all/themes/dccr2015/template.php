@@ -124,6 +124,12 @@ function dccr2015_preprocess_node(&$vars) {
 }
 
 function dccr2015_preprocess_block(&$vars, $hook) {
+  if ($vars['block_html_id'] == 'block-system-user-menu') {
+    $vars['classes_array'][] = 'user-options';
+  }
+  if ($vars['block_html_id'] == 'block-system-main-menu') {
+    $vars['classes_array'][] = 'language-switcher-block';
+  }
   // Add a striping class.
   $vars['classes_array'][] = 'block-' . $vars['zebra'];
 }
