@@ -194,22 +194,22 @@ function dccr_ftr_config_menu_default_menu_links() {
     'language' => 'en',
     'menu_links_customized' => 1,
   );
-  // Exported menu link: menu-left-menu_talleres:<front>
-  $menu_links['menu-left-menu_talleres:<front>'] = array(
+  // Exported menu link: menu-left-menu_talleres:workshops
+  $menu_links['menu-left-menu_talleres:workshops'] = array(
     'menu_name' => 'menu-left-menu',
     'link_path' => 'workshops',
-    'router_path' => '',
+    'router_path' => 'workshops',
     'link_title' => 'Talleres',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
       'alter' => TRUE,
-      'identifier' => 'menu-left-menu_talleres:<front>',
+      'identifier' => 'menu-left-menu_talleres:workshops',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
     'weight' => -41,
@@ -217,22 +217,22 @@ function dccr_ftr_config_menu_default_menu_links() {
     'language' => 'es',
     'menu_links_customized' => 1,
   );
-  // Exported menu link: menu-left-menu_workshops:<front>
-  $menu_links['menu-left-menu_workshops:<front>'] = array(
+  // Exported menu link: menu-left-menu_workshops:workshops
+  $menu_links['menu-left-menu_workshops:workshops'] = array(
     'menu_name' => 'menu-left-menu',
     'link_path' => 'workshops',
-    'router_path' => '',
+    'router_path' => 'workshops',
     'link_title' => 'Workshops',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
       'alter' => TRUE,
-      'identifier' => 'menu-left-menu_workshops:<front>',
+      'identifier' => 'menu-left-menu_workshops:workshops',
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
     'weight' => -46,
