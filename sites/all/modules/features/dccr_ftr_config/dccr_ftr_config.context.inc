@@ -26,11 +26,23 @@ function dccr_ftr_config_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'system-main-menu' => array(
+          'module' => 'system',
+          'delta' => 'main-menu',
+          'region' => 'utility_bar',
+          'weight' => '-10',
+        ),
         'dccr_blocks-dccr_login_link' => array(
           'module' => 'dccr_blocks',
           'delta' => 'dccr_login_link',
           'region' => 'utility_bar',
-          'weight' => '-10',
+          'weight' => '-9',
+        ),
+        'system-user-menu' => array(
+          'module' => 'system',
+          'delta' => 'user-menu',
+          'region' => 'utility_bar',
+          'weight' => '-8',
         ),
         'menu-menu-left-menu' => array(
           'module' => 'menu',
