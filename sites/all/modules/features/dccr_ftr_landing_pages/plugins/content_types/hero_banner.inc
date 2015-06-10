@@ -34,7 +34,7 @@ function dccr_ftr_landing_pages_hero_banner_render($subtype, $conf, $args, $cont
   $markup  .= l(t('View Schedule'), 'schedule', array('attributes' => array('class' => array('event-cta-link'))));
   $markup .= '</div></div>';
   $markup .= '<div class="event-introduction-register">';
-  $markup .= l(t('I want to register me in the event'), 'register', array('attributes' => array('class' => array('event-register-link'))));
+  $markup .= l(t('I want to register to the event'), 'register', array('attributes' => array('class' => array('event-register-link'))));
   $markup .= '</div></div>';
   $pane = new stdClass();
   $pane->content = $markup;
