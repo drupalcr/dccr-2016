@@ -341,7 +341,7 @@ input[type="checkbox"], input[type="radio"] {
   font-size: 1.6rem;
   vertical-align: baseline; }
 
-.main-content input[type="submit"] {
+input[type="submit"] {
   font-size: 15px;
   font-size: 1.5rem;
   background: #E35534;
@@ -360,7 +360,7 @@ input[type="checkbox"], input[type="radio"] {
   -moz-transition: all 0.2s ease-in-out;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out; }
-  .main-content input[type="submit"]:after {
+  input[type="submit"]:after {
     width: 0;
     height: 0;
     border-top: 5px solid transparent;
@@ -372,15 +372,15 @@ input[type="checkbox"], input[type="radio"] {
     margin: 5px 0 0 10px;
     display: inline-block;
     vertical-align: top; }
-  .main-content input[type="submit"]:hover {
+  input[type="submit"]:hover {
     background: #c83c1c; }
   @media screen and (min-width: 601px)  {
-    .main-content input[type="submit"] {
+    input[type="submit"] {
       width: auto;
       display: inline-block;
       margin-right: 10px;
       margin-bottom: 0; } }
-  .main-content input[type="submit"]:after {
+  input[type="submit"]:after {
     content: "▸";
     margin-left: 0.5em; }
 
