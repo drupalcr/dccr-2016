@@ -55,7 +55,6 @@ function dccr_ftr_faq_views_default_views() {
   $handler->display->display_options['fields']['body']['label'] = '';
   $handler->display->display_options['fields']['body']['exclude'] = TRUE;
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['body']['type'] = 'text_plain';
   /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
@@ -66,6 +65,12 @@ function dccr_ftr_faq_views_default_views() {
   <p class="answer">[body]</p>
 </div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  /* Field: Indexed Node: Embed Code */
+  $handler->display->display_options['fields']['field_embed_code']['id'] = 'field_embed_code';
+  $handler->display->display_options['fields']['field_embed_code']['table'] = 'search_api_index_nodes_index';
+  $handler->display->display_options['fields']['field_embed_code']['field'] = 'field_embed_code';
+  $handler->display->display_options['fields']['field_embed_code']['label'] = '';
+  $handler->display->display_options['fields']['field_embed_code']['element_label_colon'] = FALSE;
   /* Sort criterion: Indexed Node: Date created */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'search_api_index_nodes_index';
