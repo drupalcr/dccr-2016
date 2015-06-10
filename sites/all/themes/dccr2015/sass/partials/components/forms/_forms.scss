@@ -50,7 +50,7 @@ input[type="radio"] {
   @include font-size(16);
   vertical-align: baseline;
 }
-.main-content input[type="submit"] {
+input[type="submit"] {
   @include button-round($anaranjado,  #fff,  $arrow:yes);
   border: 0;
   outline: 0;
