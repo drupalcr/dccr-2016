@@ -626,6 +626,29 @@ input[type="submit"] {
   padding-bottom: 20px;
   border-bottom: solid 1px #e1e1e1; }
 
+.user-profile .group-left {
+  width: auto; }
+  @media screen and (min-width: 601px)  {
+    .user-profile .group-left {
+      float: left;
+      display: block;
+      margin-right: 2.8425855704%;
+      width: 28.0101901008%; }
+      .user-profile .group-left:last-child {
+        margin-right: 0; } }
+.user-profile .group-right {
+  width: auto; }
+  @media screen and (min-width: 601px)  {
+    .user-profile .group-right {
+      float: left;
+      display: block;
+      margin-right: 2.8425855704%;
+      width: 69.1472243289%; }
+      .user-profile .group-right:last-child {
+        margin-right: 0; } }
+.user-profile .field {
+  margin-bottom: 10px; }
+
 .page-register .panel-separator {
   display: none; }
 
