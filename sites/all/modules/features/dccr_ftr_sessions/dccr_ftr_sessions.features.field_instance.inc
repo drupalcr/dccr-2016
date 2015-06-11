@@ -24,6 +24,13 @@ function dccr_ftr_sessions_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 0,
       ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 6,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -75,6 +82,13 @@ function dccr_ftr_sessions_field_default_field_instances() {
         'type' => 'list_default',
         'weight' => 2,
       ),
+      'full' => array(
+        'label' => 'inline',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 3,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -115,6 +129,13 @@ function dccr_ftr_sessions_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_plain',
+        'weight' => 4,
+      ),
+      'full' => array(
+        'label' => 'inline',
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_plain',
@@ -168,6 +189,12 @@ function dccr_ftr_sessions_field_default_field_instances() {
         'type' => 'list_default',
         'weight' => 6,
       ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 15,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -215,6 +242,15 @@ function dccr_ftr_sessions_field_default_field_instances() {
         ),
         'type' => 'entityreference_label',
         'weight' => 3,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => 1,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -272,6 +308,19 @@ function dccr_ftr_sessions_field_default_field_instances() {
         'type' => 'date_default',
         'weight' => 5,
       ),
+      'full' => array(
+        'label' => 'inline',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'workshop_reminder',
+          'fromto' => 'value',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+        ),
+        'type' => 'date_default',
+        'weight' => 1,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -326,6 +375,13 @@ function dccr_ftr_sessions_field_default_field_instances() {
         'settings' => array(),
         'type' => 'taxonomy_term_reference_plain',
         'weight' => 1,
+      ),
+      'full' => array(
+        'label' => 'inline',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_plain',
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',

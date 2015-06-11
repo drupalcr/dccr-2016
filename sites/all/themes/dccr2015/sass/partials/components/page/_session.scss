@@ -1,0 +1,23 @@
+.node-dccr-session {
+  
+  .group-left {
+    margin-bottom: 10px;
+    @include media($tablet) {
+      @include span-columns(3 of 9);
+    }
+  }
+  .group-right {
+    @include media($tablet) {
+      @include span-columns(6 of 9);
+    }
+  }
+  .field {
+    margin-bottom: 10px;
+  }
+}
+.flag-add-to-favorites a {
+  @include button-round($anaranjado, #fff,  $arrow:no);
+  @include media($tablet) {
+    display: inline-block;
+  }
+}

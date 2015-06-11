@@ -42,12 +42,25 @@
       width: 28%;       // 280 / 966
     }
   }
-  .inside {}
-  .panel-pane {}
 }
 
 .front .panel-separator {
   margin: 0;
+}
+
+// display suite
+.node {
+  .group-left {
+    @include media($tablet) {
+      @include span-columns(5 of 10);
+    }
+  }
+  .group-right {
+    @include media($tablet) {
+      @include span-columns(5 of 10);
+      @include omega;
+    }
+  }
 }
 
 // bloque comunidad
