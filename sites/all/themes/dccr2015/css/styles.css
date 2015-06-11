@@ -608,6 +608,24 @@ input[type="submit"] {
   .flag-workshop-registration a:hover {
     background: #c83c1c; }
 
+.view-faq .attachment {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: solid 1px #e1e1e1; }
+  .view-faq .attachment .view-content .views-row {
+    margin-bottom: 10px;
+    padding-bottom: 0;
+    border-bottom: 0; }
+    .view-faq .attachment .view-content .views-row:last-child {
+      margin-bottom: 0; }
+  .view-faq .attachment .views-field-title a {
+    font-size: 22px;
+    font-size: 2.2rem; }
+.view-faq .view-content .views-row {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: solid 1px #e1e1e1; }
+
 .page-register .panel-separator {
   display: none; }
 
