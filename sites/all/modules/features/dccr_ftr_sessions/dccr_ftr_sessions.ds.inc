@@ -41,6 +41,49 @@ function dccr_ftr_sessions_ds_layout_settings_info() {
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|dccr_session|full';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'dccr_session';
+  $ds_layout->view_mode = 'full';
+  $ds_layout->layout = 'ds_2col';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'left' => array(
+        0 => 'field_speakers',
+        1 => 'field_time',
+        2 => 'field_track',
+        3 => 'field_level',
+        4 => 'field_location',
+        5 => 'flag_add_to_favorites',
+      ),
+      'right' => array(
+        6 => 'body',
+      ),
+    ),
+    'fields' => array(
+      'field_speakers' => 'left',
+      'field_time' => 'left',
+      'field_track' => 'left',
+      'field_level' => 'left',
+      'field_location' => 'left',
+      'flag_add_to_favorites' => 'left',
+      'body' => 'right',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'left' => 'div',
+      'right' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+  );
+  $export['node|dccr_session|full'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
   $ds_layout->id = 'node|dccr_session|time_slot';
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'dccr_session';

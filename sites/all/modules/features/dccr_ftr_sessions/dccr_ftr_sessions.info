@@ -22,6 +22,7 @@ dependencies[] = text
 features[ctools][] = ds:ds:1
 features[ctools][] = strongarm:strongarm:1
 features[ds_field_settings][] = node|dccr_session|time_slot
+features[ds_layout_settings][] = node|dccr_session|full
 features[ds_layout_settings][] = node|dccr_session|time_slot
 features[features_api][] = api:2
 features[field_base][] = field_session_approved
