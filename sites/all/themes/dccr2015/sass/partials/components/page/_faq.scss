@@ -1,0 +1,27 @@
+.view-faq {
+  .attachment {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: solid 1px #e1e1e1;
+    .view-content {
+      .views-row {
+        margin-bottom: 10px;
+        padding-bottom: 0;
+        border-bottom: 0;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .views-field-title a {
+      @include font-size(22)
+    }
+  }
+  .view-content {
+    .views-row {
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: solid 1px #e1e1e1;
+    }
+  }
+}
