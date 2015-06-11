@@ -106,7 +106,7 @@ function dccr_ftr_users_strongarm() {
             'visible' => TRUE,
           ),
           'full' => array(
-            'weight' => '10',
+            'weight' => '1',
             'visible' => TRUE,
           ),
           'teaser' => array(
@@ -120,8 +120,8 @@ function dccr_ftr_users_strongarm() {
             'visible' => TRUE,
           ),
           'full' => array(
-            'weight' => '5',
-            'visible' => TRUE,
+            'weight' => '10',
+            'visible' => FALSE,
           ),
           'teaser' => array(
             'weight' => '5',
