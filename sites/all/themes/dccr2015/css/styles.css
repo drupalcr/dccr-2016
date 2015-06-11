@@ -1244,7 +1244,7 @@ input[type="submit"] {
     .workshop-list .field-name-field-availability {
       position: absolute;
       top: 0;
-      right: 0px;
+      right: -150px;
       padding: 10px; } }
 .workshop-list .group-speaker-time {
   margin-bottom: 20px; }
