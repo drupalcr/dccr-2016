@@ -7,4 +7,3 @@ features[features_api][] = api:2
 features[menu_custom][] = main-menu
 features[menu_links][] = main-menu_english:node
 features[menu_links][] = main-menu_espaol:node
-features[menu_links][] = main-menu_home:<front>
