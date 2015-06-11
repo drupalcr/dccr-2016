@@ -40,32 +40,29 @@ function dccr_ftr_workshop_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'workshop';
   $ds_layout->view_mode = 'teaser';
-  $ds_layout->layout = 'ds_2col';
+  $ds_layout->layout = 'ds_1col';
   $ds_layout->settings = array(
     'regions' => array(
-      'left' => array(
+      'ds_content' => array(
         0 => 'title',
-        1 => 'field_speaker',
-        2 => 'group_speaker_time',
+        1 => 'field_availability',
+        2 => 'field_speaker',
         3 => 'field_workshop_date',
-        4 => 'body',
-      ),
-      'right' => array(
-        5 => 'field_availability',
+        4 => 'group_speaker_time',
+        5 => 'body',
       ),
     ),
     'fields' => array(
-      'title' => 'left',
-      'field_speaker' => 'left',
-      'group_speaker_time' => 'left',
-      'field_workshop_date' => 'left',
-      'body' => 'left',
-      'field_availability' => 'right',
+      'title' => 'ds_content',
+      'field_availability' => 'ds_content',
+      'field_speaker' => 'ds_content',
+      'field_workshop_date' => 'ds_content',
+      'group_speaker_time' => 'ds_content',
+      'body' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
-      'left' => 'div',
-      'right' => 'div',
+      'ds_content' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',

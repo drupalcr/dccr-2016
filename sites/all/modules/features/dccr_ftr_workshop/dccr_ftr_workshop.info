@@ -46,6 +46,7 @@ features[field_base][] = field_user_flagger
 features[field_base][] = field_workshop_date
 features[field_base][] = field_workshop_node
 features[field_group][] = group_speaker_time|node|workshop|teaser
+features[field_group][] = group_workshop_intro|node|workshop|default
 features[field_instance][] = message-full_workshop-field_workshop_node
 features[field_instance][] = message-user_application_workshop-field_workshop_node
 features[field_instance][] = message-workshop_reminder-field_days_remaining

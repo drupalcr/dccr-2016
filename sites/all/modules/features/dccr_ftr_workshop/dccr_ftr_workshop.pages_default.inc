@@ -76,7 +76,7 @@ function dccr_ftr_workshop_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = '';
+  $display->title = 'Talleres';
   $display->uuid = '01ce168f-f339-48a5-b6bf-c53759445702';
   $display->content = array();
   $display->panels = array();
@@ -88,8 +88,8 @@ function dccr_ftr_workshop_default_page_manager_pages() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
+      'override_title' => 1,
+      'override_title_text' => '<none>',
       'override_title_heading' => 'h2',
     );
     $pane->cache = array();
@@ -172,7 +172,7 @@ function dccr_ftr_workshop_default_page_manager_pages() {
     $pane->uuid = '6359b741-47ae-41f7-98a5-432ee4cad352';
     $display->content['new-6359b741-47ae-41f7-98a5-432ee4cad352'] = $pane;
     $display->panels['right'][2] = 'new-6359b741-47ae-41f7-98a5-432ee4cad352';
-  $display->hide_title = PANELS_TITLE_NONE;
+  $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
@@ -232,7 +232,7 @@ function dccr_ftr_workshop_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = '';
+  $display->title = 'Workshops';
   $display->uuid = '01ce168f-f339-48a5-b6bf-c53759445702';
   $display->content = array();
   $display->panels = array();
@@ -244,8 +244,8 @@ function dccr_ftr_workshop_default_page_manager_pages() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
+      'override_title' => 1,
+      'override_title_text' => '<none>',
       'override_title_heading' => 'h2',
     );
     $pane->cache = array();
@@ -328,7 +328,7 @@ function dccr_ftr_workshop_default_page_manager_pages() {
     $pane->uuid = '6a14c89b-b1b6-4c34-8433-bede17afdd49';
     $display->content['new-6a14c89b-b1b6-4c34-8433-bede17afdd49'] = $pane;
     $display->panels['right'][2] = 'new-6a14c89b-b1b6-4c34-8433-bede17afdd49';
-  $display->hide_title = PANELS_TITLE_NONE;
+  $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
