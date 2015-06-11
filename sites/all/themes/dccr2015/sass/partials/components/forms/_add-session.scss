@@ -1,0 +1,30 @@
+.page-node-add-dccr-session{
+
+	.form-item{
+		margin: 1.6em 0;
+
+		label{
+			font-size: 1.3em;
+		}
+	}
+
+	.field-name-field-speakers{
+		table{
+			background: $gray-soft;
+			border: none;
+			border-radius: 2px;
+			width: 100%;
+
+			.form-item{
+
+				.form-required{
+					display: none;
+				}
+			}
+		}
+
+		.field-add-more-submit{
+			margin: 1.5em 0;
+		}
+	}
+}
