@@ -25,7 +25,7 @@
                 </h1>
               <?php endif; ?>
               
-              <h3 class="event-logo-date">29 al 31 de julio</h3>
+              <h3 class="event-logo-date"><?php print t('July 29 - 31'); ?></h3>
               <span class="event-logo-location">Universidad de Costa Rica</span>
             </div>
 
