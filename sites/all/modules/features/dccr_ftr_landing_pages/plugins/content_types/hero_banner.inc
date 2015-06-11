@@ -22,7 +22,7 @@ $plugin = array(
  */
 function dccr_ftr_landing_pages_hero_banner_render($subtype, $conf, $args, $context) {
   $markup = '<div class="event-introduction">';
-  $markup .= '<h2 class="event-introduction-title">' . t('The country greatest web event.') . '</h2>';
+  $markup .= '<h2 class="event-introduction-title">' . t("The country's greatest web event.") . '</h2>';
   $markup .= '<p class="event-introduction-description">' . t('We talk about Drupal, front-end, back-end, business, projects and more.') . '</p>';
   $markup .= '<div class="event-introduction-ctas">';
   $markup .= ' <div class="event-cta event-cta-workshops">';
