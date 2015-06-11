@@ -31,6 +31,7 @@
 @import "partials/components/blocks/block-globals";
 @import "partials/components/tables/tables";
 @import "partials/components/forms/forms";
+@import "partials/components/forms/add-session";
 @import "partials/components/navigation/tabs";
 @import "partials/components/navigation/menus";
 @import "partials/components/navigation/utility-bar";
@@ -51,3 +52,6 @@
 @import "partials/components/blocks/important-dates";
 @import "partials/components/blocks/sponsor-information";
 @import "partials/components/blocks/proposed-sessions";
+@import "partials/components/payment/payment";
+
+

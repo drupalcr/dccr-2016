@@ -1,6 +1,6 @@
 .front-sponsors {
   width: 95%;
-  margin: 0 auto;
+  margin: 80px auto 40px;
   @include media($tablet) {
     width: 90%;
   }
@@ -8,12 +8,16 @@
     overflow: hidden;
     margin-bottom: 40px;
     li {
+      text-align: center;
+      margin-bottom: 70px;
       @extend %reset-list;
       @include span-columns(2 of 4);
-      @include omega(2n);
       @include media($tablet) {
         @include span-columns(2 of 8);
         @include omega(4n);
+      }
+      a{
+        display: inline-block;
       }
     }
   }
