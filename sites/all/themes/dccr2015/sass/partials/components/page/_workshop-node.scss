@@ -1,0 +1,16 @@
+.node-workshop.view-mode-full {
+  .field-name-body {
+    max-width: 750px;
+  }
+}
+.group-workshop-intro {
+  margin-bottom: 20px;
+  .field {
+    margin-bottom: 10px;
+  }
+}
+
+.flag-workshop-registration a {
+  @include button-round($anaranjado, #fff,  $arrow:no);
+  display: inline-block;
+}
