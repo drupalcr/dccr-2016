@@ -1,0 +1,38 @@
+.workshop-list {
+  .views-row {
+    position: relative;
+    border-bottom: solid 1px #e1e1e1;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    @include media($tablet) {
+      padding-right: 150px;
+    }
+  }
+  h2 a {
+    color: $anaranjado
+  }
+  .field-name-field-availability {
+    display: inline-block;
+    padding: 8px;
+    @include font-size(14);
+    background: $anaranjado;
+    color: #fff;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    @include media($tablet) {
+      position: absolute;
+      top: 0;
+      right: 0px;
+      padding: 10px;
+    }
+  }
+  // speaker time
+  .group-speaker-time {
+    margin-bottom: 20px;
+  }
+  .field-name-field-speaker,
+  .field-name-field-workshop-date {
+    display: inline-block;
+    vertical-align: top;
+  }
+}

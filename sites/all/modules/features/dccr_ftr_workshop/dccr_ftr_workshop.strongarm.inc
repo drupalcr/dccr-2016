@@ -180,6 +180,9 @@ function dccr_ftr_workshop_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
+      'time_slot' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -202,8 +205,8 @@ function dccr_ftr_workshop_strongarm() {
         ),
         'language' => array(
           'default' => array(
-            'weight' => '2',
-            'visible' => TRUE,
+            'weight' => '17',
+            'visible' => FALSE,
           ),
           'teaser' => array(
             'weight' => '11',

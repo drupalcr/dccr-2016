@@ -219,6 +219,8 @@ function dccr_ftr_workshop_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block_1');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'workshop-list';
   $translatables['workshops'] = array(
     t('Master'),
     t('Workshops'),
