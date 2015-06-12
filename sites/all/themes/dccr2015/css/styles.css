@@ -59,7 +59,8 @@ img {
 
 .main-content {
   background: #F7F7F7;
-  overflow: hidden; }
+  overflow: hidden;
+  padding-bottom: 20px; }
   .front .main-content {
     background: transparent; }
 
@@ -1229,6 +1230,8 @@ input[type="submit"] {
   @media screen and (min-width: 601px)  {
     .workshop-list .views-row {
       padding-right: 150px; } }
+.workshop-list .node {
+  position: relative; }
 .workshop-list h2 a {
   color: #E35534; }
 .workshop-list .field-name-field-availability {
