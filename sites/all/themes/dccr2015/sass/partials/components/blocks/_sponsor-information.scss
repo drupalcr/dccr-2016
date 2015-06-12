@@ -62,18 +62,14 @@
   .views-row{
     text-align: center;
     @extend %reset-list;
-    width: 30%;
-    float: left;
-    margin: 1% 3% 5% 0; 
-
+    margin: 1% 7px 5%; 
+    display: inline-block;
+    vertical-align: top;
     a{
       display: inline-block;
     }
-
-    &:nth-child(3n+1),
-    &:nth-child(6n+1){
-      clear: left;
-    }
   }
-
+}
+.sponsors-wrapper {
+  text-align: center;
 }

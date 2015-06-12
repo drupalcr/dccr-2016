@@ -1381,13 +1381,14 @@ input[type="submit"] {
   background: url(../images/bronce.png) no-repeat top center; }
 .pane-views-sponsors-sponsors-block .views-row {
   text-align: center;
-  width: 30%;
-  float: left;
-  margin: 1% 3% 5% 0; }
+  margin: 1% 7px 5%;
+  display: inline-block;
+  vertical-align: top; }
   .pane-views-sponsors-sponsors-block .views-row a {
     display: inline-block; }
-  .pane-views-sponsors-sponsors-block .views-row:nth-child(3n+1), .pane-views-sponsors-sponsors-block .views-row:nth-child(6n+1) {
-    clear: left; }
+
+.sponsors-wrapper {
+  text-align: center; }
 
 #block-dccr-blocks-proposed-sessions-header {
   margin-bottom: 15px; }
