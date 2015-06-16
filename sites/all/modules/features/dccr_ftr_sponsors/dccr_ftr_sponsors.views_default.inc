@@ -102,9 +102,90 @@ function dccr_ftr_sponsors_views_default_views() {
   $handler->display->display_options['row_options']['links'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['footer'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'dccr_sponsor' => 'dccr_sponsor',
+  );
+  /* Filter criterion: Content: Sponsorship Level (field_sponsorship_level_ref) */
+  $handler->display->display_options['filters']['field_sponsorship_level_ref_tid']['id'] = 'field_sponsorship_level_ref_tid';
+  $handler->display->display_options['filters']['field_sponsorship_level_ref_tid']['table'] = 'field_data_field_sponsorship_level_ref';
+  $handler->display->display_options['filters']['field_sponsorship_level_ref_tid']['field'] = 'field_sponsorship_level_ref_tid';
+  $handler->display->display_options['filters']['field_sponsorship_level_ref_tid']['value'] = array(
+    5 => '5',
+    6 => '6',
+    7 => '7',
+  );
+  $handler->display->display_options['filters']['field_sponsorship_level_ref_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_sponsorship_level_ref_tid']['vocabulary'] = 'sponsorship_level';
 
   /* Display: Sponsors (/sponsors) */
   $handler = $view->new_display('block', 'Sponsors (/sponsors)', 'sponsors_block');
+
+  /* Display: Block */
+  $handler = $view->new_display('block', 'Block', 'block_2');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Platinum Sponsors';
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'platinum-sponsors';
+  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = TRUE;
+  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'Become a Sponsor';
+  $handler->display->display_options['defaults']['link_display'] = FALSE;
+  $handler->display->display_options['link_display'] = 'custom_url';
+  $handler->display->display_options['link_url'] = 'sponsors';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '11';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'node';
+  $handler->display->display_options['row_options']['links'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['footer'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'dccr_sponsor' => 'dccr_sponsor',
+  );
+  /* Filter criterion: Content: Sponsorship Level (field_sponsorship_level_ref) */
+  $handler->display->display_options['filters']['field_sponsorship_level_ref_tid']['id'] = 'field_sponsorship_level_ref_tid';
+  $handler->display->display_options['filters']['field_sponsorship_level_ref_tid']['table'] = 'field_data_field_sponsorship_level_ref';
+  $handler->display->display_options['filters']['field_sponsorship_level_ref_tid']['field'] = 'field_sponsorship_level_ref_tid';
+  $handler->display->display_options['filters']['field_sponsorship_level_ref_tid']['value'] = array(
+    8 => '8',
+  );
+  $handler->display->display_options['filters']['field_sponsorship_level_ref_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_sponsorship_level_ref_tid']['vocabulary'] = 'sponsorship_level';
+  $handler->display->display_options['block_description'] = 'Block sponsors platinum';
   $translatables['sponsors'] = array(
     t('Master'),
     t('Sponsors'),
@@ -119,6 +200,8 @@ function dccr_ftr_sponsors_views_default_views() {
     t('Block'),
     t('Become a Sponsor'),
     t('Sponsors (/sponsors)'),
+    t('Platinum Sponsors'),
+    t('Block sponsors platinum'),
   );
   $export['sponsors'] = $view;
 
