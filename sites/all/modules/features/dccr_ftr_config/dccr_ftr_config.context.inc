@@ -56,6 +56,12 @@ function dccr_ftr_config_context_default_contexts() {
           'region' => 'header',
           'weight' => '-8',
         ),
+        'views-sponsors-block_2' => array(
+          'module' => 'views',
+          'delta' => 'sponsors-block_2',
+          'region' => 'highlighted',
+          'weight' => '-10',
+        ),
         'dccr_blocks-dccr_footer' => array(
           'module' => 'dccr_blocks',
           'delta' => 'dccr_footer',

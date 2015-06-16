@@ -31,16 +31,6 @@ function dccr_ftr_config_uuid_features_default_terms() {
     'vocabulary_machine_name' => 'tracks',
   );
   $terms[] = array(
-    'name' => 'Projects',
-    'description' => '',
-    'format' => 'manati_texto_formato',
-    'weight' => 0,
-    'uuid' => 'b5dc3afc-1f2c-4e3e-821e-b8a0784c0454',
-    'language' => 'und',
-    'i18n_tsid' => 0,
-    'vocabulary_machine_name' => 'tracks',
-  );
-  $terms[] = array(
     'name' => 'Development',
     'description' => '',
     'format' => 'manati_texto_formato',
