@@ -205,7 +205,7 @@ function dccr_ftr_workshop_strongarm() {
         ),
         'language' => array(
           'default' => array(
-            'weight' => '17',
+            'weight' => '2',
             'visible' => FALSE,
           ),
           'teaser' => array(

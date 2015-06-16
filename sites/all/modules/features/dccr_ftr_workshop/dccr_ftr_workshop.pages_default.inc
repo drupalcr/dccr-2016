@@ -81,6 +81,31 @@ function dccr_ftr_workshop_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
+    $pane->pid = 'new-c540419b-dbb5-4677-9adf-d9054dd0e660';
+    $pane->panel = 'left';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => '',
+      'body' => '<p style="font-size: 13.0080003738403px; line-height: 20.0063037872314px;"><strong>Los talleres tienen cupo limitado, para registrarse a un taller debe:</strong></p><ol style="font-size: 13.0080003738403px; line-height: 20.0063037872314px;"><li><strong>Estar inscrito en el evento</strong></li><li><strong>Pagar la inscripción a los talleres ($15)</strong></li><li><strong>Solicitar cupo por medio de la página del taller</strong></li></ol><p>&nbsp;</p>',
+      'format' => 'manati_texto_formato',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'c540419b-dbb5-4677-9adf-d9054dd0e660';
+    $display->content['new-c540419b-dbb5-4677-9adf-d9054dd0e660'] = $pane;
+    $display->panels['left'][0] = 'new-c540419b-dbb5-4677-9adf-d9054dd0e660';
+    $pane = new stdClass();
     $pane->pid = 'new-eaaa2580-68a3-4747-a16a-9ff35c789bed';
     $pane->panel = 'left';
     $pane->type = 'block';
@@ -98,11 +123,11 @@ function dccr_ftr_workshop_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
     $pane->uuid = 'eaaa2580-68a3-4747-a16a-9ff35c789bed';
     $display->content['new-eaaa2580-68a3-4747-a16a-9ff35c789bed'] = $pane;
-    $display->panels['left'][0] = 'new-eaaa2580-68a3-4747-a16a-9ff35c789bed';
+    $display->panels['left'][1] = 'new-eaaa2580-68a3-4747-a16a-9ff35c789bed';
     $pane = new stdClass();
     $pane->pid = 'new-67a9e356-09b0-4703-93f6-a596bd87b5c6';
     $pane->panel = 'right';
@@ -237,6 +262,31 @@ function dccr_ftr_workshop_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
+    $pane->pid = 'new-8d354b2c-6797-4dd0-9621-621e8852d8f2';
+    $pane->panel = 'left';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => '',
+      'body' => '<p><strong>Workshops have limited availability, to register you must</strong></p><ol><li><strong>Pay the registration fee for the event</strong></li><li><strong>Pay the registration fee for the workshops ($15)</strong></li><li><strong>Enroll through the workshop page</strong></li></ol><p>&nbsp;</p>',
+      'format' => 'manati_texto_formato',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '8d354b2c-6797-4dd0-9621-621e8852d8f2';
+    $display->content['new-8d354b2c-6797-4dd0-9621-621e8852d8f2'] = $pane;
+    $display->panels['left'][0] = 'new-8d354b2c-6797-4dd0-9621-621e8852d8f2';
+    $pane = new stdClass();
     $pane->pid = 'new-43d0909f-033a-4b53-b0c3-7fcc04058efe';
     $pane->panel = 'left';
     $pane->type = 'block';
@@ -254,11 +304,11 @@ function dccr_ftr_workshop_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
     $pane->uuid = '43d0909f-033a-4b53-b0c3-7fcc04058efe';
     $display->content['new-43d0909f-033a-4b53-b0c3-7fcc04058efe'] = $pane;
-    $display->panels['left'][0] = 'new-43d0909f-033a-4b53-b0c3-7fcc04058efe';
+    $display->panels['left'][1] = 'new-43d0909f-033a-4b53-b0c3-7fcc04058efe';
     $pane = new stdClass();
     $pane->pid = 'new-b7777e1f-e753-4a9f-8e7c-487a112c3ca3';
     $pane->panel = 'right';
