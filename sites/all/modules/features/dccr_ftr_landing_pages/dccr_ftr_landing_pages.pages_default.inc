@@ -1055,6 +1055,8 @@ function dccr_ftr_landing_pages_default_page_manager_pages() {
       'left_below' => NULL,
       'right_below' => NULL,
       'bottom' => NULL,
+      'left' => NULL,
+      'right' => NULL,
     ),
   );
   $display->cache = array();
@@ -1062,6 +1064,31 @@ function dccr_ftr_landing_pages_default_page_manager_pages() {
   $display->uuid = '891a719b-c48f-48ba-824f-3cbdb6e49243';
   $display->content = array();
   $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-dd390012-bdd4-4338-ae4d-b36ed9b42167';
+    $pane->panel = 'left';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => '',
+      'body' => '<p>Nos puede contactar vía email [camp@drupalcr.org] si desea saber alguna información específica, o si tiene dudas sobre la información suministrada.</p><p>Recuerde que nos puede seguir y preguntar por nuestras redes sociales: <a href="http://facebook.com/drupalcostarica">Facebook</a>, <a href="https://twitter.com/drupalcr">Twitter</a>.</p>',
+      'format' => 'manati_texto_formato',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'dd390012-bdd4-4338-ae4d-b36ed9b42167';
+    $display->content['new-dd390012-bdd4-4338-ae4d-b36ed9b42167'] = $pane;
+    $display->panels['left'][0] = 'new-dd390012-bdd4-4338-ae4d-b36ed9b42167';
     $pane = new stdClass();
     $pane->pid = 'new-62bd2741-0a8a-400b-a878-fa9afa81d64c';
     $pane->panel = 'right';
@@ -1229,6 +1256,8 @@ function dccr_ftr_landing_pages_default_page_manager_pages() {
       'left_below' => NULL,
       'right_below' => NULL,
       'bottom' => NULL,
+      'left' => NULL,
+      'right' => NULL,
     ),
   );
   $display->cache = array();
@@ -1236,6 +1265,31 @@ function dccr_ftr_landing_pages_default_page_manager_pages() {
   $display->uuid = '891a719b-c48f-48ba-824f-3cbdb6e49243';
   $display->content = array();
   $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-0511d490-4f29-47dd-9af7-36c281666572';
+    $pane->panel = 'left';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => '',
+      'body' => '<p style="font-size: 13.0080003738403px; line-height: 20.0063037872314px;">If you have any questions or comments, feel free to email us at&nbsp;<span style="font-size: 13.0080003738403px; line-height: 20.0063037872314px;">camp@drupalcr.org.</span></p><p style="font-size: 13.0080003738403px; line-height: 20.0063037872314px;">Remember that you can follow us and ask us through social networks:&nbsp;<a href="http://facebook.com/drupalcostarica" style="font-size: 13.0080003738403px; line-height: 20.0063037872314px;">Facebook</a><span style="font-size: 13.0080003738403px; line-height: 20.0063037872314px;">,&nbsp;</span><a href="https://twitter.com/drupalcr" style="font-size: 13.0080003738403px; line-height: 20.0063037872314px;">Twitter</a><span style="font-size: 13.0080003738403px; line-height: 20.0063037872314px;">.</span></p>',
+      'format' => 'manati_texto_formato',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '0511d490-4f29-47dd-9af7-36c281666572';
+    $display->content['new-0511d490-4f29-47dd-9af7-36c281666572'] = $pane;
+    $display->panels['left'][0] = 'new-0511d490-4f29-47dd-9af7-36c281666572';
     $pane = new stdClass();
     $pane->pid = 'new-d3671fbd-ef1d-4282-b7f2-1c34fa6c7048';
     $pane->panel = 'right';
@@ -1492,7 +1546,10 @@ function dccr_ftr_landing_pages_default_page_manager_pages() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => '',
+    );
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
