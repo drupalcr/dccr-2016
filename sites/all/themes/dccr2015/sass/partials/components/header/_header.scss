@@ -1,9 +1,8 @@
 .main-header {
-  border-bottom: 8px solid $verde-turquesa;
   padding-bottom: 20px;
   overflow: hidden;
   @include media($tablet) {
-    background: url(../images/nubes.jpg) no-repeat top center;
+    background: url(../images/nubes.jpg) no-repeat center 20px;
     padding-bottom: 70px;
   }
 }

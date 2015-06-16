@@ -48,14 +48,14 @@
   </section>
 <?php endif; // end Above Content ?>
 
+<?php if ($page['highlighted']): ?>
+  <?php print render($page['highlighted']); ?>
+<?php endif; ?>
+
 <main class="main-content">
   <div class="main-content-limiter">
     <?php if ($breadcrumb): ?>
       <!-- <?php print $breadcrumb; ?> -->
-    <?php endif; ?>
-
-    <?php if ($page['highlighted']): ?>
-      <?php print render($page['highlighted']); ?>
     <?php endif; ?>
     <?php if ($messages): ?>
     <div class="messages-wrapper">
