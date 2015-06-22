@@ -99,12 +99,18 @@ function dccr_ftr_users_views_default_views() {
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
+  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = TRUE;
+  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'View all community';
   $handler->display->display_options['path'] = 'attendees';
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'community');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Comunity';
+  $handler->display->display_options['title'] = 'Community';
   $handler->display->display_options['defaults']['link_display'] = FALSE;
   $handler->display->display_options['link_display'] = 'custom_url';
   $handler->display->display_options['link_url'] = 'attendees';
@@ -124,7 +130,6 @@ function dccr_ftr_users_views_default_views() {
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'search_api_index_dccr_users_index';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Indexed User: Whether the entity is flagged with flag dccr_registration_complete */
@@ -163,9 +168,9 @@ function dccr_ftr_users_views_default_views() {
     t('Company'),
     t('Username'),
     t('Page'),
-    t('more'),
     t('Block'),
-    t('Comunity'),
+    t('Community'),
+    t('more'),
   );
   $export['dccr_attendees'] = $view;
 

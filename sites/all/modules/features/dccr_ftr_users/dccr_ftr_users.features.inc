@@ -237,9 +237,9 @@ function dccr_ftr_users_default_search_api_index() {
       },
       "data_alter_callbacks" : {
         "search_api_alter_role_filter" : {
-          "status" : 1,
+          "status" : 0,
           "weight" : "-10",
-          "settings" : { "default" : "1", "roles" : { "1" : "1", "3" : "3", "4" : "4" } }
+          "settings" : { "default" : "1", "roles" : { "3" : "3" } }
         },
         "search_api_alter_language_control" : {
           "status" : 0,
@@ -293,12 +293,7 @@ function dccr_ftr_users_default_search_api_index() {
           "status" : 0,
           "weight" : "20",
           "settings" : {
-            "fields" : {
-              "name" : true,
-              "mail" : true,
-              "field_drupal_org" : true,
-              "field_full_name" : true
-            },
+            "fields" : { "mail" : true, "field_drupal_org" : true, "field_full_name" : true },
             "spaces" : "[^[:alnum:]]",
             "ignorable" : "[\\u0027]"
           }

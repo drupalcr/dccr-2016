@@ -444,7 +444,7 @@ function dccr_ftr_users_field_default_field_instances() {
     'bundle' => 'user',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Please enter the complete url of your profile',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -557,7 +557,7 @@ function dccr_ftr_users_field_default_field_instances() {
     'bundle' => 'user',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Please enter the complete url of your profile',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -622,7 +622,7 @@ function dccr_ftr_users_field_default_field_instances() {
     'bundle' => 'user',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Please enter the complete url of your profile',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -693,6 +693,7 @@ function dccr_ftr_users_field_default_field_instances() {
   t('If you are paying your ticket; please don\'t forget to select your own username here.');
   t('LinkedIn Profile');
   t('Payment Receipt');
+  t('Please enter the complete url of your profile');
   t('Submission');
   t('Twitter Profile');
   t('User');
