@@ -90,7 +90,7 @@ function dccr_ftr_sponsors_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
-          'image_link' => 'content',
+          'image_link' => 'field_sponsor_link',
           'image_style' => 'sponsor_logo',
         ),
         'type' => 'image',
