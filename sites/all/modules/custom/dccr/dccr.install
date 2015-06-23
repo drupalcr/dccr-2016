@@ -530,7 +530,7 @@ function dccr_update_7030() {
  */
 function dccr_update_7031() {
   $paths = array(
-    'payment-submit' => 'enviar-comprobante',
+    'eform/submit/dccr-payment-submission-form' => 'enviar-comprobante',
     'my-schedule' => 'mi-agenda',
     'workshops' => 'talleres',
     'venue' => 'sede',
