@@ -444,7 +444,7 @@ function dccr_ftr_users_field_default_field_instances() {
     'bundle' => 'user',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Please enter the complete url of your profile',
+    'description' => 'For example, https://www.facebook.com/drupalcostarica',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -557,7 +557,7 @@ function dccr_ftr_users_field_default_field_instances() {
     'bundle' => 'user',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Please enter the complete url of your profile',
+    'description' => 'The complete url of LinkedIn',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -622,7 +622,7 @@ function dccr_ftr_users_field_default_field_instances() {
     'bundle' => 'user',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Please enter the complete url of your profile',
+    'description' => 'For example, https://www.twitter.com/drupalcr',
     'display' => array(
       'default' => array(
         'label' => 'above',
