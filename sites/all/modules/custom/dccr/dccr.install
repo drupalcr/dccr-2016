@@ -524,3 +524,37 @@ function dccr_update_7030() {
   $module_list = array('i18n_field');
   module_enable($module_list, TRUE);
 }
+
+/**
+ * Create url aliases for panel pages.
+ */
+function dccr_update_7031() {
+  $paths = array(
+    'payment-submit' => 'enviar-comprobante',
+    'my-schedule' => 'mi-agenda',
+    'workshops' => 'talleres',
+    'venue' => 'sede',
+    'how-to-sponsor' => 'como-patrocinar',
+    'contact-us' => 'contactenos',
+    'conference' => 'conferencia',
+    'register' => 'registro',
+    'schedule' => 'agenda',
+    'sponsors' => 'patrocinadores',
+    'faq' => 'preguntas-frecuentes',
+  );
+  foreach ($paths as $english => $spanish) {
+    _dccr_create_alias($english, $spanish);
+  }
+}
+
+/**
+ * Create path alias.
+ */
+function _dccr_create_alias($english, $spanish) {
+  $path = array(
+    'source' => $english,
+    'alias' => $spanish,
+    'language' => 'es',
+  );
+  path_save($path);
+}
