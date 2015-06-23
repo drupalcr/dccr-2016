@@ -57,11 +57,12 @@ function dccr_install() {
     'i18n_user',
     'i18n_variable',
     'i18n_block',
+    'i18n_field',
   );
 
   $result = module_enable($modules_enable_list, TRUE);
 
-  //Empty pages.
+  // Empty pages.
   module_load_include('inc', 'i18n_string');
   // Create an empty page callback for schedule.
   $callback = new stdClass();
@@ -514,4 +515,12 @@ function dccr_update_7029() {
       menu_link_delete($mlid);
     }
   }
+}
+
+/**
+ * Enables i18n_field.
+ */
+function dccr_update_7030() {
+  $module_list = array('i18n_field');
+  module_enable($module_list, TRUE);
 }
