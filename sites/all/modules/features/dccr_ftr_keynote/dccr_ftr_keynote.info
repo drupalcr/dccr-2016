@@ -5,6 +5,7 @@ package = Drupal Camp
 version = 7.x-1.0
 project = dccr_ftr_keynote
 dependencies[] = ctools
+dependencies[] = dccr_ftr_sponsors
 dependencies[] = dccr_ftr_workshop
 dependencies[] = ds
 dependencies[] = features
