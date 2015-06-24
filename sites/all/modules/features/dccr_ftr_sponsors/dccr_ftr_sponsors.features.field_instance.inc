@@ -68,7 +68,7 @@ function dccr_ftr_sponsors_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'image',
+        'module' => 'dccr_ftr_sponsors',
         'settings' => array(
           'image_link' => '',
           'image_style' => '',
@@ -78,7 +78,7 @@ function dccr_ftr_sponsors_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'image',
+        'module' => 'dccr_ftr_sponsors',
         'settings' => array(
           'image_link' => '',
           'image_style' => 'medium',
@@ -88,7 +88,7 @@ function dccr_ftr_sponsors_field_default_field_instances() {
       ),
       'teaser' => array(
         'label' => 'hidden',
-        'module' => 'image',
+        'module' => 'dccr_ftr_sponsors',
         'settings' => array(
           'image_link' => 'field_sponsor_link',
           'image_style' => 'sponsor_logo',
