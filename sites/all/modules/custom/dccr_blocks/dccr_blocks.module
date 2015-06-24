@@ -7,9 +7,9 @@
 
 // Defining constants.
 // Thursday, July 30th.
-const DCCR_BLOCKS_FIRST_DAY = 1438264800;
+const DCCR_BLOCKS_FIRST_DAY = 1438214400;
 // Friday, July 31st.
-const DCCR_BLOCKS_SECOND_DAY = 1438351200;
+const DCCR_BLOCKS_SECOND_DAY = 1438300800;
 // Saturday, August 1st.
 const DCCR_BLOCKS_POST_CAMP = 1438437600;
 /**
