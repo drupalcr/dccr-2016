@@ -2236,6 +2236,8 @@ function date_limit_format($format, $granularity) {
     $format = '';
   }
 
+  drupal_alter('date_limit_format', $format, $granularity);
+
   // Store the return value in the static array for performance.
   $formats[$format_granularity_cid] = $format;
 

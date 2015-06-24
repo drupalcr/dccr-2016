@@ -81,6 +81,18 @@ function dccr_ftr_workshop_preprocess_node(&$variables) {
 }
 
 /**
+ * Implements hook_date_limit_format_alter().
+ */
+function dccr_ftr_workshop_date_limit_format_alter(&$format, $granularity) {
+  if ($format == '\d\e \d\e\l \a \l\a\s g a') {
+    $format = 'g a';
+  }
+  elseif ($format == '\a\t G:i') {
+    $format = 'G:i';
+  }
+}
+
+/**
  * Update availability field for a workshop when flagged/unflagged.
  */
 function dccr_ftr_workshop_countdown($action, $content_id) {

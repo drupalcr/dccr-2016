@@ -103,7 +103,7 @@ function dccr_ftr_testimonial_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'image',
+        'module' => 'dccr_ftr_sponsors',
         'settings' => array(
           'image_link' => 'content',
           'image_style' => 'medium',
