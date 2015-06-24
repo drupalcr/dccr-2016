@@ -100,7 +100,7 @@ function dccr_ftr_users_default_entityform_type() {
       "resubmit_action" : "old",
       "redirect_path" : "",
       "instruction_pre" : {
-        "value" : "Con el objetivo de coordinar y simplificar labores, tiempo y esfuerzos para la organizaci\\u00f3n del Drupal Camp agradecer\\u00edamos que nos brinde la siguiente infomaci\\u00f3n si deseea colaborar como Staff del Drupal Camp.\\r\\n\\r\\nSon labores del Staff:  Incripci\\u00f3n, organizaci\\u00f3n, empaque de materiales, distribuci\\u00f3n de manteriales, vigilancia de equipos de c\\u00f3mputo y proyectos en las aulas,  registro de estad\\u00edsticas,  distribuci\\u00f3n de alimentos, atenci\\u00f3n de dudas y consultas sobre metodolog\\u00eda y  desarrollo del Drupal Camp.  \\r\\n\\r\\nRequisito: Asistir a una reuni\\u00f3n virtual de inducci\\u00f3n y capacitaci\\u00f3n.",
+        "value" : "Con el objetivo de coordinar y simplificar labores, tiempo y esfuerzos para la organizaci\\u00f3n del Drupal Camp agradecer\\u00edamos que nos brinde la siguiente infomaci\\u00f3n si deseea colaborar como Staff del Drupal Camp CR 2015.\\r\\n\\r\\nSon labores del Staff: Incripci\\u00f3n, organizaci\\u00f3n, empaque y distribuci\\u00f3n de materiales, vigilancia de equipos de c\\u00f3mputo y proyectos, registro de estad\\u00edsticas, distribuci\\u00f3n de alimentos, atenci\\u00f3n de dudas y consultas sobre metodolog\\u00eda y desarrollo del Drupal Camp CR.\\r\\n\\r\\nRequisito: Asistir a una reuni\\u00f3n virtual de inducci\\u00f3n (se indicar\\u00e1 fecha y hora) y asistir a otra reuni\\u00f3n presencial de capacitaci\\u00f3n el d\\u00eda 28 de julio del 2015.",
         "format" : "plain_text"
       }
     },
