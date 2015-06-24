@@ -72,6 +72,47 @@ function dccr_ftr_users_default_entityform_type() {
       }
     }
   }');
+  $items['dccr_staff_form'] = entity_import('entityform_type', '{
+    "type" : "dccr_staff_form",
+    "label" : "Staff Drupal Camp",
+    "data" : {
+      "draftable" : 0,
+      "draft_redirect_path" : "",
+      "draft_button_text" : "",
+      "draft_save_text" : { "value" : "", "format" : "manati_texto_formato" },
+      "submit_button_text" : "Enviar",
+      "submit_confirm_msg" : "",
+      "your_submissions" : "",
+      "disallow_resubmit_msg" : "",
+      "delete_confirm_msg" : "",
+      "page_title_view" : "",
+      "preview_page" : 0,
+      "submission_page_title" : "\\u003Cnone\\u003E",
+      "submission_text" : {
+        "value" : "Gracias por apuntarte como staff para el Drupal Camp. Con tu ayuda este evento ser\\u00e1 a\\u00fan mejor.",
+        "format" : "plain_text"
+      },
+      "submission_show_submitted" : 0,
+      "submissions_view" : "default",
+      "user_submissions_view" : "default",
+      "form_status" : "ENTITYFORM_OPEN",
+      "roles" : { "2" : "2", "1" : 0, "3" : 0, "4" : 0, "5" : 0 },
+      "resubmit_action" : "old",
+      "redirect_path" : "",
+      "instruction_pre" : {
+        "value" : "Con el objetivo de coordinar y simplificar labores, tiempo y esfuerzos para la organizaci\\u00f3n del Drupal Camp agradecer\\u00edamos que nos brinde la siguiente infomaci\\u00f3n si deseea colaborar como Staff del Drupal Camp.\\r\\n\\r\\nSon labores del Staff:  Incripci\\u00f3n, organizaci\\u00f3n, empaque de materiales, distribuci\\u00f3n de manteriales, vigilancia de equipos de c\\u00f3mputo y proyectos en las aulas,  registro de estad\\u00edsticas,  distribuci\\u00f3n de alimentos, atenci\\u00f3n de dudas y consultas sobre metodolog\\u00eda y  desarrollo del Drupal Camp.  \\r\\n\\r\\nRequisito: Asistir a una reuni\\u00f3n virtual de inducci\\u00f3n y capacitaci\\u00f3n.",
+        "format" : "plain_text"
+      }
+    },
+    "weight" : "0",
+    "rdf_mapping" : [],
+    "paths" : { "submit" : {
+        "source" : "eform\\/submit\\/dccr-staff-form",
+        "alias" : "staff-drupal-camp",
+        "language" : "und"
+      }
+    }
+  }');
   return $items;
 }
 

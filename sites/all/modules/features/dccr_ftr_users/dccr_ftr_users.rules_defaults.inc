@@ -16,6 +16,14 @@ function dccr_ftr_users_default_rules_configuration() {
       "TAGS" : [ "users_register" ],
       "REQUIRES" : [ "rules", "message_notify", "entityform" ],
       "ON" : { "entityform_insert" : [] },
+      "IF" : [
+        { "entity_is_of_bundle" : {
+            "entity" : [ "entityform" ],
+            "type" : "entityform",
+            "bundle" : { "value" : { "dccr_payment_submission_form" : "dccr_payment_submission_form" } }
+          }
+        }
+      ],
       "DO" : [
         { "entity_create" : {
             "USING" : {
