@@ -1,0 +1,13 @@
+diff --git a/sites/all/modules/contrib/date/date_api/date_api.module b/sites/all/modules/contrib/date/date_api/date_api.module
+index b1be6e5..60b6e10 100644
+--- a/sites/all/modules/contrib/date/date_api/date_api.module
++++ b/sites/all/modules/contrib/date/date_api/date_api.module
+@@ -2236,6 +2236,8 @@ function date_limit_format($format, $granularity) {
+     $format = '';
+   }
+ 
++  drupal_alter('date_limit_format', $format, $granularity);
++
+   // Store the return value in the static array for performance.
+   $formats[$format_granularity_cid] = $format;
+ 
