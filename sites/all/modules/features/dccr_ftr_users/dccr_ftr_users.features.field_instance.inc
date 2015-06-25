@@ -321,7 +321,7 @@ function dccr_ftr_users_field_default_field_instances() {
     'bundle' => 'dccr_staff_form',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Anote aquí por ejemplo Empresa, Universidad, Colegio, etc.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -955,6 +955,7 @@ function dccr_ftr_users_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('About Me');
+  t('Anote aquí por ejemplo Empresa, Universidad, Colegio, etc.');
   t('Check this box if you are paying for other users');
   t('Company');
   t('Correo Electrónico');
