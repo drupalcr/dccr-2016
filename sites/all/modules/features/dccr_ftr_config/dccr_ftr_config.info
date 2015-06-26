@@ -50,6 +50,7 @@ features[uuid_term][] = 0df96213-5df4-4763-a799-95b8fc2d26f1
 features[uuid_term][] = e6aad68b-c463-4249-b737-ab83ba16f3ca
 features[variable][] = additional_settings__active_tab_article
 features[variable][] = honeypot_element_name
+features[variable][] = honeypot_form_dccr_session_node_form
 features[variable][] = honeypot_form_user_pass
 features[variable][] = honeypot_form_user_register_form
 features[variable][] = honeypot_form_webform_node_form
