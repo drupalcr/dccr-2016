@@ -41,7 +41,7 @@ function dccr_ftr_users_default_rules_configuration() {
             "message" : [ "message" ],
             "save_on_fail" : "0",
             "save_on_success" : "0",
-            "mail" : "kevin@estudiomanati.com"
+            "mail" : "organizacion+1@drupalcr.org"
           }
         }
       ]
