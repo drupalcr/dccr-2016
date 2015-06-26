@@ -1,0 +1,13 @@
+diff --git a/includes/stream_wrappers.inc b/includes/stream_wrappers.inc
+index 73f832e..fd21479 100644
+--- a/includes/stream_wrappers.inc
++++ b/includes/stream_wrappers.inc
+@@ -820,7 +820,7 @@ class DrupalPrivateStreamWrapper extends DrupalLocalStreamWrapper {
+    */
+   function getExternalUrl() {
+     $path = str_replace('\\', '/', $this->getTarget());
+-    return url('system/files/' . $path, array('absolute' => TRUE));
++    return url('system/files/' . $path, array('absolute' => TRUE, 'language' => '', 'prefix' => ''));
+   }
+ }
+ 
