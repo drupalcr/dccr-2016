@@ -127,7 +127,7 @@ function dccr_ftr_sponsors_get_sponsors_info_block() {
   $button_main_text = t('Become a sponsor');
   $button_secondary_text = t('Information about sponsorships.');
   $link_markup = '<span class="link-main">' . $button_main_text . '</span><span>' . $button_secondary_text . '</span>';
-  $link = l($link_markup, $url, array('html' => TRUE));
+  $link = l($link_markup, $url, array('html' => TRUE, 'attributes' => array('target' => '_blank')));
   $content = theme_item_list(array(
     'items' => $places,
     'title' => '',
