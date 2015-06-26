@@ -22,5 +22,11 @@ function dccr_ftr_users_user_default_roles() {
     'weight' => 3,
   );
 
+  // Exported role: entityforms_manager.
+  $roles['entityforms_manager'] = array(
+    'name' => 'entityforms_manager',
+    'weight' => 5,
+  );
+
   return $roles;
 }
