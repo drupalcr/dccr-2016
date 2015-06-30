@@ -558,3 +558,11 @@ function _dccr_create_alias($english, $spanish) {
   );
   path_save($path);
 }
+
+/**
+ * Enables i18n_field.
+ */
+function dccr_update_7032() {
+  $module_list = array('views_data_export');
+  module_enable($module_list, TRUE);
+}
