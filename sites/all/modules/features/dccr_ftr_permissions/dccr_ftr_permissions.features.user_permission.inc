@@ -187,6 +187,7 @@ function dccr_ftr_permissions_user_default_permissions() {
     'name' => 'administer nodes',
     'roles' => array(
       'administrator' => 'administrator',
+      'drupal_administrator' => 'drupal_administrator',
     ),
     'module' => 'node',
   );
