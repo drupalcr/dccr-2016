@@ -575,6 +575,9 @@ $conf['404_fast_html'] = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
  */
 # $conf['pressflow_smart_start'] = TRUE;
 
+# Try to fix recaptcha issue.
+ini_set('arg_separator.output', '&amp;');
+
 if (file_exists(dirname(__FILE__) . '/settings.local.inc')) {
   @include dirname(__FILE__) . '/settings.local.inc';
 }
