@@ -157,12 +157,6 @@ function recaptcha_captcha_validation($solution, $response, $element, $form_stat
     $_POST['g-recaptcha-response'],
     ip_address()
   );
-  dpm($_POST, 'POST');
-  dpm($resp, 'resp');
-  dpm($solution, 'sol');
-  dpm($response, 'response');
-  dpm($element, 'element');
-  dpm($form_state, 'form_state');
 
   if ($resp->isSuccess()) {
     // Verified!
