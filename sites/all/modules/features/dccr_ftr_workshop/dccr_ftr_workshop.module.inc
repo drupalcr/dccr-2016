@@ -227,3 +227,35 @@ function dccr_ftr_workshop_date_format_types() {
     'workshop_reminder' => t('Workshop Notification'),
   );
 }
+
+/**
+ * Returns form for unregister user from workshop.
+ */
+function dccr_ftr_workshop_unregister_form($form, $form_state, $nid, $user) {
+  $form['nid'] = array(
+    '#type' => 'value',
+    '#value' => $nid,
+  );
+  $form['user'] = array(
+    '#type' => 'value',
+    '#value' => $user,
+  );
+  $form['unregister'] = array(
+    '#type' => 'submit',
+    '#value' => t('Unregister'),
+    '#submit' => array('dccr_ftr_workshop_unregister_form_submit'),
+  );
+
+  return $form;
+}
+
+/**
+ * Submit handler for dccr_ftr_workshop_unregister_form.
+ */
+function dccr_ftr_workshop_unregister_form_submit($form, $form_state) {
+  $values = $form_state['values'];
+  $nid = $values['nid'];
+  $user = $values['user'];
+  $flag_name = 'workshop_registration';
+  flag('unflag', $flag_name, $nid, $user, TRUE);
+}

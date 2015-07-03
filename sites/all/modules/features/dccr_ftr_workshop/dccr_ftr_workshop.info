@@ -88,3 +88,4 @@ features[variable][] = node_preview_workshop
 features[variable][] = node_submitted_workshop
 features[views_view][] = site_administrators_list
 features[views_view][] = workshops
+files[] = views/dccr_ftr_workshop_unregister_workshop.inc
