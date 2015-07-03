@@ -54,7 +54,7 @@ function dccr_ftr_workshop_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Workshop intro',
-    'weight' => '1',
+    'weight' => '2',
     'children' => array(
       0 => 'field_availability',
       1 => 'field_level',
