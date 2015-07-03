@@ -13,6 +13,11 @@ function dccr_ftr_workshop_field_extra_fields() {
     'description' => t('Provides a Flag link'),
     'weight' => 0,
   );
+  $extra['node']['workshop']['display']['extra_field_workshop_attendants'] = array(
+    'label' => t('Workshop Attendants'),
+    'description' => t('Provides a linki to workshop attendants'),
+    'weight' => 0,
+  );
   return $extra;
 }
 
@@ -25,6 +30,11 @@ function dccr_ftr_workshop_node_view($node, $view_mode, $langcode) {
       '#type' => 'item',
       '#title' => '',
       '#markup' => dccr_ftr_workshop_register_link($node),
+    );
+    $node->content['extra_field_workshop_attendants'] = array(
+      '#type' => 'item',
+      '#title' => '',
+      '#markup' => dccr_ftr_workshop_attendants_link($node),
     );
   }
 }
@@ -49,6 +59,18 @@ function dccr_ftr_workshop_register_link($node) {
       return $markup;
     }
   }
+}
+
+/**
+ * Returns a link for attendants view if user has drupal_administrator role.
+ */
+function dccr_ftr_workshop_attendants_link($node) {
+  $markup = '';
+  $role = user_role_load_by_name('drupal_administrator');
+  if (user_has_role($role->rid)) {
+    $markup = '<div class="attendants-link">' . l(t('View attendants'), 'workshops-attendants/' . $node->nid) . '</div>';
+  }
+  return $markup;
 }
 
 /**
