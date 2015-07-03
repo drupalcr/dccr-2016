@@ -693,7 +693,6 @@ function captcha_validate($element, &$form_state) {
     if (!function_exists($captcha_validate)) {
       $captcha_validate = 'captcha_validate_strict_equality';
     }
-    dpm($element, $captcha_validate);
     // Check the response with the CAPTCHA validation function.
     // Apart from the traditional expected $solution and received $response,
     // we also provide the CAPTCHA $element and $form_state arrays for more advanced use cases.
