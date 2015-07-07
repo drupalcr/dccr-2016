@@ -52,5 +52,76 @@
       background: $gris-claro;
       border-radius: 4px;
     }
-  }  
+  }
+}
+
+// Footer menus
+.event-menu-footer {
+  margin-bottom: 1em;
+  @include media($tablet) {
+    margin-bottom: 3em;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    list-style-type: none;
+    display: inline;
+    margin-right: 6px;
+    &:after {
+      content: "|";
+      margin-left: 10px;
+    }
+    &:last-child:after {
+      content: "";
+    }
+  }
+  a:hover {
+    color: #fff;
+  }
+}
+
+.social-links.footer {
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+  .social-link {
+    @extend %text-hidden;
+    display: block;
+    height: 17px;
+    width: 17px;
+    margin-right: 1em;
+    background-image: url(../images/sprite.png); // fallback
+    background-image: url(../images/sprite.svg), none;
+  }
+  .facebook {
+    background-position: 2px -164px;
+    &:hover {
+      background-position: -17px -164px;
+    }
+  }
+  .twitter {
+    height: 17px;
+    width: 17px;
+    background-position: -1px -192px;
+    &:hover {
+      background-position: -20px -192px;
+    }
+  }
+  .drupal {
+    height: 17px;
+    width: 17px;
+    background-position: 2px -212px;
+    &:hover {
+      background-position: -19px -212px;
+    }
+  }
 }

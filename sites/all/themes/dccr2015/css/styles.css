@@ -29,6 +29,11 @@ html {
   font-weight: normal;
   text-transform: uppercase; }
 
+.social-links.footer .social-link {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden; }
+
 html {
   font-size: 62.5%;
   color: #3c3c44;
@@ -509,6 +514,58 @@ input[type="submit"] {
     background: #E2E5E4;
     border-radius: 4px; }
 
+.event-menu-footer {
+  margin-bottom: 1em; }
+  @media screen and (min-width: 601px)  {
+    .event-menu-footer {
+      margin-bottom: 3em; } }
+  .event-menu-footer ul {
+    margin: 0;
+    padding: 0; }
+  .event-menu-footer li {
+    list-style-type: none;
+    display: inline;
+    margin-right: 6px; }
+    .event-menu-footer li:after {
+      content: "|";
+      margin-left: 10px; }
+    .event-menu-footer li:last-child:after {
+      content: ""; }
+  .event-menu-footer a:hover {
+    color: #fff; }
+
+.social-links.footer ul {
+  margin: 0;
+  padding: 0; }
+.social-links.footer li {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0;
+  padding: 0; }
+.social-links.footer .social-link {
+  display: block;
+  height: 17px;
+  width: 17px;
+  margin-right: 1em;
+  background-image: url(../images/sprite.png);
+  background-image: url(../images/sprite.svg), none; }
+.social-links.footer .facebook {
+  background-position: 2px -164px; }
+  .social-links.footer .facebook:hover {
+    background-position: -17px -164px; }
+.social-links.footer .twitter {
+  height: 17px;
+  width: 17px;
+  background-position: -1px -192px; }
+  .social-links.footer .twitter:hover {
+    background-position: -20px -192px; }
+.social-links.footer .drupal {
+  height: 17px;
+  width: 17px;
+  background-position: 2px -212px; }
+  .social-links.footer .drupal:hover {
+    background-position: -19px -212px; }
+
 .utility-bar {
   background: #3C3C44;
   padding: 10px;
@@ -577,9 +634,12 @@ input[type="submit"] {
 
 .event-footer {
   background: #3C3C44;
-  padding: 55px 15px;
+  padding: 35px 15px;
   color: #33B78B;
-  text-align: center; }
+  border-bottom: 8px solid #33B78B;
+  overflow: hidden; }
+  .event-footer a {
+    color: #33B78B; }
 
 .event-footer-title {
   color: #fff;
@@ -587,15 +647,28 @@ input[type="submit"] {
   font-size: 16px;
   font-size: 1.6rem; }
 
-.event-footer-description:after {
-  content: '';
-  display: block;
-  border-bottom: solid 1px #8A8A8F;
-  width: 20px;
-  margin: 20px auto 0; }
+.event-footer-description {
+  margin-bottom: 1em; }
 
-.event-footer-contact-email {
-  color: #33B78B; }
+.event-footer-description-contact {
+  margin-bottom: 0.3em; }
+
+.event-footer-description-trademark {
+  color: #5d5d5d;
+  margin-bottom: 0; }
+
+@media screen and (min-width: 601px)  {
+  .event-footer-left, .event-footer-right {
+    float: left; } }
+
+@media screen and (min-width: 601px)  {
+  .event-footer-left {
+    width: 80%; } }
+
+@media screen and (min-width: 601px)  {
+  .event-footer-right {
+    text-align: right;
+    width: 20%; } }
 
 .page-title, #block-dccr-blocks-proposed-sessions-header h2 {
   font-weight: normal;

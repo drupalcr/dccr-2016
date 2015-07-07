@@ -219,9 +219,15 @@ function dccr_blocks_build_footer_block() {
   $block = array();
   $block['subject'] = '';
   $markup = '<div class="event-footer">';
-  $markup .= '<h2 class="event-footer-title">' . t('Contact') . '</h2>';
-  $markup .= '<p class="event-footer-description">' . t('Please contact the organizers if you have any questions') . '</p>';
-  $markup .= '<a class="event-footer-contact-email" href="mailto:camp@drupalcr.org">camp@drupalcr.org</a>';
+  $menu = menu_navigation_links('menu-footer-menu');
+  $markup .= '<div class="event-footer-left">';
+  $markup .= '<div class="event-menu-footer">' . theme('links__menu_main_page', array('links' => $menu)) . '</div>';
+  $markup .= '<div class="event-footer-description"><p class="event-footer-description-contact">' . t('Contact us to !email', array('!email' => l('camp@drupalcr.org', 'mailto:camp@drupalcr', array('external' => TRUE, 'attributes' => array('class' => 'event-footer-contact-email')))));
+  $markup .= '<p class="event-footer-description-trademark">' . t('Drupal and the Drupal logo are registered trademarks  of Dries Buytaert. All rights reserved.') . '</p></div>';
+  $markup .= '</div>';
+  $markup .= '<div class="event-footer-right">';
+  $markup .= drupal_render(dccr_blocks_get_social_block('footer')['content']);
+  $markup .= '</div>';
   $markup .= '</div>';
   $block['content'] = $markup;
   return $block;
