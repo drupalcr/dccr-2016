@@ -1,23 +1,45 @@
 .event-footer {
   background: #3C3C44;
-  padding: 55px 15px;
+  padding: 35px 15px;
   color: $verde-turquesa;
-  text-align: center;
+  border-bottom: 8px solid $verde-turquesa;
+  overflow: hidden;
+  a {
+    color: $verde-turquesa;
+  }
 }
 .event-footer-title {
   color: #fff;
   text-transform: uppercase;
   @include font-size(16);
 }
+
 .event-footer-description {
-  &:after {
-    content: '';
-    display: block;
-    border-bottom: solid 1px #8A8A8F;
-    width: 20px;
-    margin: 20px auto 0;
+  margin-bottom: 1em;
+}
+.event-footer-description-contact {
+  margin-bottom: 0.3em;
+}
+
+.event-footer-description-trademark {
+  color: #5d5d5d;
+  margin-bottom: 0;
+}
+.event-footer-left, .event-footer-right {
+  @include media($tablet) {
+    float: left;
   }
 }
-.event-footer-contact-email {
-  color: $verde-turquesa;
+
+.event-footer-left {
+  @include media($tablet) {
+    width: 80%;
+  }
+}
+
+.event-footer-right {
+  @include media($tablet) {
+    text-align: right;
+    width: 20%;
+  }
 }
