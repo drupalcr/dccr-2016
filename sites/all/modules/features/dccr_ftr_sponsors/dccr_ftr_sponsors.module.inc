@@ -116,10 +116,18 @@ function dccr_ftr_sponsors_get_sponsors_info_block() {
     t('Web Site'),
     t('Or simply give back to the community'),
   );
+  $url = '';
+  global $language;
+  if ($language->language == 'en') {
+    $url = file_create_url('public://sponsors/sponsors.pdf');
+  }
+  elseif ($language->language == 'es') {
+    $url = file_create_url('public://sponsors/patrocinadores.pdf');
+  }
   $button_main_text = t('Become a sponsor');
   $button_secondary_text = t('Information about sponsorships.');
   $link_markup = '<span class="link-main">' . $button_main_text . '</span><span>' . $button_secondary_text . '</span>';
-  $link = l($link_markup, '<front>', array('html' => TRUE));
+  $link = l($link_markup, $url, array('html' => TRUE, 'attributes' => array('target' => '_blank')));
   $content = theme_item_list(array(
     'items' => $places,
     'title' => '',

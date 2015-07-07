@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * @file
+ * Install file for dccr_ftr_sponsors.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function dccr_ftr_sponsors_install() {
+  _dccr_ftr_sponsors_move_sponsors_docs();
+}
+
+/**
+ * Move sponsors files to required location.
+ */
+function dccr_ftr_sponsors_update_7000() {
+  _dccr_ftr_sponsors_move_sponsors_docs();
+}
+
+/**
+ * Helper function for moving sponsors pdf to required location.
+ */
+function _dccr_ftr_sponsors_move_sponsors_docs() {
+  $directory = 'public://sponsors';
+  file_prepare_directory($directory, FILE_CREATE_DIRECTORY);
+  $sponsors = drupal_get_path('module', 'dccr_ftr_sponsors') . '/files/sponsors.pdf';
+  $patrocinadores = drupal_get_path('module', 'dccr_ftr_sponsors') . '/files/patrocinadores.pdf';
+  file_unmanaged_copy($sponsors, 'public://sponsors/sponsors.pdf');
+  file_unmanaged_copy($patrocinadores, 'public://sponsors/patrocinadores.pdf');
+}

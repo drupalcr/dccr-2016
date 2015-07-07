@@ -6,6 +6,7 @@ version = 7.x-1.0
 project = dccr_ftr_landing_pages
 dependencies[] = ctools
 dependencies[] = dccr_ftr_config
+dependencies[] = dccr_ftr_sponsors
 dependencies[] = ds
 dependencies[] = entity
 dependencies[] = features

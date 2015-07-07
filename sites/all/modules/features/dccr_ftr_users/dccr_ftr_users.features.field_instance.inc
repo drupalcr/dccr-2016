@@ -145,6 +145,276 @@ function dccr_ftr_users_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'entityform-dccr_staff_form-field_cellphone_number'
+  $field_instances['entityform-dccr_staff_form-field_cellphone_number'] = array(
+    'bundle' => 'dccr_staff_form',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
+    ),
+    'entity_type' => 'entityform',
+    'field_name' => 'field_cellphone_number',
+    'label' => 'Número de Celular',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'entityform-dccr_staff_form-field_email'
+  $field_instances['entityform-dccr_staff_form-field_email'] = array(
+    'bundle' => 'dccr_staff_form',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'email',
+        'settings' => array(),
+        'type' => 'email_default',
+        'weight' => 2,
+      ),
+    ),
+    'entity_type' => 'entityform',
+    'field_name' => 'field_email',
+    'label' => 'Correo Electrónico',
+    'required' => 1,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'email',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'email_textfield',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'entityform-dccr_staff_form-field_full_name'
+  $field_instances['entityform-dccr_staff_form-field_full_name'] = array(
+    'bundle' => 'dccr_staff_form',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'entityform',
+    'field_name' => 'field_full_name',
+    'label' => 'Nombre Completo',
+    'required' => 1,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance: 'entityform-dccr_staff_form-field_genre'
+  $field_instances['entityform-dccr_staff_form-field_genre'] = array(
+    'bundle' => 'dccr_staff_form',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 5,
+      ),
+    ),
+    'entity_type' => 'entityform',
+    'field_name' => 'field_genre',
+    'label' => 'Género',
+    'required' => 1,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance: 'entityform-dccr_staff_form-field_id_number'
+  $field_instances['entityform-dccr_staff_form-field_id_number'] = array(
+    'bundle' => 'dccr_staff_form',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Ingrese el número de documento de identificación. Para propósitos contables y justificación de gastos.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'entityform',
+    'field_name' => 'field_id_number',
+    'label' => 'Cédula o Identificación',
+    'required' => 1,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'entityform-dccr_staff_form-field_organization'
+  $field_instances['entityform-dccr_staff_form-field_organization'] = array(
+    'bundle' => 'dccr_staff_form',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Anote aquí por ejemplo Empresa, Universidad, Colegio, etc.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 4,
+      ),
+    ),
+    'entity_type' => 'entityform',
+    'field_name' => 'field_organization',
+    'label' => 'Organización a la que representa',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance: 'entityform-dccr_staff_form-field_time_availability'
+  $field_instances['entityform-dccr_staff_form-field_time_availability'] = array(
+    'bundle' => 'dccr_staff_form',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 7,
+      ),
+    ),
+    'entity_type' => 'entityform',
+    'field_name' => 'field_time_availability',
+    'label' => 'Disponibilidad Horaria',
+    'required' => 1,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 7,
+    ),
+  );
+
+  // Exported field_instance: 'entityform-dccr_staff_form-field_tshirt_size'
+  $field_instances['entityform-dccr_staff_form-field_tshirt_size'] = array(
+    'bundle' => 'dccr_staff_form',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 6,
+      ),
+    ),
+    'entity_type' => 'entityform',
+    'field_name' => 'field_tshirt_size',
+    'label' => 'Talla en Camiseta',
+    'required' => 1,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 6,
+    ),
+  );
+
   // Exported field_instance: 'message-dccr_admin_notification_payment_submit_form-field_submission'
   $field_instances['message-dccr_admin_notification_payment_submit_form-field_submission'] = array(
     'bundle' => 'dccr_admin_notification_payment_submit_form',
@@ -685,16 +955,28 @@ function dccr_ftr_users_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('About Me');
+  t('Anote aquí por ejemplo Empresa, Universidad, Colegio, etc.');
   t('Check this box if you are paying for other users');
   t('Company');
+  t('Correo Electrónico');
+  t('Cédula o Identificación');
+  t('Disponibilidad Horaria');
   t('Drupal.Org Username');
   t('Facebook Profile');
+  t('For example, https://www.facebook.com/drupalcostarica');
+  t('For example, https://www.twitter.com/drupalcr');
   t('Full Name');
+  t('Género');
   t('If you are paying your ticket; please don\'t forget to select your own username here.');
+  t('Ingrese el número de documento de identificación. Para propósitos contables y justificación de gastos.');
   t('LinkedIn Profile');
+  t('Nombre Completo');
+  t('Número de Celular');
+  t('Organización a la que representa');
   t('Payment Receipt');
-  t('Please enter the complete url of your profile');
   t('Submission');
+  t('Talla en Camiseta');
+  t('The complete url of LinkedIn');
   t('Twitter Profile');
   t('User');
   t('Users');

@@ -237,5 +237,130 @@ function dccr_ftr_workshop_views_default_views() {
   );
   $export['workshops'] = $view;
 
+  $view = new view();
+  $view->name = 'workshops_attendants';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'users';
+  $view->human_name = 'Workshops Attendants';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Workshops Attendants';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'role';
+  $handler->display->display_options['access']['role'] = array(
+    4 => '4',
+  );
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Aplicar';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Reiniciar';
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '30';
+  $handler->display->display_options['pager']['options']['tags']['first'] = '« primera';
+  $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ anterior';
+  $handler->display->display_options['pager']['options']['tags']['next'] = 'siguiente ›';
+  $handler->display->display_options['pager']['options']['tags']['last'] = 'última »';
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'name' => 'name',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'name' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = 'There is no people registered for this workshop or specified id doesn\'t belong to a workshop.';
+  $handler->display->display_options['empty']['area']['format'] = 'manati_texto_formato';
+  /* Relationship: Flags: User's flaggings */
+  $handler->display->display_options['relationships']['flag_user_content_rel']['id'] = 'flag_user_content_rel';
+  $handler->display->display_options['relationships']['flag_user_content_rel']['table'] = 'users';
+  $handler->display->display_options['relationships']['flag_user_content_rel']['field'] = 'flag_user_content_rel';
+  $handler->display->display_options['relationships']['flag_user_content_rel']['flag'] = 'workshop_registration';
+  /* Campo: Usuario: Nombre */
+  $handler->display->display_options['fields']['name']['id'] = 'name';
+  $handler->display->display_options['fields']['name']['table'] = 'users';
+  $handler->display->display_options['fields']['name']['field'] = 'name';
+  $handler->display->display_options['fields']['name']['label'] = 'Nombre de usuario';
+  $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
+  /* Campo: Campo: Nombre Completo */
+  $handler->display->display_options['fields']['field_full_name']['id'] = 'field_full_name';
+  $handler->display->display_options['fields']['field_full_name']['table'] = 'field_data_field_full_name';
+  $handler->display->display_options['fields']['field_full_name']['field'] = 'field_full_name';
+  $handler->display->display_options['fields']['field_full_name']['label'] = 'Nombre completo';
+  /* Campo: Usuario: Unregister user from workshop */
+  $handler->display->display_options['fields']['dccr_ftr_workshop_unregister_workshop']['id'] = 'dccr_ftr_workshop_unregister_workshop';
+  $handler->display->display_options['fields']['dccr_ftr_workshop_unregister_workshop']['table'] = 'users';
+  $handler->display->display_options['fields']['dccr_ftr_workshop_unregister_workshop']['field'] = 'dccr_ftr_workshop_unregister_workshop';
+  $handler->display->display_options['fields']['dccr_ftr_workshop_unregister_workshop']['label'] = 'Acción';
+  /* Sort criterion: Usuario: Created date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'users';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Contextual filter: Flags: Entity ID */
+  $handler->display->display_options['arguments']['entity_id']['id'] = 'entity_id';
+  $handler->display->display_options['arguments']['entity_id']['table'] = 'flagging';
+  $handler->display->display_options['arguments']['entity_id']['field'] = 'entity_id';
+  $handler->display->display_options['arguments']['entity_id']['relationship'] = 'flag_user_content_rel';
+  $handler->display->display_options['arguments']['entity_id']['default_action'] = 'empty';
+  $handler->display->display_options['arguments']['entity_id']['exception']['title'] = 'Todo';
+  $handler->display->display_options['arguments']['entity_id']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['entity_id']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['entity_id']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['entity_id']['summary_options']['items_per_page'] = '25';
+  /* Filter criterion: Usuario: Activo */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'users';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = '1';
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+
+  /* Display: Page */
+  $handler = $view->new_display('page', 'Page', 'page');
+  $handler->display->display_options['path'] = 'workshops-attendants';
+  $translatables['workshops_attendants'] = array(
+    t('Master'),
+    t('Workshops Attendants'),
+    t('more'),
+    t('Aplicar'),
+    t('Reiniciar'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Items per page'),
+    t('- All -'),
+    t('Offset'),
+    t('« primera'),
+    t('‹ anterior'),
+    t('siguiente ›'),
+    t('última »'),
+    t('There is no people registered for this workshop or specified id doesn\'t belong to a workshop.'),
+    t('user flagged content'),
+    t('Nombre de usuario'),
+    t('Nombre completo'),
+    t('Acción'),
+    t('Todo'),
+    t('Page'),
+  );
+  $export['workshops_attendants'] = $view;
+
   return $export;
 }

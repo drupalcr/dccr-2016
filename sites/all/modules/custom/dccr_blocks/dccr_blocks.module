@@ -7,9 +7,9 @@
 
 // Defining constants.
 // Thursday, July 30th.
-const DCCR_BLOCKS_FIRST_DAY = 1438264800;
+const DCCR_BLOCKS_FIRST_DAY = 1438214400;
 // Friday, July 31st.
-const DCCR_BLOCKS_SECOND_DAY = 1438351200;
+const DCCR_BLOCKS_SECOND_DAY = 1438300800;
 // Saturday, August 1st.
 const DCCR_BLOCKS_POST_CAMP = 1438437600;
 /**
@@ -273,8 +273,8 @@ function dccr_blocks_important_dates_block() {
       'text' => t('Early Bird Inscription Finishes'),
     ),
     array(
-      // 07-16-15.
-      'date' => 1437004800,
+      // 07-12-15.
+      'date' => 1436702400,
       'text' => t('Sessions Proposals Finishes'),
     ),
     array(

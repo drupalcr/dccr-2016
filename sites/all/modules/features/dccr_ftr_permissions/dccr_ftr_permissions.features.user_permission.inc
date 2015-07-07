@@ -187,6 +187,7 @@ function dccr_ftr_permissions_user_default_permissions() {
     'name' => 'administer nodes',
     'roles' => array(
       'administrator' => 'administrator',
+      'drupal_administrator' => 'drupal_administrator',
     ),
     'module' => 'node',
   );
@@ -348,6 +349,7 @@ function dccr_ftr_permissions_user_default_permissions() {
     'name' => 'delete any entityform',
     'roles' => array(
       'administrator' => 'administrator',
+      'entityforms_manager' => 'entityforms_manager',
     ),
     'module' => 'entityform',
   );
@@ -424,6 +426,7 @@ function dccr_ftr_permissions_user_default_permissions() {
     'name' => 'edit any entityform',
     'roles' => array(
       'administrator' => 'administrator',
+      'entityforms_manager' => 'entityforms_manager',
     ),
     'module' => 'entityform',
   );
@@ -596,6 +599,7 @@ function dccr_ftr_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'drupal_administrator' => 'drupal_administrator',
+      'entityforms_manager' => 'entityforms_manager',
     ),
     'module' => 'entityform',
   );

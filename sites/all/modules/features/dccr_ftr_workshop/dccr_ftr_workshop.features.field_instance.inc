@@ -265,7 +265,7 @@ function dccr_ftr_workshop_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 8,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -341,7 +341,7 @@ function dccr_ftr_workshop_field_default_field_instances() {
     'required' => 1,
     'settings' => array(
       'entity_translation_sync' => FALSE,
-      'max' => 15,
+      'max' => 30,
       'min' => '',
       'prefix' => '',
       'suffix' => '',
