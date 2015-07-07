@@ -268,8 +268,8 @@ function dccr_blocks_important_dates_block() {
       'text' => t('Early Bird Inscription Finishes'),
     ),
     array(
-      // 07-16-15.
-      'date' => 1437004800,
+      // 07-12-15.
+      'date' => 1436659200,
       'text' => t('Sessions Proposals Finishes'),
     ),
     array(
