@@ -269,12 +269,12 @@ function dccr_blocks_important_dates_block() {
     ),
     array(
       // 07-12-15.
-      'date' => 1436659200,
+      'date' => 1436680800,
       'text' => t('Sessions Proposals Finishes'),
     ),
     array(
-      // 07-25-15.
-      'date' => 1437782400,
+      // 07-12-15.
+      'date' => 1436659200,
       'text' => t('Regular Bird Inscription Finishes'),
     ),
     array(
