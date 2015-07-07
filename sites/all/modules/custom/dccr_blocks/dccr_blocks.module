@@ -269,7 +269,7 @@ function dccr_blocks_important_dates_block() {
     ),
     array(
       // 07-12-15.
-      'date' => 1436680800,
+      'date' => 1436702400,
       'text' => t('Sessions Proposals Finishes'),
     ),
     array(
