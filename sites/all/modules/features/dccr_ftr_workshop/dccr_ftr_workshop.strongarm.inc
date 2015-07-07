@@ -205,7 +205,7 @@ function dccr_ftr_workshop_strongarm() {
         ),
         'language' => array(
           'default' => array(
-            'weight' => '2',
+            'weight' => '12',
             'visible' => FALSE,
           ),
           'teaser' => array(
@@ -215,12 +215,18 @@ function dccr_ftr_workshop_strongarm() {
         ),
         'extra_field_workshop_register' => array(
           'default' => array(
-            'weight' => '0',
+            'weight' => '1',
             'visible' => TRUE,
           ),
           'teaser' => array(
             'weight' => '12',
             'visible' => FALSE,
+          ),
+        ),
+        'extra_field_workshop_attendants' => array(
+          'default' => array(
+            'weight' => '0',
+            'visible' => TRUE,
           ),
         ),
       ),

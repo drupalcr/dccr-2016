@@ -62,7 +62,7 @@ function dccr_ftr_keynote_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'image',
+        'module' => 'dccr_ftr_sponsors',
         'settings' => array(
           'image_link' => '',
           'image_style' => 'thumbnail',
@@ -72,7 +72,7 @@ function dccr_ftr_keynote_field_default_field_instances() {
       ),
       'teaser' => array(
         'label' => 'hidden',
-        'module' => 'image',
+        'module' => 'dccr_ftr_sponsors',
         'settings' => array(
           'image_link' => '',
           'image_style' => 'keynote_frontpage',

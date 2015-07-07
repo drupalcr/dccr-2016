@@ -88,6 +88,7 @@ function message_notify_entity_info_alter(&$entity_info) {
 function message_notify_mail($key, &$message, $params) {
   $message['subject'] = $params['message_notify_email_subject'];
   $message['body'][] = $params['message_notify_email_body'];
+  $message['headers']['Content-Type'] = 'text/html; charset=UTF-8';
 }
 
 /**
