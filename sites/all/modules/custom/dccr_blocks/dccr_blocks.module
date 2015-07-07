@@ -222,7 +222,8 @@ function dccr_blocks_build_footer_block() {
   $menu = menu_navigation_links('menu-footer-menu');
   $markup .= '<div class="event-footer-left">';
   $markup .= '<div class="event-menu-footer">' . theme('links__menu_main_page', array('links' => $menu)) . '</div>';
-  $markup .= '<p class="event-footer-description">' . t('Contact us to !email | Drupal and the Drupal logo are registered trademarks  of Dries Buytaert. All rights reserved.', array('!email' => l('camp@drupalcr.org', 'mailto:camp@drupalcr', array('external' => TRUE, 'attributes' => array('class' => 'event-footer-contact-email'))))) . '</p>';
+  $markup .= '<div class="event-footer-description"><p class="event-footer-description-contact">' . t('Contact us to !email', array('!email' => l('camp@drupalcr.org', 'mailto:camp@drupalcr', array('external' => TRUE, 'attributes' => array('class' => 'event-footer-contact-email')))));
+  $markup .= '<p class="event-footer-description-trademark">' . t('Drupal and the Drupal logo are registered trademarks  of Dries Buytaert. All rights reserved.') . '</p></div>';
   $markup .= '</div>';
   $markup .= '<div class="event-footer-right">';
   $markup .= drupal_render(dccr_blocks_get_social_block('footer')['content']);
