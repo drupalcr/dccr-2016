@@ -10,6 +10,190 @@
 function dccr_ftr_config_menu_default_menu_links() {
   $menu_links = array();
 
+  // Exported menu link: menu-footer-menu_agenda:schedule
+  $menu_links['menu-footer-menu_agenda:schedule'] = array(
+    'menu_name' => 'menu-footer-menu',
+    'link_path' => 'schedule',
+    'router_path' => 'schedule',
+    'link_title' => 'Agenda',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'menu-footer-menu_agenda:schedule',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -49,
+    'customized' => 1,
+    'language' => 'es',
+    'menu_links_customized' => 1,
+  );
+  // Exported menu link: menu-footer-menu_be-a-sponsor:sponsors
+  $menu_links['menu-footer-menu_be-a-sponsor:sponsors'] = array(
+    'menu_name' => 'menu-footer-menu',
+    'link_path' => 'sponsors',
+    'router_path' => 'sponsors',
+    'link_title' => 'Be a Sponsor',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'menu-footer-menu_be-a-sponsor:sponsors',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -44,
+    'customized' => 1,
+    'language' => 'en',
+    'menu_links_customized' => 1,
+  );
+  // Exported menu link: menu-footer-menu_register:register
+  $menu_links['menu-footer-menu_register:register'] = array(
+    'menu_name' => 'menu-footer-menu',
+    'link_path' => 'register',
+    'router_path' => 'register',
+    'link_title' => 'Register',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'menu-footer-menu_register:register',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -46,
+    'customized' => 1,
+    'language' => 'en',
+    'menu_links_customized' => 1,
+  );
+  // Exported menu link: menu-footer-menu_registro:register
+  $menu_links['menu-footer-menu_registro:register'] = array(
+    'menu_name' => 'menu-footer-menu',
+    'link_path' => 'register',
+    'router_path' => 'register',
+    'link_title' => 'Registro',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'menu-footer-menu_registro:register',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -45,
+    'customized' => 1,
+    'language' => 'es',
+    'menu_links_customized' => 1,
+  );
+  // Exported menu link: menu-footer-menu_s-un-patrocinador:sponsors
+  $menu_links['menu-footer-menu_s-un-patrocinador:sponsors'] = array(
+    'menu_name' => 'menu-footer-menu',
+    'link_path' => 'sponsors',
+    'router_path' => 'sponsors',
+    'link_title' => 'Sé un Patrocinador',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'menu-footer-menu_s-un-patrocinador:sponsors',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -43,
+    'customized' => 1,
+    'language' => 'es',
+    'menu_links_customized' => 1,
+  );
+  // Exported menu link: menu-footer-menu_schedule:schedule
+  $menu_links['menu-footer-menu_schedule:schedule'] = array(
+    'menu_name' => 'menu-footer-menu',
+    'link_path' => 'schedule',
+    'router_path' => 'schedule',
+    'link_title' => 'Schedule',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'menu-footer-menu_schedule:schedule',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -50,
+    'customized' => 1,
+    'language' => 'en',
+    'menu_links_customized' => 1,
+  );
+  // Exported menu link: menu-footer-menu_sede:venue
+  $menu_links['menu-footer-menu_sede:venue'] = array(
+    'menu_name' => 'menu-footer-menu',
+    'link_path' => 'venue',
+    'router_path' => 'venue',
+    'link_title' => 'Sede',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'menu-footer-menu_sede:venue',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -47,
+    'customized' => 1,
+    'language' => 'es',
+    'menu_links_customized' => 1,
+  );
+  // Exported menu link: menu-footer-menu_venue:venue
+  $menu_links['menu-footer-menu_venue:venue'] = array(
+    'menu_name' => 'menu-footer-menu',
+    'link_path' => 'venue',
+    'router_path' => 'venue',
+    'link_title' => 'Venue',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'menu-footer-menu_venue:venue',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -48,
+    'customized' => 1,
+    'language' => 'en',
+    'menu_links_customized' => 1,
+  );
   // Exported menu link: menu-left-menu_agenda:schedule
   $menu_links['menu-left-menu_agenda:schedule'] = array(
     'menu_name' => 'menu-left-menu',
@@ -427,6 +611,7 @@ function dccr_ftr_config_menu_default_menu_links() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Agenda');
+  t('Be a Sponsor');
   t('Charlas Propuestas');
   t('Conference');
   t('Conferencia');
@@ -441,6 +626,7 @@ function dccr_ftr_config_menu_default_menu_links() {
   t('Schedule');
   t('Sede');
   t('Sponsors');
+  t('Sé un Patrocinador');
   t('Talleres');
   t('Venue');
   t('Workshops');

@@ -10,6 +10,14 @@
 function dccr_ftr_config_menu_default_menu_custom() {
   $menus = array();
 
+  // Exported menu: menu-footer-menu.
+  $menus['menu-footer-menu'] = array(
+    'menu_name' => 'menu-footer-menu',
+    'title' => 'Footer Menu',
+    'description' => '',
+    'language' => 'und',
+    'i18n_mode' => 5,
+  );
   // Exported menu: menu-left-menu.
   $menus['menu-left-menu'] = array(
     'menu_name' => 'menu-left-menu',
@@ -28,6 +36,7 @@ function dccr_ftr_config_menu_default_menu_custom() {
   );
   // Translatables
   // Included for use with string extractors like potx.
+  t('Footer Menu');
   t('Left Menu');
   t('Left part of the main menu');
   t('Right Menu');
