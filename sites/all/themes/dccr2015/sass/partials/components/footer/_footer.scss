@@ -1,8 +1,16 @@
-.event-footer {
+footer.footer {
   background: #3C3C44;
-  padding: 35px 15px;
-  color: $verde-turquesa;
   border-bottom: 8px solid $verde-turquesa;
+}
+
+.footer-content {
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+.event-footer {
+  padding: 35px 20px;
+  color: $verde-turquesa;
   overflow: hidden;
   a {
     color: $verde-turquesa;

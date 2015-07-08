@@ -562,7 +562,8 @@ input[type="submit"] {
 .social-links.footer .drupal {
   height: 17px;
   width: 17px;
-  background-position: 2px -212px; }
+  background-position: 2px -212px;
+  margin-right: 0; }
   .social-links.footer .drupal:hover {
     background-position: -19px -212px; }
 
@@ -632,11 +633,17 @@ input[type="submit"] {
     font-size: 14px;
     font-size: 1.4rem; }
 
-.event-footer {
+footer.footer {
   background: #3C3C44;
-  padding: 35px 15px;
+  border-bottom: 8px solid #33B78B; }
+
+.footer-content {
+  max-width: 1020px;
+  margin: 0 auto; }
+
+.event-footer {
+  padding: 35px 20px;
   color: #33B78B;
-  border-bottom: 8px solid #33B78B;
   overflow: hidden; }
   .event-footer a {
     color: #33B78B; }
