@@ -402,7 +402,7 @@ function dccr_blocks_register_image_link_block() {
       $button_secondary_text = t('$35 Regular Bird');
     }
     $link_markup = '<span class="link-main">' . $button_main_text . '</span><span>' . $button_secondary_text . '</span>';
-    $link = l($link_markup, '<front>', array('html' => TRUE));
+    $link = l($link_markup, 'register', array('html' => TRUE));
     $markup .= $link;
   }
 
