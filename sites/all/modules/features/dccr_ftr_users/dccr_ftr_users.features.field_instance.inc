@@ -887,6 +887,49 @@ function dccr_ftr_users_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'user-user-field_tshirt_size'
+  $field_instances['user-user-field_tshirt_size'] = array(
+    'bundle' => 'user',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'user',
+    'field_name' => 'field_tshirt_size',
+    'label' => 'T-shirt Size',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => 0,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 10,
+    ),
+  );
+
   // Exported field_instance: 'user-user-field_twitter_profile'
   $field_instances['user-user-field_twitter_profile'] = array(
     'bundle' => 'user',
@@ -977,6 +1020,7 @@ function dccr_ftr_users_field_default_field_instances() {
   t('Submission');
   t('Talla en Camiseta');
   t('The complete url of LinkedIn');
+  t('T-shirt Size');
   t('Twitter Profile');
   t('User');
   t('Users');
