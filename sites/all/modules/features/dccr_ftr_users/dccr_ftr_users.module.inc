@@ -24,6 +24,9 @@ function dccr_ftr_users_form_alter(&$form, &$form_state, $form_id) {
       ),
     );
   }
+  elseif ($form_id === 'user_profile_form') {
+    $form['field_tshirt_size']['#weight'] = -11;
+  }
 }
 
 /**
