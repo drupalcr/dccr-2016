@@ -316,6 +316,38 @@ function dccr_ftr_users_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'entityform-dccr_staff_form-field_member_type'
+  $field_instances['entityform-dccr_staff_form-field_member_type'] = array(
+    'bundle' => 'dccr_staff_form',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 9,
+      ),
+    ),
+    'entity_type' => 'entityform',
+    'field_name' => 'field_member_type',
+    'label' => 'Tipo',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 8,
+    ),
+  );
+
   // Exported field_instance: 'entityform-dccr_staff_form-field_organization'
   $field_instances['entityform-dccr_staff_form-field_organization'] = array(
     'bundle' => 'dccr_staff_form',
@@ -1018,9 +1050,10 @@ function dccr_ftr_users_field_default_field_instances() {
   t('Organización a la que representa');
   t('Payment Receipt');
   t('Submission');
+  t('T-shirt Size');
   t('Talla en Camiseta');
   t('The complete url of LinkedIn');
-  t('T-shirt Size');
+  t('Tipo');
   t('Twitter Profile');
   t('User');
   t('Users');
