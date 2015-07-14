@@ -42,6 +42,7 @@ function dccr_ftr_config_default_search_api_index() {
         "field_availability" : { "type" : "integer" },
         "field_level" : { "type" : "integer" },
         "field_location" : { "type" : "integer", "entity_type" : "taxonomy_term" },
+        "field_session_approved" : { "type" : "boolean" },
         "field_speaker_title" : { "type" : "text" },
         "field_speakers:name" : { "type" : "list\\u003Ctext\\u003E" },
         "field_tags" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
@@ -53,7 +54,7 @@ function dccr_ftr_config_default_search_api_index() {
         "search_api_language" : { "type" : "string" },
         "source" : { "type" : "integer", "entity_type" : "node" },
         "status" : { "type" : "integer" },
-        "title" : { "type" : "text" },
+        "title" : { "type" : "string" },
         "type" : { "type" : "string" }
       }
     },
