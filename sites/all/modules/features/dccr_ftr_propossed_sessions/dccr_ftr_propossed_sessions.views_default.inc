@@ -356,14 +356,15 @@ function dccr_ftr_propossed_sessions_views_default_views() {
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['element_wrapper_type'] = 'div';
   $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
-  /* Field: Speakers: Name (indexed) */
-  $handler->display->display_options['fields']['field_speakers_name']['id'] = 'field_speakers_name';
-  $handler->display->display_options['fields']['field_speakers_name']['table'] = 'search_api_index_nodes_index';
-  $handler->display->display_options['fields']['field_speakers_name']['field'] = 'field_speakers_name';
-  $handler->display->display_options['fields']['field_speakers_name']['label'] = '';
-  $handler->display->display_options['fields']['field_speakers_name']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_speakers_name']['hide_empty'] = TRUE;
-  $handler->display->display_options['fields']['field_speakers_name']['link_to_entity'] = 1;
+  /* Field: Indexed Node: Speakers */
+  $handler->display->display_options['fields']['field_speakers']['id'] = 'field_speakers';
+  $handler->display->display_options['fields']['field_speakers']['table'] = 'search_api_index_nodes_index';
+  $handler->display->display_options['fields']['field_speakers']['field'] = 'field_speakers';
+  $handler->display->display_options['fields']['field_speakers']['label'] = '';
+  $handler->display->display_options['fields']['field_speakers']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_speakers']['link_to_entity'] = 1;
+  $handler->display->display_options['fields']['field_speakers']['view_mode'] = 'full';
+  $handler->display->display_options['fields']['field_speakers']['bypass_access'] = 0;
   /* Field: Indexed Node: Room */
   $handler->display->display_options['fields']['field_location']['id'] = 'field_location';
   $handler->display->display_options['fields']['field_location']['table'] = 'search_api_index_nodes_index';
@@ -613,14 +614,15 @@ function dccr_ftr_propossed_sessions_views_default_views() {
   $handler->display->display_options['fields']['title']['element_type'] = 'h2';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
-  /* Field: Speakers: Name (indexed) */
-  $handler->display->display_options['fields']['field_speakers_name']['id'] = 'field_speakers_name';
-  $handler->display->display_options['fields']['field_speakers_name']['table'] = 'search_api_index_nodes_index';
-  $handler->display->display_options['fields']['field_speakers_name']['field'] = 'field_speakers_name';
-  $handler->display->display_options['fields']['field_speakers_name']['label'] = '';
-  $handler->display->display_options['fields']['field_speakers_name']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_speakers_name']['hide_empty'] = TRUE;
-  $handler->display->display_options['fields']['field_speakers_name']['link_to_entity'] = 1;
+  /* Field: Indexed Node: Speakers */
+  $handler->display->display_options['fields']['field_speakers']['id'] = 'field_speakers';
+  $handler->display->display_options['fields']['field_speakers']['table'] = 'search_api_index_nodes_index';
+  $handler->display->display_options['fields']['field_speakers']['field'] = 'field_speakers';
+  $handler->display->display_options['fields']['field_speakers']['label'] = '';
+  $handler->display->display_options['fields']['field_speakers']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_speakers']['link_to_entity'] = 1;
+  $handler->display->display_options['fields']['field_speakers']['view_mode'] = 'full';
+  $handler->display->display_options['fields']['field_speakers']['bypass_access'] = 0;
   /* Field: Indexed Node: Room */
   $handler->display->display_options['fields']['field_location']['id'] = 'field_location';
   $handler->display->display_options['fields']['field_location']['table'] = 'search_api_index_nodes_index';
