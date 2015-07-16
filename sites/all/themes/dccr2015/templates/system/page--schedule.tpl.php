@@ -1,3 +1,9 @@
+<?php
+/**
+ * @file
+ * Template for /schedule path
+ */
+?>
 <header class="main-header" role="banner">
   <?php if ($page['utility_bar']): ?>
     <div class="utility-bar">
@@ -17,13 +23,13 @@
               <h2 class="logo-site-name">
                 <a class="logo-site-name-link" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
               </h2>
-              
+
               <?php else: /* Use h1 when the content title is empty */ ?>
                 <h1 class="logo-site-name">
                   <a class="logo-site-name-link" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
                 </h1>
               <?php endif; ?>
-              
+
               <h3 class="event-logo-date"><?php print t('July 29 - 31'); ?></h3>
               <span class="event-logo-location">Universidad de Costa Rica</span>
             </div>
@@ -45,7 +51,7 @@
   <section class="above-content">
     <?php print render($page['above_content']); ?>
   </section>
-<?php endif; // end Above Content ?>
+<?php endif; ?> <!-- // End Above Content. -->
 
 <?php if ($page['highlighted']): ?>
   <?php print render($page['highlighted']); ?>
@@ -64,7 +70,7 @@
     </div>
     <?php endif; ?>
       <a id="main-content"></a>
-      
+
       <div class="main" role="main">
         <?php print render($title_prefix); ?>
         <?php if ($title): ?><h1 class="page-title"><?php print $title; ?></h1><?php endif; ?>
@@ -82,9 +88,9 @@
             <?php print render($action_links); ?>
           </ul>
         <?php endif; ?>
-        
+
         <div class="schedule-content-container">
-          <a class="schedule-workshops-link" href="/workshops"><?php print t('Workshops'); ?></a>
+          <?php print l(t('Workshops'), 'workshops', array('attributes' => array('class' => array('schedule-workshops-link')))); ?>
           <ul class='content-tabs'>
             <li class="content-tab-item"><a class="content-tab-link" href='#tab1'><?php print t('July 30'); ?></a></li>
             <li class="content-tab-item"><a class="content-tab-link" href='#tab2'><?php print t('July 31'); ?></a></li>
@@ -102,8 +108,6 @@
           </div>
         </div>
 
-        <?php // print render($page['content']); ?>
-
       </div>
 
     <?php if ($page['sidebar_second']): ?>
@@ -118,7 +122,7 @@
   <section class="below-content">
     <?php print render($page['below_content']); ?>
   </section>
-<?php endif; // end Below Content ?>
+<?php endif; ?> <!-- End Below Content. -->
 
 <footer class="footer" role="contentinfo">
   <div class="footer-content">
@@ -130,4 +134,4 @@
 <aside class="closure">
   <?php print render($page['closure']); ?>
 </aside>
-<?php endif; // end closure ?>
+<?php endif; ?> <!-- End closure. -->
