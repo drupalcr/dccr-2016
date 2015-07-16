@@ -62,7 +62,7 @@ function dccr_ftr_global_activities_field_default_field_instances() {
     'bundle' => 'global_activity',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Add "keynote" if you want this activity to be a keynote',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -87,7 +87,7 @@ function dccr_ftr_global_activities_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_subtitle',
-    'label' => 'Subtitle',
+    'label' => 'Type',
     'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -167,9 +167,10 @@ function dccr_ftr_global_activities_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Add "keynote" if you want this activity to be a keynote');
   t('Place');
-  t('Subtitle');
   t('Time');
+  t('Type');
 
   return $field_instances;
 }

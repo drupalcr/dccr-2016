@@ -326,18 +326,35 @@ function dccr_ftr_propossed_sessions_views_default_views() {
       'rendered_strip' => 0,
     ),
   );
+  $handler->display->display_options['style_options']['row_class'] = '[type] [field_subtitle]';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Indexed Node: Content type */
+  $handler->display->display_options['fields']['type']['id'] = 'type';
+  $handler->display->display_options['fields']['type']['table'] = 'search_api_index_nodes_index';
+  $handler->display->display_options['fields']['type']['field'] = 'type';
+  $handler->display->display_options['fields']['type']['label'] = '';
+  $handler->display->display_options['fields']['type']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['type']['alter']['text'] = '<div class="[type]"></div>';
+  $handler->display->display_options['fields']['type']['element_type'] = '0';
+  $handler->display->display_options['fields']['type']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['type']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['type']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['type']['link_to_entity'] = 0;
+  $handler->display->display_options['fields']['type']['format_name'] = 0;
   /* Field: Indexed Node: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'search_api_index_nodes_index';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['text'] = '<h2 class="views-field-title [type]">[title]</h2>';
+  $handler->display->display_options['fields']['title']['element_type'] = 'h2';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_wrapper_type'] = 'div';
   $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
   /* Field: Speakers: Name (indexed) */
   $handler->display->display_options['fields']['field_speakers_name']['id'] = 'field_speakers_name';
@@ -345,13 +362,23 @@ function dccr_ftr_propossed_sessions_views_default_views() {
   $handler->display->display_options['fields']['field_speakers_name']['field'] = 'field_speakers_name';
   $handler->display->display_options['fields']['field_speakers_name']['label'] = '';
   $handler->display->display_options['fields']['field_speakers_name']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_speakers_name']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_speakers_name']['link_to_entity'] = 1;
+  /* Field: Indexed Node: Room */
+  $handler->display->display_options['fields']['field_location']['id'] = 'field_location';
+  $handler->display->display_options['fields']['field_location']['table'] = 'search_api_index_nodes_index';
+  $handler->display->display_options['fields']['field_location']['field'] = 'field_location';
+  $handler->display->display_options['fields']['field_location']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_location']['link_to_entity'] = 0;
+  $handler->display->display_options['fields']['field_location']['view_mode'] = 'full';
+  $handler->display->display_options['fields']['field_location']['bypass_access'] = 0;
   /* Field: Indexed Node: Track */
   $handler->display->display_options['fields']['field_track']['id'] = 'field_track';
   $handler->display->display_options['fields']['field_track']['table'] = 'search_api_index_nodes_index';
   $handler->display->display_options['fields']['field_track']['field'] = 'field_track';
   $handler->display->display_options['fields']['field_track']['label'] = '';
   $handler->display->display_options['fields']['field_track']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_track']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_track']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_track']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_track']['bypass_access'] = 0;
@@ -361,14 +388,7 @@ function dccr_ftr_propossed_sessions_views_default_views() {
   $handler->display->display_options['fields']['field_level']['field'] = 'field_level';
   $handler->display->display_options['fields']['field_level']['label'] = '';
   $handler->display->display_options['fields']['field_level']['element_label_colon'] = FALSE;
-  /* Field: Indexed Node: Room */
-  $handler->display->display_options['fields']['field_location']['id'] = 'field_location';
-  $handler->display->display_options['fields']['field_location']['table'] = 'search_api_index_nodes_index';
-  $handler->display->display_options['fields']['field_location']['field'] = 'field_location';
-  $handler->display->display_options['fields']['field_location']['hide_empty'] = TRUE;
-  $handler->display->display_options['fields']['field_location']['link_to_entity'] = 0;
-  $handler->display->display_options['fields']['field_location']['view_mode'] = 'full';
-  $handler->display->display_options['fields']['field_location']['bypass_access'] = 0;
+  $handler->display->display_options['fields']['field_level']['hide_empty'] = TRUE;
   /* Field: Time: Start date (indexed) */
   $handler->display->display_options['fields']['field_time_value']['id'] = 'field_time_value';
   $handler->display->display_options['fields']['field_time_value']['table'] = 'search_api_index_nodes_index';
@@ -380,14 +400,17 @@ function dccr_ftr_propossed_sessions_views_default_views() {
   $handler->display->display_options['fields']['field_time_value']['custom_date_format'] = 'g:i a';
   $handler->display->display_options['fields']['field_time_value']['second_date_format'] = 'hour_minute';
   $handler->display->display_options['fields']['field_time_value']['link_to_entity'] = 0;
-  /* Campo: Indexed Nodo: Subtitle */
+  /* Field: Indexed Node: Type */
   $handler->display->display_options['fields']['field_subtitle']['id'] = 'field_subtitle';
   $handler->display->display_options['fields']['field_subtitle']['table'] = 'search_api_index_nodes_index';
   $handler->display->display_options['fields']['field_subtitle']['field'] = 'field_subtitle';
   $handler->display->display_options['fields']['field_subtitle']['label'] = '';
+  $handler->display->display_options['fields']['field_subtitle']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_subtitle']['element_type'] = '0';
   $handler->display->display_options['fields']['field_subtitle']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_subtitle']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_subtitle']['hide_empty'] = TRUE;
-  /* Campo: Indexed Nodo: Place */
+  /* Field: Indexed Node: Place */
   $handler->display->display_options['fields']['field_place']['id'] = 'field_place';
   $handler->display->display_options['fields']['field_place']['table'] = 'search_api_index_nodes_index';
   $handler->display->display_options['fields']['field_place']['field'] = 'field_place';
@@ -406,7 +429,7 @@ function dccr_ftr_propossed_sessions_views_default_views() {
     2 => 'AND',
   );
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Indexed Nodo: Tipo de contenido */
+  /* Filter criterion: Indexed Node: Content type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_nodes_index';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -439,7 +462,7 @@ function dccr_ftr_propossed_sessions_views_default_views() {
     4 => 0,
   );
   $handler->display->display_options['filters']['field_track']['expose']['reduce'] = 0;
-  /* Filter criterion: Indexed Nodo: Approved */
+  /* Filter criterion: Indexed Node: Approved */
   $handler->display->display_options['filters']['field_session_approved']['id'] = 'field_session_approved';
   $handler->display->display_options['filters']['field_session_approved']['table'] = 'search_api_index_nodes_index';
   $handler->display->display_options['filters']['field_session_approved']['field'] = 'field_session_approved';
@@ -455,7 +478,7 @@ function dccr_ftr_propossed_sessions_views_default_views() {
   $handler->display->display_options['filters']['field_time_value']['value'] = '2015-07-31';
   $handler->display->display_options['filters']['field_time_value']['group'] = 1;
   $handler->display->display_options['filters']['field_time_value']['widget_type'] = 'date_popup';
-  /* Filter criterion: Indexed Nodo: Tipo de contenido */
+  /* Filter criterion: Indexed Node: Content type */
   $handler->display->display_options['filters']['type_1']['id'] = 'type_1';
   $handler->display->display_options['filters']['type_1']['table'] = 'search_api_index_nodes_index';
   $handler->display->display_options['filters']['type_1']['field'] = 'type';
@@ -471,7 +494,7 @@ function dccr_ftr_propossed_sessions_views_default_views() {
   $handler->display->display_options['filters']['field_time_value_1']['value'] = '2015-07-31';
   $handler->display->display_options['filters']['field_time_value_1']['group'] = 2;
   $handler->display->display_options['filters']['field_time_value_1']['widget_type'] = 'date_popup';
-  /* Filter criterion: Indexed Nodo: Item language */
+  /* Filter criterion: Indexed Node: Item language */
   $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
   $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_nodes_index';
   $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
@@ -575,6 +598,7 @@ function dccr_ftr_propossed_sessions_views_default_views() {
       'rendered_strip' => 0,
     ),
   );
+  $handler->display->display_options['style_options']['row_class'] = '[type] [field_subtitle]';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
@@ -586,6 +610,7 @@ function dccr_ftr_propossed_sessions_views_default_views() {
   $handler->display->display_options['fields']['title']['table'] = 'search_api_index_nodes_index';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['element_type'] = 'h2';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
   /* Field: Speakers: Name (indexed) */
@@ -594,13 +619,23 @@ function dccr_ftr_propossed_sessions_views_default_views() {
   $handler->display->display_options['fields']['field_speakers_name']['field'] = 'field_speakers_name';
   $handler->display->display_options['fields']['field_speakers_name']['label'] = '';
   $handler->display->display_options['fields']['field_speakers_name']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_speakers_name']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_speakers_name']['link_to_entity'] = 1;
+  /* Field: Indexed Node: Room */
+  $handler->display->display_options['fields']['field_location']['id'] = 'field_location';
+  $handler->display->display_options['fields']['field_location']['table'] = 'search_api_index_nodes_index';
+  $handler->display->display_options['fields']['field_location']['field'] = 'field_location';
+  $handler->display->display_options['fields']['field_location']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_location']['link_to_entity'] = 0;
+  $handler->display->display_options['fields']['field_location']['view_mode'] = 'full';
+  $handler->display->display_options['fields']['field_location']['bypass_access'] = 0;
   /* Field: Indexed Node: Track */
   $handler->display->display_options['fields']['field_track']['id'] = 'field_track';
   $handler->display->display_options['fields']['field_track']['table'] = 'search_api_index_nodes_index';
   $handler->display->display_options['fields']['field_track']['field'] = 'field_track';
   $handler->display->display_options['fields']['field_track']['label'] = '';
   $handler->display->display_options['fields']['field_track']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_track']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_track']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_track']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_track']['bypass_access'] = 0;
@@ -610,14 +645,7 @@ function dccr_ftr_propossed_sessions_views_default_views() {
   $handler->display->display_options['fields']['field_level']['field'] = 'field_level';
   $handler->display->display_options['fields']['field_level']['label'] = '';
   $handler->display->display_options['fields']['field_level']['element_label_colon'] = FALSE;
-  /* Field: Indexed Node: Room */
-  $handler->display->display_options['fields']['field_location']['id'] = 'field_location';
-  $handler->display->display_options['fields']['field_location']['table'] = 'search_api_index_nodes_index';
-  $handler->display->display_options['fields']['field_location']['field'] = 'field_location';
-  $handler->display->display_options['fields']['field_location']['hide_empty'] = TRUE;
-  $handler->display->display_options['fields']['field_location']['link_to_entity'] = 0;
-  $handler->display->display_options['fields']['field_location']['view_mode'] = 'full';
-  $handler->display->display_options['fields']['field_location']['bypass_access'] = 0;
+  $handler->display->display_options['fields']['field_level']['hide_empty'] = TRUE;
   /* Field: Time: Start date (indexed) */
   $handler->display->display_options['fields']['field_time_value']['id'] = 'field_time_value';
   $handler->display->display_options['fields']['field_time_value']['table'] = 'search_api_index_nodes_index';
@@ -629,20 +657,33 @@ function dccr_ftr_propossed_sessions_views_default_views() {
   $handler->display->display_options['fields']['field_time_value']['custom_date_format'] = 'g:i a';
   $handler->display->display_options['fields']['field_time_value']['second_date_format'] = 'hour_minute';
   $handler->display->display_options['fields']['field_time_value']['link_to_entity'] = 0;
-  /* Campo: Indexed Nodo: Subtitle */
+  /* Field: Indexed Node: Type */
   $handler->display->display_options['fields']['field_subtitle']['id'] = 'field_subtitle';
   $handler->display->display_options['fields']['field_subtitle']['table'] = 'search_api_index_nodes_index';
   $handler->display->display_options['fields']['field_subtitle']['field'] = 'field_subtitle';
   $handler->display->display_options['fields']['field_subtitle']['label'] = '';
+  $handler->display->display_options['fields']['field_subtitle']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_subtitle']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_subtitle']['hide_empty'] = TRUE;
-  /* Campo: Indexed Nodo: Place */
+  /* Field: Indexed Node: Place */
   $handler->display->display_options['fields']['field_place']['id'] = 'field_place';
   $handler->display->display_options['fields']['field_place']['table'] = 'search_api_index_nodes_index';
   $handler->display->display_options['fields']['field_place']['field'] = 'field_place';
   $handler->display->display_options['fields']['field_place']['label'] = '';
   $handler->display->display_options['fields']['field_place']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_place']['hide_empty'] = TRUE;
+  /* Field: Indexed Node: Content type */
+  $handler->display->display_options['fields']['type']['id'] = 'type';
+  $handler->display->display_options['fields']['type']['table'] = 'search_api_index_nodes_index';
+  $handler->display->display_options['fields']['type']['field'] = 'type';
+  $handler->display->display_options['fields']['type']['label'] = '';
+  $handler->display->display_options['fields']['type']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['type']['element_type'] = '0';
+  $handler->display->display_options['fields']['type']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['type']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['type']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['type']['link_to_entity'] = 0;
+  $handler->display->display_options['fields']['type']['format_name'] = 0;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Time: Start date (indexed) */
   $handler->display->display_options['sorts']['field_time_value']['id'] = 'field_time_value';
@@ -655,7 +696,7 @@ function dccr_ftr_propossed_sessions_views_default_views() {
     2 => 'AND',
   );
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Indexed Nodo: Tipo de contenido */
+  /* Filter criterion: Indexed Node: Content type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_nodes_index';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -704,7 +745,7 @@ function dccr_ftr_propossed_sessions_views_default_views() {
   $handler->display->display_options['filters']['field_time_value']['value'] = '2015-07-31';
   $handler->display->display_options['filters']['field_time_value']['group'] = 1;
   $handler->display->display_options['filters']['field_time_value']['widget_type'] = 'date_popup';
-  /* Filter criterion: Indexed Nodo: Tipo de contenido */
+  /* Filter criterion: Indexed Node: Content type */
   $handler->display->display_options['filters']['type_1']['id'] = 'type_1';
   $handler->display->display_options['filters']['type_1']['table'] = 'search_api_index_nodes_index';
   $handler->display->display_options['filters']['type_1']['field'] = 'type';
@@ -720,7 +761,7 @@ function dccr_ftr_propossed_sessions_views_default_views() {
   $handler->display->display_options['filters']['field_time_value_1']['value'] = '2015-07-31';
   $handler->display->display_options['filters']['field_time_value_1']['group'] = 2;
   $handler->display->display_options['filters']['field_time_value_1']['widget_type'] = 'date_popup';
-  /* Filter criterion: Indexed Nodo: Item language */
+  /* Filter criterion: Indexed Node: Item language */
   $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
   $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_nodes_index';
   $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
@@ -749,6 +790,8 @@ function dccr_ftr_propossed_sessions_views_default_views() {
     t('Track'),
     t('Level'),
     t('Dia1'),
+    t('<div class="[type]"></div>'),
+    t('<h2 class="views-field-title [type]">[title]</h2>'),
     t('Room'),
     t('Dia2'),
   );
