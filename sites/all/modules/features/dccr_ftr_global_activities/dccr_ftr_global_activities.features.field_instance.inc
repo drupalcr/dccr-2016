@@ -18,11 +18,11 @@ function dccr_ftr_global_activities_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 4,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -62,14 +62,14 @@ function dccr_ftr_global_activities_field_default_field_instances() {
     'bundle' => 'global_activity',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Add "keynote" if you want this activity to be a keynote',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 6,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -87,7 +87,7 @@ function dccr_ftr_global_activities_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_subtitle',
-    'label' => 'Subtitle',
+    'label' => 'Type',
     'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -112,7 +112,7 @@ function dccr_ftr_global_activities_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'date',
         'settings' => array(
           'format_type' => 'long',
@@ -122,7 +122,7 @@ function dccr_ftr_global_activities_field_default_field_instances() {
           'multiple_to' => '',
         ),
         'type' => 'date_default',
-        'weight' => 5,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -167,9 +167,10 @@ function dccr_ftr_global_activities_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Add "keynote" if you want this activity to be a keynote');
   t('Place');
-  t('Subtitle');
   t('Time');
+  t('Type');
 
   return $field_instances;
 }

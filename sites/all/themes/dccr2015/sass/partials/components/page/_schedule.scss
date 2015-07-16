@@ -1,0 +1,148 @@
+.schedule-content-container {
+  position: relative;
+}
+
+.schedule-workshops-link {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  @extend .content-tab-link;
+  @include media($tablet) {
+    left: 10px;
+    width: 21%;
+  }
+}
+
+// tabs
+.content-tabs {
+  margin: 0 0 0 66px;
+  @include media($tablet) {
+    padding: 0 0 0 22.3%;
+    margin: 0;
+  }
+  
+}
+.content-tab-item {
+  list-style-type: none;
+  display: inline-block;
+  vertical-align: top;
+  @include media($tablet) {
+    width: 30%;
+  }
+}
+.content-tab-link {
+  @include font-size(18);
+  color: #757575;
+  display: block;
+  vertical-align: top;
+  background: #e1e1e1;
+  padding: 10px;
+  text-align: center;
+  @include media($tablet) {
+    @include font-size(24);
+    padding: 10px 20px;
+  }
+  &.active {
+    background: $anaranjado;
+    color: #fff;
+  }
+  &:hover {
+    background: darken($anaranjado, 10);
+    color: #fff;
+  }
+}
+
+// content
+.content-tab-schedule {
+  padding: 20px;
+  background: #fff;
+  border-top: solid 4px $anaranjado;
+  @include media($tablet) {
+    padding: 40px;
+  }
+  .view-filters {
+    border-top: 0;
+    padding-top: 0;
+  }
+}
+
+.proposed-sessions-list-schedule {
+  padding: 0;
+  ul {
+    margin-bottom: 40px;
+  }
+}
+
+// content blocks
+.proposed-sessions-list-schedule {
+  // time
+  h3 {
+    @include font-size(24);
+    color: $anaranjado;
+    font-weight: bold;
+    @include media($tablet) {
+      @include font-size(34);
+    }
+  }
+  .views-row {
+    list-style-type: none;
+    margin: 0 0 20px;
+    padding-bottom: 20px;
+    border-bottom: solid 1px #e1e1e1;
+  }
+  .views-field-title {
+    a {
+      @include font-size(18);
+      @include media($tablet) {
+        @include font-size(22);
+      }
+    }
+  }
+  .views-field-field-location {
+    background-color: #e4e4e4;
+    border-radius: 5px;
+    padding: 4px 10px;
+    color: #979797;
+  }
+  .views-field-field-speakers-name,
+  .views-field-field-track,
+  .views-field-field-level,
+  .views-field-field-location {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px;
+  }
+  .views-field-field-speakers-name {
+    font-weight: bold;
+    a {
+      color: #222;
+    }
+  }
+  .views-field-field-speakers-name,
+  .views-field-field-track,
+  .views-field-field-level,
+  .views-field-field-location {
+    @include font-size(14);
+    color: #777;
+    padding-top: 2px;
+  }
+  // activities
+  .global-activity {
+    padding: 10px;
+    border-bottom: 0;
+    background: #ececec;
+    text-align: center;
+    .views-field-title a {
+      @include font-size(20);
+    }
+    &.keynote {
+      padding: 15px;
+      background: #555;
+      color: #e1e1e1;
+      .views-field-title a {
+        color: #FFC700;
+      }
+    }
+  }
+}
