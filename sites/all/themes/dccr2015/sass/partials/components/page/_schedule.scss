@@ -121,4 +121,22 @@
     color: #777;
     padding-top: 2px;
   }
+  // activities
+  .global-activity {
+    padding: 10px;
+    border-bottom: 0;
+    background: #ececec;
+    text-align: center;
+    .views-field-title a {
+      @include font-size(20);
+    }
+    &.keynote {
+      padding: 15px;
+      background: #555;
+      color: #e1e1e1;
+      .views-field-title a {
+        color: #FFC700;
+      }
+    }
+  }
 }

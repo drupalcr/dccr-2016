@@ -1727,5 +1727,19 @@ footer.footer {
   font-size: 1.4rem;
   color: #777;
   padding-top: 2px; }
+.proposed-sessions-list-schedule .global-activity {
+  padding: 10px;
+  border-bottom: 0;
+  background: #ececec;
+  text-align: center; }
+  .proposed-sessions-list-schedule .global-activity .views-field-title a {
+    font-size: 20px;
+    font-size: 2rem; }
+  .proposed-sessions-list-schedule .global-activity.keynote {
+    padding: 15px;
+    background: #555;
+    color: #e1e1e1; }
+    .proposed-sessions-list-schedule .global-activity.keynote .views-field-title a {
+      color: #FFC700; }
 
 /*# sourceMappingURL=styles.css.map */

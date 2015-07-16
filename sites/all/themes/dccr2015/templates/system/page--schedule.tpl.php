@@ -94,7 +94,6 @@
           <ul class='content-tabs'>
             <li class="content-tab-item"><a class="content-tab-link" href='#tab1'><?php print t('July 30'); ?></a></li>
             <li class="content-tab-item"><a class="content-tab-link" href='#tab2'><?php print t('July 31'); ?></a></li>
-            <!-- <li><a href='#tab3'>Tab 3</a></li> -->
           </ul>
           <div class="content-tab-schedule" id='tab1'>
             <div id="day-1">
