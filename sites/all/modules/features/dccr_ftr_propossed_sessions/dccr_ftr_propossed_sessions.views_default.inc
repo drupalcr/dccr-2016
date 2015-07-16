@@ -365,6 +365,7 @@ function dccr_ftr_propossed_sessions_views_default_views() {
   $handler->display->display_options['fields']['field_location']['id'] = 'field_location';
   $handler->display->display_options['fields']['field_location']['table'] = 'search_api_index_nodes_index';
   $handler->display->display_options['fields']['field_location']['field'] = 'field_location';
+  $handler->display->display_options['fields']['field_location']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_location']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_location']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_location']['bypass_access'] = 0;
@@ -379,14 +380,33 @@ function dccr_ftr_propossed_sessions_views_default_views() {
   $handler->display->display_options['fields']['field_time_value']['custom_date_format'] = 'g:i a';
   $handler->display->display_options['fields']['field_time_value']['second_date_format'] = 'hour_minute';
   $handler->display->display_options['fields']['field_time_value']['link_to_entity'] = 0;
+  /* Campo: Indexed Nodo: Subtitle */
+  $handler->display->display_options['fields']['field_subtitle']['id'] = 'field_subtitle';
+  $handler->display->display_options['fields']['field_subtitle']['table'] = 'search_api_index_nodes_index';
+  $handler->display->display_options['fields']['field_subtitle']['field'] = 'field_subtitle';
+  $handler->display->display_options['fields']['field_subtitle']['label'] = '';
+  $handler->display->display_options['fields']['field_subtitle']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_subtitle']['hide_empty'] = TRUE;
+  /* Campo: Indexed Nodo: Place */
+  $handler->display->display_options['fields']['field_place']['id'] = 'field_place';
+  $handler->display->display_options['fields']['field_place']['table'] = 'search_api_index_nodes_index';
+  $handler->display->display_options['fields']['field_place']['field'] = 'field_place';
+  $handler->display->display_options['fields']['field_place']['label'] = '';
+  $handler->display->display_options['fields']['field_place']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_place']['hide_empty'] = TRUE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Time: Start date (indexed) */
   $handler->display->display_options['sorts']['field_time_value']['id'] = 'field_time_value';
   $handler->display->display_options['sorts']['field_time_value']['table'] = 'search_api_index_nodes_index';
   $handler->display->display_options['sorts']['field_time_value']['field'] = 'field_time_value';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['filter_groups']['operator'] = 'OR';
+  $handler->display->display_options['filter_groups']['groups'] = array(
+    1 => 'AND',
+    2 => 'AND',
+  );
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Indexed Node: Content type */
+  /* Filter criterion: Indexed Nodo: Tipo de contenido */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_nodes_index';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -419,20 +439,46 @@ function dccr_ftr_propossed_sessions_views_default_views() {
     4 => 0,
   );
   $handler->display->display_options['filters']['field_track']['expose']['reduce'] = 0;
-  /* Filter criterion: Indexed Node: Approved */
+  /* Filter criterion: Indexed Nodo: Approved */
   $handler->display->display_options['filters']['field_session_approved']['id'] = 'field_session_approved';
   $handler->display->display_options['filters']['field_session_approved']['table'] = 'search_api_index_nodes_index';
   $handler->display->display_options['filters']['field_session_approved']['field'] = 'field_session_approved';
   $handler->display->display_options['filters']['field_session_approved']['value'] = array(
     1 => '1',
   );
+  $handler->display->display_options['filters']['field_session_approved']['group'] = 1;
   /* Filter criterion: Time: Start date (indexed) */
   $handler->display->display_options['filters']['field_time_value']['id'] = 'field_time_value';
   $handler->display->display_options['filters']['field_time_value']['table'] = 'search_api_index_nodes_index';
   $handler->display->display_options['filters']['field_time_value']['field'] = 'field_time_value';
   $handler->display->display_options['filters']['field_time_value']['operator'] = '<';
   $handler->display->display_options['filters']['field_time_value']['value'] = '2015-07-31';
+  $handler->display->display_options['filters']['field_time_value']['group'] = 1;
   $handler->display->display_options['filters']['field_time_value']['widget_type'] = 'date_popup';
+  /* Filter criterion: Indexed Nodo: Tipo de contenido */
+  $handler->display->display_options['filters']['type_1']['id'] = 'type_1';
+  $handler->display->display_options['filters']['type_1']['table'] = 'search_api_index_nodes_index';
+  $handler->display->display_options['filters']['type_1']['field'] = 'type';
+  $handler->display->display_options['filters']['type_1']['value'] = array(
+    'global_activity' => 'global_activity',
+  );
+  $handler->display->display_options['filters']['type_1']['group'] = 2;
+  /* Filter criterion: Time: Start date (indexed) */
+  $handler->display->display_options['filters']['field_time_value_1']['id'] = 'field_time_value_1';
+  $handler->display->display_options['filters']['field_time_value_1']['table'] = 'search_api_index_nodes_index';
+  $handler->display->display_options['filters']['field_time_value_1']['field'] = 'field_time_value';
+  $handler->display->display_options['filters']['field_time_value_1']['operator'] = '<';
+  $handler->display->display_options['filters']['field_time_value_1']['value'] = '2015-07-31';
+  $handler->display->display_options['filters']['field_time_value_1']['group'] = 2;
+  $handler->display->display_options['filters']['field_time_value_1']['widget_type'] = 'date_popup';
+  /* Filter criterion: Indexed Nodo: Item language */
+  $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
+  $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_nodes_index';
+  $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
+  $handler->display->display_options['filters']['search_api_language']['value'] = array(
+    'current' => 'current',
+  );
+  $handler->display->display_options['filters']['search_api_language']['group'] = 2;
 
   /* Display: Dia2 */
   $handler = $view->new_display('block', 'Dia2', 'block_1');
@@ -568,6 +614,7 @@ function dccr_ftr_propossed_sessions_views_default_views() {
   $handler->display->display_options['fields']['field_location']['id'] = 'field_location';
   $handler->display->display_options['fields']['field_location']['table'] = 'search_api_index_nodes_index';
   $handler->display->display_options['fields']['field_location']['field'] = 'field_location';
+  $handler->display->display_options['fields']['field_location']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_location']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_location']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_location']['bypass_access'] = 0;
@@ -582,14 +629,33 @@ function dccr_ftr_propossed_sessions_views_default_views() {
   $handler->display->display_options['fields']['field_time_value']['custom_date_format'] = 'g:i a';
   $handler->display->display_options['fields']['field_time_value']['second_date_format'] = 'hour_minute';
   $handler->display->display_options['fields']['field_time_value']['link_to_entity'] = 0;
+  /* Campo: Indexed Nodo: Subtitle */
+  $handler->display->display_options['fields']['field_subtitle']['id'] = 'field_subtitle';
+  $handler->display->display_options['fields']['field_subtitle']['table'] = 'search_api_index_nodes_index';
+  $handler->display->display_options['fields']['field_subtitle']['field'] = 'field_subtitle';
+  $handler->display->display_options['fields']['field_subtitle']['label'] = '';
+  $handler->display->display_options['fields']['field_subtitle']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_subtitle']['hide_empty'] = TRUE;
+  /* Campo: Indexed Nodo: Place */
+  $handler->display->display_options['fields']['field_place']['id'] = 'field_place';
+  $handler->display->display_options['fields']['field_place']['table'] = 'search_api_index_nodes_index';
+  $handler->display->display_options['fields']['field_place']['field'] = 'field_place';
+  $handler->display->display_options['fields']['field_place']['label'] = '';
+  $handler->display->display_options['fields']['field_place']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_place']['hide_empty'] = TRUE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Time: Start date (indexed) */
   $handler->display->display_options['sorts']['field_time_value']['id'] = 'field_time_value';
   $handler->display->display_options['sorts']['field_time_value']['table'] = 'search_api_index_nodes_index';
   $handler->display->display_options['sorts']['field_time_value']['field'] = 'field_time_value';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['filter_groups']['operator'] = 'OR';
+  $handler->display->display_options['filter_groups']['groups'] = array(
+    1 => 'AND',
+    2 => 'AND',
+  );
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Indexed Node: Content type */
+  /* Filter criterion: Indexed Nodo: Tipo de contenido */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_nodes_index';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -629,13 +695,39 @@ function dccr_ftr_propossed_sessions_views_default_views() {
   $handler->display->display_options['filters']['field_session_approved']['value'] = array(
     1 => '1',
   );
+  $handler->display->display_options['filters']['field_session_approved']['group'] = 1;
   /* Filter criterion: Time: Start date (indexed) */
   $handler->display->display_options['filters']['field_time_value']['id'] = 'field_time_value';
   $handler->display->display_options['filters']['field_time_value']['table'] = 'search_api_index_nodes_index';
   $handler->display->display_options['filters']['field_time_value']['field'] = 'field_time_value';
   $handler->display->display_options['filters']['field_time_value']['operator'] = '>=';
   $handler->display->display_options['filters']['field_time_value']['value'] = '2015-07-31';
+  $handler->display->display_options['filters']['field_time_value']['group'] = 1;
   $handler->display->display_options['filters']['field_time_value']['widget_type'] = 'date_popup';
+  /* Filter criterion: Indexed Nodo: Tipo de contenido */
+  $handler->display->display_options['filters']['type_1']['id'] = 'type_1';
+  $handler->display->display_options['filters']['type_1']['table'] = 'search_api_index_nodes_index';
+  $handler->display->display_options['filters']['type_1']['field'] = 'type';
+  $handler->display->display_options['filters']['type_1']['value'] = array(
+    'global_activity' => 'global_activity',
+  );
+  $handler->display->display_options['filters']['type_1']['group'] = 2;
+  /* Filter criterion: Time: Start date (indexed) */
+  $handler->display->display_options['filters']['field_time_value_1']['id'] = 'field_time_value_1';
+  $handler->display->display_options['filters']['field_time_value_1']['table'] = 'search_api_index_nodes_index';
+  $handler->display->display_options['filters']['field_time_value_1']['field'] = 'field_time_value';
+  $handler->display->display_options['filters']['field_time_value_1']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_time_value_1']['value'] = '2015-07-31';
+  $handler->display->display_options['filters']['field_time_value_1']['group'] = 2;
+  $handler->display->display_options['filters']['field_time_value_1']['widget_type'] = 'date_popup';
+  /* Filter criterion: Indexed Nodo: Item language */
+  $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
+  $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_nodes_index';
+  $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
+  $handler->display->display_options['filters']['search_api_language']['value'] = array(
+    'current' => 'current',
+  );
+  $handler->display->display_options['filters']['search_api_language']['group'] = 2;
   $translatables['proposed_sessions_list'] = array(
     t('Master'),
     t('Proposed sessions list'),
