@@ -1714,6 +1714,11 @@ footer.footer {
     .proposed-sessions-list-schedule .views-field-title a {
       font-size: 22px;
       font-size: 2.2rem; } }
+.proposed-sessions-list-schedule .views-field-field-location {
+  background-color: #e4e4e4;
+  border-radius: 5px;
+  padding: 4px 10px;
+  color: #979797; }
 .proposed-sessions-list-schedule .views-field-field-speakers-name, .proposed-sessions-list-schedule .views-field-field-track, .proposed-sessions-list-schedule .views-field-field-level, .proposed-sessions-list-schedule .views-field-field-location {
   display: inline-block;
   vertical-align: top;
