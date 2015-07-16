@@ -234,6 +234,8 @@ function dccr_ftr_propossed_sessions_views_default_views() {
   /* Display: Dia1 */
   $handler = $view->new_display('block', 'Dia1', 'block_2');
   $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'proposed-sessions-list proposed-sessions-list-schedule';
   $handler->display->display_options['defaults']['use_ajax'] = FALSE;
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['defaults']['exposed_form'] = FALSE;
@@ -374,7 +376,7 @@ function dccr_ftr_propossed_sessions_views_default_views() {
   $handler->display->display_options['fields']['field_time_value']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_time_value']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_time_value']['date_format'] = 'custom';
-  $handler->display->display_options['fields']['field_time_value']['custom_date_format'] = 'H:i';
+  $handler->display->display_options['fields']['field_time_value']['custom_date_format'] = 'g:i a';
   $handler->display->display_options['fields']['field_time_value']['second_date_format'] = 'hour_minute';
   $handler->display->display_options['fields']['field_time_value']['link_to_entity'] = 0;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
@@ -435,6 +437,8 @@ function dccr_ftr_propossed_sessions_views_default_views() {
   /* Display: Dia2 */
   $handler = $view->new_display('block', 'Dia2', 'block_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'proposed-sessions-list proposed-sessions-list-schedule';
   $handler->display->display_options['defaults']['use_ajax'] = FALSE;
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['defaults']['exposed_form'] = FALSE;
@@ -575,7 +579,7 @@ function dccr_ftr_propossed_sessions_views_default_views() {
   $handler->display->display_options['fields']['field_time_value']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_time_value']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_time_value']['date_format'] = 'custom';
-  $handler->display->display_options['fields']['field_time_value']['custom_date_format'] = 'H:i';
+  $handler->display->display_options['fields']['field_time_value']['custom_date_format'] = 'g:i a';
   $handler->display->display_options['fields']['field_time_value']['second_date_format'] = 'hour_minute';
   $handler->display->display_options['fields']['field_time_value']['link_to_entity'] = 0;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
