@@ -11,6 +11,7 @@ dependencies[] = dccr_ftr_workshop
 dependencies[] = ds
 dependencies[] = features
 dependencies[] = image
+dependencies[] = node
 dependencies[] = strongarm
 dependencies[] = text
 features[ctools][] = ds:ds:1
