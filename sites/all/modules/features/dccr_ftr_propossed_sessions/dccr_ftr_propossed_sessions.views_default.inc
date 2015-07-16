@@ -362,6 +362,7 @@ function dccr_ftr_propossed_sessions_views_default_views() {
   $handler->display->display_options['fields']['field_speakers']['field'] = 'field_speakers';
   $handler->display->display_options['fields']['field_speakers']['label'] = '';
   $handler->display->display_options['fields']['field_speakers']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_speakers']['element_wrapper_class'] = 'views-field-field-speakers-name';
   $handler->display->display_options['fields']['field_speakers']['link_to_entity'] = 1;
   $handler->display->display_options['fields']['field_speakers']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_speakers']['bypass_access'] = 0;
@@ -620,6 +621,7 @@ function dccr_ftr_propossed_sessions_views_default_views() {
   $handler->display->display_options['fields']['field_speakers']['field'] = 'field_speakers';
   $handler->display->display_options['fields']['field_speakers']['label'] = '';
   $handler->display->display_options['fields']['field_speakers']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_speakers']['element_wrapper_class'] = 'views-field-field-speakers-name';
   $handler->display->display_options['fields']['field_speakers']['link_to_entity'] = 1;
   $handler->display->display_options['fields']['field_speakers']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_speakers']['bypass_access'] = 0;
