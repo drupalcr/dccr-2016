@@ -64,12 +64,7 @@
     </div>
     <?php endif; ?>
       <a id="main-content"></a>
-      <div id="day-1">
-        <?php print views_embed_view('proposed_sessions_list', 'block_2'); ?>
-      </div>
-      <div id="day-2">
-        <?php print views_embed_view('proposed_sessions_list', 'block_1'); ?>
-      </div>
+      
       <div class="main" role="main">
         <?php print render($title_prefix); ?>
         <?php if ($title): ?><h1 class="page-title"><?php print $title; ?></h1><?php endif; ?>
@@ -87,8 +82,27 @@
             <?php print render($action_links); ?>
           </ul>
         <?php endif; ?>
+        
+        <div class="schedule-content-container">
+          <a class="schedule-workshops-link" href="/workshops"><?php print t('Workshops'); ?></a>
+          <ul class='content-tabs'>
+            <li class="content-tab-item"><a class="content-tab-link" href='#tab1'><?php print t('July 30'); ?></a></li>
+            <li class="content-tab-item"><a class="content-tab-link" href='#tab2'><?php print t('July 31'); ?></a></li>
+            <!-- <li><a href='#tab3'>Tab 3</a></li> -->
+          </ul>
+          <div class="content-tab-schedule" id='tab1'>
+            <div id="day-1">
+              <?php print views_embed_view('proposed_sessions_list', 'block_2'); ?>
+            </div>
+          </div>
+          <div class="content-tab-schedule" id='tab2'>
+            <div id="day-2">
+              <?php print views_embed_view('proposed_sessions_list', 'block_1'); ?>
+            </div>
+          </div>
+        </div>
 
-        <?php print render($page['content']); ?>
+        <?php // print render($page['content']); ?>
 
       </div>
 
