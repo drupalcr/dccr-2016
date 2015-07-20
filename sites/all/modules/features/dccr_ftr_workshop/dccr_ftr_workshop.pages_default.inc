@@ -90,7 +90,7 @@ function dccr_ftr_workshop_default_page_manager_pages() {
     $pane->configuration = array(
       'admin_title' => '',
       'title' => '',
-      'body' => '<p style="font-size: 13.0080003738403px; line-height: 20.0063037872314px;"><strong>Los talleres tienen cupo limitado, para registrarse a un taller debe:</strong></p><ol style="font-size: 13.0080003738403px; line-height: 20.0063037872314px;"><li><strong>Estar inscrito en el evento</strong></li><li><strong>Pagar la inscripción a los talleres ($15)</strong></li><li><strong>Solicitar cupo por medio de la página del taller</strong></li></ol><p>&nbsp;</p>',
+      'body' => '<p style="font-size: 13.0080003738403px; line-height: 20.0063037872314px;"><strong>Los talleres tienen cupo limitado, para registrarse a un taller debe:</strong></p><ol style="font-size: 13.0080003738403px; line-height: 20.0063037872314px;"><li><strong>Estar inscrito en el evento ($35)</strong></li><li><strong>Pagar la inscripción a los talleres ($15)</strong></li><li><strong>Solicitar cupo por medio de la página del taller</strong></li></ol><p>&nbsp;</p>',
       'format' => 'manati_texto_formato',
       'substitute' => TRUE,
     );
@@ -271,7 +271,7 @@ function dccr_ftr_workshop_default_page_manager_pages() {
     $pane->configuration = array(
       'admin_title' => '',
       'title' => '',
-      'body' => '<p><strong>Workshops have limited availability, to register you must</strong></p><ol><li><strong>Pay the registration fee for the event</strong></li><li><strong>Pay the registration fee for the workshops ($15)</strong></li><li><strong>Enroll through the workshop page</strong></li></ol><p>&nbsp;</p>',
+      'body' => '<p><strong>Workshops have limited availability, to register you must</strong></p><ol><li><strong>Pay the registration fee for the event ($35)</strong></li><li><strong>Pay the registration fee for the workshops ($15)</strong></li><li><strong>Enroll through the workshop page</strong></li></ol><p>&nbsp;</p>',
       'format' => 'manati_texto_formato',
       'substitute' => TRUE,
     );
