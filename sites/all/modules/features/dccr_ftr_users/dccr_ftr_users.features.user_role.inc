@@ -28,5 +28,11 @@ function dccr_ftr_users_user_default_roles() {
     'weight' => 5,
   );
 
+  // Exported role: staff.
+  $roles['staff'] = array(
+    'name' => 'staff',
+    'weight' => 6,
+  );
+
   return $roles;
 }

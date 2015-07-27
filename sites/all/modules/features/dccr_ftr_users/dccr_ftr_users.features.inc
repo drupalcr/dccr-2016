@@ -153,6 +153,39 @@ function dccr_ftr_users_flag_default_flags() {
     ),
     'api_version' => 3,
   );
+  // Exported flag: "Event Registration".
+  $flags['event_registration'] = array(
+    'entity_type' => 'user',
+    'title' => 'Event Registration',
+    'global' => 1,
+    'types' => array(),
+    'flag_short' => 'Mark this used as registered',
+    'flag_long' => '',
+    'flag_message' => '',
+    'unflag_short' => 'Unmark this used as registered',
+    'unflag_long' => '',
+    'unflag_message' => '',
+    'unflag_denied_text' => '',
+    'link_type' => 'toggle',
+    'weight' => 0,
+    'show_in_links' => array(
+      'full' => 0,
+      'diff_standard' => 0,
+      'token' => 0,
+      'teaser' => 0,
+    ),
+    'show_as_field' => 0,
+    'show_on_form' => 0,
+    'access_author' => '',
+    'show_contextual_link' => 0,
+    'show_on_profile' => 0,
+    'access_uid' => '',
+    'api_version' => 3,
+    'module' => 'dccr_ftr_users',
+    'locked' => array(
+      0 => 'name',
+    ),
+  );
   return $flags;
 
 }
