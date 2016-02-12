@@ -45,9 +45,8 @@ build:
             # Prepare Drupal Installation and Install it.
             # Build the Drupal site and set files permissions.
             chown -R root:www-data ./files
-            ./node_modules/.bin/aquifer build
+            # @TODO Build Drupal Site
             chmod 777 -R ./build/sites/default/files
-            ./node_modules/.bin/aquifer extensions-load
             chown -R www-data:www-data ./build/sites/default/files
             # Set alias.
             drush site-set @dccr-2016.dccr-2016.dev
@@ -114,8 +113,7 @@ deploy:
     - script:
         name: Deploy code to pantheon
         code: |
-            npm install -g aquifer aquifer-git
-            aquifer deploy-git -m "Auto deploy triggered from master branch"
+            # @TODO Deploy code
     - script:
         name: Deploy steps to pantheon dev
         code: |

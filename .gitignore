@@ -6,10 +6,6 @@
 *.tgz
 node_modules
 
-# Aquifer
-.aquifer
-!.aquifer/.gitkeep
-
 # Apache HTML file.
 html/index.html
 
