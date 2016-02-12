@@ -203,7 +203,7 @@ composer_home_path: '/home/vagrant/.composer'
 
 # Run specified scripts after VM is provisioned. Path is relative to the
 # `provisioning/playbook.yml` file.
-post_provision_scripts: []
+post_provision_scripts:
   - "../post-provision/chrome.sh"
 
 # MySQL Configuration.
