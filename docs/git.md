@@ -20,4 +20,4 @@ Commit early, commit often, and push often! Keep your commits [atomic as possibl
 
 ### Commit messages
 
-Commit messages should start with the JIRA Story identifier, followed by a colon, then a brief description of what occurred.
+Commit messages should start with the Github Issue identifier, followed by a colon, then a brief description of what occurred.
