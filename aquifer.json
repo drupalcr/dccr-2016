@@ -1,0 +1,73 @@
+{
+  "name": "Drupal Camp CR 2016",
+  "paths": {
+    "make": "drupal.make.yml",
+    "lock": false,
+    "settings": "settings",
+    "build": "build",
+    "root": "root",
+    "drush": "drush",
+    "themes": {
+      "root": "themes/",
+      "contrib": "themes/contrib",
+      "custom": "themes/custom"
+    },
+    "modules": {
+      "root": "modules",
+      "contrib": "modules/contrib",
+      "custom": "modules/custom",
+      "features": "modules/features"
+    },
+    "profiles": {
+      "dccr-2016": "profiles/dccr-2016"
+    },
+    "files": {
+      "root": "files"
+    },
+    "builds": "artifacts/"
+  },
+  "extensions": {
+    "aquifer-git": {
+      "source": "aquifer-git",
+      "remote": "",
+      "branch": "master",
+      "name": "CI Bot",
+      "email": "ci@estudiomanati.com",
+      "deploymentFiles": [
+        {
+          "src": "root/.gitignore",
+          "dest": ".gitignore"
+        },
+        {
+          "src": "root/.htaccess",
+          "dest": ".htaccess"
+        }
+      ],
+      "excludeLinks": ["sites/default/files"],
+      "addlinks": [],
+      "delPatterns": ["*", "!.git"]
+    }
+  },
+  "refreshCommands": [
+    [
+      "updb"
+    ],
+    [
+      "cc",
+      "all"
+    ],
+    [
+      "en",
+      "master"
+    ],
+    [
+      "master-execute"
+    ],
+    [
+      "fra"
+    ],
+    [
+      "rr"
+    ]
+  ]
+}
