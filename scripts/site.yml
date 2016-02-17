@@ -8,7 +8,26 @@
     - drush_path: /usr/local/bin/drush
 
   tasks:
-    - name: Clear sites/defaults
+    - name: Empty build
+      file: path=/var/www/build/ state=absent
+
+    - name: Restore build directory
+      file: path=/var/www/build/ state=directory
+
+    - name: Restore .gitkeep
+      file: path=/var/www/build/.gitkeep state=touch
+
+    - name: Copy drush makefile into place.
+      copy:
+        src: "{{ drush_makefile_path }}"
+        dest: /tmp/drupal.make.yml
+
+    - name: Generate Drupal site with drush makefile.
+      command: >
+        {{ drush_path }} make -y /tmp/drupal.make.yml --no-gitinfofile
+        chdir={{ drupal_core_path }}
+
+    - name: Clear sites/default
       file: path=/var/www/build/sites/default state=absent
 
     - name: Symlink settings
