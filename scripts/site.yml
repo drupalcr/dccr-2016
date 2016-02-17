@@ -32,6 +32,9 @@
     - name: Symlink files
       file: src=/var/www/files/ path=/var/www/build/sites/default/files state=link
 
+    - name: Symlink config
+      file: src=/var/www/config/ path=/var/www/build/sites/default/config state=link
+
     - name: Symlink Drush folder
       file: src=/var/www/drush path=/var/www/build/drush state=link
 
