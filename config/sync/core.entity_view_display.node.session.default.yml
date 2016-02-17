@@ -1,0 +1,24 @@
+uuid: 61837a15-d3cb-425f-9f02-2b1032027c08
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.session.body
+    - node.type.session
+  module:
+    - text
+    - user
+id: node.session.default
+targetEntityType: node
+bundle: session
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 100
+hidden: {  }
