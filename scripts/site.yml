@@ -8,24 +8,14 @@
     - drush_path: /usr/local/bin/drush
 
   tasks:
-    - name: Symlink settings.php
-      file: src=/var/www/settings/settings.php path=/var/www/build/sites/default/settings.php state=link
+    - name: Clear sites/defaults
+      file: path=/var/www/build/sites/default state=absent
 
-    - name: Check if settings.secret.php exists
-      stat: path=/var/www/settings/settings.secret.php
-      register: settings_secret
+    - name: Symlink settings
+      file: src=/var/www/settings/ path=/var/www/build/sites/default state=link
 
-    - name: Check if settings.local.php exists
-      stat: path=/var/www/settings/settings.local.php
-      register: settings_local
-
-    - name: Symlink settings.secret.php
-      file: src=/var/www/settings/settings.secret.php path=/var/www/build/sites/default/settings.secret.php state=link
-      when: settings_secret == true
-
-    - name: Symlink settings.local.php
-      file: src=/var/www/settings/settings.local.php path=/var/www/build/sites/default/settings.local.php state=link
-      when: settings_local == true
+    - name: Symlink files
+      file: src=/var/www/files/ path=/var/www/build/sites/default/files state=link
 
     - name: Symlink Drush folder
       file: src=/var/www/drush path=/var/www/build/drush state=link
