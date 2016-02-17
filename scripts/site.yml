@@ -1,0 +1,58 @@
+---
+- hosts: all
+  become: yes
+
+  vars_files:
+    - ../config.yml
+  vars:
+    - drush_path: /usr/local/bin/drush
+
+  tasks:
+    - name: Symlink settings.php
+      file: src=/var/www/settings/settings.php path=/var/www/build/sites/default/settings.php state=link
+
+    - name: Check if settings.secret.php exists
+      stat: path=/var/www/settings/settings.secret.php
+      register: settings_secret
+
+    - name: Check if settings.local.php exists
+      stat: path=/var/www/settings/settings.local.php
+      register: settings_local
+
+    - name: Symlink settings.secret.php
+      file: src=/var/www/settings/settings.secret.php path=/var/www/build/sites/default/settings.secret.php state=link
+      when: settings_secret == true
+
+    - name: Symlink settings.local.php
+      file: src=/var/www/settings/settings.local.php path=/var/www/build/sites/default/settings.local.php state=link
+      when: settings_local == true
+
+    - name: Symlink Drush folder
+      file: src=/var/www/drush path=/var/www/build/drush state=link
+
+    - name: Empty profiles folder
+      file: path=/var/www/build/profiles/README.txt state=absent
+
+    - name: Symlink profiles folder
+      file: src=/var/www/profiles path=/var/www/build/profiles state=link force=yes
+
+    - name: Remove .htaccess
+      file: path=/var/www/build/.htaccess state=absent
+
+    - name: Symlink .htaccess
+      file: src=/var/www/root/.htaccess path=/var/www/build/.htaccess state=link
+
+    - name: Remove .gitignore
+      file: path=/var/www/build/.gitignore state=absent
+
+    - name: Symlink .gitignore
+      file: src=/var/www/root/.gitignore path=/var/www/build/.gitignore state=link
+
+    - name: Symlink custom modules folder
+      file: src=/var/www/modules/custom path=/var/www/build/modules/custom state=link
+
+    - name: Symlink features modules folder
+      file: src=/var/www/modules/features path=/var/www/build/modules/features state=link
+
+    - name: Symlink custom themes folder
+      file: src=/var/www/themes/custom path=/var/www/build/themes/custom state=link
