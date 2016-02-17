@@ -1,4 +1,4 @@
-core: 7.x
+core: 8.x
 api: 2
 
 # Common attributes.
@@ -8,71 +8,13 @@ defaults:
 
 projects:
   # Core.
-  drops-7:
+  drupal:
     type: "core"
-    download:
-      type: "git"
-      url: "https://github.com/pantheon-systems/drops-7.git"
-      branch: "master"
-    #tag: ""
+    version: 8.0.3
 
   # Projects.
-  admin_menu:
-    version: ""
-  admin_views:
-    version: ""
-  adminimal_admin_menu:
-    version: ""
-  ckeditor:
-    version: ""
-  ctools:
-    version: ""
-  date:
-    version: ""
   devel:
-    version: ""
-  diff:
-    version: ""
-  entity:
-    version: ""
-  entityreference:
-    version: ""
-  environment:
-    version: ""
-  environment_indicator:
-    version: ""
-  field_group:
-    version: ""
-  features:
-    version: ""
-  fences:
-    version: ""
-  libraries:
-    version: ""
-  link:
-    version: ""
-  master:
-    version: ""
-  module_filter:
-    version: ""
-  pathauto:
-    version: ""
-  panels:
-    version: ""
-  semantic_panels:
-    version: ""
-  strongarm:
-    version: ""
-  token:
-    version: ""
-  views:
-    version: ""
-  views_bulk_operations:
-    version: ""
-  # Themes.
-  adminimal_theme:
-    version: ""
-    type: "theme"
+    version: "1.x-dev"
 
 libraries:
   ckeditor:
