@@ -24,6 +24,7 @@ vendor
 
 # Settings
 settings/files
+settings/config
 settings.secret.php
 settings.local.php
 !circle/settings.secret.php
