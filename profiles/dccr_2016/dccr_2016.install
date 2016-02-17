@@ -7,7 +7,7 @@
 /**
  * Implements hook_install().
  */
-function dccr-2016_install() {
+function dccr_2016_install() {
   // Create a default role for site administrators,
   // with all available permissions assigned.
   $admin_role = new stdClass();

@@ -7,7 +7,7 @@
 /**
  * Implements hook_form_FORM_ID_alter().
  */
-function dccr-2016_form_install_configure_form_alter(&$form, $form_state) {
+function dccr_2016_form_install_configure_form_alter(&$form, $form_state) {
   $form['site_information']['site_name']['#default_value'] = 'Drupal Camp CR 2016';
   $form['site_information']['site_mail']['#default_value'] = 'ops@estudiomanati.com';
   $form['admin_account']['account']['name']['#default_value'] = 'admin';
