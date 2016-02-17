@@ -4,8 +4,6 @@
 
   vars_files:
     - ../config.yml
-  vars:
-    - drush_path: /usr/local/bin/drush
 
   tasks:
     - name: Empty build
@@ -23,9 +21,7 @@
         dest: /tmp/drupal.make.yml
 
     - name: Generate Drupal site with drush makefile.
-      command: >
-        {{ drush_path }} make -y /tmp/drupal.make.yml --no-gitinfofile
-        chdir={{ drupal_core_path }}
+      command: /usr/local/bin/drush make -y /tmp/drupal.make.yml --no-gitinfofile chdir=/var/www/build
 
     - name: Clear sites/default
       file: path=/var/www/build/sites/default state=absent
