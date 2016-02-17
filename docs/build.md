@@ -14,4 +14,4 @@ Deployable artifacts are created in the `artifacts` directory.
 
 ## Executing a build
 
-### @TODO: DOCUMENT HERE
+./scripts/build.sh

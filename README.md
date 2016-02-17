@@ -44,9 +44,9 @@ Prepare for local development:
     * vagrant_memory: `2048`
     * build_makefile: `false`
     * install_site: `false`
-    * drupal_major_version: `7`
+    * drupal_major_version: `8`
     * drupal_core_path: `/var/www/build`
-    * drush_version: `7.1.0`
+    * drush_version: `master`
     * installed_extras:
       * `# - adminer`
       * `- mailhog`
@@ -66,6 +66,10 @@ Prepare for local development:
 Create local settings files:
 
 * `./scripts/local_settings.sh`
+
+Build the site:
+
+* `./scripts/build.sh`
 
 Prepare the site:
 
