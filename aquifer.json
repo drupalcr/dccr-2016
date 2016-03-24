@@ -1,0 +1,38 @@
+{
+  "name": "dccr-2016",
+  "core": 8,
+  "paths": {
+    "make": "drupal.make.yml",
+    "lock": false,
+    "settings": "settings",
+    "build": "build",
+    "root": "root",
+    "drush": "drush",
+    "themes": {
+      "root": "themes",
+      "contrib": "themes/contrib",
+      "custom": "themes/custom"
+    },
+    "modules": {
+      "root": "modules",
+      "contrib": "modules/contrib",
+      "custom": "modules/custom",
+      "features": "modules/features"
+    },
+    "profiles": {
+      "dccr_2016": "profiles/dccr_2016"
+    },
+    "files": {
+      "root": "files"
+    }
+  },
+  "run": {
+    "scripts": {
+      "refresh": [
+        "drush updb -y",
+        "drush cr -y"
+      ]
+    }
+  },
+  "extensions": {}
+}
