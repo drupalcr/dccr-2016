@@ -8,7 +8,7 @@ A story is considered complete when:
     * Code comments.
     * `docs/`
 * No manual steps are needed for deployment.
-    * Each deployment will include: `aquifer build`, `updb`, `master-execute`, `features-revert-all`, `cc all`
+    * Each deployment will include: `@TODO: something to build`, `updb`, `master-execute`, `features-revert-all`, `cc all`
 * Steps for demoing are documented in the story.
 * The pull request links to the story and the story links to the pull request.
 * All Behat tests pass.

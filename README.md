@@ -31,8 +31,6 @@ Prepare the local site:
 
 * `composer install`
 * `npm install`
-* `node_modules/.bin/aquifer extensions-load`
-* `node_modules/.bin/aquifer build`
 
 Prepare for local development:
 
@@ -46,9 +44,9 @@ Prepare for local development:
     * vagrant_memory: `2048`
     * build_makefile: `false`
     * install_site: `false`
-    * drupal_major_version: `7`
+    * drupal_major_version: `8`
     * drupal_core_path: `/var/www/build`
-    * drush_version: `7.1.0`
+    * drush_version: `master`
     * installed_extras:
       * `# - adminer`
       * `- mailhog`
@@ -69,21 +67,19 @@ Create local settings files:
 
 * `./scripts/local_settings.sh`
 
-Configure Solr search (adapted from
-  [Solr for Drupal Developers](http://www.midwesternmac.com/blogs/jeff-geerling/solr-drupal-developers-part-3)):
+Build the site:
 
-* `./scripts/drupalvm_solr.sh`
+* `./scripts/build.sh`
 
 Prepare the site:
 
-* `./scripts/local_install.sh`
+* `./scripts/install.sh`
 
 ## Structure
 
 **Drupal Camp CR 2016 Distribution**
 
 * `.gitignore`
-* `/artifacts/` - Deployable build artifacts.
 * `/build/` - Build working directory.
 * `/docs` - Documentation for the distribution.
 * `/files/` - User files.
@@ -94,7 +90,6 @@ Prepare the site:
 * `/provisioning` - Drupal VM Ansible playbooks.
 * `/scripts` - Utilities.
 * `/settings/settings.php` - Drupal common settings.
-* `aquifer.json` - [Aquifer](https://github.com/aquifer/aquifer) build system configuration.
 * `composer.json` - [Composer](https://getcomposer.org) PHP dependency manager configuration.
 * `composer.lock` - locks Composer to specific versions.
 * `config.yml` - Drupal VM.

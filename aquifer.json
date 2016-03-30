@@ -1,5 +1,6 @@
 {
-  "name": "Drupal Camp CR 2016",
+  "name": "dccr-2016",
+  "core": 8,
   "paths": {
     "make": "drupal.make.yml",
     "lock": false,
@@ -8,7 +9,7 @@
     "root": "root",
     "drush": "drush",
     "themes": {
-      "root": "themes/",
+      "root": "themes",
       "contrib": "themes/contrib",
       "custom": "themes/custom"
     },
@@ -19,55 +20,19 @@
       "features": "modules/features"
     },
     "profiles": {
-      "dccr-2016": "profiles/dccr-2016"
+      "dccr_2016": "profiles/dccr_2016"
     },
     "files": {
       "root": "files"
-    },
-    "builds": "artifacts/"
-  },
-  "extensions": {
-    "aquifer-git": {
-      "source": "aquifer-git",
-      "remote": "",
-      "branch": "master",
-      "name": "CI Bot",
-      "email": "ci@estudiomanati.com",
-      "deploymentFiles": [
-        {
-          "src": "root/.gitignore",
-          "dest": ".gitignore"
-        },
-        {
-          "src": "root/.htaccess",
-          "dest": ".htaccess"
-        }
-      ],
-      "excludeLinks": ["sites/default/files"],
-      "addlinks": [],
-      "delPatterns": ["*", "!.git"]
     }
   },
-  "refreshCommands": [
-    [
-      "updb"
-    ],
-    [
-      "cc",
-      "all"
-    ],
-    [
-      "en",
-      "master"
-    ],
-    [
-      "master-execute"
-    ],
-    [
-      "fra"
-    ],
-    [
-      "rr"
-    ]
-  ]
+  "run": {
+    "scripts": {
+      "refresh": [
+        "drush updb -y",
+        "drush cr -y"
+      ]
+    }
+  },
+  "extensions": {}
 }
