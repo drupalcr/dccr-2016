@@ -10,7 +10,7 @@ Repositories associated with the distribution will be using a basic [Gitflow wor
 * Release branch prefix: `release/` - fork from `develop`
 * Hotfix branch prefix: `hotfix/` - fork from `master`
 
-Branch names should start with the JIRA Story identifier, followed by a dash, then a short description.
+Branch names should start with the Github issue identifier, followed by a dash, then a short description.
 
 Branches should be deleted locally and remotely once merged.
 
