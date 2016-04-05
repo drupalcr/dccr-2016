@@ -1,0 +1,11 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for DCCR 2016 profile.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function dccr_2016_install() {
+}
