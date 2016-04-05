@@ -9,6 +9,7 @@ if [ -f ./files/config/sync/core.extension.yml ] ; then $DRUSH $SITE_ALIAS si st
 #echo "Executing master..."
 #$DRUSH $SITE_ALIAS master-execute -y
 echo "Importing config..."
+$DRUSH $SITE_ALIAS ev '\Drupal::entityManager()->getStorage("shortcut_set")->load("default")->delete();'
 $DRUSH $SITE_ALIAS cim -y
 echo "Cleaning cache..."
 $DRUSH $SITE_ALIAS cr
