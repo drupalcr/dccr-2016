@@ -18,49 +18,9 @@ function dccr_install() {
   );
   module_disable($modules_disable_list);
   drupal_uninstall_modules($modules_disable_list, TRUE);
-
-  $modules_enable_list = array(
-    'ctools',
-    'views',
-    'entity',
-    'entity_token',
-    'views_bulk_operations',
-    'admin_views',
-    'admin_menu',
-    'module_filter',
-    'context',
-    'rules',
-    'date_api',
-    'date',
-    'entityreference',
-    'email',
-    'link',
-    'libraries',
-    'token',
-    'pathauto',
-    'transliteration',
-    'variable',
-    'conditional_styles',
-    'magic',
-    'features',
-    'strongarm',
-    'diff',
-    'logintoboggan',
-    'smtp',
-    'pathologic',
-    'wysiwyg',
-    'wysiwyg_filter',
-    'manati_editortexto',
-    'i18n',
-    'i18n_node',
-    'i18n_menu',
-    'i18n_user',
-    'i18n_variable',
-    'i18n_block',
-    'i18n_field',
-  );
-
-  $result = module_enable($modules_enable_list, TRUE);
+  if (defined('PANTHEON_ENVIRONMENT')) {
+    module_enable(array('pantheon_apachesolr'), TRUE);
+  }
 
   // Empty pages.
   module_load_include('inc', 'i18n_string');
